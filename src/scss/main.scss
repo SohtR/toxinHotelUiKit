@@ -1,0 +1,48 @@
+@mixin outline1{
+  outline:1px solid black;
+}
+$bgColor: #f4f4f6;
+
+body{
+  margin: 0px;
+  padding: 0px;
+ 
+}
+main{
+  margin: 0 auto;
+  width: 75.6%;
+  display: flex;
+  @include outline1();
+  background: $bgColor url(../img/mainLogo.svg) no-repeat 30px 30px;
+}
+
+header{
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  height: 70px;
+  width: 100%;
+  margin: 154px 0 0 0;
+  @include outline1();
+  display: flex;
+}
+.wrapper{
+  width: 80.7%;
+  display: flex;
+  margin: auto 9.7%;
+  @include outline1();
+  justify-content: space-between;
+  a{
+    display: inline-block;
+  }
+}
+
+.mainMenu{
+  list-style: none;
+  
+  li{
+    display: inline-block;
+  }
+}
+.buttons{
+  align-self: center;
+}
