@@ -6,24 +6,47 @@ html
         title Toxin Hotel
     body
         main
-            header
+            .headerButtons
                 .wrapper   
-                    a(href="#") 
+                    a.header__logo(href="#") 
                         img(src="../src/img/colorLogo.svg", alt="Main Logo")
-                    nav 
-                        ul.mainMenu
-                            li 
-                                a Home
-                            li 
-                                a About Us
-                            li
-                                a Services
-                            li
-                                a Careers
-                            li
-                                a News
-                            li
-                                a Documentation
-                    .buttons
-                        a.btn.btn-login login
-                        a.btn.btn-register register
+                    .header__nav-but-wrap
+                        nav 
+                            ul.mainMenu
+                                li.active 
+                                    a Home
+                                li 
+                                    a About Us
+                                li
+                                    a Services
+                                li
+                                    a Careers
+                                li
+                                    a News
+                                li
+                                    a Documentation
+                        .buttons
+                            a.btn.btn-login login
+                            a.btn.btn-register register
+            .header
+                .wrapper
+                    a.header__logo(href="#") 
+                        img(src="../src/img/colorLogo.svg", alt="Main Logo")
+                    .header__nav-but-wrap
+                        nav 
+                            ul.mainMenu
+                                li.active 
+                                    a Home
+                                li 
+                                    a About Us
+                                li
+                                    a Services
+                                li
+                                    a Careers
+                                li
+                                    a News
+                                li
+                                    a Documentation
+                        .buttons
+                            a.btn.btn-login login
+                            a.btn.btn-register register
