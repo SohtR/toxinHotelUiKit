@@ -4,6 +4,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 //const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const images = require('file-loader');
 module.exports = {
   entry: { main: './src/index.js' },
   output: {
@@ -40,6 +41,18 @@ module.exports = {
                
            ]
     },
+    {
+      test: /\.(gif|png|jpe?g)$/,
+      use: [
+        {
+            loader: 'file-loader?name=./img/[name].[ext]'
+        }
+        
+    ]
+    },
+      
+    
+   
     {
       test : /\.react\.js$/,
       loader: 'webpack-bem-loader',

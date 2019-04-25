@@ -14,21 +14,20 @@ html
                         nav 
                             ul.mainMenu
                                 li.active 
-                                    a Home
+                                    a(href='#') Home
                                 li 
-                                    a About Us
+                                    a(href='#') About Us
                                 li
-                                    a 
-                                        span Services
+                                    a(href='#') Services
                                 li
-                                    a Careers
+                                    a(href='#') Careers
                                 li
-                                    a News
+                                    a(href='#') News
                                 li
-                                    a Documentation
+                                    a(href='#') Documentation
                         .buttons
-                            a.btn.btn-login login
-                            a.btn.btn-register register
+                            a.btn.btn-login(href='#') login
+                            a.btn.btn-register(href='#') register
             .header
                 .wrapper
                     a.header__logo(href="#") 
@@ -37,17 +36,79 @@ html
                         nav 
                             ul.mainMenu
                                 li.active 
-                                    a Home
+                                    a(href='#') Home
                                 li 
-                                    a About Us
+                                    a(href='#') About Us
                                 li
-                                    a Services
+                                    a(href='#') Services
                                 li
-                                    a Careers
+                                    a(href='#') Careers
                                 li
-                                    a News
+                                    a(href='#') News
                                 li
-                                    a Documentation
-                        a.withBorder
-                            span Cosmin Negoita
-                        
+                                    a(href='#') Documentation
+                        a(href="#").withBorder Cosmin Negoita
+                             
+            .footer-big
+                .wrapper
+                    .footer-big__main
+                        .footer-big__logo
+                            a.header__logo(href="#") 
+                                img(src="../src/img/colorLogo.svg", alt="Main Logo")
+                            p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.       
+                        .footer-big__menus
+                            .footer-big__list.footer-big__nav
+                                h3.footer-big__headline navigation
+                                ul
+                                    li
+                                        a(href="") About Us
+                                    li
+                                        a(href="") News
+                                    li
+                                        a(href="") Support
+                                    li
+                                        a(href="") Products
+                            .footer-big__list.footer-big__about
+                                h3.footer-big__headline about us
+                                ul
+                                    li
+                                        a(href="") Who we are
+                                    li
+                                        a(href="") Our team
+                                    li
+                                        a(href="") Careers
+                                    li
+                                        a(href="") Investors
+                            .footer-big__list.footer-big__support
+                                h3.footer-big__headline support
+                                ul
+                                    li
+                                        a(href="") Documentation
+                                    li
+                                        a(href="") Community
+                                    li
+                                        a(href="") Get in touch
+                        .footer-big__subscribe
+                            h3.footer-big__headline subscribe to ours newsletter
+                            p Receive our latest news and promotions in your inbox!
+                            form(action="#", method="post").formEmail
+                                input(type="email", name="email", placeholder="Your email address")
+                                input(type="submit", value="")
+                    .footer-big__copyright
+                        p Copyright © 2018 Toxin UI Kit. All rights reserved.
+                        .footer-big__social 
+                            a(href="").footer-big__twitter 
+                            a(href="").footer-big__facebook 
+                            a(href="").footer-big__instagram
+            .footer-small
+                .wrapper
+                    .wrapper-column
+                        a.footer-small__logo(href="#") 
+                                    img(src="../src/img/colorLogo.svg", alt="Main Logo")
+                        p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis. 
+                        .footer-small__social
+                            a(href="").footer-big__twitter 
+                            a(href="").footer-big__facebook 
+                            a(href="").footer-big__instagram
+
+                            
