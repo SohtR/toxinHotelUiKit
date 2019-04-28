@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js">               </script>
+    <script src="../src/numbercategoryselector.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Toxin Hotel</title>
@@ -91,7 +93,8 @@
       </div>
       <div class="footer-small">
         <div class="wrapper">
-          <div class="wrapper-column"><a class="footer-small__logo" href="#"> <img src="../src/img/colorLogo.svg" alt="Main Logo"></a>
+          <div class="wrapper-column">
+            <div class="footer-small__logo"><a href="#"> <img src="../src/img/colorLogo.svg" alt="Logo"></a></div>
             <p>Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis. </p>
             <div class="footer-small__social"><a class="footer-big__twitter" href=""> </a><a class="footer-big__facebook" href=""> </a><a class="footer-big__instagram" href=""></a></div>
           </div>
@@ -197,14 +200,46 @@
               </label>
               <input type="text" name="textfield" placeholder="Email" id="textfield">
             </form>
-            <form class="formDropdown" action="#" method="post">
-              <select name="guests">
-                <option value="1">1</option>
-              </select>
+            <div class="dropdownGuests">
+              <form class="dropdown" action="#">
+                <label for="dropdown"> 
+                  <h3>Dropdown</h3>
+                </label>
+                <input id="dropdown" name="NCS" type="text" readonly placeholder="Сколько гостей">
+              </form>
+            </div>
+            <form class="maskedText" action="#" method="post">
+              <label for="maskedText"> 
+                <h3>Masked Textfield</h3>
+              </label>
+              <input type="text" placeholder="ДД.ММ.ГГГГ" id="maskedText" pattern="(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/d{4}">
             </form>
+            <form class="dataPick" action="#" method="post">
+              <label for=""> 
+                <h3>Data Dropdown</h3>
+              </label>
+              <input class="datepicker-here" type="text" placeholder="">
+            </form>
+            <div class="datepicker-here">   </div>
           </div>
         </div>
       </div>
     </main>
   <script type="text/javascript" src="main.js"></script></body>
 </html>
+<script src="../src/datepicker.min.js"></script>
+<script>
+$("input[name='NCS']").NCS({
+    categoryNames: ["Спальни", "Кровати", "Ванные комнаты"],
+    categoryValues: false,
+    minValue: 0,
+    maxValue: 10,
+    closeOnOutsideClick: true,
+    showText: true,
+    delimiter: ", ",
+    align: "left",
+    fade: true,
+    useDisplay: false,
+    showZero: false,
+});
+</script>

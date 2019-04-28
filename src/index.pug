@@ -1,6 +1,8 @@
 doctype html
 html
     head
+        script(src="https://code.jquery.com/jquery-1.12.4.min.js")                
+        script(src="../src/numbercategoryselector.js")
         meta(charset = 'utf-8')
         meta(name='viewport', content="initial-scale=1.0, width=device-width")
         title Toxin Hotel
@@ -103,8 +105,9 @@ html
             .footer-small
                 .wrapper
                     .wrapper-column
-                        a.footer-small__logo(href="#") 
-                                    img(src="../src/img/colorLogo.svg", alt="Main Logo")
+                        .footer-small__logo
+                            a(href="#") 
+                                img(src="../src/img/colorLogo.svg", alt="Logo")
                         p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis. 
                         .footer-small__social
                             a(href="").footer-big__twitter 
@@ -177,8 +180,27 @@ html
                             label(for="textfield") 
                                 h3 Text field
                             input(type="text", name="textfield", placeholder="Email", id="textfield")
-                        form(action="#", method="post").formDropdown
-                            select(name="guests")
-                                option(value="1") 1
+                        .dropdownGuests
+                            form(action="#").dropdown
+                                label(for="dropdown") 
+                                    h3 Dropdown
+                                input(id="dropdown" name="NCS", type="text", readonly, placeholder="Сколько гостей")
+                            
+                        
+                        form(action="#", method="post").maskedText
+                            label(for="maskedText") 
+                                h3 Masked Textfield
+                            input(type="text", placeholder="ДД.ММ.ГГГГ", id="maskedText", pattern="(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/\d{4}")
+                        
+                        form(action="#", method="post").dataPick
+                            label(for="") 
+                                h3 Data Dropdown
+                            input(type="text", placeholder="").datepicker-here
+                        .datepicker-here    
+script(src="../src/datepicker.min.js")
+script
+    include ncs.js                        
+                        
+                  
                             
                             
