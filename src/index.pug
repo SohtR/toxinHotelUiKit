@@ -195,8 +195,10 @@ html
                         form(action="#", method="post").dataPick
                             label(for="") 
                                 h3 Data Dropdown
-                            input(type="text", placeholder="").datepicker-here
-                        .datepicker-here    
+                            input(type="text" data-range="true" data-multiple-dates-separator=" - " class="datepicker-here" data-clear-Button="true" data-apply-Button="true" data-inline="true")
+                            
+                        
+
 script(src="../src/datepicker.min.js")
 script
     include ncs.js                        
