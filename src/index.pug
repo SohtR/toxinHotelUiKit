@@ -175,7 +175,7 @@ html
                                     p This is the body text which is used for most of the design, like paragraphs, lists, etc.
             .form-elements
                 .wrapper
-                    .wrapper-column
+                    .flex
                         form(action="#", method="post").formText
                             label(for="textfield") 
                                 h3 Text field
@@ -191,13 +191,51 @@ html
                             label(for="maskedText") 
                                 h3 Masked Textfield
                             input(type="text", placeholder="ДД.ММ.ГГГГ", id="maskedText", pattern="(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/\d{4}")
-                        
-                        form(action="#", method="post").dataPick
+                    .flex   
+                        form(action="#", method="post").dataDropdown
                             label(for="") 
                                 h3 Data Dropdown
-                            input(type="text" data-range="true" data-multiple-dates-separator=" - " class="datepicker-here" data-clear-Button="true" data-apply-Button="true" data-inline="true")
+                            input(type="text" class="datepicker-here" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true")
+                        form(action="#").filterDropdown
+                            label(for="") 
+                                h3 Filter Dropdown    
+                            input(type="text" data-range="true" data-multiple-dates-separator=" - " class="datepicker-here" data-clear-Button="true" data-apply-Button="true")
+                        .email
+                            h3 subscription textfield
+                            form(action="#", method="post").formEmail
+                                                            
+                                input(type="email", name="email", placeholder="Your email address")
+                                input(type="submit", value="")
+                        form(action="#").expendCheck 
                             
-                        
+                            input(id="expander" type="checkbox")
+                            label(for="expander" class="exCheckLabel")
+                            ul.exCheckList
+                                li
+                                    input(type="checkbox" id="cfirst" name="first" hidden)
+                                    label(for="cfirst") Завтрак
+                                li
+                                    input(type="checkbox" id="csecond" name="first" checked hidden)
+                                    label(for="csecond") Письменный стол
+                                li
+                                    input(type="checkbox" id="cthird" name="first" checked hidden)
+                                    label(for="cthird") Стул для кормления
+                                li
+                                    input(type="checkbox" id="cfourth" name="first" checked hidden)
+                                    label(for="cfourth") Кроватка
+                                li
+                                    input(type="checkbox" id="cfifth" name="first" hidden)
+                                    label(for="cfifth") Телевизор
+                                li
+                                    input(type="checkbox" id="csix" name="first" hidden)
+                                    label(for="csix") Шампунь
+                                li
+                                    input(type="checkbox" id="cseven" name="first" hidden)
+                                    label(for="cseven") Телевизор
+                                li
+                                    input(type="checkbox" id="ceight" name="first" hidden)
+                                    label(for="ceight") Шампунь
+                            
 
 script(src="../src/datepicker.min.js")
 script
