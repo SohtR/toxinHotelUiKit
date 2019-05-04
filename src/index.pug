@@ -207,7 +207,6 @@ html
                                 input(type="email", name="email", placeholder="Your email address")
                                 input(type="submit", value="")
                         form(action="#").expendCheck 
-                            
                             input(id="expander" type="checkbox")
                             label(for="expander" class="exCheckLabel")
                             ul.exCheckList
@@ -235,6 +234,36 @@ html
                                 li
                                     input(type="checkbox" id="ceight" name="first" hidden)
                                     label(for="ceight") Шампунь
+                    .flex
+                        .flex-col  
+                            .roomFeature.comfort
+                                p.roomFeature__headline Комфорт
+                                p Шумопоглощающие стены
+                            .roomFeature.udobstvo
+                                p.roomFeature__headline Удобство
+                                p Окно в каждой из спален
+                        form(action="#").checkboxes
+                            input(id="checkboxes" type="checkbox")
+                            label(for="checkboxes" class="CheckLabel")
+                            ul.CheckList
+                                li
+                                    input(type="checkbox" id="bfirst" name="first" hidden)
+                                    label(for="bfirst") Завтрак
+                                li
+                                    input(type="checkbox" id="bsecond" name="first" checked hidden)
+                                    label(for="bsecond") Письменный стол
+                                li
+                                    input(type="checkbox" id="bthird" name="first" checked hidden)
+                                    label(for="bthird") Стул для кормления
+                        form(action="#").radioButtons
+                            h3 Radio buttons 
+                            p
+                                input(type="radio" id="test1" name="radio-group" checked)
+                                label(for="test1") Мужчина
+                            
+                                input(type="radio" id="test2" name="radio-group")
+                                label(for="test2") Женщина
+                            
                             
 
 script(src="../src/datepicker.min.js")

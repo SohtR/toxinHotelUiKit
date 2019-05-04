@@ -540,6 +540,13 @@ main{
     margin: 10px;
   }
 }
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  form{
+    margin: 10px;
+  }
+}
 .email{
   h3{
     margin: 20px 0 0 20px;
@@ -624,4 +631,159 @@ main{
   
 #expander {
     display: none;
+}
+
+.roomFeature{
+  width: 291px;
+  margin: 20px 0 0 0;
+  padding: 0 0 18px 0px;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  p{
+    padding: 0 0 5px 54px;
+    margin: 0;
+    color: rgba(31, 32, 65, 0.75);
+  }
+  .roomFeature__headline{
+    font-family: 'MontserratBold';
+    
+  }
+  &.comfort{
+    background: url(../img/comfort.png) no-repeat;
+  }
+  &.udobstvo{
+    background: url(../img/udobstvo.png) no-repeat;
+  }
+}
+
+.flex form.checkboxes{
+  margin: auto;
+}
+.CheckList {
+  margin: 18px 0 0 24px;
+  padding: 0;
+  width: 266px;
+  li{
+    margin: 0 0 10px 0;
+    height: 20px;
+  }
+  input[type="checkbox"]{
+    display:none;            
+  }
+  input[type="checkbox"] + label{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
+    cursor: pointer;
+  }
+  input[type="checkbox"] + label::before{
+    content: "";
+    display: inline-block;
+    margin: 0 10px 0 0;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: relative;
+    top: 4px;
+  }
+  input[type="checkbox"]:checked + label::before {
+    background: url(../img/checked.png) no-repeat top left;
+    border: none;  
+  }
+  
+}
+#checkboxes{
+    display: none;
+   
+  }
+  .CheckLabel {
+    position: relative;
+    
+    &:hover {
+      color: orange;
+    }
+    
+    &:after {
+      content: 'Checkbox buttons';
+      white-space: nowrap;
+      position: absolute;
+      bottom: 0;
+      left: 2em;
+      width: 266px;
+      font-family: 'MontserratBold';
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #1F2041;
+      
+    }
+    
+}
+
+.radioButtons{
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked) {
+      position: absolute;
+      left: -9999px;
+  }
+  [type="radio"]:checked + label,
+  [type="radio"]:not(:checked) + label
+  {
+      position: relative;
+      padding-left: 28px;
+      cursor: pointer;
+      line-height: 20px;
+      display: inline-block;
+      color: rgba(31, 32, 65, 0.75);
+      margin: 0 20px 0 0;
+  }
+  [type="radio"]:not(:checked) + label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      border-radius: 100%;
+      background: #fff;
+  }
+  [type="radio"]:checked + label:before{
+      border: 1px solid #BC9CFF;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      background: #fff;
+  }
+  [type="radio"]:checked + label:after,
+  [type="radio"]:not(:checked) + label:after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      border-radius: 100%;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+  }
+  [type="radio"]:not(:checked) + label:after {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+  [type="radio"]:checked + label:after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
 }

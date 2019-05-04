@@ -274,6 +274,45 @@
               </ul>
             </form>
           </div>
+          <div class="flex">
+            <div class="flex-col"> 
+              <div class="roomFeature comfort">
+                <p class="roomFeature__headline">Комфорт</p>
+                <p>Шумопоглощающие стены</p>
+              </div>
+              <div class="roomFeature udobstvo">
+                <p class="roomFeature__headline">Удобство</p>
+                <p>Окно в каждой из спален</p>
+              </div>
+            </div>
+            <form class="checkboxes" action="#">
+              <input id="checkboxes" type="checkbox">
+              <label class="CheckLabel" for="checkboxes"></label>
+              <ul class="CheckList">
+                <li>
+                  <input type="checkbox" id="bfirst" name="first" hidden>
+                  <label for="bfirst">Завтрак</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="bsecond" name="first" checked hidden>
+                  <label for="bsecond">Письменный стол</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="bthird" name="first" checked hidden>
+                  <label for="bthird">Стул для кормления</label>
+                </li>
+              </ul>
+            </form>
+            <form class="radioButtons" action="#">
+              <h3>Radio buttons </h3>
+              <p>
+                <input type="radio" id="test1" name="radio-group" checked>
+                <label for="test1">Мужчина</label>
+                <input type="radio" id="test2" name="radio-group">
+                <label for="test2">Женщина</label>
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </main>
