@@ -1440,3 +1440,62 @@ main {
   -webkit-transform: scale(1);
   transform: scale(1); }
 
+.toggleButton p {
+  margin: 0 0 0 10px; }
+
+.toggle {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0); }
+  .toggle:before {
+    content: "";
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 20px;
+    display: block;
+    background: #fff;
+    border-radius: 10px;
+    transition: background .2s ease;
+    border: 1px solid rgba(31, 32, 65, 0.25); }
+  .toggle span {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 12px;
+    height: 12px;
+    display: block;
+    background: rgba(31, 32, 65, 0.25);
+    border-radius: 10px;
+    transition: all .2s ease; }
+    .toggle span:before {
+      content: "";
+      position: absolute;
+      display: block;
+      margin: -18px;
+      width: 56px;
+      height: 56px;
+      background: rgba(79, 46, 220, 0.5);
+      border-radius: 50%;
+      transform: scale(0);
+      opacity: 1;
+      pointer-events: none; }
+
+#cbx:checked + .toggle:before {
+  background: #FFFFFF;
+  border: 1px solid #BC9CFF; }
+
+#cbx:checked + .toggle span {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  transform: translateX(20px);
+  transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease; }
+
+#cbx:checked + .toggle:before {
+  transform: scale(1);
+  transition: all .4s ease; }
+
