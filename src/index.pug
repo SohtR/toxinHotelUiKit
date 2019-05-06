@@ -3,11 +3,16 @@ html
     head
         script(src="https://code.jquery.com/jquery-1.12.4.min.js")                
         script(src="../src/numbercategoryselector.js")
+        script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+        script
+            include rangeSlider.js
         meta(charset = 'utf-8')
         meta(name='viewport', content="initial-scale=1.0, width=device-width")
         title Toxin Hotel
     body
         main
+            
+                        
             .headerButtons
                 .wrapper   
                     a.header__logo(href="#") 
@@ -270,14 +275,36 @@ html
                                     label(for="cbx" class="toggle")
                                         span
                                     p Получать спецпредложения
-                                    
-                            
+                    .flex   
+                        .flex-column 
+                            h3 like button
+                            a(href="#" title="Love it" class="btn-counter my-counter my" data-count="0")
+                                span
+                        .flex-column
+                            h3 rate button
+                            span(class="rating")
+                                input(id="rating5" type="radio" name="rating" value="5")
+                                label(for="rating5") 5
+                                input(id="rating4" type="radio" name="rating" value="4")
+                                label(for="rating4") 4
+                                input(id="rating3" type="radio" name="rating" value="3")
+                                label(for="rating3") 3
+                                input(id="rating2" type="radio" name="rating" value="2" checked)
+                                label(for="rating2") 2
+                                input(id="rating1" type="radio" name="rating" value="1")
+                                label(for="rating1") 1
+                        .flex-column
+                            .rangeSlider
+                                label(for="amount") Range Slider
+                                input(type="text" disabled id="amount" readonly)
+                                #slider-range
                             
 
 script(src="../src/datepicker.min.js")
 script
     include ncs.js                        
-                        
+script 
+    include likeButton.js
                   
                             
                             

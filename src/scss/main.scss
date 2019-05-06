@@ -53,7 +53,7 @@ a{
   font-size: 0.875rem;
   color: rgba(31, 32, 65, 0.5);
   list-style: none;
-   text-decoration: none;
+  text-decoration: none;
 }
 h1{
   font-size: 24px;
@@ -540,9 +540,10 @@ main{
     margin: 10px;
   }
 }
-.flex-col{
+.flex-column{
   display: flex;
   flex-direction: column;
+  margin: auto 20px;
   form{
     margin: 10px;
   }
@@ -860,4 +861,245 @@ main{
       transition: all .4s ease;
       
     }
+}
+
+
+.my {
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  line-height: 18px;
+  padding: 0 8px;
+  position: relative;
+  font-size: 10px;
+  text-decoration: none;
+  background:#fff url(../img/like_border.svg) no-repeat 4px 6px;
+}
+/*
+ * Counter button style
+ */
+
+.my-counter:after {
+  padding: 0 14px;
+  color: rgba(31, 32, 65, 0.25);
+  content: attr(data-count);
+  left: 10;
+/*   margin-left: 8px;
+  margin-right: -13px; */
+  position: absolute;
+  top: 1px;
+  
+}
+
+.my {
+  color: rgba(31, 32, 65, 0.25);
+}
+.my:hover,
+.my.active {
+  background:#fff url(../img/like.svg) no-repeat 4px 6px;
+  border: 1px solid #BC9CFF;
+  color: #BC9CFF;
+}
+.my:hover:after,
+.my.active:after{
+  color: #BC9CFF;
+ 
+} 
+
+
+.rating{
+  overflow: hidden;
+  vertical-align: bottom;
+  display: inline-block;
+  width: 120px;
+  height: 24px;
+    input{
+    opacity: 0;
+    margin-right: -100%;
+  }
+  label{
+    position: relative;
+    display: block;
+    float: right;
+    background: url('../img/star_border.png') no-repeat;
+    background-size: 24px 24px;
+  }
+  label:before{
+    display: block;
+    opacity: 0;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background: url('../img/star.png') no-repeat;
+    background-size: 24px 24px;
+    transition: opacity 0.2s linear;
+  }
+}
+.rating > label:hover:before,
+.rating > label:hover ~ label:before,
+.rating:not(:hover) > :checked ~ label:before{
+  opacity: 1;
+}
+
+
+#amount{
+  background: $bgColor;
+  border:0;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  text-align: right;
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.5);
+  margin: 0 0 20px 0;
+}
+.ui-slider {
+	position: relative;
+	text-align: left;
+}
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 12px;
+	height: 12px;
+	cursor: default;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background-position: 0 0;
+}
+
+/* support: IE8 - See #6727 */
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+	filter: inherit;
+}
+
+.ui-slider-horizontal {
+	height: 6px;
+}
+.ui-slider-horizontal .ui-slider-handle {
+	top: -6px;
+	margin-left: -.6em;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+	left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+
+.ui-slider-vertical {
+	width: .8em;
+	height: 100px;
+}
+.ui-slider-vertical .ui-slider-handle {
+	left: -.3em;
+	margin-left: 0;
+	margin-bottom: -.6em;
+}
+.ui-slider-vertical .ui-slider-range {
+	left: 0;
+	width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+	bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+	top: 0;
+}
+.ui-sortable-handle {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+
+.ui-widget {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 1em;
+}
+.ui-widget .ui-widget {
+	font-size: 1em;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 1em;
+}
+.ui-widget.ui-widget-content {
+	border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 266px;
+}
+.ui-widget-content {
+	border: 1px solid #dddddd;
+	background: #ffffff;
+	color: #333333;
+}
+.ui-widget-content a {
+	color: #333333;
+}
+.ui-widget-header {
+	border: 1px solid #dddddd;
+	background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+	color: #333333;
+	font-weight: bold;
+}
+.ui-widget-header a {
+	color: #333333;
+}
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+
+/* We use html here because we need a greater specificity to make sure disabled
+works properly when clicked or hovered */
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+	border: 2px solid #FFFFFF;
+	background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+	font-weight: normal;
+	color: #454545;
+  border-radius: 10px;
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited,
+a.ui-button,
+a:link.ui-button,
+a:visited.ui-button,
+.ui-button {
+	color: #454545;
+	text-decoration: none;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+	border: 2px solid #FFFFFF;
+	background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+	font-weight: normal;
+	color: #2b2b2b;
 }

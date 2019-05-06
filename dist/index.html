@@ -3,6 +3,21 @@
   <head>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js">               </script>
     <script src="../src/numbercategoryselector.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>$( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 1000,
+      max: 16000,
+      values: [ 5000, 10000 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( ui.values[ 0 ] + "₽" + " - " + ui.values[ 1 ] + "₽" );
+      }
+    });
+    $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ) + "₽"  +
+      " - " + $( "#slider-range" ).slider( "values", 1 ) + "₽" );
+  } );
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Toxin Hotel</title>
@@ -321,6 +336,31 @@
               </div>
             </form>
           </div>
+          <div class="flex">  
+            <div class="flex-column"> 
+              <h3>like button</h3><a class="btn-counter my-counter my" href="#" title="Love it" data-count="0"><span></span></a>
+            </div>
+            <div class="flex-column">
+              <h3>rate button</h3><span class="rating">
+                <input id="rating5" type="radio" name="rating" value="5">
+                <label for="rating5">5</label>
+                <input id="rating4" type="radio" name="rating" value="4">
+                <label for="rating4">4</label>
+                <input id="rating3" type="radio" name="rating" value="3">
+                <label for="rating3">3</label>
+                <input id="rating2" type="radio" name="rating" value="2" checked>
+                <label for="rating2">2</label>
+                <input id="rating1" type="radio" name="rating" value="1">
+                <label for="rating1">1</label></span>
+            </div>
+            <div class="flex-column">
+              <div class="rangeSlider">
+                <label for="amount">Range Slider</label>
+                <input type="text" disabled id="amount" readonly>
+                <div id="slider-range"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -341,4 +381,18 @@ $("input[name='NCS']").NCS({
     useDisplay: false,
     showZero: false,
 });
+</script>
+<script>
+   $('.btn-counter').on('click', function(event, count) {
+    event.preventDefault();
+    
+    var $this = $(this),
+        count = $this.attr('data-count'),
+        active = $this.hasClass('active'),
+        multiple = $this.hasClass('multiple-count');
+    
+    $.fn.noop = $.noop;
+    $this.attr('data-count', ! active || multiple ? ++count : --count  )[multiple ? 'noop' : 'toggleClass']('active');
+    
+  });
 </script>
