@@ -3,6 +3,7 @@ html
     head
         script(src="https://code.jquery.com/jquery-1.12.4.min.js")                
         script(src="../src/numbercategoryselector.js")
+        script(src="../src/numbercategoryselectorGuest.js")
         script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
         script
             include rangeSlider.js
@@ -32,7 +33,7 @@ html
                                     a(href='#') News
                                 li
                                     a(href='#') Documentation
-                        .buttons
+                        .headerButtons__buttons
                             a.btn.btn-login(href='#') login
                             a.btn.btn-register(href='#') register
             .header
@@ -185,11 +186,11 @@ html
                             label(for="textfield") 
                                 h3 Text field
                             input(type="text", name="textfield", placeholder="Email", id="textfield")
-                        .dropdownGuests
+                        .dropdownRooms
                             form(action="#").dropdown
                                 label(for="dropdown") 
                                     h3 Dropdown
-                                input(id="dropdown" name="NCS", type="text", readonly, placeholder="Сколько гостей")
+                                input(id="dropdown" name="NCS", type="text", readonly, placeholder="Параметры комнаты")
                             
                         
                         form(action="#", method="post").maskedText
@@ -298,11 +299,20 @@ html
                                 label(for="amount") Range Slider
                                 input(type="text" disabled id="amount" readonly)
                                 #slider-range
+                        .flex-column
+                            .dropdownGuests
+                            form(action="#").dropdownGuest
+                                label(for="dropdownGuest") 
+                                    h3 Dropdown
+                                input(id="dropdownGuest" name="guest", type="text", readonly, placeholder="Сколько гостей")
                             
 
 script(src="../src/datepicker.min.js")
+  
 script
-    include ncs.js                        
+    include guest.js
+script
+    include ncs.js                     
 script 
     include likeButton.js
                   
