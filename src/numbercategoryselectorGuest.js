@@ -185,8 +185,10 @@
                 $gtext += $gsum + " гостя";
                 if ($gsum == 0) {
                     $ginput.val($goriginalPlaceholder); 
+                    $(".NCSG.reset").hide();
                 } else {
                     $ginput.val($gtext);
+                    $(".NCSG.reset").show();
                 }
                 
             }
@@ -255,6 +257,7 @@
                     if (settings.categoryValues[$gi] != 0 || settings.showZero) {
                         settings.categoryValues[$gi] = 0;
                         $("div.guest.value[category='" + $gi + "']").text("0");
+                        $(".guest.button.minus").addClass("inactive");
                         doCallback();
                     }
                 }
