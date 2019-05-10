@@ -1,3 +1,11 @@
+mixin btnBorder(name)
+    a.btn.btnBorder=name
+mixin btnFill(name)
+    a.btn.btnFill=name
+mixin btnLong(name)
+    a.btn.btnLong=name
+
+
 doctype html
 html
     head
@@ -34,8 +42,8 @@ html
                                 li
                                     a(href='#') Documentation
                         .headerButtons__buttons
-                            a.btn.btn-login(href='#') login
-                            a.btn.btn-register(href='#') register
+                            +btnBorder('login')
+                            +btnFill('register')
             .header
                 .wrapper
                     a.header__logo(href="#") 
@@ -305,7 +313,22 @@ html
                                 label(for="dropdownGuest") 
                                     h3 Dropdown
                                 input(id="dropdownGuest" name="guest", type="text", readonly, placeholder="Сколько гостей")
-                            
+                    .flex
+                        .clickMe
+                            h3 Buttons
+                            +btnFill('click me')  
+                            +btnBorder('click me')    
+                            a.linkPurple(href='#') click me  
+                            +btnLong('перейти к оплате')
+                        .pagination
+                            h3 pagination
+                            a.active(href="#") 1
+                            a(href="#") 2
+                            a(href="#") 3
+                            span &hellip;
+                            a(href="#") 15
+                            a.next(href="#") next
+                            p 1 – 12 из 100+ вариантов аренды
 
 script(src="../src/datepicker.min.js")
   

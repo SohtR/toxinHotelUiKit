@@ -1027,31 +1027,32 @@ main {
   .headerButtons__buttons a:nth-child(2) {
     margin: 0 0 0 1.3125rem; }
 
-.btn-register {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-radius: 22px;
+.btn {
+  height: 34px;
+  box-sizing: border-box;
+  cursor: pointer;
   font-family: 'MontserratBold';
   font-size: 0.75rem;
   text-transform: uppercase;
   color: #ffffff;
   text-align: center;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px; }
+
+.btnFill {
   padding: 0.625rem 1.1875rem; }
 
-.btn-register:hover,
-.btn-register:active {
+.btnFill:hover,
+.btnFill:active {
   opacity: 0.5; }
 
-.btn-login {
+.btnBorder {
   position: relative;
-  font-family: 'MontserratBold';
-  font-size: 0.75rem;
-  text-transform: uppercase;
   color: #BC9CFF;
-  border-radius: 1.37em;
   padding: 0.55em 1.5em;
-  background-color: #ffffff; }
+  background: #ffffff; }
 
-.btn-login::before {
+.btnBorder::before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -1062,8 +1063,8 @@ main {
   border-radius: 22px;
   background: linear-gradient(to bottom, #BC9CFF, #8BA4F9); }
 
-.btn-login:hover::before,
-.btn-login:active::before {
+.btnBorder:hover::before,
+.btnBorder:active::before {
   opacity: 0.5; }
 
 .header {
@@ -1292,7 +1293,8 @@ main {
 .form-elements {
   width: 100%;
   margin: 50px 0 0 0;
-  display: flex; }
+  display: flex;
+  z-index: 1; }
 
 #textfield,
 #maskedText {
@@ -1861,4 +1863,68 @@ a:visited.ui-button,
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
   font-weight: normal;
   color: #2b2b2b; }
+
+.clickMe h3 {
+  margin: 20px; }
+
+.clickMe .btn {
+  margin: 20px; }
+
+.clickMe .btnFill {
+  padding: 14.8px 19px;
+  margin: 20px; }
+
+.clickMe .btnBorder {
+  padding: 11px 17px; }
+
+.linkPurple {
+  font-family: 'MontserratBold';
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF; }
+
+.linkPurple:hover,
+.linkPurple:active {
+  color: rgba(31, 32, 65, 0.5); }
+
+.btnLong {
+  width: 320px;
+  height: 44px;
+  display: inline-block;
+  text-align: center;
+  background: url(./img/arrow_forward.png) no-repeat right 13px center, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  padding: 15px 0 0 0; }
+  .btnLong:hover, .btnLong:active {
+    opacity: 0.5; }
+
+.pagination a, .pagination span {
+  display: inline-block;
+  width: 40px;
+  height: 41px;
+  border-radius: 22px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  font-family: 'Montserrat';
+  font-size: 12px;
+  color: rgba(31, 32, 65, 0.5); }
+
+.pagination .active,
+.pagination a:hover {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: #fff; }
+
+.pagination .next {
+  background: url(./img/arrow_forward.png) no-repeat center, linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  text-indent: -1000000px; }
+  .pagination .next:hover {
+    background: url(./img/arrow_forward.png) no-repeat center, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+
+.pagination p {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  margin: 8px 0 0 5px; }
 
