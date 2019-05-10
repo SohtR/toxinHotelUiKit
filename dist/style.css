@@ -1928,3 +1928,44 @@ a:visited.ui-button,
   color: rgba(31, 32, 65, 0.75);
   margin: 8px 0 0 5px; }
 
+.richCheckbox .CheckList li {
+  margin: 0 0 42px 0; }
+  .richCheckbox .CheckList li label {
+    font-family: 'MontserratBold';
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75); }
+  .richCheckbox .CheckList li p {
+    margin: 0;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(31, 32, 65, 0.5);
+    padding: 4px 5px 0 30px; }
+
+#richCheckbox {
+  display: none; }
+
+.bulletList li {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  margin: 0 0 10px 10px;
+  position: relative;
+  padding: 0 0 0 12px;
+  width: 240px; }
+
+.bulletList li:before {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: rgba(31, 32, 65, 0.25);
+  content: "";
+  padding-right: 0px;
+  display: inline-block;
+  margin: 0 10px 0 0;
+  position: absolute;
+  left: -9px;
+  top: 7px; }
+
