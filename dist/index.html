@@ -1,24 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js">               </script>
-    <script src="../src/numbercategoryselector.js"></script>
-    <script src="../src/numbercategoryselectorGuest.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>$( function() {
-    $( "#slider-range" ).slider({
-      range: true,
-      min: 1000,
-      max: 16000,
-      values: [ 5000, 10000 ],
-      slide: function( event, ui ) {
-        $( "#amount" ).val( ui.values[ 0 ] + "₽" + " - " + ui.values[ 1 ] + "₽" );
-      }
-    });
-    $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ) + "₽"  +
-      " - " + $( "#slider-range" ).slider( "values", 1 ) + "₽" );
-  } );
-    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <title>Toxin Hotel</title>
@@ -233,18 +217,18 @@
             </form>
           </div>
           <div class="flex">  
-            <form class="dataDropdown" action="#" method="post">
+            <div class="dataDropdown">
               <label for=""> 
                 <h3>Data Dropdown</h3>
               </label>
               <input class="datepicker-here" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
-            </form>
-            <form class="filterDropdown" action="#">
+            </div>
+            <div class="filterDropdown">
               <label for=""> 
                 <h3>Filter Dropdown    </h3>
               </label>
               <input class="datepicker-here" type="text" data-range="true" data-multiple-dates-separator=" - " data-clear-Button="true" data-apply-Button="true">
-            </form>
+            </div>
             <div class="email">
               <h3>subscription textfield</h3>
               <form class="formEmail" action="#" method="post">
@@ -409,12 +393,22 @@
               </ul>
             </div>
           </div>
+          <div class="flex">
+            <div class="review">
+              <div class="review__topBlock"><img class="review__avatar" src="../src/img/avatar2.jpg" alt="avatar">
+                <p class="review__name"><b>Мурад Сарафанов</b> <br> 5 дней назад</p>
+              </div>
+              <div class="review__bottomBlock">
+                <div class="review__like"><a class="btn-counter my-counter my" href="#" title="Love it" data-count="11"><span></span></a></div>
+                <p class="review__content">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
   <script type="text/javascript" src="main.js"></script></body>
 </html>
-<script src="../src/datepicker.min.js"></script>
 <script>
 $("input[name='guest']").guest({
     categoryNames: ["Взрослые", "Дети", "Младенцы"],
@@ -446,7 +440,8 @@ $("input[name='NCS']").NCS({
 });
 </script>
 <script>
-   $('.btn-counter').on('click', function(event, count) {
+   
+    $('.btn-counter').on('click', function(event, count) {
     event.preventDefault();
     
     var $this = $(this),
@@ -458,4 +453,23 @@ $("input[name='NCS']").NCS({
     $this.attr('data-count', ! active || multiple ? ++count : --count  )[multiple ? 'noop' : 'toggleClass']('active');
     
   });
+
+</script>
+<script>
+  $( function() {
+      $( "#slider-range" ).slider({
+        range: true,
+        min: 1000,
+        max: 16000,
+        values: [ 5000, 10000 ],
+        slide: function( event, ui ) {
+          $( "#amount" ).val( ui.values[ 0 ] + "₽" + " - " + ui.values[ 1 ] + "₽" );
+        }
+      });
+      $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ) + "₽"  +
+        " - " + $( "#slider-range" ).slider( "values", 1 ) + "₽" );
+    } );
+
+
+ 
 </script>

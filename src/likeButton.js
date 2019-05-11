@@ -1,4 +1,5 @@
-$('.btn-counter').on('click', function(event, count) {
+
+    $('.btn-counter').on('click', function(event, count) {
     event.preventDefault();
     
     var $this = $(this),

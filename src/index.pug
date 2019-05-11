@@ -9,19 +9,15 @@ mixin btnLong(name)
 doctype html
 html
     head
-        script(src="https://code.jquery.com/jquery-1.12.4.min.js")                
-        script(src="../src/numbercategoryselector.js")
-        script(src="../src/numbercategoryselectorGuest.js")
+        script(src="https://code.jquery.com/jquery-1.12.4.min.js")
         script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
-        script
-            include rangeSlider.js
+        //- script(src="../src/js/jquery-ui.js")
+        //- script(src="../src/js/jquery-1.12.4.min.js")
         meta(charset = 'utf-8')
         meta(name='viewport', content="initial-scale=1.0, width=device-width")
         title Toxin Hotel
     body
         main
-            
-                        
             .headerButtons
                 .wrapper   
                     a.header__logo(href="#") 
@@ -64,7 +60,6 @@ html
                                 li
                                     a(href='#') Documentation
                         a(href="#").withBorder Cosmin Negoita
-                             
             .footer-big
                 .wrapper
                     .footer-big__main
@@ -206,11 +201,11 @@ html
                                 h3 Masked Textfield
                             input(type="text", placeholder="ДД.ММ.ГГГГ", id="maskedText", pattern="(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/\d{4}")
                     .flex   
-                        form(action="#", method="post").dataDropdown
+                        .dataDropdown
                             label(for="") 
                                 h3 Data Dropdown
                             input(type="text" class="datepicker-here" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true")
-                        form(action="#").filterDropdown
+                        .filterDropdown
                             label(for="") 
                                 h3 Filter Dropdown    
                             input(type="text" data-range="true" data-multiple-dates-separator=" - " class="datepicker-here" data-clear-Button="true" data-apply-Button="true")
@@ -349,14 +344,23 @@ html
                                 li Нельзя с питомцами
                                 li Без вечеринок и мероприятий
                                 li Время прибытия — после 13:00, а выезд до 12:00       
-script(src="../src/datepicker.min.js")
-  
+                    .flex
+                        .review
+                            .review__topBlock
+                                img.review__avatar(src="../src/img/avatar2.jpg", alt="avatar")
+                                p.review__name <b>Мурад Сарафанов</b> <br> 5 дней назад
+                            .review__bottomBlock
+                                .review__like
+                                    a(href="#" title="Love it" class="btn-counter my-counter my" data-count="11")
+                                        span
+                                p.review__content Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
 script
     include guest.js
 script
     include ncs.js                     
 script 
-    include likeButton.js
-                  
+   include likeButton.js
+script
+    include rangeSlider.js
                             
                             

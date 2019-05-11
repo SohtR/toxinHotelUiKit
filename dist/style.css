@@ -52,16 +52,16 @@
   z-index: 1; }
 
 .datepicker--cell.-focus- {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  color: #fff; }
+
+.datepicker--cell.-current- {
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
   border-radius: 22px; }
 
-.datepicker--cell.-current- {
-  color: #4EB5E6;
-  border-radius: 22px; }
-
 .datepicker--cell.-current-.-focus- {
-  color: #4a4a4a;
-  border-radius: 22px; }
+  color: #4a4a4a; }
 
 .datepicker--cell.-current-.-in-range- {
   color: #4EB5E6; }
@@ -1377,7 +1377,8 @@ main {
   box-sizing: border-box; }
 
 .flex {
-  display: flex; }
+  display: flex;
+  margin: 20px 0 0 0; }
   .flex form {
     margin: 10px; }
 
@@ -1651,8 +1652,8 @@ main {
   display: inline-block;
   width: 40px;
   height: 20px;
-  line-height: 18px;
-  padding: 0 8px;
+  line-height: 17px;
+  padding: 0 5px;
   position: relative;
   font-size: 10px;
   text-decoration: none;
@@ -1968,4 +1969,33 @@ a:visited.ui-button,
   position: absolute;
   left: -9px;
   top: 7px; }
+
+.review {
+  display: flex;
+  flex-direction: column;
+  max-width: 710px; }
+  .review .review__topBlock,
+  .review .review__bottomBlock {
+    display: flex; }
+  .review .review__avatar {
+    max-width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1); }
+  .review .review__name {
+    margin: 0px 0 0 10px;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75); }
+    .review .review__name b {
+      font-family: 'MontserratBold'; }
+  .review .review__like {
+    margin: 12px 0 0 4px; }
+  .review .review__content {
+    margin: 10px 0 0 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75); }
 

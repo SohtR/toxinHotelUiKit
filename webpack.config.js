@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const images = require('file-loader');
 module.exports = {
-  entry: { main: './src/index.js' },
+  entry: './src/index.js' ,
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
@@ -92,6 +92,11 @@ module.exports = {
     new HtmlWebpackPlugin({
         template: './src/index.pug'
     })
+    // new webpack.ProvidePlugin({
+    //   $: "./src/js/jquery-1.12.4.min.js",
+    //   jQuery: "./src/js/jquery-1.12.4.min.js",
+    //   "window.jQuery": "./src/js/jquery-1.12.4.min.js"
+    // })
     //new WebpackMd5Hash()
   ]
 };

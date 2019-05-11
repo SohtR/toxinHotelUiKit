@@ -26,18 +26,19 @@
 }
 
 .datepicker--cell.-focus- {
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 22px;
+    color: #fff;
 }
 
 .datepicker--cell.-current- {
-    color: #4EB5E6;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     border-radius: 22px;
 }
 
 .datepicker--cell.-current-.-focus- {
     color: #4a4a4a;
-    border-radius: 22px;
+    
 }
 
 .datepicker--cell.-current-.-in-range- {
