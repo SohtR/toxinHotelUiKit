@@ -13,6 +13,7 @@ input[name='guest'] {
             background: #fff url(../img/arrowDown.svg) 285px 9px no-repeat;
             text-overflow: ellipsis;
             outline: none;
+            cursor: pointer;
         }
 div.guest.parent {
     position: absolute;

@@ -4,7 +4,26 @@ mixin btnFill(name)
     a.btn.btnFill=name
 mixin btnLong(name)
     a.btn.btnLong=name
-
+mixin textField(id,ph)
+    label(for=id) 
+    input(class="textfield", type="text", name=id, placeholder=ph, id=id)
+mixin radioButton(id, content, name)
+    input(class="radioButton", type="radio" id=id name=name)
+    label(for=id)=content
+mixin maskedTextfield(id, ph)
+    label(for=id) 
+    input(class="textfield", type="text", placeholder=ph, id=id, pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}")
+mixin emailField(id, ph)
+    label(for=id) 
+    input(class="textfield", type="email", name=id, placeholder=ph, id=id)
+mixin passwordField(id, ph)
+    label(for=id) 
+    input(class="textfield", type="password", name=id, placeholder=ph, id=id)
+mixin toggleButton(id)
+    .toggleButton 
+        input(type="checkbox" id=id style="display:none")
+        label(for=id class="toggle")
+            span
 
 doctype html
 html
@@ -185,23 +204,23 @@ html
             .form-elements
                 .wrapper
                     .flex
-                        form(action="#", method="post").formText
-                            label(for="textfield") 
-                                h3 Text field
-                            input(type="text", name="textfield", placeholder="Email", id="textfield")
-                        .dropdownRooms
+                        .formText
+                            h3 Text field
+                            +textField('textfield','Email')
+                            .dropdownRooms
                             form(action="#").dropdown
                                 label(for="dropdown") 
                                     h3 Dropdown
                                 input(id="dropdown" name="NCS", type="text", readonly, placeholder="Параметры комнаты")
                             
                         
-                        form(action="#", method="post").maskedText
-                            label(for="maskedText") 
-                                h3 Masked Textfield
-                            input(type="text", placeholder="ДД.ММ.ГГГГ", id="maskedText", pattern="(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/\d{4}")
+                        .maskedText
+                            h3 Masked Textfield
+                            +maskedTextfield('maskedText',"ДД.ММ.ГГГГ")
                     .flex   
-                        include components/dataDropdown/dataDropdown.pug
+                        .date
+                            h3 Data Dropdown
+                            include components/dataDropdown/dataDropdown.pug
                         .filterDropdown
                             label(for="") 
                                 h3 Filter Dropdown    
@@ -261,20 +280,15 @@ html
                                 li
                                     input(type="checkbox" id="bthird" name="first" checked hidden)
                                     label(for="bthird") Стул для кормления
-                        form(action="#").radioButtons
-                            h3 Radio buttons 
+                        .radioBut
+                            h3 Radio buttons
                             p
-                                input(type="radio" id="test1" name="radio-group" checked)
-                                label(for="test1") Мужчина
-                            
-                                input(type="radio" id="test2" name="radio-group")
-                                label(for="test2") Женщина
-                        form(action="#").toggleButton
+                                +radioButton('test1','Мужчина','radio-group')
+                                +radioButton('test2', 'Женщина', 'radio-group')
+                        .toggleBut
                                 h3 Toggle
                                 .flex
-                                    input(type="checkbox" id="cbx" style="display:none")
-                                    label(for="cbx" class="toggle")
-                                        span
+                                    +toggleButton('cbx')
                                     p Получать спецпредложения
                     .flex   
                         .flex-column 
@@ -367,7 +381,24 @@ html
                                     h3 гости
                                     include components/dropdownGuest/dropdownGuest.pug
                                 +btnLong('подобрать номер')
-                                   
+                            .card.registerAccount
+                                h1 Регистрация аккаунта
+                                +textField('name', 'Имя')
+                                +textField('lastname', 'Фамилия')
+                                p
+                                    +radioButton('test3','Мужчина','group')
+                                    +radioButton('test4', 'Женщина', 'group')
+                                h3.registerAccount__birthday дата рождения
+                                +maskedTextfield('birthday',"ДД.ММ.ГГГГ")
+                                h3.registerAccount__enterData данные для входа в сервис
+                                +emailField('regEmail','Email')
+                                +passwordField('regPass', 'Пароль')
+                                .flex
+                                    +toggleButton('mailing')
+                                    p Получать спецпредложения
+                                +btnLong('Перейти к оплате')
+                                p.haveAccount Уже есть аккаунт на Toxin
+                                    +btnBorder('войти')
 script
     include guest.js
 script

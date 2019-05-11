@@ -36,7 +36,7 @@
 }
 @import 'datepicker.min';
 @import 'numbercategoryselector';
-@import 'numbercategoryselectorGuest';
+@import '../components/dropdownGuest/numbercategoryselectorGuest.scss';
 @mixin outline1{
   outline:1px solid black;
 }
@@ -53,6 +53,9 @@ a{
   color: rgba(31, 32, 65, 0.5);
   list-style: none;
   text-decoration: none;
+}
+p{
+  margin: 0;
 }
 h1{
   font-size: 24px;
@@ -446,8 +449,7 @@ main{
   display: flex;
   z-index: 1;
 }
-#textfield,
-#maskedText{
+.textfield{
   width: 320px;
   height: 44px;
   background: #FFFFFF;
@@ -461,51 +463,17 @@ main{
   padding: 0 0 0 15px;
 
 }
-#textfield:hover,
-#textfield:focus{
+.textfield:hover,
+.textfield:focus{
   border: 1px solid rgba(31, 32, 65, 0.5);
   color: rgba(31, 32, 65, 0.75);
 }
-#textfield:focus::placeholder{
+.textfield:focus::placeholder{
   opacity:0;
 }
 
 
-.formDropdown{
-  margin: 20px 0 10px 0;
-  input[type="submit"]{
-  background: url(../img/arrowDown.svg) no-repeat;
-  border: none;
-  outline: none;
-  margin: 0.8125rem 0 0 0.6875rem;
-  width: 1.125rem;
-  height: 1.125rem;
-  border-radius: 4px;
-  }
-  select{
-    width: 320px;
-    display: block;
-    padding: 10px 70px 10px 13px !important; 
-    max-width: 100%; 
-    height: 44px; 
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
-    border-radius: 4px;
-    background: url("../img/arrowDown.svg") right center no-repeat; 
-    background-color: #fff; 
-    color: #444444; 
-    font-size: 12px; 
-    line-height: 16px !important; 
-    appearance: none; 
-    /* this is must */ -webkit-appearance: none; 
-    -moz-appearance: none;
-    option{
-      border: 1px solid rgba(31, 32, 65, 0.25);
-      border-radius: 5px;
-    }
-  }
-  
-}
+
 
 .filterDropdown{
   input{
@@ -715,14 +683,14 @@ main{
     
 }
 
-.radioButtons{
-  [type="radio"]:checked,
-  [type="radio"]:not(:checked) {
+.radioButton{
+  &[type="radio"]:checked,
+  &[type="radio"]:not(:checked) {
       position: absolute;
       left: -9999px;
   }
-  [type="radio"]:checked + label,
-  [type="radio"]:not(:checked) + label
+  &[type="radio"]:checked + label,
+  &[type="radio"]:not(:checked) + label
   {
       position: relative;
       padding-left: 28px;
@@ -732,7 +700,7 @@ main{
       color: rgba(31, 32, 65, 0.75);
       margin: 0 20px 0 0;
   }
-  [type="radio"]:not(:checked) + label:before {
+  &[type="radio"]:not(:checked) + label:before {
       content: '';
       position: absolute;
       left: 0;
@@ -740,10 +708,11 @@ main{
       width: 20px;
       height: 20px;
       border: 1px solid rgba(31, 32, 65, 0.25);
-      border-radius: 100%;
+      border-radius: 10px;
       background: #fff;
+      box-sizing: border-box;
   }
-  [type="radio"]:checked + label:before{
+  &[type="radio"]:checked + label:before{
       border: 1px solid #BC9CFF;
       content: '';
       position: absolute;
@@ -751,28 +720,29 @@ main{
       top: 0;
       width: 20px;
       height: 20px;
-      border-radius: 100%;
+      border-radius: 10px;
       background: #fff;
+      box-sizing: border-box;
   }
-  [type="radio"]:checked + label:after,
-  [type="radio"]:not(:checked) + label:after {
+  &[type="radio"]:checked + label:after,
+  &[type="radio"]:not(:checked) + label:after {
       content: '';
       width: 12px;
       height: 12px;
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       position: absolute;
-      top: 5px;
-      left: 5px;
+      top: 4px;
+      left: 4px;
       border-radius: 100%;
       -webkit-transition: all 0.2s ease;
       transition: all 0.2s ease;
   }
-  [type="radio"]:not(:checked) + label:after {
+  &[type="radio"]:not(:checked) + label:after {
       opacity: 0;
       -webkit-transform: scale(0);
       transform: scale(0);
   }
-  [type="radio"]:checked + label:after {
+  &[type="radio"]:checked + label:after {
       opacity: 1;
       -webkit-transform: scale(1);
       transform: scale(1);
@@ -835,11 +805,10 @@ main{
     }
   }
 }
-#cbx:checked + .toggle{
+.toggleButton input[type="checkbox"]:checked + .toggle{
   &:before{
     background: #FFFFFF;
     border: 1px solid #BC9CFF;
-    
   }
   span{
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -1267,26 +1236,70 @@ a:visited.ui-button,
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;}
-.searchRoom{
-  .flex{
-    margin: 0 0 10px 0;
-  }
+  border-radius: 4px;
   h1{
     font-family: 'MontserratBold';
     font-size: 24px;
     line-height: 30px;
     color: #1F2041;
-    margin: 0px;
+    margin: 0 0 20px 0;
     letter-spacing: -0.4px;
   }
+}
+.searchRoom{
+  .flex{
+    margin: 0 0 10px 0;
+  }
+  
   h3{
-       margin: 21px 0 4px 0;
+       margin: 1px 0 4px 0;
     }
   .searchRoom__arrival{
     margin: 0 20px 0 0;
   }
   .dropdownGuest{
     margin: 0 0 9px 0;
+  }
+}
+.registerAccount{
+  z-index: 1;
+  h1{
+    letter-spacing: -0.6px;
+  }
+  input{
+    margin: 0 0 10px 0;
+  }
+  input[type="password"]{
+    margin: 0 0 8px 0;
+  }
+  .registerAccount__birthday{
+    margin: 25px 0 5px 0;
+  }
+  .registerAccount__enterData{
+    margin: 10px 0 5px 0;
+  }
+  .flex{
+    margin: 0px 0 3px 0;
+    p{
+    margin: 0 0 20px 10px;
+    line-height: 22px;
+    }
+  }
+  .btnLong{
+    margin: 0 0 30px 0;
+  }
+  .haveAccount{
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
+    
+  }
+  .btnBorder{
+    margin: 2px 0 0 37px;
+    width: 96px;
+    height: 40px;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 29px;
   }
 }

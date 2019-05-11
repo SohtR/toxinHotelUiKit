@@ -8,11 +8,12 @@ input[name='NCS']{
             font-size: 14px;
             line-height: 24px;
             margin: 0 0 23px 0; //Костыль. Убрать, если выпадающее меню ниже, чем надо (виноват img logo)
-            color: rgba(31, 32, 65, 0.75);
+            color: rgba(56, 56, 77, 0.75);
             font-family: 'Montserrat';
             background: #ffffff url("../img/arrowDown.svg") 232px 9px no-repeat; 
             text-overflow: ellipsis;
             outline: none;
+            cursor: pointer;
         }
 div.NCS.parent {
     position: absolute;

@@ -683,11 +683,12 @@ input[name='NCS'] {
   font-size: 14px;
   line-height: 24px;
   margin: 0 0 23px 0;
-  color: rgba(31, 32, 65, 0.75);
+  color: rgba(56, 56, 77, 0.75);
   font-family: 'Montserrat';
   background: #ffffff url(./fonts/arrowDown/arrowDown.svg) 232px 9px no-repeat;
   text-overflow: ellipsis;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
 
 div.NCS.parent {
   position: absolute;
@@ -810,7 +811,8 @@ input[name='guest'] {
   font-family: 'Montserrat';
   background: #fff url(./fonts/arrowDown/arrowDown.svg) 285px 9px no-repeat;
   text-overflow: ellipsis;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
 
 div.guest.parent {
   position: absolute;
@@ -959,6 +961,9 @@ a {
   color: rgba(31, 32, 65, 0.5);
   list-style: none;
   text-decoration: none; }
+
+p {
+  margin: 0; }
 
 h1 {
   font-size: 24px;
@@ -1309,8 +1314,7 @@ main {
   display: flex;
   z-index: 1; }
 
-#textfield,
-#maskedText {
+.textfield {
   width: 320px;
   height: 44px;
   background: #FFFFFF;
@@ -1323,45 +1327,13 @@ main {
   color: rgba(31, 32, 65, 0.25);
   padding: 0 0 0 15px; }
 
-#textfield:hover,
-#textfield:focus {
+.textfield:hover,
+.textfield:focus {
   border: 1px solid rgba(31, 32, 65, 0.5);
   color: rgba(31, 32, 65, 0.75); }
 
-#textfield:focus::placeholder {
+.textfield:focus::placeholder {
   opacity: 0; }
-
-.formDropdown {
-  margin: 20px 0 10px 0; }
-  .formDropdown input[type="submit"] {
-    background: url(./fonts/arrowDown/arrowDown.svg) no-repeat;
-    border: none;
-    outline: none;
-    margin: 0.8125rem 0 0 0.6875rem;
-    width: 1.125rem;
-    height: 1.125rem;
-    border-radius: 4px; }
-  .formDropdown select {
-    width: 320px;
-    display: block;
-    padding: 10px 70px 10px 13px !important;
-    max-width: 100%;
-    height: 44px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
-    border-radius: 4px;
-    background: url(./fonts/arrowDown/arrowDown.svg) right center no-repeat;
-    background-color: #fff;
-    color: #444444;
-    font-size: 12px;
-    line-height: 16px !important;
-    appearance: none;
-    /* this is must */
-    -webkit-appearance: none;
-    -moz-appearance: none; }
-    .formDropdown select option {
-      border: 1px solid rgba(31, 32, 65, 0.25);
-      border-radius: 5px; }
 
 .filterDropdown input {
   width: 266px;
@@ -1526,13 +1498,12 @@ main {
     text-transform: uppercase;
     color: #1F2041; }
 
-.radioButtons [type="radio"]:checked,
-.radioButtons [type="radio"]:not(:checked) {
+.radioButton[type="radio"]:checked, .radioButton[type="radio"]:not(:checked) {
   position: absolute;
   left: -9999px; }
 
-.radioButtons [type="radio"]:checked + label,
-.radioButtons [type="radio"]:not(:checked) + label {
+.radioButton[type="radio"]:checked + label,
+.radioButton[type="radio"]:not(:checked) + label {
   position: relative;
   padding-left: 28px;
   cursor: pointer;
@@ -1541,7 +1512,7 @@ main {
   color: rgba(31, 32, 65, 0.75);
   margin: 0 20px 0 0; }
 
-.radioButtons [type="radio"]:not(:checked) + label:before {
+.radioButton[type="radio"]:not(:checked) + label:before {
   content: '';
   position: absolute;
   left: 0;
@@ -1549,10 +1520,11 @@ main {
   width: 20px;
   height: 20px;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 100%;
-  background: #fff; }
+  border-radius: 10px;
+  background: #fff;
+  box-sizing: border-box; }
 
-.radioButtons [type="radio"]:checked + label:before {
+.radioButton[type="radio"]:checked + label:before {
   border: 1px solid #BC9CFF;
   content: '';
   position: absolute;
@@ -1560,28 +1532,29 @@ main {
   top: 0;
   width: 20px;
   height: 20px;
-  border-radius: 100%;
-  background: #fff; }
+  border-radius: 10px;
+  background: #fff;
+  box-sizing: border-box; }
 
-.radioButtons [type="radio"]:checked + label:after,
-.radioButtons [type="radio"]:not(:checked) + label:after {
+.radioButton[type="radio"]:checked + label:after,
+.radioButton[type="radio"]:not(:checked) + label:after {
   content: '';
   width: 12px;
   height: 12px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 4px;
+  left: 4px;
   border-radius: 100%;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease; }
 
-.radioButtons [type="radio"]:not(:checked) + label:after {
+.radioButton[type="radio"]:not(:checked) + label:after {
   opacity: 0;
   -webkit-transform: scale(0);
   transform: scale(0); }
 
-.radioButtons [type="radio"]:checked + label:after {
+.radioButton[type="radio"]:checked + label:after {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1); }
@@ -1632,16 +1605,16 @@ main {
       opacity: 1;
       pointer-events: none; }
 
-#cbx:checked + .toggle:before {
+.toggleButton input[type="checkbox"]:checked + .toggle:before {
   background: #FFFFFF;
   border: 1px solid #BC9CFF; }
 
-#cbx:checked + .toggle span {
+.toggleButton input[type="checkbox"]:checked + .toggle span {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   transform: translateX(20px);
   transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease; }
 
-#cbx:checked + .toggle:before {
+.toggleButton input[type="checkbox"]:checked + .toggle:before {
   transform: scale(1);
   transition: all .4s ease; }
 
@@ -2010,24 +1983,54 @@ a:visited.ui-button,
   box-sizing: border-box;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px; }
+  .card h1 {
+    font-family: 'MontserratBold';
+    font-size: 24px;
+    line-height: 30px;
+    color: #1F2041;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.4px; }
 
 .searchRoom .flex {
   margin: 0 0 10px 0; }
 
-.searchRoom h1 {
-  font-family: 'MontserratBold';
-  font-size: 24px;
-  line-height: 30px;
-  color: #1F2041;
-  margin: 0px;
-  letter-spacing: -0.4px; }
-
 .searchRoom h3 {
-  margin: 21px 0 4px 0; }
+  margin: 1px 0 4px 0; }
 
 .searchRoom .searchRoom__arrival {
   margin: 0 20px 0 0; }
 
 .searchRoom .dropdownGuest {
   margin: 0 0 9px 0; }
+
+.registerAccount {
+  z-index: 1; }
+  .registerAccount h1 {
+    letter-spacing: -0.6px; }
+  .registerAccount input {
+    margin: 0 0 10px 0; }
+  .registerAccount input[type="password"] {
+    margin: 0 0 8px 0; }
+  .registerAccount .registerAccount__birthday {
+    margin: 25px 0 5px 0; }
+  .registerAccount .registerAccount__enterData {
+    margin: 10px 0 5px 0; }
+  .registerAccount .flex {
+    margin: 0px 0 3px 0; }
+    .registerAccount .flex p {
+      margin: 0 0 20px 10px;
+      line-height: 22px; }
+  .registerAccount .btnLong {
+    margin: 0 0 30px 0; }
+  .registerAccount .haveAccount {
+    font-size: 14px;
+    line-height: 18px;
+    color: #000; }
+  .registerAccount .btnBorder {
+    margin: 2px 0 0 37px;
+    width: 96px;
+    height: 40px;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 29px; }
 
