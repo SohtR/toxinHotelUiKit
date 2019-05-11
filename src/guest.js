@@ -1,4 +1,3 @@
-
 $("input[name='guest']").guest({
     categoryNames: ["Взрослые", "Дети", "Младенцы"],
     categoryValues: false,

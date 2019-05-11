@@ -936,6 +936,19 @@ a.guest.button.inactive {
   text-transform: uppercase;
   color: #BC9CFF; }
 
+.dataDropdown input {
+  width: 150px;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  padding: 0px 0px 1px 14px;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+  background: #fff url(./fonts/arrowDown/arrowDown.svg) no-repeat 114px 11px;
+  box-sizing: border-box; }
+
 body,
 ul,
 a {
@@ -1349,19 +1362,6 @@ main {
     .formDropdown select option {
       border: 1px solid rgba(31, 32, 65, 0.25);
       border-radius: 5px; }
-
-.dataDropdown input {
-  width: 150px;
-  height: 44px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-  padding: 0px 0px 1px 14px;
-  font-family: 'Montserrat';
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.75);
-  background: #fff url(./fonts/arrowDown/arrowDown.svg) no-repeat 114px 11px;
-  box-sizing: border-box; }
 
 .filterDropdown input {
   width: 266px;
@@ -1998,4 +1998,36 @@ a:visited.ui-button,
     margin: 10px 0 0 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75); }
+
+.cards {
+  width: 100%; }
+
+.card {
+  width: 380px;
+  padding: 40px 30px 30px 30px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px; }
+
+.searchRoom .flex {
+  margin: 0 0 10px 0; }
+
+.searchRoom h1 {
+  font-family: 'MontserratBold';
+  font-size: 24px;
+  line-height: 30px;
+  color: #1F2041;
+  margin: 0px;
+  letter-spacing: -0.4px; }
+
+.searchRoom h3 {
+  margin: 21px 0 4px 0; }
+
+.searchRoom .searchRoom__arrival {
+  margin: 0 20px 0 0; }
+
+.searchRoom .dropdownGuest {
+  margin: 0 0 9px 0; }
 

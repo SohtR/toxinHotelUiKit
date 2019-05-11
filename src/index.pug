@@ -201,10 +201,7 @@ html
                                 h3 Masked Textfield
                             input(type="text", placeholder="ДД.ММ.ГГГГ", id="maskedText", pattern="(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/\d{4}")
                     .flex   
-                        .dataDropdown
-                            label(for="") 
-                                h3 Data Dropdown
-                            input(type="text" class="datepicker-here" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true")
+                        include components/dataDropdown/dataDropdown.pug
                         .filterDropdown
                             label(for="") 
                                 h3 Filter Dropdown    
@@ -303,11 +300,10 @@ html
                                 input(type="text" disabled id="amount" readonly)
                                 #slider-range
                         .flex-column
-                            .dropdownGuests
-                            form(action="#").dropdownGuest
-                                label(for="dropdownGuest") 
-                                    h3 Dropdown
-                                input(id="dropdownGuest" name="guest", type="text", readonly, placeholder="Сколько гостей")
+                            //- .dropdownGuest
+                            //-     label(for="dropdownGuest") 
+                            //-         h3 Dropdown
+                            //-     input(id="dropdownGuest" name="guest", type="text", readonly, placeholder="Сколько гостей")
                     .flex
                         .clickMe
                             h3 Buttons
@@ -354,6 +350,24 @@ html
                                     a(href="#" title="Love it" class="btn-counter my-counter my" data-count="11")
                                         span
                                 p.review__content Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+            .cards
+                .wrapper
+                    .flex
+                        .flex-column
+                            .card.searchRoom
+                                h1 Найдем номера под ваши пожелания
+                                .flex
+                                    .searchRoom__arrival
+                                        h3 пРиБыТие
+                                        include components/dataDropdown/dataDropdown.pug
+                                    .searchRoom__departure
+                                        h3 выезд
+                                        include components/dataDropdown/dataDropdown.pug
+                                .dropdownGuest
+                                    h3 гости
+                                    include components/dropdownGuest/dropdownGuest.pug
+                                +btnLong('подобрать номер')
+                                   
 script
     include guest.js
 script

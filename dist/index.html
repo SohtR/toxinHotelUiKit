@@ -217,12 +217,10 @@
             </form>
           </div>
           <div class="flex">  
-            <div class="dataDropdown">
-              <label for=""> 
-                <h3>Data Dropdown</h3>
-              </label>
-              <input class="datepicker-here" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
-            </div>
+<div class="dataDropdown">
+  <label for=""> </label>
+  <input class="datepicker-here" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+</div>
             <div class="filterDropdown">
               <label for=""> 
                 <h3>Filter Dropdown    </h3>
@@ -346,15 +344,7 @@
                 <div id="slider-range"></div>
               </div>
             </div>
-            <div class="flex-column">
-              <div class="dropdownGuests"></div>
-              <form class="dropdownGuest" action="#">
-                <label for="dropdownGuest"> 
-                  <h3>Dropdown</h3>
-                </label>
-                <input id="dropdownGuest" name="guest" type="text" readonly placeholder="Сколько гостей">
-              </form>
-            </div>
+            <div class="flex-column"></div>
           </div>
           <div class="flex">
             <div class="clickMe">
@@ -406,11 +396,43 @@
           </div>
         </div>
       </div>
+      <div class="cards">
+        <div class="wrapper">
+          <div class="flex">
+            <div class="flex-column">
+              <div class="card searchRoom">
+                <h1>Найдем номера под ваши пожелания</h1>
+                <div class="flex">
+                  <div class="searchRoom__arrival">
+                    <h3>пРиБыТие</h3>
+<div class="dataDropdown">
+  <label for=""> </label>
+  <input class="datepicker-here" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+</div>
+                  </div>
+                  <div class="searchRoom__departure">
+                    <h3>выезд</h3>
+<div class="dataDropdown">
+  <label for=""> </label>
+  <input class="datepicker-here" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+</div>
+                  </div>
+                </div>
+                <div class="dropdownGuest">
+                  <h3>гости</h3>
+<label for="dropdownGuest"> 
+  <input id="dropdownGuest" name="guest" type="text" readonly placeholder="Сколько гостей">
+</label>
+                </div><a class="btn btnLong">подобрать номер</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   <script type="text/javascript" src="main.js"></script></body>
 </html>
-<script>
-$("input[name='guest']").guest({
+<script>$("input[name='guest']").guest({
     categoryNames: ["Взрослые", "Дети", "Младенцы"],
     categoryValues: false,
     minValue: 0,
