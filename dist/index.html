@@ -513,6 +513,17 @@
                   </tr>
                 </table>
               </div>
+              <div class="card roomSlider"><div class="flexslider">
+<ul class="slides">
+<li>
+<img src="../src/img/slide-1.jpg" />
+</li>
+<li>
+<img src="../src/img/slide-2.jpg" />
+</li>
+</ul>
+</div>
+              </div>
             </div>
           </div>
         </div>
@@ -520,6 +531,11 @@
     </main>
   <script type="text/javascript" src="main.js"></script></body>
 </html>
+<script>  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+
+</script>
 <script>$("input[name='guest']").guest({
     categoryNames: ["Взрослые", "Дети", "Младенцы"],
     categoryValues: false,

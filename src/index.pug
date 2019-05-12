@@ -35,6 +35,7 @@ html
         meta(charset = 'utf-8')
         meta(name='viewport', content="initial-scale=1.0, width=device-width")
         title Toxin Hotel
+        //- script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js")
     body
         main
             .headerButtons
@@ -435,7 +436,20 @@ html
                                         td.roomDetail__leftCol Сбор за дополнительные услуги
                                         td i
                                         td.roomDetail__rightCol 300₽
+                            .card.roomSlider
+                                <div class="flexslider">
+                                    <ul class="slides">
+                                        <li>
+                                            <img src="../src/img/slide-1.jpg" />
+                                        </li>
+                                        <li>
+                                            <img src="../src/img/slide-2.jpg" />
+                                        </li>
+                                    </ul>
+                                </div>
 
+script
+    include flexSlider.js
 script
     include guest.js
 script

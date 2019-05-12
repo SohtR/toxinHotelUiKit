@@ -38,6 +38,7 @@
 @import 'numbercategoryselector';
 @import '../components/dropdownGuest/numbercategoryselectorGuest.scss';
 @import '../components/dropdownGuest2/numbercategoryselectorGuest2.scss';
+@import 'flexslider.scss';
 
 @mixin outline1{
   outline:1px solid black;
@@ -1391,4 +1392,8 @@ a:visited.ui-button,
     }
   }
   
+}
+.roomSlider{
+  padding: 0;
+  margin: 20px 0 0 0;
 }

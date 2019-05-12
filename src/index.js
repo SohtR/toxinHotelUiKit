@@ -2,6 +2,7 @@ import "./scss/main.scss";
 import "./js/numbercategoryselector.js";
 import "./js/numbercategoryselectorGuest.js";
 import "./js/numbercategoryselectorGuest2.js";
+import "./jquery.flexslider.js";
 // import "./js/jquery.js";
 // import "./js/jqueryui.js";
 import "./js/datepicker.min.js";
