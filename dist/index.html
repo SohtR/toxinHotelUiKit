@@ -471,8 +471,8 @@
               </div>
               <div class="card roomDetail">
                 <div class="flex">
-                  <p>№888 <span class="roomDetail__lux">люкс</span></p>
-                  <p>9 990₽ в сутки</p>
+                  <p class="roomDetail__number"><span class="roomDetail__num"> №</span>888 <span class="roomDetail__lux">люкс</span></p>
+                  <p class="roomDetail__price">9 990₽ в сутки</p>
                 </div>
                 <div class="flex">
                   <div class="searchRoom__arrival">
@@ -492,10 +492,26 @@
                 </div>
                 <div class="dropdownGuest">
                   <h3>гости</h3>
-<label for="dropdownGuest2"> 
-  <input id="dropdownGuest2" name="guest2" type="text" readonly placeholder="Сколько гостей">
-</label>
+<label for="guest2"> </label>
+<input id="guest2" name="guest2" type="text" readonly placeholder="Сколько гостей">
                 </div>
+                <table class="roomDetail__priceTable">
+                  <tr>
+                    <td class="roomDetail__leftCol">9 990₽ х 4 суток</td>
+                    <td></td>
+                    <td class="roomDetail__rightCol">39 960₽</td>
+                  </tr>
+                  <tr>
+                    <td class="roomDetail__leftCol">Сбор за услуги: скидка 2 179₽</td>
+                    <td>i</td>
+                    <td class="roomDetail__rightCol">0₽</td>
+                  </tr>
+                  <tr>
+                    <td class="roomDetail__leftCol">Сбор за дополнительные услуги</td>
+                    <td>i</td>
+                    <td class="roomDetail__rightCol">300₽</td>
+                  </tr>
+                </table>
               </div>
             </div>
           </div>

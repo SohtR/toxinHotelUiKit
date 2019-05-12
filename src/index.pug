@@ -410,8 +410,8 @@ html
                                     +btnBorder('создать')
                             .card.roomDetail
                                 .flex
-                                    p №888 <span class="roomDetail__lux">люкс</span>
-                                    p 9 990₽ в сутки
+                                    p.roomDetail__number <span class="roomDetail__num"> №</span>888 <span class="roomDetail__lux">люкс</span>
+                                    p.roomDetail__price 9 990₽ в сутки
                                 .flex
                                     .searchRoom__arrival
                                         h3 пРиБыТие
@@ -422,6 +422,19 @@ html
                                 .dropdownGuest
                                     h3 гости
                                     include components/dropdownGuest2/dropdownGuest2.pug
+                                table.roomDetail__priceTable
+                                    tr
+                                        td.roomDetail__leftCol 9 990₽ х 4 суток
+                                        td
+                                        td.roomDetail__rightCol 39 960₽
+                                    tr
+                                        td.roomDetail__leftCol Сбор за услуги: скидка 2 179₽
+                                        td i
+                                        td.roomDetail__rightCol 0₽
+                                    tr
+                                        td.roomDetail__leftCol Сбор за дополнительные услуги
+                                        td i
+                                        td.roomDetail__rightCol 300₽
 
 script
     include guest.js

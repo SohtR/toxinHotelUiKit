@@ -1334,7 +1334,61 @@ a:visited.ui-button,
 }
 
 .roomDetail{
+  height: 511px;
+  h3{
+    margin: 0 0 5px 0;
+  }
+  .roomDetail__price{
+    margin: 9px -6px 0px 0px;
+  }
+  .roomDetail__number{
+    font-family: 'MontserratBold';
+    font-size: 24px;
+    line-height: 30px;
+    color: #1F2041;
+    letter-spacing: -1px;
+  }
+  .roomDetail__num{
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 3px 0 0;
+  }
+  .roomDetail__lux{
+    font-family: 'MontserratBold';
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #BC9CFF;
+  }
   .flex{
     justify-content: space-between;
+    margin: 20px 0 0 0;
   }
+  .flex:first-child{
+    justify-content: space-between;
+    margin: 0;
+  }
+  .roomDetail__priceTable{
+    border-collapse: collapse;
+    margin: 17px 0 0 0;
+    td{
+      padding: 0 0 10px 0;
+      line-height: 24px;
+    }
+  }
+  .roomDetail__priceTable .roomDetail__rightCol{
+    text-align: right;
+  }
+  .roomDetail__priceTable .roomDetail__leftCol{
+    text-align: left;
+    width: 214px;
+    padding: 0 13px 10px 0;
+  }
+  .dropdownGuest{
+    margin: 20px 0 0 0;
+    input{
+      margin: 0;
+    }
+  }
+  
 }

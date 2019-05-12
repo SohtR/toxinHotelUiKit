@@ -2203,6 +2203,48 @@ a:visited.ui-button,
   display: inline-block;
   line-height: 27px; }
 
-.roomDetail .flex {
-  justify-content: space-between; }
+.roomDetail {
+  height: 511px; }
+  .roomDetail h3 {
+    margin: 0 0 5px 0; }
+  .roomDetail .roomDetail__price {
+    margin: 9px -6px 0px 0px; }
+  .roomDetail .roomDetail__number {
+    font-family: 'MontserratBold';
+    font-size: 24px;
+    line-height: 30px;
+    color: #1F2041;
+    letter-spacing: -1px; }
+  .roomDetail .roomDetail__num {
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 3px 0 0; }
+  .roomDetail .roomDetail__lux {
+    font-family: 'MontserratBold';
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #BC9CFF; }
+  .roomDetail .flex {
+    justify-content: space-between;
+    margin: 20px 0 0 0; }
+  .roomDetail .flex:first-child {
+    justify-content: space-between;
+    margin: 0; }
+  .roomDetail .roomDetail__priceTable {
+    border-collapse: collapse;
+    margin: 17px 0 0 0; }
+    .roomDetail .roomDetail__priceTable td {
+      padding: 0 0 10px 0;
+      line-height: 24px; }
+  .roomDetail .roomDetail__priceTable .roomDetail__rightCol {
+    text-align: right; }
+  .roomDetail .roomDetail__priceTable .roomDetail__leftCol {
+    text-align: left;
+    width: 214px;
+    padding: 0 13px 10px 0; }
+  .roomDetail .dropdownGuest {
+    margin: 20px 0 0 0; }
+    .roomDetail .dropdownGuest input {
+      margin: 0; }
 
