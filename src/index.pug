@@ -399,8 +399,34 @@ html
                                 +btnLong('Перейти к оплате')
                                 p.haveAccount Уже есть аккаунт на Toxin
                                     +btnBorder('войти')
+                        .flex-column
+                            .card.loginAccount
+                                h1 Войти
+                                +emailField('loginEmail','Email')
+                                +passwordField('loginPass', 'Пароль')
+                                +btnLong('Войти')
+                                .flex
+                                    p.haveAccount Нет аккаунта на Toxin?
+                                    +btnBorder('создать')
+                            .card.roomDetail
+                                .flex
+                                    p №888 <span class="roomDetail__lux">люкс</span>
+                                    p 9 990₽ в сутки
+                                .flex
+                                    .searchRoom__arrival
+                                        h3 пРиБыТие
+                                        include components/dataDropdown/dataDropdown.pug
+                                    .searchRoom__departure
+                                        h3 выезд
+                                        include components/dataDropdown/dataDropdown.pug
+                                .dropdownGuest
+                                    h3 гости
+                                    include components/dropdownGuest2/dropdownGuest2.pug
+
 script
     include guest.js
+script
+    include guest2.js
 script
     include ncs.js                     
 script 

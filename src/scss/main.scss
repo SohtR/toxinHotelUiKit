@@ -37,6 +37,8 @@
 @import 'datepicker.min';
 @import 'numbercategoryselector';
 @import '../components/dropdownGuest/numbercategoryselectorGuest.scss';
+@import '../components/dropdownGuest2/numbercategoryselectorGuest2.scss';
+
 @mixin outline1{
   outline:1px solid black;
 }
@@ -1237,6 +1239,7 @@ a:visited.ui-button,
   box-sizing: border-box;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  z-index: 1;
   h1{
     font-family: 'MontserratBold';
     font-size: 24px;
@@ -1244,6 +1247,20 @@ a:visited.ui-button,
     color: #1F2041;
     margin: 0 0 20px 0;
     letter-spacing: -0.4px;
+  }
+  .btnBorder{
+    margin: 2px 0 0 36px;
+    width: 96px;
+    height: 40px;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 26px;
+  }
+  .haveAccount{
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
+    
   }
 }
 .searchRoom{
@@ -1262,7 +1279,7 @@ a:visited.ui-button,
   }
 }
 .registerAccount{
-  z-index: 1;
+  
   h1{
     letter-spacing: -0.6px;
   }
@@ -1288,18 +1305,36 @@ a:visited.ui-button,
   .btnLong{
     margin: 0 0 30px 0;
   }
+  
+}
+.loginAccount{
+  .flex{
+    margin: 0px 0 4px 0;
+  }
   .haveAccount{
-    font-size: 14px;
-    line-height: 18px;
-    color: #000;
-    
+    margin: 13px 0 0px 0;
+  }
+  input{
+    margin: 0 0 10px 0;
+  }
+  input[type="password"]{
+    margin: 0 0 20px 0;
+  }
+  .btnLong{
+    margin: 0 0 30px 0;
   }
   .btnBorder{
-    margin: 2px 0 0 37px;
-    width: 96px;
-    height: 40px;
+    margin: 2px 0px 0px 59px;
+    width: 95px;
+    height: 42px;
     box-sizing: border-box;
     display: inline-block;
-    line-height: 29px;
+    line-height: 27px;
+  }
+}
+
+.roomDetail{
+  .flex{
+    justify-content: space-between;
   }
 }

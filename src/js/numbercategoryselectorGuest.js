@@ -175,14 +175,25 @@
                 $gtext = "";
                 $gadded = 0;
                 $gsum = 0;
+                $baby =0;
+                $last = settings.categoryNames.length-1;
+                console.log($last);
                 for ($gi = 0; $gi < settings.categoryNames.length; $gi++) {
+                    
                     if (settings.categoryValues[$gi] != 0 || settings.showZero) {
                         
                         $gsum += settings.categoryValues[$gi];
                         $gadded++;
+                        
                     }
                 }
-                $gtext += $gsum + " гостя";
+                $baby+= settings.categoryValues[$last]
+                if($baby != 0){
+                    //$gtext+=$gsum + " гостя, " + $baby + " младенцы";   Если младенец != гость
+                    $gtext+=$gsum-$baby + " гостя, " + $baby + " младенцы";
+                }else{
+                    $gtext += $gsum + " гостя";}
+                
                 if ($gsum == 0) {
                     $ginput.val($goriginalPlaceholder); 
                     $(".NCSG.reset").hide();

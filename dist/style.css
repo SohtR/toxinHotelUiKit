@@ -938,6 +938,147 @@ a.guest.button.inactive {
   text-transform: uppercase;
   color: #BC9CFF; }
 
+input[name='guest2'] {
+  height: 44px;
+  width: 320px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px 4px 0 0;
+  padding: 0 24px 0px 15px;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 23px 0;
+  color: rgba(31, 32, 65, 0.75);
+  font-family: 'Montserrat';
+  background: #fff url(./fonts/arrowDown/arrowDown.svg) 285px 9px no-repeat;
+  text-overflow: ellipsis;
+  outline: none;
+  cursor: pointer; }
+
+div.guest2.parent {
+  position: absolute;
+  z-index: 1000;
+  background: white;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  padding: 4px 5px 12px 12px;
+  text-align: center;
+  overflow: hidden;
+  min-width: 320px;
+  box-sizing: border-box; }
+
+div.guest2.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+
+div.guest2.room {
+  height: 5px; }
+
+div.guest2.display {
+  overflow: hidden;
+  background: transparent;
+  z-index: 999;
+  position: absolute;
+  border-radius: 2px;
+  padding: 5px 2.5px;
+  box-sizing: border-box;
+  align-items: center; }
+
+div.guest2.inlinedisplay {
+  height: 100%;
+  width: 10000px;
+  margin: 0 0 0 5px; }
+
+div.guest2.displayelement:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle; }
+
+div.guest2.displayelement {
+  display: inline;
+  background: #ffffff;
+  color: rgba(31, 32, 65, 0.75);
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  margin: 0 0px 0 0;
+  padding: 2.5px 0px;
+  box-sizing: border-box;
+  line-height: 24px;
+  border-radius: 2.5px;
+  font-size: 14px; }
+
+a.guest2.close {
+  opacity: 1;
+  text-align: center;
+  font-size: 14px;
+  margin: 5px;
+  text-decoration: underline; }
+
+div.guest2.name {
+  font-size: 16px;
+  float: left; }
+
+div.guest2.value {
+  font-size: 16px; }
+
+div.guest2.text {
+  clear: both;
+  display: inline-block;
+  padding: 7px 0 0px 0;
+  margin: 0 0 15px 0; }
+
+div.guest2.name, a.guest2.close, div.guest2.value {
+  font-family: 'MontserratBold';
+  color: #1F2041;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px; }
+
+div.guest2.buttons {
+  display: flex;
+  width: 92px;
+  justify-content: space-between;
+  align-items: center; }
+
+a.guest2.button {
+  color: rgba(31, 32, 65, 0.5);
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 22px;
+  box-sizing: border-box;
+  font-weight: 700;
+  line-height: 30px; }
+
+a.guest2.button.inactive {
+  background: #FFFFFF;
+  opacity: 0.38; }
+
+.NCSG.reset {
+  float: left;
+  padding: 14px 0 0 2px;
+  font-family: 'MontserratBold';
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase; }
+
+.NCSG.close {
+  float: right;
+  padding: 14px 0 0 0;
+  font-family: 'MontserratBold';
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF; }
+
 .dataDropdown input {
   width: 150px;
   height: 44px;
@@ -1982,7 +2123,8 @@ a:visited.ui-button,
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px; }
+  border-radius: 4px;
+  z-index: 1; }
   .card h1 {
     font-family: 'MontserratBold';
     font-size: 24px;
@@ -1990,6 +2132,17 @@ a:visited.ui-button,
     color: #1F2041;
     margin: 0 0 20px 0;
     letter-spacing: -0.4px; }
+  .card .btnBorder {
+    margin: 2px 0 0 36px;
+    width: 96px;
+    height: 40px;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 26px; }
+  .card .haveAccount {
+    font-size: 14px;
+    line-height: 18px;
+    color: #000; }
 
 .searchRoom .flex {
   margin: 0 0 10px 0; }
@@ -2003,34 +2156,53 @@ a:visited.ui-button,
 .searchRoom .dropdownGuest {
   margin: 0 0 9px 0; }
 
-.registerAccount {
-  z-index: 1; }
-  .registerAccount h1 {
-    letter-spacing: -0.6px; }
-  .registerAccount input {
-    margin: 0 0 10px 0; }
-  .registerAccount input[type="password"] {
-    margin: 0 0 8px 0; }
-  .registerAccount .registerAccount__birthday {
-    margin: 25px 0 5px 0; }
-  .registerAccount .registerAccount__enterData {
-    margin: 10px 0 5px 0; }
-  .registerAccount .flex {
-    margin: 0px 0 3px 0; }
-    .registerAccount .flex p {
-      margin: 0 0 20px 10px;
-      line-height: 22px; }
-  .registerAccount .btnLong {
-    margin: 0 0 30px 0; }
-  .registerAccount .haveAccount {
-    font-size: 14px;
-    line-height: 18px;
-    color: #000; }
-  .registerAccount .btnBorder {
-    margin: 2px 0 0 37px;
-    width: 96px;
-    height: 40px;
-    box-sizing: border-box;
-    display: inline-block;
-    line-height: 29px; }
+.registerAccount h1 {
+  letter-spacing: -0.6px; }
+
+.registerAccount input {
+  margin: 0 0 10px 0; }
+
+.registerAccount input[type="password"] {
+  margin: 0 0 8px 0; }
+
+.registerAccount .registerAccount__birthday {
+  margin: 25px 0 5px 0; }
+
+.registerAccount .registerAccount__enterData {
+  margin: 10px 0 5px 0; }
+
+.registerAccount .flex {
+  margin: 0px 0 3px 0; }
+  .registerAccount .flex p {
+    margin: 0 0 20px 10px;
+    line-height: 22px; }
+
+.registerAccount .btnLong {
+  margin: 0 0 30px 0; }
+
+.loginAccount .flex {
+  margin: 0px 0 4px 0; }
+
+.loginAccount .haveAccount {
+  margin: 13px 0 0px 0; }
+
+.loginAccount input {
+  margin: 0 0 10px 0; }
+
+.loginAccount input[type="password"] {
+  margin: 0 0 20px 0; }
+
+.loginAccount .btnLong {
+  margin: 0 0 30px 0; }
+
+.loginAccount .btnBorder {
+  margin: 2px 0px 0px 59px;
+  width: 95px;
+  height: 42px;
+  box-sizing: border-box;
+  display: inline-block;
+  line-height: 27px; }
+
+.roomDetail .flex {
+  justify-content: space-between; }
 

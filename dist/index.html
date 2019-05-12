@@ -458,6 +458,46 @@
                 </p>
               </div>
             </div>
+            <div class="flex-column">
+              <div class="card loginAccount">
+                <h1>Войти</h1>
+                <label for="loginEmail"> </label>
+                <input class="textfield" type="email" name="loginEmail" placeholder="Email" id="loginEmail">
+                <label for="loginPass"> </label>
+                <input class="textfield" type="password" name="loginPass" placeholder="Пароль" id="loginPass"><a class="btn btnLong">Войти</a>
+                <div class="flex">
+                  <p class="haveAccount">Нет аккаунта на Toxin?</p><a class="btn btnBorder">создать</a>
+                </div>
+              </div>
+              <div class="card roomDetail">
+                <div class="flex">
+                  <p>№888 <span class="roomDetail__lux">люкс</span></p>
+                  <p>9 990₽ в сутки</p>
+                </div>
+                <div class="flex">
+                  <div class="searchRoom__arrival">
+                    <h3>пРиБыТие</h3>
+<div class="dataDropdown">
+  <label for=""> </label>
+  <input class="datepicker-here" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+</div>
+                  </div>
+                  <div class="searchRoom__departure">
+                    <h3>выезд</h3>
+<div class="dataDropdown">
+  <label for=""> </label>
+  <input class="datepicker-here" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+</div>
+                  </div>
+                </div>
+                <div class="dropdownGuest">
+                  <h3>гости</h3>
+<label for="dropdownGuest2"> 
+  <input id="dropdownGuest2" name="guest2" type="text" readonly placeholder="Сколько гостей">
+</label>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -465,6 +505,20 @@
   <script type="text/javascript" src="main.js"></script></body>
 </html>
 <script>$("input[name='guest']").guest({
+    categoryNames: ["Взрослые", "Дети", "Младенцы"],
+    categoryValues: false,
+    minValue: 0,
+    maxValue: 10,
+    closeOnOutsideClick: false,
+    showText: true,
+    delimiter: ", ",
+    align: "left",
+    fade: true,
+    useDisplay: false,
+    showZero: false,
+});
+</script>
+<script>$("input[name='guest2']").guest2({
     categoryNames: ["Взрослые", "Дети", "Младенцы"],
     categoryValues: false,
     minValue: 0,
