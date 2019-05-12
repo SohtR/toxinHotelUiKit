@@ -429,12 +429,20 @@ html
                                         td.roomDetail__rightCol 39 960₽
                                     tr
                                         td.roomDetail__leftCol Сбор за услуги: скидка 2 179₽
-                                        td i
+                                        td 
+                                            a(href='#').circle i
                                         td.roomDetail__rightCol 0₽
                                     tr
                                         td.roomDetail__leftCol Сбор за дополнительные услуги
-                                        td i
+                                        td
+                                             a(href='#').circle i
                                         td.roomDetail__rightCol 300₽
+                                .flex.roomDetail__total
+                                    p Итого
+                                    .roomDetail__borderDashed
+                                    p.roomDetail__totalSum 38 081₽
+                                +btnLong('Забронировать')
+                                
 
 script
     include guest.js

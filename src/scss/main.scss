@@ -1370,19 +1370,30 @@ a:visited.ui-button,
   }
   .roomDetail__priceTable{
     border-collapse: collapse;
-    margin: 17px 0 0 0;
+    margin: 21px 0 0 0;
     td{
       padding: 0 0 10px 0;
-      line-height: 24px;
+      // line-height: 20px;
+      vertical-align: top;
+      text-align: center;
+    }
+    .circle{
+      width: 20px;
+      height: 20px;
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      box-sizing: border-box;
+      border-radius: 50%;
+      display: inline-block;
     }
   }
   .roomDetail__priceTable .roomDetail__rightCol{
     text-align: right;
+    padding: 0 0 0 21px;
   }
   .roomDetail__priceTable .roomDetail__leftCol{
     text-align: left;
     width: 214px;
-    padding: 0 13px 10px 0;
+    padding: 0 5px 17px 0;
   }
   .dropdownGuest{
     margin: 20px 0 0 0;
@@ -1390,5 +1401,22 @@ a:visited.ui-button,
       margin: 0;
     }
   }
-  
+  .roomDetail__total{
+    font-family: 'MontserratBold';
+    font-size: 19px;
+    line-height: 24px;
+    color: #1F2041;
+    margin: 10px 0 0 0;
+    margin: 15px 0 0 0;
+    justify-content: space-between;
+  }
+  .roomDetail__borderDashed{
+    border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+  }
+  .roomDetail__totalSum{
+    letter-spacing: -1.5px;
+  }
+  .btnLong{
+    margin: 20px 0 0 0;
+  }
 }
