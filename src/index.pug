@@ -24,6 +24,22 @@ mixin toggleButton(id)
         input(type="checkbox" id=id style="display:none")
         label(for=id class="toggle")
             span
+mixin sliderRoom(roomNum, price,rev, lux)
+    .cardSmall.roomSlider
+        .flexslider
+            ul.slides
+                li
+                    img(src='../src/img/'+roomNum+'/slide-1.jpg')
+                li
+                    img(src='../src/img/'+roomNum+'/slide-2.jpg')
+        .flex.roomSlider__priceHeadline
+            p.roomSlider__number <span class="roomSlider__num"> №</span> #{roomNum} <span class="roomSlider__lux">#{lux}</span>
+            p.roomSlider__price= price +"₽ в сутки"
+        .flex.roomSlider__rating
+            +rateButton(roomNum)                               
+            p.roomSlider__reviewsAmount <b>#{rev}</b> Отзывов
+
+include components/rateButton/rateButton.pug
 
 doctype html
 html
@@ -36,6 +52,8 @@ html
         meta(name='viewport', content="initial-scale=1.0, width=device-width")
         title Toxin Hotel
         //- script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet")
     body
         main
             .headerButtons
@@ -298,17 +316,7 @@ html
                                 span
                         .flex-column
                             h3 rate button
-                            span(class="rating")
-                                input(id="rating5" type="radio" name="rating" value="5")
-                                label(for="rating5") 5
-                                input(id="rating4" type="radio" name="rating" value="4")
-                                label(for="rating4") 4
-                                input(id="rating3" type="radio" name="rating" value="3")
-                                label(for="rating3") 3
-                                input(id="rating2" type="radio" name="rating" value="2" checked)
-                                label(for="rating2") 2
-                                input(id="rating1" type="radio" name="rating" value="1")
-                                label(for="rating1") 1
+                            +rateButton(0)
                         .flex-column
                             .rangeSlider
                                 label(for="amount") Range Slider
@@ -410,7 +418,7 @@ html
                                     p.haveAccount Нет аккаунта на Toxin?
                                     +btnBorder('создать')
                             .card.roomDetail
-                                .flex
+                                .flex.roomDetail__priceHeadline
                                     p.roomDetail__number <span class="roomDetail__num"> №</span>888 <span class="roomDetail__lux">люкс</span>
                                     p.roomDetail__price 9 990₽ в сутки
                                 .flex
@@ -443,18 +451,8 @@ html
                                     .roomDetail__borderDashed
                                     p.roomDetail__totalSum 38 081₽
                                 +btnLong('Забронировать')
-                            .card.roomSlider
-                                <div class="flexslider">
-                                    <ul class="slides">
-                                        <li>
-                                            <img src="../src/img/slide-1.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="../src/img/slide-2.jpg" />
-                                        </li>
-                                    </ul>
-                                </div>
-                               
+                            +sliderRoom('888','9 990', '145','люкс')
+                            +sliderRoom('840','9 900','65')
 
 script
     include flexSlider.js
