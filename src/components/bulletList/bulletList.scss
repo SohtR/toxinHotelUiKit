@@ -1,0 +1,25 @@
+.bulletList{
+    li{
+      font-family: 'Montserrat';
+      font-size: 14px;
+      line-height: 24px;
+      color: rgba(31, 32, 65, 0.75);
+      margin: 0 0 10px 10px;
+      position: relative;
+      padding: 0 0 0 12px;
+      width: 240px;
+    }
+    li:before {
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      background: rgba(31, 32, 65, 0.25);
+      content: "";
+      padding-right: 0px;
+      display: inline-block;
+      margin: 0 10px 0 0;
+      position: absolute;
+      left: -9px;
+      top: 7px;
+     }
+  }

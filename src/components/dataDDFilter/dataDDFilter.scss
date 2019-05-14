@@ -1,0 +1,13 @@
+.filter{
+    width: 266px;
+    height: 44px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    padding: 0px 0px 1px 14px;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+    background: $white url(../img/arrowDown.svg)  no-repeat right 10px center;
+    box-sizing: border-box;
+}

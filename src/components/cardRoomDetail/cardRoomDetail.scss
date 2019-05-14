@@ -1,0 +1,90 @@
+.roomDetail{
+    height: 511px;
+    h3{
+      margin: 0 0 5px 0;
+    }
+    .roomDetail__price{
+      margin: 9px -6px 0px 0px;
+    }
+    .roomDetail__number{
+      font-family: 'MontserratBold';
+      font-size: 24px;
+      line-height: 30px;
+      color: $dark100;
+      letter-spacing: -1px;
+    }
+    .roomDetail__num{
+      font-size: 14px;
+      line-height: 17px;
+      margin: 0 3px 0 0;
+    }
+    .roomDetail__lux{
+      font-family: 'MontserratBold';
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: $purple;
+    }
+    .flex{
+      justify-content: space-between;
+      margin: 20px 0 0 0;
+    }
+    .flex:first-child{
+      justify-content: space-between;
+      margin: 0;
+    }
+    .roomDetail__priceTable{
+      border-collapse: collapse;
+      margin: 21px 0 0 0;
+      td{
+        padding: 0 0 10px 0;
+        // line-height: 20px;
+        vertical-align: top;
+        text-align: center;
+      }
+      .circle{
+        width: 20px;
+        height: 20px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        box-sizing: border-box;
+        border-radius: 50%;
+        display: inline-block;
+      }
+    }
+    .roomDetail__priceTable .roomDetail__rightCol{
+      text-align: right;
+      padding: 0 0 0 21px;
+    }
+    .roomDetail__priceTable .roomDetail__leftCol{
+      text-align: left;
+      width: 214px;
+      padding: 0 5px 17px 0;
+    }
+    .dropdownGuest{
+      margin: 20px 0 0 0;
+      input{
+        margin: 0;
+      }
+    }
+    .roomDetail__total{
+      font-family: 'MontserratBold';
+      font-size: 19px;
+      line-height: 24px;
+      color: $dark100;
+      margin: 10px 0 0 0;
+      margin: 15px 0 0 0;
+      justify-content: space-between;
+    }
+    .roomDetail__borderDashed{
+      border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+      flex-grow: 1;
+      height: 18px;
+      margin: 0 4px;
+    }
+    .roomDetail__totalSum{
+      letter-spacing: -1.5px;
+    }
+    .btnLong{
+      margin: 20px 0 0 0;
+    }
+  }

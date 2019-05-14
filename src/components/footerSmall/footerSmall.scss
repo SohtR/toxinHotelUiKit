@@ -1,0 +1,30 @@
+.footer-small{
+    background: $white;
+    margin: 40px 0 0 0;
+    max-height: 367px;
+    width: 100%;
+    display: flex;
+    padding: 0 0 106px 0;
+}
+
+.wrapper-column{
+flex-direction: column;
+width: 100%;
+align-items: center;
+display: flex;
+p{
+    max-width: 560px;
+    text-align: center;
+    margin: 14px 0 0 0;
+    line-height: 23px;
+}
+}
+
+.footer-small__logo{
+padding:101px 0 0 0;
+}
+
+.footer-small__social{
+margin: 31px 0 0 0;
+}
+  

@@ -1,0 +1,18 @@
+mixin sliderRoom(roomNum, price,rev, lux)
+    .cardSmall.roomSlider
+        .flexslider
+            ul.slides
+                li
+                    img(src='../src/img/'+roomNum+'/slide-1.jpg')
+                li
+                    img(src='../src/img/'+roomNum+'/slide-2.jpg')
+                li
+                    img(src='../src/img/'+roomNum+'/slide-3.jpg')
+                li
+                    img(src='../src/img/'+roomNum+'/slide-4.jpg')
+        .flex.roomSlider__priceHeadline
+            p.roomSlider__number <span class="roomSlider__num"> №</span> #{roomNum} <span class="roomSlider__lux">#{lux}</span>
+            p.roomSlider__price= price +"₽ в сутки"
+        .flex.roomSlider__rating
+            +rateButton(roomNum)                               
+            p.roomSlider__reviewsAmount <b>#{rev}</b> Отзывов

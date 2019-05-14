@@ -1,0 +1,35 @@
+.review{
+    display: flex;
+    flex-direction: column;
+    max-width: 710px;;
+    .review__topBlock,
+    .review__bottomBlock{
+      display: flex;
+    }
+    .review__avatar{
+      max-width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid $white;
+      box-sizing: border-box;
+      box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+    }
+    .review__name{
+      margin: 0px 0 0 10px;
+      font-family: 'Montserrat';
+      font-size: 14px;
+      line-height: 24px;
+      color: rgba(31, 32, 65, 0.75);
+      b{
+        font-family: 'MontserratBold'
+      }
+    }
+    .review__like{
+      margin: 12px 0 0 4px;
+    }
+    .review__content{
+      margin: 10px 0 0 14px;
+      line-height: 24px;
+      color: rgba(31, 32, 65, 0.75);
+    }
+  }

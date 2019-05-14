@@ -1,0 +1,13 @@
+form(action="#").checkboxes
+    input(id="checkboxes" type="checkbox")
+    label(for="checkboxes" class="CheckLabel")
+    ul.CheckList
+        li
+            input(type="checkbox" id="bfirst" name="first" hidden)
+            label(for="bfirst") Завтрак
+        li
+            input(type="checkbox" id="bsecond" name="first" checked hidden)
+            label(for="bsecond") Письменный стол
+        li
+            input(type="checkbox" id="bthird" name="first" checked hidden)
+            label(for="bthird") Стул для кормления

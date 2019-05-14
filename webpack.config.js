@@ -84,13 +84,15 @@ module.exports = {
       filename: 'style.css',
     }),
     new HtmlWebpackPlugin({
-      inject: false,
+      inject: 'head',
       hash: true,
       template: './src/index.html',
       filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
-        template: './src/index.pug'
+      inject: 'head',
+      
+      template: './src/index.pug'
     })
     // new webpack.ProvidePlugin({
     //   $: "./src/js/jquery-1.12.4.min.js",

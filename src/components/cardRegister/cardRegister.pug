@@ -1,0 +1,18 @@
+.card.registerAccount
+    h1 Регистрация аккаунта
+    +textField('name', 'Имя')
+    +textField('lastname', 'Фамилия')
+    p
+        +radioButton('test3','Мужчина','group')
+        +radioButton('test4', 'Женщина', 'group')
+    h3.registerAccount__birthday дата рождения
+    +maskedTextfield('birthday',"ДД.ММ.ГГГГ")
+    h3.registerAccount__enterData данные для входа в сервис
+    +emailField('regEmail','Email')
+    +passwordField('regPass', 'Пароль')
+    .flex
+        +toggleButton('mailing')
+        p Получать спецпредложения
+    +btnLong('Перейти к оплате')
+    p.haveAccount Уже есть аккаунт на Toxin
+        +btnBorder('войти')

@@ -1,0 +1,8 @@
+.card.loginAccount
+    h1 Войти
+    +emailField('loginEmail','Email')
+    +passwordField('loginPass', 'Пароль')
+    +btnLong('Войти')
+    .flex
+        p.haveAccount Нет аккаунта на Toxin?
+        +btnBorder('создать')

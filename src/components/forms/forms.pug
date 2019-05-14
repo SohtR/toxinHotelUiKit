@@ -1,0 +1,74 @@
+.form-elements
+    .wrapper
+        .flex
+            .formText
+                h3 Text field
+                +textField('textfield','Email')
+                .dropdownRooms
+                form(action="#").dropdown
+                    h3 Dropdown
+                    include ../dropdownRoom/dropdownRoom.pug
+                
+            
+            .maskedText
+                h3 Masked Textfield
+                +maskedTextfield('maskedText',"ДД.ММ.ГГГГ")
+        .flex   
+            .date
+                h3 Data Dropdown
+                include ../dataDropdown/dataDropdown.pug
+                
+            .filterDropdown
+                label(for="") 
+                    h3 Filter Dropdown    
+                include ../dataDDFilter/dataDDFilter.pug
+            .email
+                h3 subscription textfield
+                +emailSubscribe('subs2', 'Your email address')
+            include ../expendCheckBox/expendCheckBox.pug
+        .flex
+            .flex-col  
+                +roomFeature('comfort', "Комфорт","Шумопоглощающие стены")
+                +roomFeature('udobstvo', "Удобство","Окно в каждой из спален")
+            include ../checkBoxes/checkBoxes.pug
+            .radioBut
+                h3 Radio buttons
+                p
+                    +radioButton('test1','Мужчина','radio-group')
+                    +radioButton('test2', 'Женщина', 'radio-group')
+            .toggleBut
+                    h3 Toggle
+                    .flex
+                        +toggleButton('cbx')
+                        p Получать спецпредложения
+        .flex   
+            .flex-column 
+                h3 like button
+                +likeButton(5)
+            .flex-column
+                h3 rate button
+                +rateButton(0)
+            .flex-column
+                +rangeSlider('Range Slider')
+            .flex-column
+                //- .dropdownGuest
+                //-     label(for="dropdownGuest") 
+                //-         h3 Dropdown
+                //-     input(id="dropdownGuest" name="guest", type="text", readonly, placeholder="Сколько гостей")
+        .flex
+            .clickMe
+                h3 Buttons
+                +btnFill('click me')  
+                +btnBorder('click me')    
+                a.linkPurple(href='#') click me  
+                +btnLong('перейти к оплате')
+            include ../pagination/pagination.pug
+        .flex
+            .richChbox
+                h3 rich checkbox buttons
+                include ../richCheckBox/richCheckBox.pug
+            .bullet
+                h3 Bullet list
+                include ../bulletList/bulletList.pug     
+        .flex
+            include ../review/review.pug

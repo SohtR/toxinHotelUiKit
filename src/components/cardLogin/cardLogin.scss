@@ -1,0 +1,25 @@
+.loginAccount{
+    .flex{
+      margin: 0px 0 4px 0;
+    }
+    .haveAccount{
+      margin: 13px 0 0px 0;
+    }
+    input{
+      margin: 0 0 10px 0;
+    }
+    input[type="password"]{
+      margin: 0 0 20px 0;
+    }
+    .btnLong{
+      margin: 0 0 30px 0;
+    }
+    .btnBorder{
+      margin: 2px 0px 0px 59px;
+      width: 95px;
+      height: 42px;
+      box-sizing: border-box;
+      display: inline-block;
+      line-height: 27px;
+    }
+  }

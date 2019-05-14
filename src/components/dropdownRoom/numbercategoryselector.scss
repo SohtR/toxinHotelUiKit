@@ -10,7 +10,7 @@ input[name='NCS']{
             margin: 0 0 23px 0; //Костыль. Убрать, если выпадающее меню ниже, чем надо (виноват img logo)
             color: rgba(56, 56, 77, 0.75);
             font-family: 'Montserrat';
-            background: #ffffff url("../img/arrowDown.svg") 232px 9px no-repeat; 
+            background: $white url("../img/arrowDown.svg") 232px 9px no-repeat; 
             text-overflow: ellipsis;
             outline: none;
             cursor: pointer;
@@ -68,7 +68,7 @@ div.NCS.displayelement:before {
 
 div.NCS.displayelement {
     display: inline;
-    background: #ffffff;
+    background: $white;
     color: rgba(31, 32, 65, 0.75);
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
@@ -106,7 +106,7 @@ div.NCS.text {
 
 div.NCS.name, a.NCS.close, div.NCS.value {
     font-family: 'MontserratBold';
-    color: #1F2041;
+    color: $dark100;
     text-transform: uppercase;
     font-size: 12px;
     line-height: 15px;
@@ -128,7 +128,7 @@ a.NCS.button {
     
     display: inline-block;
     text-align: center;
-    background: #FFFFFF;
+    background: $white;
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
     border-radius: 22px;
@@ -139,7 +139,7 @@ a.NCS.button {
 }
 
 a.NCS.button.inactive {
-    background: #FFFFFF;
+    background: $white;
     opacity: 0.38;
 }
 

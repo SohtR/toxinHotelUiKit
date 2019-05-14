@@ -1,0 +1,36 @@
+.pagination{
+    a,span{
+      display: inline-block;
+      width: 40px;
+      height: 41px;
+      border-radius: 22px;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 40px;
+      font-family: 'Montserrat';
+      font-size: 12px;
+      color: rgba(31, 32, 65, 0.5);
+    }
+    .active,
+    a:hover{
+      background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+      color: $white;
+    }
+    .next{
+      background: url(../img/arrow_forward.png) no-repeat center,
+                  linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      text-indent: -1000000px;
+      &:hover{
+        background: url(../img/arrow_forward.png) no-repeat center,
+        linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+      }
+    }
+    p{
+      font-family: 'Montserrat';
+      font-size: 14px;
+      line-height: 24px;
+      color: rgba(31, 32, 65, 0.75);
+      margin: 8px 0 0 5px;
+    }
+  }
+  
