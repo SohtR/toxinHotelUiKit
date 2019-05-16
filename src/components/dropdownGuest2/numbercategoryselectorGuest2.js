@@ -175,6 +175,8 @@
                 $g2gtext = "";
                 $g2gadded = 0;
                 $g2gsum = 0;
+                $gbaby =0;
+                $glast = settings.categoryNames.length-1;
                 for ($g2gi = 0; $g2gi < settings.categoryNames.length; $g2gi++) {
                     if (settings.categoryValues[$g2gi] != 0 || settings.showZero) {
                         
@@ -182,7 +184,13 @@
                         $g2gadded++;
                     }
                 }
-                $g2gtext += $g2gsum + " гостя";
+                $gbaby+= settings.categoryValues[$glast]
+                if($gbaby != 0){
+                    //$gtext+=$gsum + " гостя, " + $baby + " младенцы";   Если младенец != гость
+                    $g2gtext+=$g2gsum-$gbaby + " гостя, " + $gbaby + " младенцы";
+                }else{
+                    $g2gtext += $g2gsum + " гостя";}
+                
                 if ($g2gsum == 0) {
                     $g2ginput.val($g2goriginalPlaceholder); 
                     $(".NCSG.reset").hide();

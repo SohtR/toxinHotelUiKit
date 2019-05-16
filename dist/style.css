@@ -34,7 +34,7 @@ main {
   margin: 0 auto;
   width: 100%;
   display: flex;
-  background: #f4f4f6 url(./fonts/mainLogo/mainLogo.svg) no-repeat 14.1% 1.875rem;
+  background: #f4f4f6 url(./img/mainLogo.svg) no-repeat 14.1% 1.875rem;
   flex-wrap: wrap; }
 
 .form-elements {
@@ -137,7 +137,7 @@ main {
     display: inline-block;
     width: 1.0625rem;
     height: 1.0625rem;
-    background: url(./fonts/arrowDown/arrowDown.svg) no-repeat;
+    background: url(./img/arrowDown.svg) no-repeat;
     position: absolute;
     top: -0.1875rem;
     left: 3.4375rem;
@@ -301,7 +301,7 @@ main {
   font-size: 14px;
   line-height: 18px;
   color: rgba(31, 32, 65, 0.75);
-  background: #fff url(./fonts/arrowDown/arrowDown.svg) no-repeat right 10px center;
+  background: #fff url(./img/arrowDown.svg) no-repeat right 10px center;
   box-sizing: border-box; }
 
 .exCheckList {
@@ -506,7 +506,7 @@ main {
   position: relative;
   font-size: 10px;
   text-decoration: none;
-  background: #fff url(./fonts/like_border/like_border.svg) no-repeat 4px 6px; }
+  background: #fff url(./img/like_border.svg) no-repeat 4px 6px; }
 
 .my-counter:after {
   padding: 0 14px;
@@ -523,7 +523,7 @@ margin-right: -13px; */
 
 .my:hover,
 .my.active {
-  background: #fff url(./fonts/like/like.svg) no-repeat 4px 6px;
+  background: #fff url(./img/like.svg) no-repeat 4px 6px;
   border: 1px solid #BC9CFF;
   color: #BC9CFF; }
 
@@ -1609,7 +1609,7 @@ input[name='NCS'] {
   margin: 0 0 23px 0;
   color: rgba(56, 56, 77, 0.75);
   font-family: 'Montserrat';
-  background: #fff url(./fonts/arrowDown/arrowDown.svg) 232px 9px no-repeat;
+  background: #fff url(./img/arrowDown.svg) 232px 9px no-repeat;
   text-overflow: ellipsis;
   outline: none;
   cursor: pointer; }
@@ -1733,7 +1733,7 @@ input[name='guest'] {
   margin: 0 0 23px 0;
   color: rgba(31, 32, 65, 0.75);
   font-family: 'Montserrat';
-  background: #fff url(./fonts/arrowDown/arrowDown.svg) 285px 9px no-repeat;
+  background: #fff url(./img/arrowDown.svg) 285px 9px no-repeat;
   text-overflow: ellipsis;
   outline: none;
   cursor: pointer; }
@@ -1874,7 +1874,7 @@ input[name='guest2'] {
   margin: 0 0 23px 0;
   color: rgba(31, 32, 65, 0.75);
   font-family: 'Montserrat';
-  background: #fff url(./fonts/arrowDown/arrowDown.svg) 285px 9px no-repeat;
+  background: #fff url(./img/arrowDown.svg) 285px 9px no-repeat;
   text-overflow: ellipsis;
   outline: none;
   cursor: pointer; }
@@ -2343,7 +2343,7 @@ html[xmlns] .flexslider .slides {
   font-size: 14px;
   line-height: 18px;
   color: rgba(31, 32, 65, 0.75);
-  background: #fff url(./fonts/arrowDown/arrowDown.svg) no-repeat 114px 11px;
+  background: #fff url(./img/arrowDown.svg) no-repeat 114px 11px;
   box-sizing: border-box; }
 
 .cardSmall {
@@ -2486,7 +2486,7 @@ html[xmlns] .flexslider .slides {
   .formEmail input:focus::placeholder {
     color: rgba(31, 32, 65, 0); }
   .formEmail input[type="submit"] {
-    background: url(./fonts/arrowInput/arrowInput.svg) no-repeat;
+    background: url(./img/arrowInput.svg) no-repeat;
     border: none;
     outline: none;
     margin: 0.8125rem 0 0 0.6875rem;

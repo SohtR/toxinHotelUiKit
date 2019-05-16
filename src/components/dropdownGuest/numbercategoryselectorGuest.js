@@ -177,9 +177,7 @@
                 $gsum = 0;
                 $baby =0;
                 $last = settings.categoryNames.length-1;
-                console.log($last);
                 for ($gi = 0; $gi < settings.categoryNames.length; $gi++) {
-                    
                     if (settings.categoryValues[$gi] != 0 || settings.showZero) {
                         
                         $gsum += settings.categoryValues[$gi];

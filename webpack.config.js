@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 //const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const images = require('file-loader');
+const CopyWebpackPlugin= require('copy-webpack-plugin');
 module.exports = {
   entry: './src/index.js' ,
   output: {
@@ -31,50 +32,36 @@ module.exports = {
             pretty: true
         }
       
-    },
-    {
-      test: /\.(eot|svg|ttf|woff|woff2)$/,
-      use: [
-               {
-                   loader: 'file-loader?name=./fonts/[name]/[name].[ext]'
-               }
-               
-           ]
-    },
-    {
-      test: /\.(gif|png|jpg)$/,
-      use: [
-        {
-            loader: 'file-loader?name=./img/[name].[ext]'
-        }
-        
-    ]
-    },
-      
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        exclude: /img/,
+        use: [
+                {
+                    loader: 'file-loader?name=./fonts/[name]/[name].[ext]'
+                }
+                
+            ]
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        exclude: /fonts/,
+        use: [
+          {
+            loader: 'file-loader?name=./img/[name].[ext]',
+            
+            // loader: 'file-loader',
+            // options: {
+            //   name: '[path][name].[ext]',
+            //   // publicPath: '..' // use relative path
+            // }
+          }]
+      },
     
-   
-    {
-      test : /\.react\.js$/,
-      loader: 'webpack-bem-loader',
-      options: {
-          naming: 'react',
-          levels: ['./pathToBlocks'],
-          // OR:
-          // levels: {
-          //     './pathToBlocks': {
-          //         default: true,
-          //         scheme: 'nested',
-          //         naming: 'origin'
-          //     }
-          // },
-          techs: ['js', 'css'],
-          techMap: {
-              js : ['react.js']
-          },
-          langs: ['ru', 'en']
-      }
-  }
     ]
+  },
+  devServer: {
+    stats: 'errors-only'
   },
   plugins: [
     // new ExtractTextPlugin(
@@ -89,6 +76,23 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html'
     }),
+    new CopyWebpackPlugin([{
+      from: './src/fonts',
+      to: './fonts'
+    },
+    {
+      from: './src/favicon',
+      to: './favicon'
+    },
+    {
+      from: './src/img',
+      to: './img'
+    },
+    {
+      from: './src/uploads',
+      to: './uploads'
+    }
+    ]),
     new HtmlWebpackPlugin({
       inject: 'head',
       
