@@ -33,6 +33,7 @@ module.exports = {
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
         exclude: /img/,
+        include: /fonts/,
         use: [
                 {
                     loader: 'file-loader?name=./fonts/[name]/[name].[ext]'
@@ -45,13 +46,15 @@ module.exports = {
         exclude: /fonts/,
         use: [
           {
-            loader: 'file-loader?name=./img/[name].[ext]',
             
-            // loader: 'file-loader',
-            // options: {
-            //   name: '[path][name].[ext]',
-            //   // publicPath: '..' // use relative path
-            // }
+            loader: 'file-loader',
+                        options: {
+                            name: './img/[name].[ext]',
+                            context: path.resolve(__dirname, "src/"),
+                            // outputPath: 'dist/',
+                            publicPath: '../',
+                            useRelativePaths: true
+                        }
           }]
       },
     
@@ -61,9 +64,6 @@ module.exports = {
     stats: 'errors-only'
   },
   plugins: [
-    // new ExtractTextPlugin(
-    //   {filename: 'style.[hash].css', disable: false, allChunks: true }
-    // ),
     new MiniCssExtractPlugin({
       filename: 'style.css',
     }),
@@ -84,7 +84,6 @@ module.exports = {
     ]),
     new HtmlWebpackPlugin({
       inject: 'head',
-      
       template: './src/index.pug'
     })
     

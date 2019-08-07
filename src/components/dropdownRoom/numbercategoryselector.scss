@@ -10,7 +10,7 @@ input[name='NCS']{
             margin: 0 0 23px 0; //Костыль. Убрать, если выпадающее меню ниже, чем надо (виноват img logo)
             color: rgba(56, 56, 77, 0.75);
             font-family: 'Montserrat';
-            background: $white url("../img/arrowDown.svg") 232px 9px no-repeat; 
+            background: $white url("./components/dropdownRoom/arrowDown.svg") 232px 9px no-repeat; 
             text-overflow: ellipsis;
             outline: none;
             cursor: pointer;

@@ -30,7 +30,7 @@
       top: 4px;
     }
     input[type="checkbox"]:checked + label::before {
-      background: url(../img/checked.png) no-repeat top left;
+      background: url(./components/checkBoxes/checked.png) no-repeat top left;
       border: none;  
     }
     

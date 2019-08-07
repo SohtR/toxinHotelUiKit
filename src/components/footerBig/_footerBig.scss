@@ -112,19 +112,19 @@
     display: inline-block;
     width: 22px;
     height: 22px;
-    background: url(../img/css_sprites.png) no-repeat;
+    background: url(./components/footerBig/css_sprites.png) no-repeat;
     margin: 0 22px 0 0;
 }
 
 .footer-big__twitter {
-    background: url(../img/css_sprites.png) no-repeat -10px -52px;
+    background: url(./components/footerBig/css_sprites.png) no-repeat -10px -52px;
 }
 
 .footer-big__facebook {
-    background: url(../img/css_sprites.png) no-repeat -10px -10px;
+    background: url(./components/footerBig/css_sprites.png) no-repeat -10px -10px;
 }
 
 .footer-big__instagram {
-    background: url(../img/css_sprites.png) no-repeat -52px -10px;
+    background: url(./components/footerBig/css_sprites.png) no-repeat -52px -10px;
     margin: 0;
 }

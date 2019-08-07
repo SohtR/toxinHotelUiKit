@@ -1,3 +1,31 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./fonts/montserrat-regular/montserrat-regular.eot);
+  src: url(./fonts/montserrat-regular/montserrat-regular.woff) format("woff"), url(./fonts/montserrat-regular/montserrat-regular.ttf) format("truetype"), url(./fonts/montserrat-regular/montserrat-regular.svg) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'MontserratBold';
+  src: url(./fonts/montserrat-Bold/montserrat-Bold.eot);
+  src: url(./fonts/montserrat-Bold/montserrat-Bold.woff) format("woff"), url(./fonts/montserrat-Bold/montserrat-Bold.ttf) format("truetype"), url(./fonts/montserrat-Bold/montserrat-Bold.svg) format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'quicksand';
+  src: url(./fonts/Quicksand-regular/Quicksand-regular.eot);
+  src: url(./fonts/Quicksand-regular/Quicksand-regular.woff) format("woff"), url(./fonts/Quicksand-regular/Quicksand-regular.ttf) format("truetype"), url(./fonts/Quicksand-regular/Quicksand-regular.svg) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'quicksandBold';
+  src: url(./fonts/Quicksand-bold/Quicksand-bold.eot);
+  src: url(./fonts/Quicksand-bold/Quicksand-bold.woff) format("woff"), url(./fonts/Quicksand-bold/Quicksand-bold.ttf) format("truetype"), url(./fonts/Quicksand-bold/Quicksand-bold.svg) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 body,
 ul,
 a {
@@ -34,7 +62,7 @@ main {
   margin: 0 auto;
   width: 100%;
   display: flex;
-  background: #f4f4f6 url(./img/mainLogo.svg) no-repeat 14.1% 1.875rem;
+  background: #f4f4f6 url(.././img/mainLogo.svg) no-repeat 14.1% 1.875rem;
   flex-wrap: wrap; }
 
 .form-elements {
@@ -137,7 +165,7 @@ main {
     display: inline-block;
     width: 1.0625rem;
     height: 1.0625rem;
-    background: url(./img/arrowDown.svg) no-repeat;
+    background: url(.././img/arrowDown.svg) no-repeat;
     position: absolute;
     top: -0.1875rem;
     left: 3.4375rem;
@@ -253,17 +281,17 @@ main {
   display: inline-block;
   width: 22px;
   height: 22px;
-  background: url(./img/css_sprites.png) no-repeat;
+  background: url(.././img/css_sprites.png) no-repeat;
   margin: 0 22px 0 0; }
 
 .footer-big__twitter {
-  background: url(./img/css_sprites.png) no-repeat -10px -52px; }
+  background: url(.././img/css_sprites.png) no-repeat -10px -52px; }
 
 .footer-big__facebook {
-  background: url(./img/css_sprites.png) no-repeat -10px -10px; }
+  background: url(.././img/css_sprites.png) no-repeat -10px -10px; }
 
 .footer-big__instagram {
-  background: url(./img/css_sprites.png) no-repeat -52px -10px;
+  background: url(.././img/css_sprites.png) no-repeat -52px -10px;
   margin: 0; }
 
 .footer-small {
@@ -301,7 +329,7 @@ main {
   font-size: 14px;
   line-height: 18px;
   color: rgba(31, 32, 65, 0.75);
-  background: #fff url(./img/arrowDown.svg) no-repeat right 10px center;
+  background: #fff url(.././img/arrowDown.svg) no-repeat right 10px center;
   box-sizing: border-box; }
 
 .exCheckList {
@@ -337,7 +365,7 @@ main {
     position: relative;
     top: 4px; }
   .exCheckList input[type="checkbox"]:checked + label::before {
-    background: url(./img/checked.png) no-repeat top left;
+    background: url(.././img/checked.png) no-repeat top left;
     border: none; }
 
 .exCheckLabel {
@@ -351,7 +379,7 @@ main {
     cursor: pointer;
     bottom: 0;
     left: 2em;
-    background: url(./img/arrowDown.png) no-repeat 238px;
+    background: url(.././img/arrowDown.png) no-repeat 238px;
     width: 266px;
     font-family: 'MontserratBold';
     font-weight: bold;
@@ -361,7 +389,7 @@ main {
     color: #1F2041; }
   #expander:checked + .exCheckLabel:after {
     content: 'Expandable checkbox list';
-    background: url(./img/expand_more.png) no-repeat 238px;
+    background: url(.././img/expand_more.png) no-repeat 238px;
     width: 266px; }
 
 #expander {
@@ -409,7 +437,7 @@ main {
     position: relative;
     top: 4px; }
   .CheckList input[type="checkbox"]:checked + label::before {
-    background: url(./img/checked.png) no-repeat top left;
+    background: url(.././img/checked.png) no-repeat top left;
     border: none; }
 
 #checkboxes {
@@ -506,7 +534,7 @@ main {
   position: relative;
   font-size: 10px;
   text-decoration: none;
-  background: #fff url(./img/like_border.svg) no-repeat 4px 6px; }
+  background: #fff url(.././img/like_border.svg) no-repeat 4px 6px; }
 
 .my-counter:after {
   padding: 0 14px;
@@ -523,7 +551,7 @@ margin-right: -13px; */
 
 .my:hover,
 .my.active {
-  background: #fff url(./img/like.svg) no-repeat 4px 6px;
+  background: #fff url(.././img/like.svg) no-repeat 4px 6px;
   border: 1px solid #BC9CFF;
   color: #BC9CFF; }
 
@@ -752,10 +780,10 @@ a:visited.ui-button,
   color: #fff; }
 
 .pagination .next {
-  background: url(./img/arrow_forward.png) no-repeat center, linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background: url(.././img/arrow_forward.png) no-repeat center, linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
   text-indent: -1000000px; }
   .pagination .next:hover {
-    background: url(./img/arrow_forward.png) no-repeat center, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+    background: url(.././img/arrow_forward.png) no-repeat center, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
 
 .pagination p {
   font-family: 'Montserrat';
@@ -922,34 +950,6 @@ a:visited.ui-button,
   .roomDetail .btnLong {
     margin: 20px 0 0 0; }
 
-@font-face {
-  font-family: 'Montserrat';
-  src: url(./fonts/montserrat-regular/montserrat-regular.eot);
-  src: url(./fonts/montserrat-regular/montserrat-regular.woff) format("woff"), url(./fonts/montserrat-regular/montserrat-regular.ttf) format("truetype"), url(./fonts/montserrat-regular/montserrat-regular.svg) format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'MontserratBold';
-  src: url(./fonts/montserrat-Bold/montserrat-Bold.eot);
-  src: url(./fonts/montserrat-Bold/montserrat-Bold.woff) format("woff"), url(./fonts/montserrat-Bold/montserrat-Bold.ttf) format("truetype"), url(./fonts/montserrat-Bold/montserrat-Bold.svg) format("svg");
-  font-weight: bold;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'quicksand';
-  src: url(./fonts/Quicksand-regular/Quicksand-regular.eot);
-  src: url(./fonts/Quicksand-regular/Quicksand-regular.woff) format("woff"), url(./fonts/Quicksand-regular/Quicksand-regular.ttf) format("truetype"), url(./fonts/Quicksand-regular/Quicksand-regular.svg) format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'quicksandBold';
-  src: url(./fonts/Quicksand-bold/Quicksand-bold.eot);
-  src: url(./fonts/Quicksand-bold/Quicksand-bold.woff) format("woff"), url(./fonts/Quicksand-bold/Quicksand-bold.ttf) format("truetype"), url(./fonts/Quicksand-bold/Quicksand-bold.svg) format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
 .datepicker--cells {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1034,11 +1034,11 @@ a:visited.ui-button,
   border: none; }
 
 .datepicker--cell.-selected-.-range-from- {
-  background: url(./img/Rectangle_2.png) no-repeat right, url(./img/Rectangle_1.png) no-repeat;
+  background: url(.././img/Rectangle_2.png) no-repeat right, url(.././img/Rectangle_1.png) no-repeat;
   border-radius: 0; }
 
 .datepicker--cell.-selected-.-range-to- {
-  background: url(./img/Rectangle_2.png) no-repeat left, url(./img/Rectangle_1.png) no-repeat;
+  background: url(.././img/Rectangle_2.png) no-repeat left, url(.././img/Rectangle_1.png) no-repeat;
   border-radius: 0; }
 
 .datepicker--cell.-selected-.-focus- {
@@ -1609,7 +1609,7 @@ input[name='NCS'] {
   margin: 0 0 23px 0;
   color: rgba(56, 56, 77, 0.75);
   font-family: 'Montserrat';
-  background: #fff url(./img/arrowDown.svg) 232px 9px no-repeat;
+  background: #fff url(.././img/arrowDown.svg) 232px 9px no-repeat;
   text-overflow: ellipsis;
   outline: none;
   cursor: pointer; }
@@ -1733,7 +1733,8 @@ input[name='guest'] {
   margin: 0 0 23px 0;
   color: rgba(31, 32, 65, 0.75);
   font-family: 'Montserrat';
-  background: #fff url(./img/arrowDown.svg) 285px 9px no-repeat;
+  background-image: url(.././img/arrowDown.svg);
+  background: #fff 285px 9px no-repeat;
   text-overflow: ellipsis;
   outline: none;
   cursor: pointer; }
@@ -1874,7 +1875,7 @@ input[name='guest2'] {
   margin: 0 0 23px 0;
   color: rgba(31, 32, 65, 0.75);
   font-family: 'Montserrat';
-  background: #fff url(./img/arrowDown.svg) 285px 9px no-repeat;
+  background: #fff url(.././img/arrowDown.svg) 285px 9px no-repeat;
   text-overflow: ellipsis;
   outline: none;
   cursor: pointer; }
@@ -2343,7 +2344,7 @@ html[xmlns] .flexslider .slides {
   font-size: 14px;
   line-height: 18px;
   color: rgba(31, 32, 65, 0.75);
-  background: #fff url(./img/arrowDown.svg) no-repeat 114px 11px;
+  background: #fff url(.././img/arrowDown.svg) no-repeat 114px 11px;
   box-sizing: border-box; }
 
 .cardSmall {
@@ -2405,7 +2406,7 @@ html[xmlns] .flexslider .slides {
   height: 44px;
   display: inline-block;
   text-align: center;
-  background: url(./img/arrow_forward.png) no-repeat right 13px center, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: url(.././img/arrow_forward.png) no-repeat right 13px center, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   padding: 15px 0 0 0; }
   .btnLong:hover, .btnLong:active {
     opacity: 0.5; }
@@ -2486,7 +2487,7 @@ html[xmlns] .flexslider .slides {
   .formEmail input:focus::placeholder {
     color: rgba(31, 32, 65, 0); }
   .formEmail input[type="submit"] {
-    background: url(./img/arrowInput.svg) no-repeat;
+    background: url(.././img/arrowInput.svg) no-repeat;
     border: none;
     outline: none;
     margin: 0.8125rem 0 0 0.6875rem;
