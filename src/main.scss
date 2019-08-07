@@ -1,0 +1,175 @@
+@font-face {
+	font-family: 'Montserrat';
+	src: url('./fonts/Montserrat-regular/montserrat-regular.eot');
+  src: url('./fonts/Montserrat-regular/montserrat-regular.woff') format('woff'),
+       url('./fonts/Montserrat-regular/montserrat-regular.ttf') format('truetype'),
+       url('./fonts/Montserrat-regular/montserrat-regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'MontserratBold';
+	src: url('./fonts/Montserrat-bold/montserrat-Bold.eot');
+  src: url('./fonts/Montserrat-bold/montserrat-Bold.woff') format('woff'),
+       url('./fonts/Montserrat-bold/montserrat-Bold.ttf') format('truetype'),
+       url('./fonts/Montserrat-bold/montserrat-Bold.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'quicksand';
+	src: url('./fonts/Quicksand/Quicksand-regular.eot');
+  src: url('./fonts/Quicksand/Quicksand-regular.woff') format('woff'),
+       url('./fonts/Quicksand/Quicksand-regular.ttf') format('truetype'),
+       url('./fonts/Quicksand/Quicksand-regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'quicksandBold';
+	src: url('./fonts/QuicksandBold/Quicksand-bold.eot');
+  src: url('./fonts/QuicksandBold/Quicksand-bold.woff') format('woff'),
+       url('./fonts/QuicksandBold/Quicksand-bold.ttf') format('truetype'),
+       url('./fonts/QuicksandBold/Quicksand-bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+$bgColor: #f4f4f6;
+$dark100: #1F2041;
+$dark50: rgba(31, 32, 65, 0.5);
+$white: #fff;
+$purple: #BC9CFF;
+
+body,
+ul,
+a{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Montserrat';
+  font-size: 0.875rem;
+  color: $dark50;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+p{
+  margin: 0;
+}
+h1{
+  font-size: 24px;
+  line-height: 30px;
+}
+h2{
+  font-size: 19px;
+  line-height: 24px;
+}
+h3{
+  font-size: 12px;
+  line-height: 15px;
+  font-family: 'MontserratBold';
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $dark100;
+  opacity: 0.75;
+}
+main{
+  margin: 0 auto;
+  width:100%;
+  display: flex;
+  background: $bgColor url(./img/mainLogo.svg) no-repeat 14.1% 1.875rem;
+  flex-wrap: wrap;
+}
+.form-elements{
+  width: 100%;
+  margin: 50px 0 0 0;
+  display: flex;
+  z-index: 1;
+}
+.flex{
+  display: flex;
+  margin: 20px 0 0 0;
+  form{
+    margin: 10px;
+  }
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  margin: auto 20px;
+  form{
+    margin: 10px;
+  }
+}
+.email{
+  h3{
+    margin: 20px 0 0 20px;
+  }
+}
+
+.clickMe{
+  h3{
+    margin: 20px;
+  }
+  .btn{
+    margin: 20px;
+  }
+  .btnFill  {
+    padding: 14.8px 19px;
+    margin: 20px;
+  }
+  .btnBorder{
+    padding: 11px 17px;
+  }
+  
+}
+
+.linkPurple{
+  font-family: 'MontserratBold';
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $purple;
+}
+.linkPurple:hover,
+.linkPurple:active{
+  color: rgba(31, 32, 65, 0.5);
+}
+.cards{
+  width: 100%;
+}
+
+@import './components/header/header.scss';
+@import './components/headerButtons/headerButtons.scss';
+@import './components/footerBig/footerBig.scss';
+@import './components/footerSmall/footerSmall.scss';
+@import './components/dataDDFilter/dataDDFilter.scss';
+@import "./components/expendCheckBox/expendCheckBox.scss";
+@import './components/roomFeature/roomFeature.scss';
+@import './components/checkBoxes/checkBoxes.scss';
+@import './components/radioButton/radioButton.scss';
+@import './components/likeButton/likeButton.scss';
+@import './components/rangeSlider/rangeSlider.scss';
+@import './components/richCheckBox/richCheckBox.scss';
+@import './components/bulletList/bulletList.scss';
+@import './components/review/review.scss';
+@import './components/pagination/pagination.scss';
+@import './components/cardSearchRoom/card.scss';
+@import './components/cardSearchRoom/cardSearchRoom.scss';
+@import './components/cardRegister/cardRegister.scss';
+@import './components/cardLogin/cardLogin.scss';
+@import './components/cardRoomDetail/cardRoomDetail.scss';
+@import './components/dataDropdown/datepicker.min.scss';
+@import './components/dropdownRoom/numbercategoryselector.scss';
+@import './components/dropdownGuest/numbercategoryselectorGuest.scss';
+@import './components/dropdownGuest2/numbercategoryselectorGuest2.scss';
+@import './components/cardSliderRoom/flexslider.scss';
+@import './components/rateButton/rateButton.scss';
+@import './components/btnBorder/btnBorder.scss';
+@import './components/dataDropdown/dataDropdown.scss';
+@import './components/cardSliderRoom/cardSliderRoom.scss';
+@import './components/btnFill/btnFill.scss';
+@import './components/btnLong/btnLong.scss';
+@import './components/colorsTypes/colorsTypes.scss';
+@import './components/emailSubscribe/emailSubscribe.scss';
+@import './components/textField/textField.scss';
+@import './components/toggleButton/toggleButton.scss';

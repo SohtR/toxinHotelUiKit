@@ -36,7 +36,7 @@
       top: 4px;
     }
     input[type="checkbox"]:checked + label::before {
-      background: url(../img/checked.png) no-repeat top left;
+      background: url(./components/expendCheckBox/checked.png) no-repeat top left;
       border: none;  
       
     }
@@ -56,7 +56,7 @@
       cursor: pointer;
       bottom: 0;
       left: 2em;
-      background: url(../img/arrowDown.png) no-repeat 238px;
+      background: url(./components/expendCheckBox/arrowDown.png) no-repeat 238px;
       width: 266px;
       font-family: 'MontserratBold';
       font-weight: bold;
@@ -68,7 +68,7 @@
     }
     #expander:checked + &:after {
         content: 'Expandable checkbox list';
-        background: url(../img/expand_more.png) no-repeat 238px;
+        background: url(./components/expendCheckBox/expand_more.png) no-repeat 238px;
         width: 266px;
       }
 }

@@ -10,7 +10,8 @@ input[name='guest'] {
             margin: 0 0 23px 0; //Костыль. Убрать, если выпадающее меню ниже, чем надо (виноват img logo)
             color: rgba(31, 32, 65, 0.75);
             font-family: 'Montserrat';
-            background: $white url(../img/arrowDown.svg) 285px 9px no-repeat;
+            background-image: url(./components/dropdownGuest/arrowDown.svg);
+            background: $white  285px 9px no-repeat;
             text-overflow: ellipsis;
             outline: none;
             cursor: pointer;

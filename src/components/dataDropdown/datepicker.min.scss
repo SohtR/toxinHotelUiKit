@@ -101,13 +101,13 @@
 }
 
 .datepicker--cell.-selected-.-range-from- {
-    background: url(../img/Rectangle_2.png) no-repeat right,
-    url(../img/Rectangle_1.png) no-repeat;
+    background: url(./components/dataDropdown/Rectangle_2.png) no-repeat right,
+    url(./components/dataDropdown/Rectangle_1.png) no-repeat;
     border-radius: 0;
 }
 .datepicker--cell.-selected-.-range-to- {
-    background: url(../img/Rectangle_2.png) no-repeat left,
-    url(../img/Rectangle_1.png) no-repeat;
+    background: url(./components/dataDropdown/Rectangle_2.png) no-repeat left,
+    url(./components/dataDropdown/Rectangle_1.png) no-repeat;
     border-radius: 0;
 }
 
