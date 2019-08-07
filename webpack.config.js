@@ -1,8 +1,5 @@
-// webpack v4
 const path = require('path');
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-//const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const images = require('file-loader');
 const CopyWebpackPlugin= require('copy-webpack-plugin');
@@ -81,16 +78,8 @@ module.exports = {
       to: './fonts'
     },
     {
-      from: './src/favicon',
-      to: './favicon'
-    },
-    {
       from: './src/img',
       to: './img'
-    },
-    {
-      from: './src/uploads',
-      to: './uploads'
     }
     ]),
     new HtmlWebpackPlugin({
@@ -98,11 +87,6 @@ module.exports = {
       
       template: './src/index.pug'
     })
-    // new webpack.ProvidePlugin({
-    //   $: "./src/js/jquery-1.12.4.min.js",
-    //   jQuery: "./src/js/jquery-1.12.4.min.js",
-    //   "window.jQuery": "./src/js/jquery-1.12.4.min.js"
-    // })
-    //new WebpackMd5Hash()
+    
   ]
 };
