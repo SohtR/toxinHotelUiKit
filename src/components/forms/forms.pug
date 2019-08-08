@@ -7,7 +7,7 @@
                 .dropdownRooms
                 form(action="#").dropdown
                     h3 Dropdown
-                    include ../dropdownRoom/dropdownRoom.pug
+                    include ../dropdownRoom/dropdown-room.pug
                 
             
             .maskedText
@@ -16,21 +16,21 @@
         .flex   
             .date
                 h3 Data Dropdown
-                include ../dataDropdown/dataDropdown.pug
+                include ../dataDropdown/data-dropdown.pug
                 
             .filterDropdown
                 label(for="") 
                     h3 Filter Dropdown    
-                include ../dataDDFilter/dataDDFilter.pug
+                include ../dataDDFilter/data-dd-filter.pug
             .email
                 h3 subscription textfield
                 +emailSubscribe('subs2', 'Your email address')
-            include ../expendCheckBox/expendCheckBox.pug
+            include ../expendCheckBox/expend-checkbox.pug
         .flex
             .flex-col  
                 +roomFeature('comfort', "Комфорт","Шумопоглощающие стены")
                 +roomFeature('udobstvo', "Удобство","Окно в каждой из спален")
-            include ../checkBoxes/checkBoxes.pug
+            include ../checkBoxes/check-boxes.pug
             .radioBut
                 h3 Radio buttons
                 p
@@ -66,9 +66,9 @@
         .flex
             .richChbox
                 h3 rich checkbox buttons
-                include ../richCheckBox/richCheckBox.pug
+                include ../richCheckBox/rich-check-box.pug
             .bullet
                 h3 Bullet list
-                include ../bulletList/bulletList.pug     
+                include ../bulletList/bullet-list.pug     
         .flex
             include ../review/review.pug

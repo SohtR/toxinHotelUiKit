@@ -56,7 +56,7 @@
       cursor: pointer;
       bottom: 0;
       left: 2em;
-      background: url(./arrowDown.png) no-repeat 238px;
+      background: url(./arrow-down.png) no-repeat 238px;
       width: 266px;
       font-family: 'MontserratBold';
       font-weight: bold;
@@ -68,7 +68,7 @@
     }
     #expander:checked + &:after {
         content: 'Expandable checkbox list';
-        background: url(./expand_more.png) no-repeat 238px;
+        background: url(./expand-more.png) no-repeat 238px;
         width: 266px;
       }
 }

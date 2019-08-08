@@ -22,7 +22,8 @@
       content: '\e83a';
       transition: opacity 0.2s linear;
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      -webkit-background-clip: text; 
+      -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
     }
   }
@@ -37,6 +38,7 @@
     transition: opacity 0.2s linear;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     -webkit-background-clip: text; 
+    background-clip: text;
     color: transparent;
   }
   

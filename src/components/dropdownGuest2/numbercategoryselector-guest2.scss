@@ -1,4 +1,4 @@
-input[name='guest'] {
+input[name='guest2'] {
             height: 44px;
             width: 320px;
             border: 1px solid rgba(31, 32, 65, 0.25);
@@ -7,16 +7,15 @@ input[name='guest'] {
             padding: 0 24px 0px 15px;
             font-size: 14px;
             line-height: 24px;
-            margin: 0 0 23px 0; 
+            margin: 0 0 23px 0; //Костыль. Убрать, если выпадающее меню ниже, чем надо (виноват img logo)
             color: rgba(31, 32, 65, 0.75);
             font-family: 'Montserrat';
-            background-image: url(./arrowDown.svg);
-            background: #fff  285px 9px no-repeat;
+            background: #fff url(./arrow-down.svg) 285px 9px no-repeat;
             text-overflow: ellipsis;
             outline: none;
             cursor: pointer;
         }
-div.guest.parent {
+div.guest2.parent {
     position: absolute;
     z-index: 1000;
     background: white;
@@ -31,18 +30,18 @@ div.guest.parent {
     
 }
 
-div.guest.category {
+div.guest2.category {
     // padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-div.guest.room {
+div.guest2.room {
     height: 5px;
 }
 
-div.guest.display {
+div.guest2.display {
     overflow: hidden;
     background: transparent;
     z-index: 999;
@@ -53,20 +52,20 @@ div.guest.display {
     align-items: center;
 }
 
-div.guest.inlinedisplay {
+div.guest2.inlinedisplay {
     height: 100%;
     width: 10000px;
     margin: 0 0 0 5px;
 }
 
-div.guest.displayelement:before {
+div.guest2.displayelement:before {
     content: "";
     display: inline-block;
     height: 100%;
     vertical-align: middle;
 }
 
-div.guest.displayelement {
+div.guest2.displayelement {
     display: inline;
     background: #fff;
     color: rgba(31, 32, 65, 0.75);
@@ -81,7 +80,7 @@ div.guest.displayelement {
     font-size: 14px;
 }
 
-a.guest.close {
+a.guest2.close {
     opacity: 1;
     text-align: center;
     font-size: 14px;
@@ -89,23 +88,23 @@ a.guest.close {
     text-decoration: underline;
 }
 
-div.guest.name{
+div.guest2.name{
     font-size: 16px;
     float: left;
 }
 
-div.guest.value{
+div.guest2.value{
     font-size: 16px;
 }
 
-div.guest.text {
+div.guest2.text {
     clear: both;
     display: inline-block;
     padding: 7px 0 0px 0;
     margin: 0 0 15px 0;
 }
 
-div.guest.name, a.guest.close, div.guest.value {
+div.guest2.name, a.guest2.close, div.guest2.value {
     font-family: 'MontserratBold';
     color: #1F2041;
     text-transform: uppercase;
@@ -114,14 +113,14 @@ div.guest.name, a.guest.close, div.guest.value {
     // padding: 0 0 0 15px;
 }
 
-div.guest.buttons {
+div.guest2.buttons {
     display: flex;
     width: 92px;
     justify-content: space-between;
     align-items: center;
 }
 
-a.guest.button {
+a.guest2.button {
     color: rgba(31, 32, 65, 0.5);
     text-decoration: none;
     width: 30px;
@@ -139,7 +138,7 @@ a.guest.button {
     line-height: 30px;
 }
 
-a.guest.button.inactive {
+a.guest2.button.inactive {
     background: #fff;
     opacity: 0.38;
 }
