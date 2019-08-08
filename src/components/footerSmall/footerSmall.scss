@@ -1,5 +1,5 @@
 .footer-small{
-    background: $white;
+    background: #fff;
     margin: 40px 0 0 0;
     max-height: 367px;
     width: 100%;
@@ -8,10 +8,10 @@
 }
 
 .wrapper-column{
-flex-direction: column;
-width: 100%;
-align-items: center;
-display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    display: flex;
 p{
     max-width: 560px;
     text-align: center;
@@ -21,10 +21,12 @@ p{
 }
 
 .footer-small__logo{
-padding:101px 0 0 0;
+    padding:101px 0 0 0;
+    width: 106px;
+    height: 40px;
 }
 
 .footer-small__social{
-margin: 31px 0 0 0;
+    margin: 31px 0 0 0;
 }
   

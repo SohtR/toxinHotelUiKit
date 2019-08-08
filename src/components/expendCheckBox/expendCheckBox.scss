@@ -28,7 +28,7 @@
       margin: 0 10px 0 0;
       width: 20px;
       height: 20px;
-      background: $white;
+      background: #fff;
       border: 1px solid rgba(31, 32, 65, 0.25);
       box-sizing: border-box;
       border-radius: 4px;
@@ -36,7 +36,7 @@
       top: 4px;
     }
     input[type="checkbox"]:checked + label::before {
-      background: url(./components/expendCheckBox/checked.png) no-repeat top left;
+      background: url(./checked.png) no-repeat top left;
       border: none;  
       
     }
@@ -56,19 +56,19 @@
       cursor: pointer;
       bottom: 0;
       left: 2em;
-      background: url(./components/expendCheckBox/arrowDown.png) no-repeat 238px;
+      background: url(./arrowDown.png) no-repeat 238px;
       width: 266px;
       font-family: 'MontserratBold';
       font-weight: bold;
       font-size: 12px;
       line-height: 15px;
       text-transform: uppercase;
-      color: $dark100;
+      color: #1F2041;
       
     }
     #expander:checked + &:after {
         content: 'Expandable checkbox list';
-        background: url(./components/expendCheckBox/expand_more.png) no-repeat 238px;
+        background: url(./expand_more.png) no-repeat 238px;
         width: 266px;
       }
 }

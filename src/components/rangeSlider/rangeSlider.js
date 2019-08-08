@@ -1,4 +1,3 @@
-
   $( function() {
       $( "#slider-range" ).slider({
         range: true,

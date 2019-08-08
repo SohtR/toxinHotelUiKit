@@ -10,7 +10,7 @@ input[name='guest2'] {
             margin: 0 0 23px 0; //Костыль. Убрать, если выпадающее меню ниже, чем надо (виноват img logo)
             color: rgba(31, 32, 65, 0.75);
             font-family: 'Montserrat';
-            background: $white url(./components/dropdownGuest2/arrowDown.svg) 285px 9px no-repeat;
+            background: #fff url(./arrowDown.svg) 285px 9px no-repeat;
             text-overflow: ellipsis;
             outline: none;
             cursor: pointer;
@@ -67,7 +67,7 @@ div.guest2.displayelement:before {
 
 div.guest2.displayelement {
     display: inline;
-    background: $white;
+    background: #fff;
     color: rgba(31, 32, 65, 0.75);
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
@@ -106,7 +106,7 @@ div.guest2.text {
 
 div.guest2.name, a.guest2.close, div.guest2.value {
     font-family: 'MontserratBold';
-    color: $dark100;
+    color: #1F2041;
     text-transform: uppercase;
     font-size: 12px;
     line-height: 15px;
@@ -128,7 +128,7 @@ a.guest2.button {
     
     display: inline-block;
     text-align: center;
-    background: $white;
+    background: #fff;
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
     border-radius: 22px;
@@ -139,7 +139,7 @@ a.guest2.button {
 }
 
 a.guest2.button.inactive {
-    background: $white;
+    background: #fff;
     opacity: 0.38;
 }
 
@@ -158,7 +158,7 @@ a.guest2.button.inactive {
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    color: $purple;
+    color: #BC9CFF;
 }
 
 

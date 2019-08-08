@@ -1,5 +1,5 @@
 #amount{
-    background: $bgColor;
+    background: #f4f4f6;
     border:0;
     font-family: 'Montserrat';
     font-size: 12px;
@@ -87,7 +87,7 @@ width: 266px;
 }
 .ui-widget-content {
     border: 1px solid #dddddd;
-    background: $white;
+    background: #fff;
     color: #333333;
 }
 .ui-widget-content a {
@@ -114,7 +114,7 @@ width: 266px;
 works properly when clicked or hovered */
 html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
-    border: 2px solid $white;
+    border: 2px solid #fff;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     font-weight: normal;
     color: #454545;
@@ -138,7 +138,7 @@ a:visited.ui-button,
 .ui-widget-header .ui-state-focus,
 .ui-button:hover,
 .ui-button:focus {
-    border: 2px solid $white;
+    border: 2px solid #fff;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     font-weight: normal;
     color: #2b2b2b;

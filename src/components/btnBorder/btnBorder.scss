@@ -1,8 +1,8 @@
 .btnBorder{
     position: relative;
-    color: $purple;
+    color: #BC9CFF;
     padding: 0.55em 1.5em;
-    background: $white;
+    background: #fff;
 }
   
 .btnBorder::before {
@@ -14,7 +14,7 @@
     bottom: -0.125rem;
     left: -0.125rem;
     border-radius: 22px;
-    background: linear-gradient(to bottom, $purple, #8BA4F9);
+    background: linear-gradient(to bottom, #BC9CFF, #8BA4F9);
 }
 .btnBorder:hover::before,
   .btnBorder:active::before{

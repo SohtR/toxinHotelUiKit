@@ -1,5 +1,5 @@
 .headerButtons{
-    background: $white;
+    background: #fff;
     box-shadow: 0rem 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
     height: 4.375rem;
     width: 100%;
@@ -41,7 +41,7 @@ li:nth-child(3) a::after{
     display: inline-block;
     width: 1.0625rem;
     height: 1.0625rem;
-    background: url(./components/headerButtons/arrowDown.svg) no-repeat;
+    background: url(./arrowDown.svg) no-repeat;
     position: absolute;
     top: -0.1875rem;
     left: 3.4375rem;
@@ -68,9 +68,9 @@ cursor: pointer;
 font-family: 'MontserratBold';
 font-size: 0.75rem;
 text-transform: uppercase;
-color: $white;
+color: #fff;
 text-align: center;
-background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 border-radius: 22px;
 }
   

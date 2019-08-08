@@ -7,11 +7,11 @@ input[name='guest'] {
             padding: 0 24px 0px 15px;
             font-size: 14px;
             line-height: 24px;
-            margin: 0 0 23px 0; //Костыль. Убрать, если выпадающее меню ниже, чем надо (виноват img logo)
+            margin: 0 0 23px 0; 
             color: rgba(31, 32, 65, 0.75);
             font-family: 'Montserrat';
-            background-image: url(./components/dropdownGuest/arrowDown.svg);
-            background: $white  285px 9px no-repeat;
+            background-image: url(./arrowDown.svg);
+            background: #fff  285px 9px no-repeat;
             text-overflow: ellipsis;
             outline: none;
             cursor: pointer;
@@ -68,7 +68,7 @@ div.guest.displayelement:before {
 
 div.guest.displayelement {
     display: inline;
-    background: $white;
+    background: #fff;
     color: rgba(31, 32, 65, 0.75);
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
@@ -107,7 +107,7 @@ div.guest.text {
 
 div.guest.name, a.guest.close, div.guest.value {
     font-family: 'MontserratBold';
-    color: $dark100;
+    color: #1F2041;
     text-transform: uppercase;
     font-size: 12px;
     line-height: 15px;
@@ -129,7 +129,7 @@ a.guest.button {
     
     display: inline-block;
     text-align: center;
-    background: $white;
+    background: #fff;
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
     border-radius: 22px;
@@ -140,7 +140,7 @@ a.guest.button {
 }
 
 a.guest.button.inactive {
-    background: $white;
+    background: #fff;
     opacity: 0.38;
 }
 
@@ -159,7 +159,7 @@ a.guest.button.inactive {
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    color: $purple;
+    color: #BC9CFF;
 }
 
 

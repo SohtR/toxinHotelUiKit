@@ -10,7 +10,7 @@
     position: relative;
     font-size: 10px;
     text-decoration: none;
-    background:$white url(./components/likeButton/like_border.svg) no-repeat 4px 6px;
+    background:#fff url(./like_border.svg) no-repeat 4px 6px;
 }
 
 .my-counter:after {
@@ -30,13 +30,13 @@ color: rgba(31, 32, 65, 0.25);
 }
 .my:hover,
 .my.active {
-background:$white url(./components/likeButton/like.svg) no-repeat 4px 6px;
-border: 1px solid $purple;
-color: $purple;
+background:#fff url(./like.svg) no-repeat 4px 6px;
+border: 1px solid #BC9CFF;
+color: #BC9CFF;
 }
 .my:hover:after,
 .my.active:after{
-color: $purple;
+color: #BC9CFF;
 
 } 
   

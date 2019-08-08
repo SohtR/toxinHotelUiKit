@@ -1,39 +1,4 @@
-@font-face {
-	font-family: 'Montserrat';
-	src: url('./fonts/Montserrat-regular/montserrat-regular.eot');
-  src: url('./fonts/Montserrat-regular/montserrat-regular.woff') format('woff'),
-       url('./fonts/Montserrat-regular/montserrat-regular.ttf') format('truetype'),
-       url('./fonts/Montserrat-regular/montserrat-regular.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'MontserratBold';
-	src: url('./fonts/Montserrat-bold/montserrat-Bold.eot');
-  src: url('./fonts/Montserrat-bold/montserrat-Bold.woff') format('woff'),
-       url('./fonts/Montserrat-bold/montserrat-Bold.ttf') format('truetype'),
-       url('./fonts/Montserrat-bold/montserrat-Bold.svg') format('svg');
-	font-weight: bold;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'quicksand';
-	src: url('./fonts/Quicksand/Quicksand-regular.eot');
-  src: url('./fonts/Quicksand/Quicksand-regular.woff') format('woff'),
-       url('./fonts/Quicksand/Quicksand-regular.ttf') format('truetype'),
-       url('./fonts/Quicksand/Quicksand-regular.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'quicksandBold';
-	src: url('./fonts/QuicksandBold/Quicksand-bold.eot');
-  src: url('./fonts/QuicksandBold/Quicksand-bold.woff') format('woff'),
-       url('./fonts/QuicksandBold/Quicksand-bold.ttf') format('truetype'),
-       url('./fonts/QuicksandBold/Quicksand-bold.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+
 $bgColor: #f4f4f6;
 $dark100: #1F2041;
 $dark50: rgba(31, 32, 65, 0.5);
@@ -47,7 +12,7 @@ a{
   padding: 0px;
   font-family: 'Montserrat';
   font-size: 0.875rem;
-  color: $dark50;
+  color: rgba(31, 32, 65, 0.5);
   list-style: none;
   text-decoration: none;
   outline: none;
@@ -69,14 +34,14 @@ h3{
   font-family: 'MontserratBold';
   font-weight: bold;
   text-transform: uppercase;
-  color: $dark100;
+  color: #1F2041;
   opacity: 0.75;
 }
 main{
   margin: 0 auto;
   width:100%;
   display: flex;
-  background: $bgColor url(./img/mainLogo.svg) no-repeat 14.1% 1.875rem;
+  background: #f4f4f6 url(./img/mainLogo.svg) no-repeat 14.1% 1.875rem;
   flex-wrap: wrap;
 }
 .form-elements{
@@ -128,7 +93,7 @@ main{
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
-  color: $purple;
+  color: #BC9CFF;
 }
 .linkPurple:hover,
 .linkPurple:active{
@@ -137,39 +102,3 @@ main{
 .cards{
   width: 100%;
 }
-
-@import './components/header/header.scss';
-@import './components/headerButtons/headerButtons.scss';
-@import './components/footerBig/footerBig.scss';
-@import './components/footerSmall/footerSmall.scss';
-@import './components/dataDDFilter/dataDDFilter.scss';
-@import "./components/expendCheckBox/expendCheckBox.scss";
-@import './components/roomFeature/roomFeature.scss';
-@import './components/checkBoxes/checkBoxes.scss';
-@import './components/radioButton/radioButton.scss';
-@import './components/likeButton/likeButton.scss';
-@import './components/rangeSlider/rangeSlider.scss';
-@import './components/richCheckBox/richCheckBox.scss';
-@import './components/bulletList/bulletList.scss';
-@import './components/review/review.scss';
-@import './components/pagination/pagination.scss';
-@import './components/cardSearchRoom/card.scss';
-@import './components/cardSearchRoom/cardSearchRoom.scss';
-@import './components/cardRegister/cardRegister.scss';
-@import './components/cardLogin/cardLogin.scss';
-@import './components/cardRoomDetail/cardRoomDetail.scss';
-@import './components/dataDropdown/datepicker.min.scss';
-@import './components/dropdownRoom/numbercategoryselector.scss';
-@import './components/dropdownGuest/numbercategoryselectorGuest.scss';
-@import './components/dropdownGuest2/numbercategoryselectorGuest2.scss';
-@import './components/cardSliderRoom/flexslider.scss';
-@import './components/rateButton/rateButton.scss';
-@import './components/btnBorder/btnBorder.scss';
-@import './components/dataDropdown/dataDropdown.scss';
-@import './components/cardSliderRoom/cardSliderRoom.scss';
-@import './components/btnFill/btnFill.scss';
-@import './components/btnLong/btnLong.scss';
-@import './components/colorsTypes/colorsTypes.scss';
-@import './components/emailSubscribe/emailSubscribe.scss';
-@import './components/textField/textField.scss';
-@import './components/toggleButton/toggleButton.scss';

@@ -20,7 +20,7 @@ transform: translate3d(0,0,0);
     width: 40px;
     height: 20px;
     display: block;
-    background: $white;
+    background: #fff;
     border-radius: 10px;
     transition: background .2s ease;
     border: 1px solid rgba(31, 32, 65, 0.25);
@@ -52,11 +52,11 @@ span{
 }
 .toggleButton input[type="checkbox"]:checked + .toggle{
 &:before{
-    background: $white;
-    border: 1px solid $purple;
+    background: #fff;
+    border: 1px solid #BC9CFF;
 }
 span{
-    background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     transform: translateX(20px);
     transition: all .2s cubic-bezier(.8,.4,.3,1.25), background .15s ease;
 }

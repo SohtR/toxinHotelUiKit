@@ -1,0 +1,36 @@
+@font-face {
+	font-family: 'Montserrat';
+	src: url('./Montserrat-regular/montserrat-regular.eot');
+    src: url('./Montserrat-regular/montserrat-regular.woff') format('woff'),
+       url('./Montserrat-regular/montserrat-regular.ttf') format('truetype'),
+       url('./Montserrat-regular/montserrat-regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'MontserratBold';
+	src: url('./Montserrat-bold/montserrat-Bold.eot');
+    src: url('./Montserrat-bold/montserrat-Bold.woff') format('woff'),
+       url('./Montserrat-bold/montserrat-Bold.ttf') format('truetype'),
+       url('./Montserrat-bold/montserrat-Bold.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'quicksand';
+	src: url('./Quicksand/Quicksand-regular.eot');
+    src: url('./Quicksand/Quicksand-regular.woff') format('woff'),
+       url('./Quicksand/Quicksand-regular.ttf') format('truetype'),
+       url('./Quicksand/Quicksand-regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'quicksandBold';
+	src: url('./QuicksandBold/Quicksand-bold.eot');
+    src: url('./QuicksandBold/Quicksand-bold.woff') format('woff'),
+       url('./QuicksandBold/Quicksand-bold.ttf') format('truetype'),
+       url('./QuicksandBold/Quicksand-bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

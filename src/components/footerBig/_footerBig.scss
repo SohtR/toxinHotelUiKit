@@ -1,6 +1,6 @@
 .footer-big {
     width: 100%;
-    background: $white;
+    background: #fff;
     box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
     margin: 2.3125rem 0 0 0;
     padding: 6.25rem 0 0px 0px;
@@ -60,7 +60,7 @@
     font-size: 0.75rem;
     line-height: 0.9375rem;
     text-transform: uppercase;
-    color: $dark100;
+    color: #1F2041;
     margin: 0.3125rem 0 0 0;
 }
 
@@ -96,7 +96,7 @@
     display: block;
     position: absolute;
     height: 2px;
-    background: $bgColor;
+    background: #f4f4f6;
     bottom: 70px;
 }
 
@@ -112,19 +112,19 @@
     display: inline-block;
     width: 22px;
     height: 22px;
-    background: url(./components/footerBig/css_sprites.png) no-repeat;
+    background: url(./css_sprites.png) no-repeat;
     margin: 0 22px 0 0;
 }
 
 .footer-big__twitter {
-    background: url(./components/footerBig/css_sprites.png) no-repeat -10px -52px;
+    background: url(./css_sprites.png) no-repeat -10px -52px;
 }
 
 .footer-big__facebook {
-    background: url(./components/footerBig/css_sprites.png) no-repeat -10px -10px;
+    background: url(./css_sprites.png) no-repeat -10px -10px;
 }
 
 .footer-big__instagram {
-    background: url(./components/footerBig/css_sprites.png) no-repeat -52px -10px;
+    background: url(./css_sprites.png) no-repeat -52px -10px;
     margin: 0;
 }

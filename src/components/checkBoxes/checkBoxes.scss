@@ -22,7 +22,7 @@
       margin: 0 10px 0 0;
       width: 20px;
       height: 20px;
-      background: $white;
+      background: #fff;
       border: 1px solid rgba(31, 32, 65, 0.25);
       box-sizing: border-box;
       border-radius: 4px;
@@ -30,7 +30,7 @@
       top: 4px;
     }
     input[type="checkbox"]:checked + label::before {
-      background: url(./components/checkBoxes/checked.png) no-repeat top left;
+      background: url(./checked.png) no-repeat top left;
       border: none;  
     }
     
@@ -58,7 +58,7 @@
         font-size: 12px;
         line-height: 15px;
         text-transform: uppercase;
-        color: $dark100;
+        color: #1F2041;
         
       }
       

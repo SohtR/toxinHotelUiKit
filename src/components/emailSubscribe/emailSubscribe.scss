@@ -4,7 +4,7 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
     border-radius: 4px;
-    background: $white;
+    background: #fff;
     margin: 1.5625rem 0 0 0;
       input[type="email"]{
         border: none;
@@ -21,7 +21,7 @@
         color: rgba(31, 32, 65, 0);
       }
       input[type="submit"]{
-        background: url(./components/emailSubscribe/arrowInput.svg) no-repeat;
+        background: url(./arrowInput.svg) no-repeat;
         border: none;
         outline: none;
         margin: 0.8125rem 0 0 0.6875rem;
