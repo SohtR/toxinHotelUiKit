@@ -1,11 +1,14 @@
-.footer-small
-    .wrapper
+mixin footerSmall(data)
         .wrapper-column
             .footer-small__logo
                 a(href="#") 
-                    img(src=require("./color-logo.svg"), alt="Logo")
+                    img(src=require("./components/footerSmall/color-logo.svg"), alt="Logo")
             p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis. 
             .footer-small__social
                 a(href="").footer-big__twitter 
                 a(href="").footer-big__facebook 
                 a(href="").footer-big__instagram
+
+.footer-small
+    .wrapper
+        +footerSmall()

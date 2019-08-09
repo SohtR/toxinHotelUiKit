@@ -1,7 +1,6 @@
-.header
-    .wrapper
+mixin header(data)
         a.header__logo(href="#") 
-            img(src=require("./color-logo.svg"), alt="Main Logo")
+            img(src=require("./components/headerButtons/color-logo.svg"), alt="Main Logo")
         .header__nav-but-wrap
             nav 
                 ul.headerButtons__mainMenu
@@ -18,3 +17,7 @@
                     li
                         a(href='#') Documentation
             a(href="#").withBorder Cosmin Negoita
+
+.header
+    .wrapper
+        +header()

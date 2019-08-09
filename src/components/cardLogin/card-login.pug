@@ -1,8 +1,8 @@
 .card.loginAccount
     h1 Войти
-    +emailField('loginEmail','Email')
-    +passwordField('loginPass', 'Пароль')
-    +btnLong('Войти')
+    +emailField(data.cardLogin.emailField.id, data.cardLogin.emailField.placeholder)
+    +passwordField(data.cardLogin.passField.id, data.cardLogin.passField.placeholder)
+    +btnLong(data.cardLogin.btnLongContent)
     .flex
         p.haveAccount Нет аккаунта на Toxin?
-        +btnBorder('создать')
+        +btnBorder(data.cardLogin.btnBorderContent)

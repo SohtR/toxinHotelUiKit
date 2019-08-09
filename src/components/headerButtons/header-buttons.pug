@@ -1,5 +1,5 @@
-.headerButtons
-    .wrapper   
+mixin headerButtons(data)
+    .wrapper  
         a.header__logo(href="#") 
             img(src=require("./components/headerButtons/color-logo.svg"), alt="Main Logo")
         .header__nav-but-wrap
@@ -18,5 +18,8 @@
                     li
                         a(href='#') Documentation
             .headerButtons__buttons
-                +btnBorder('login')
-                +btnFill('register')
+                +btnBorder(data.loginButton)
+                +btnFill(data.registerButton)
+
+.headerButtons
+    +headerButtons({loginButton: "login", registerButton: "register"})

@@ -1,5 +1,4 @@
-.colors-type
-    .wrapper
+mixin colorsTypes(data)
         ul.color-squares
             li  
                 div.square
@@ -58,3 +57,7 @@
                         p Body
                     td
                         p This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+.colors-type
+    .wrapper
+        +colorsTypes()

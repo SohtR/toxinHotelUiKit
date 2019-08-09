@@ -1,9 +1,8 @@
-.form-elements
-    .wrapper
+mixin forms(data)
         .flex
             .formText
                 h3 Text field
-                +textField('textfield','Email')
+                +textField(data.textfieldId, data.textfieldPlaceholder)
                 .dropdownRooms
                 form(action="#").dropdown
                     h3 Dropdown
@@ -12,7 +11,7 @@
             
             .maskedText
                 h3 Masked Textfield
-                +maskedTextfield('maskedText',"ДД.ММ.ГГГГ")
+                +maskedTextfield(data.maskedTextId, data.maskedTextPlaceholder)
         .flex   
             .date
                 h3 Data Dropdown
@@ -24,44 +23,39 @@
                 include ../dataDDFilter/data-dd-filter.pug
             .email
                 h3 subscription textfield
-                +emailSubscribe('subs2', 'Your email address')
+                +emailSubscribe(data.emailSubId, data.emailSubPlaceholder)
             include ../expendCheckBox/expend-checkbox.pug
         .flex
             .flex-col  
-                +roomFeature('comfort', "Комфорт","Шумопоглощающие стены")
-                +roomFeature('udobstvo', "Удобство","Окно в каждой из спален")
+                +roomFeature(data.roomFeatureComfort.ImgName, data.roomFeatureComfort.Header, data.roomFeatureComfort.Body)
+                +roomFeature(data.roomFeatureUdobstvo.ImgName, data.roomFeatureUdobstvo.Header, data.roomFeatureUdobstvo.Body)
             include ../checkBoxes/check-boxes.pug
             .radioBut
                 h3 Radio buttons
                 p
-                    +radioButton('test1','Мужчина','radio-group')
-                    +radioButton('test2', 'Женщина', 'radio-group')
+                    +radioButton(data.radioId1, data.radioContent1, data.radioName)
+                    +radioButton(data.radioId2, data.radioContent2, data.radioName)
             .toggleBut
                     h3 Toggle
                     .flex
-                        +toggleButton('cbx')
+                        +toggleButton(data.toggleButtonId)
                         p Получать спецпредложения
         .flex   
             .flex-column 
                 h3 like button
-                +likeButton(5)
+                +likeButton(data.likeCount)
             .flex-column
                 h3 rate button
-                +rateButton(0)
+                +rateButton(data.ratingNumber0)
             .flex-column
-                +rangeSlider('Range Slider')
-            .flex-column
-                //- .dropdownGuest
-                //-     label(for="dropdownGuest") 
-                //-         h3 Dropdown
-                //-     input(id="dropdownGuest" name="guest", type="text", readonly, placeholder="Сколько гостей")
+                +rangeSlider(data.rangeSliderLabel)
         .flex
             .clickMe
                 h3 Buttons
-                +btnFill('click me')  
-                +btnBorder('click me')    
+                +btnFill(data.btnFillContent)  
+                +btnBorder(data.btnBorderContent)    
                 a.linkPurple(href='#') click me  
-                +btnLong('перейти к оплате')
+                +btnLong(data.btnLongContent)
             include ../pagination/pagination.pug
         .flex
             .richChbox
@@ -72,3 +66,37 @@
                 include ../bulletList/bullet-list.pug     
         .flex
             include ../review/review.pug
+
+.form-elements
+    .wrapper
+        +forms({
+            textfieldId: "textfield",
+            textfieldPlaceholder: "Email",
+            maskedTextId: "maskedText",
+            maskedTextPlaceholder: "ДД.ММ.ГГГГ",
+            emailSubId: "subs2",
+            emailSubPlaceholder: "Your email address",
+            roomFeatureComfort: {
+                    ImgName: "comfort",
+                    Header: "Комфорт",
+                    Body: "Шумопоглощающие стены"
+                },
+            roomFeatureUdobstvo: {
+                    ImgName: "udobstvo",
+                    Header: "Удобство",
+                    Body: "Окно в каждой из спален"
+                },
+            radioId1: "test1",
+            radioId2: "test2",
+            radioContent1: "Мужчина",
+            radioContent2: "Женщина",
+            radioName: "radio-group",
+            toggleButtonId: "cbx",
+            likeCount: 5,
+            ratingNumber0: 0,
+            rangeSliderLabel: "Range Slider",
+            btnFillContent: "click me",
+            btnBorderContent: "click me",
+            btnLongContent: "перейти к оплате"
+
+        })
