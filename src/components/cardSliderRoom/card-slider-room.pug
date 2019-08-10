@@ -3,13 +3,13 @@ mixin sliderRoom(roomNum, price,rev, lux)
         .flexslider
             ul.slides
                 li
-                    img(src=require('./components/cardSliderRoom/'+roomNum+'/slide-1.jpg'))
+                    img(src=require(`./components/cardSliderRoom/${roomNum}-slide-1.jpg`))
                 li
-                    img(src=require('./components/cardSliderRoom/'+roomNum+'/slide-2.jpg'))
+                    img(src=require(`./components/cardSliderRoom/${roomNum}-slide-2.jpg`))
                 li
-                    img(src=require('./components/cardSliderRoom/'+roomNum+'/slide-3.jpg'))
+                    img(src=require(`./components/cardSliderRoom/${roomNum}-slide-3.jpg`))
                 li
-                    img(src=require('./components/cardSliderRoom/'+roomNum+'/slide-4.jpg'))
+                    img(src=require(`./components/cardSliderRoom/${roomNum}-slide-4.jpg`))
         .flex.roomSlider__priceHeadline
             p.roomSlider__number <span class="roomSlider__num"> №</span> #{roomNum} <span class="roomSlider__lux">#{lux}</span>
             p.roomSlider__price= price +"₽ в сутки"
