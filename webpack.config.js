@@ -67,12 +67,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.css',
     }),
-    new HtmlWebpackPlugin({
-      inject: 'head',
-      hash: true,
-      template: './src/index.html',
-      filename: 'index.html'
-    }),
     new CopyWebpackPlugin([{
       from: './src/fonts',
       to: './fonts'
