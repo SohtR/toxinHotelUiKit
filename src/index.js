@@ -3,12 +3,5 @@ function importAll(resolve) {
 }
 
 importAll(
-    require.context('./', true, /\.(scss)$/)
+    require.context('./', true, /\.(js|scss)$/)
 );
-importAll(
-    require.context('./', true, /\.(js)$/)
-);
-
-import "./components/dropdownRoom/numbercategoryselector.js";
-import "./components/dropdownGuest/numbercategoryselector-guest.js";
-import "./components/dropdownGuest2/numbercategoryselector-guest2.js";
