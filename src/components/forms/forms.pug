@@ -6,7 +6,7 @@ mixin forms(data)
                 .dropdownRooms
                 form(action="#").dropdown
                     h3 Dropdown
-                    include ../dropdownRoom/dropdown-room.pug
+                    include ../dropdown-room/dropdown-room.pug
                 
             
             .maskedText
@@ -15,21 +15,21 @@ mixin forms(data)
         .flex   
             .date
                 h3 Data Dropdown
-                include ../dataDropdown/data-dropdown.pug
+                include ../data-dropdown/data-dropdown.pug
                 
             .filterDropdown
                 label(for="") 
                     h3 Filter Dropdown    
-                include ../dataDDFilter/data-dd-filter.pug
+                include ../data-dd-filter/data-dd-filter.pug
             .email
                 h3 subscription textfield
                 +emailSubscribe(data.emailSubId, data.emailSubPlaceholder)
-            include ../expendCheckBox/expend-checkbox.pug
+            include ../expend-checkbox/expend-checkbox.pug
         .flex
             .flex-col  
                 +roomFeature(data.roomFeatureComfort.ImgName, data.roomFeatureComfort.Header, data.roomFeatureComfort.Body)
                 +roomFeature(data.roomFeatureUdobstvo.ImgName, data.roomFeatureUdobstvo.Header, data.roomFeatureUdobstvo.Body)
-            include ../checkBoxes/check-boxes.pug
+            include ../check-boxes/check-boxes.pug
             .radioBut
                 h3 Radio buttons
                 p
@@ -60,10 +60,10 @@ mixin forms(data)
         .flex
             .richChbox
                 h3 rich checkbox buttons
-                include ../richCheckBox/rich-check-box.pug
+                include ../rich-check-box/rich-check-box.pug
             .bullet
                 h3 Bullet list
-                include ../bulletList/bullet-list.pug     
+                include ../bullet-list/bullet-list.pug     
         .flex
             include ../review/review.pug
 
