@@ -18,8 +18,12 @@ mixin headerButtons(data)
                     li
                         a(href='#') Documentation
             .headerButtons__buttons
-                +btnBorder(data.loginButton)
-                +btnFill(data.registerButton)
+                +button(data.loginButtonStyle, data.loginButton)
+                +button(data.registerButtonStyle, data.registerButton)
 
 .headerButtons
-    +headerButtons({loginButton: "login", registerButton: "register"})
+    +headerButtons({
+        loginButtonStyle: "border",
+        loginButton: "login",
+        registerButtonStyle: "fill",
+        registerButton: "register"})

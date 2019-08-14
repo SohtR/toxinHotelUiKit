@@ -52,10 +52,10 @@ mixin forms(data)
         .flex
             .clickMe
                 h3 Buttons
-                +btnFill(data.btnFillContent)  
-                +btnBorder(data.btnBorderContent)    
+                +button(data.btnFillStyle, data.btnFillContent)  
+                +button(data.btnBorderStyle, data.btnBorderContent)    
                 a.linkPurple(href='#') click me  
-                +btnLong(data.btnLongContent)
+                +button(data.btnLongStyle, data.btnLongContent)
             include ../pagination/pagination.pug
         .flex
             .richChbox
@@ -96,7 +96,10 @@ mixin forms(data)
             ratingNumber0: 0,
             rangeSliderLabel: "Range Slider",
             btnFillContent: "click me",
+            btnFillStyle: "fill",
             btnBorderContent: "click me",
-            btnLongContent: "перейти к оплате"
+            btnBorderStyle: "border",
+            btnLongContent: "перейти к оплате",
+            btnLongStyle: "long"
 
         })

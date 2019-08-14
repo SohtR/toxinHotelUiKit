@@ -1,4 +1,3 @@
-$( function() {
     $("input[name='guest2']").guest2({
         categoryNames: ["Взрослые", "Дети", "Младенцы"],
         categoryValues: false,
@@ -12,4 +11,3 @@ $( function() {
         useDisplay: false,
         showZero: false,
     });
-});

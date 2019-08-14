@@ -1,11 +1,11 @@
-.btn.btnBorder{
+.button_border{
     position: relative;
     color: #BC9CFF;
     padding: 0.55em 1.5em;
     background: #fff;
 }
   
-.btnBorder::before {
+.button_border::before {
     content: '';
     position: absolute;
     z-index: -1;
@@ -16,7 +16,7 @@
     border-radius: 22px;
     background: linear-gradient(to bottom, #BC9CFF, #8BA4F9);
 }
-.btnBorder:hover::before,
-  .btnBorder:active::before{
+.button_border:hover::before,
+.button_border:active::before{
     opacity: 0.5;
 }
