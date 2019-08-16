@@ -9,4 +9,49 @@
     text-align: center;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 22px;
+
+    &_border{
+        position: relative;
+        color: #BC9CFF;
+        padding: 0.55em 1.5em;
+        background: #fff;
+    }
+      
+    &_border::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: -0.125rem;
+        right: -0.125rem;
+        bottom: -0.125rem;
+        left: -0.125rem;
+        border-radius: 22px;
+        background: linear-gradient(to bottom, #BC9CFF, #8BA4F9);
+    }
+    &_border:hover::before,
+    &_border:active::before{
+        opacity: 0.5;
+    }
+
+    &_fill{
+        padding: 0.625rem 1.1875rem;
+    }
+    &_fill:hover,
+    &_fill:active{
+        opacity: 0.5;
+    }
+
+    &_long{
+        width: 320px;
+        height: 44px;
+        display: inline-block;
+        text-align: center;
+        background: url(./arrow-forward.png) no-repeat right 13px center,
+        linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        padding: 15px 0 0 0;
+        &:hover,
+        &:active{
+          opacity: 0.5;
+        }
+    }
 }

@@ -1,7 +1,7 @@
 .card.loginAccount
     h1 Войти
-    +emailField(data.cardLogin.emailField.id, data.cardLogin.emailField.placeholder)
-    +passwordField(data.cardLogin.passField.id, data.cardLogin.passField.placeholder)
+    +textField(data.cardLogin.emailField.id, data.cardLogin.emailField.placeholder, data.cardLogin.emailField.type)
+    +textField(data.cardLogin.passField.id, data.cardLogin.passField.placeholder, data.cardLogin.passField.type)
     +button(data.cardLogin.btnLongStyle, data.cardLogin.btnLongContent)
     .flex
         p.haveAccount Нет аккаунта на Toxin?

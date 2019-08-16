@@ -2,7 +2,7 @@ mixin forms(data)
         .flex
             .formText
                 h3 Text field
-                +textField(data.textfieldId, data.textfieldPlaceholder)
+                +textField(data.textfieldId, data.textfieldPlaceholder, data.textfieldType)
                 .dropdownRooms
                 form(action="#").dropdown
                     h3 Dropdown
@@ -72,6 +72,7 @@ mixin forms(data)
         +forms({
             textfieldId: "textfield",
             textfieldPlaceholder: "Email",
+            textfieldType: "text",
             maskedTextId: "maskedText",
             maskedTextPlaceholder: "ДД.ММ.ГГГГ",
             emailSubId: "subs2",
