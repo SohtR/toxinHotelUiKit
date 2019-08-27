@@ -1,8 +1,8 @@
 body,
 ul,
 a{
-  margin: 0px;
-  padding: 0px;
+  margin: 0rem;
+  padding: 0rem;
   font-family: 'Montserrat';
   font-size: 0.875rem;
   color: rgba(31, 32, 65, 0.5);
@@ -14,17 +14,16 @@ p{
   margin: 0;
 }
 h1{
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
 }
 h2{
-  font-size: 19px;
-  line-height: 24px;
+  font-size: 1.1875rem;
+  line-height: 1.5rem;
 }
 h3{
-  font-size: 12px;
-  line-height: 15px;
-  font-family: 'MontserratBold';
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
   font-weight: bold;
   text-transform: uppercase;
   color: #1F2041;
@@ -39,30 +38,30 @@ main{
 }
 .form-elements{
   width: 100%;
-  margin: 50px 0 0 0;
+  margin: 3.125rem 0 0 0;
   display: flex;
   z-index: 1;
 }
 .flex-wrapper{
   display: flex;
-  margin: 20px 0 0 0;
+  margin: 1.25rem 0 0 0;
   form{
-    margin: 10px;
+    margin: 0.625rem;
   }
 }
 .flex-column-wrapper{
   display: flex;
   flex-direction: column;
-  margin: auto 20px;
+  margin: auto 1.25rem;
   form{
-    margin: 10px;
+    margin: 0.625rem;
   }
 }
 
 .link__purple{
-  font-family: 'MontserratBold';
-  font-size: 12px;
-  line-height: 15px;
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
   text-transform: uppercase;
   color: #BC9CFF;
 }

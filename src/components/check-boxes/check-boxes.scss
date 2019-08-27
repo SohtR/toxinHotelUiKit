@@ -1,42 +1,41 @@
 .checkboxes__header{
-  font-family: 'MontserratBold';
   font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
   text-transform: uppercase;
   color: #1F2041;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 1.25rem;
 }
 .CheckList {
-    margin: 18px 0 0 24px;
+    margin: 1.125rem 0 0 1.5rem;
     padding: 0;
-    width: 266px;
+    width: 16.625rem;
     .CheckList__item{
-      margin: 0 0 10px 0;
-      height: 20px;
+      margin: 0 0 0.625rem 0;
+      height: 1.25rem;
     }
     .CheckList__checkbox{
       display:none;            
     }
-    .CheckList__checkbox + label{
-      font-family: 'Montserrat';
-      font-size: 14px;
-      line-height: 18px;
+    .CheckList__checkbox + .CheckList__checkbox-label{
+      font-size: 0.875rem;
+      line-height: 1.125rem;
       color: rgba(31, 32, 65, 0.5);
       cursor: pointer;
+      font-weight: normal;
     }
-    .CheckList__checkbox + label::before{
+    .CheckList__checkbox + .CheckList__checkbox-label::before{
       content: "";
       display: inline-block;
-      margin: 0 10px 0 0;
-      width: 20px;
-      height: 20px;
+      margin: 0 0.625rem 0 0;
+      width: 1.25rem;
+      height: 1.25rem;
       background: #fff;
-      border: 1px solid rgba(31, 32, 65, 0.25);
+      border: 0.0625rem solid rgba(31, 32, 65, 0.25);
       box-sizing: border-box;
-      border-radius: 4px;
+      border-radius: 0.25rem;
       position: relative;
-      top: 4px;
+      top: 0.25rem;
     }
     .CheckList__checkbox:checked + label::before {
       background: url(./checked.png) no-repeat top left;

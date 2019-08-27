@@ -1,13 +1,12 @@
 .datepicker-filter{
-    width: 266px;
-    height: 44px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 4px;
-    padding: 0px 0px 1px 14px;
-    font-family: 'Montserrat';
-    font-size: 14px;
-    line-height: 18px;
+    width: 16.625rem;
+    height: 2.75rem;
+    border: 0.0625rem solid rgba(31, 32, 65, 0.25);
+    border-radius: 0.25rem;
+    padding: 0rem 0rem 0.0625rem 0.875rem;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
     color: rgba(31, 32, 65, 0.75);
-    background: #fff url(./arrow-down.svg)  no-repeat right 10px center;
+    background: #fff url(./arrow-down.svg)  no-repeat right 0.625rem center;
     box-sizing: border-box;
 }

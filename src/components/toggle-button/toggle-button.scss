@@ -1,45 +1,45 @@
 .toggleButton{
-    margin: 0 10px 8px 0;
+    margin: 0 0.625rem 0.5rem 0;
 }
 
 .toggle{
     position: relative;
     display: block;
-    width: 40px;
-    height: 20px;
+    width: 2.5rem;
+    height: 1.25rem;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     transform: translate3d(0,0,0);
     &:before{
         content: "";
         position: relative;
-        top: 0px;
-        left: 0px;
-        width: 40px;
-        height: 20px;
+        top: 0rem;
+        left: 0rem;
+        width: 2.5rem;
+        height: 1.25rem;
         display: block;
         background: #fff;
-        border-radius: 10px;
+        border-radius: 0.625rem;
         transition: background .2s ease;
-        border: 1px solid rgba(31, 32, 65, 0.25);
+        border: 0.0625rem solid rgba(31, 32, 65, 0.25);
     }
     .toggle__button{
         position: absolute;
-        top: 5px;
-        left: 5px;
-        width: 12px;
-        height: 12px;
+        top: 0.3125rem;
+        left: 0.3125rem;
+        width: 0.75rem;
+        height: 0.75rem;
         display: block;
         background: rgba(31, 32, 65, 0.25);
-        border-radius: 10px;
+        border-radius: 0.625rem;
         transition: all .2s ease;
         &:before{
         content: "";
         position: absolute;
         display: block;
-        margin: -18px;
-        width: 56px;
-        height: 56px;
+        margin: -1.125rem;
+        width: 3.5rem;
+        height: 3.5rem;
         background: rgba(#4F2EDC,.5);
         border-radius: 50%;
         transform: scale(0);
@@ -51,11 +51,11 @@
 .toggleButton input[type="checkbox"]:checked + .toggle{
     &:before{
         background: #fff;
-        border: 1px solid #BC9CFF;
+        border: 0.0625rem solid #BC9CFF;
     }
     .toggle__button{
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        transform: translateX(20px);
+        transform: translateX(1.25rem);
         transition: all .2s cubic-bezier(.8,.4,.3,1.25), background .15s ease;
     }
     &:before{

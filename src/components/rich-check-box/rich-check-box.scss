@@ -1,30 +1,30 @@
 .CheckList {
-  margin: 18px 0 0 24px;
+  margin: 1.125rem 0 0 1.5rem;
   padding: 0;
-  width: 266px;
+  width: 16.625rem;
  
   .CheckList__checkbox{
     display:none;            
   }
   .CheckList__checkbox + label{
     cursor: pointer;
-    font-family: 'MontserratBold';
-    font-size: 14px;
-    line-height: 18px;
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
     color: rgba(31, 32, 65, 0.75);
   }
   .CheckList__checkbox + label::before{
     content: "";
     display: inline-block;
-    margin: 0 10px 0 0;
-    width: 20px;
-    height: 20px;
+    margin: 0 0.625rem 0 0;
+    width: 1.25rem;
+    height: 1.25rem;
     background: #fff;
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 0.0625rem solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     position: relative;
-    top: 4px;
+    top: 0.25rem;
   }
   .CheckList__checkbox:checked + label::before {
     background: url(./checked.png) no-repeat top left;
@@ -34,14 +34,14 @@
 
 .richCheckbox{
   .CheckList__item{
-      margin: 0 0 42px 0;
+      margin: 0 0 2.625rem 0;
       .CheckList__content{
         margin: 0;
-        font-family: 'Montserrat';
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 0.75rem;
+        line-height: 0.875rem;
         color: rgba(31, 32, 65, 0.5);
-        padding: 4px 5px 0 30px;
+        padding: 0.25rem 0.3125rem 0 1.875rem;
+        font-weight: normal;
       }
     }
   }

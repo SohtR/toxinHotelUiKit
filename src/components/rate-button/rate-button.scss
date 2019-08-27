@@ -2,8 +2,8 @@
     overflow: hidden;
     vertical-align: bottom;
     display: inline-block;
-    width: 120px;
-    height: 24px;
+    width: 7.5rem;
+    height: 1.5rem;
     .rating__input{
       opacity: 0;
       margin-right: -100%;
@@ -16,7 +16,7 @@
     }
     .rating__label:before{
       font-family: 'Material Icons';
-      font-size: 24px;
+      font-size: 1.5rem;
       display: block;
       opacity: 1;
       content: '\e83a';
@@ -32,7 +32,7 @@
   .rating:not(:hover) > :checked ~ .rating__label:before{
     opacity: 1;
     font-family: 'Material Icons';
-    font-size: 24px;
+    font-size: 1.5rem;
     display: block;
     content: '\e838';
     transition: opacity 0.2s linear;

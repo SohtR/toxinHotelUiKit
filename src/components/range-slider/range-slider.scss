@@ -1,12 +1,12 @@
 #amount{
     background: #f4f4f6;
     border:0;
-    font-family: 'Montserrat';
-    font-size: 12px;
+    
+    font-size: 0.75rem;
     text-align: right;
     text-transform: uppercase;
     color: rgba(31, 32, 65, 0.5);
-    margin: 0 0 20px 0;
+    margin: 0 0 1.25rem 0;
   }
   
   
@@ -17,8 +17,8 @@
 .ui-slider .ui-slider-handle {
     position: absolute;
     z-index: 2;
-    width: 12px;
-    height: 12px;
+    width: 0.75rem;
+    height: 0.75rem;
     cursor: default;
     -ms-touch-action: none;
     touch-action: none;
@@ -39,10 +39,10 @@
 }
 
 .ui-slider-horizontal {
-    height: 6px;
+    height: 0.375rem;
 }
 .ui-slider-horizontal .ui-slider-handle {
-    top: -6px;
+    top: -0.375rem;
     margin-left: -.6em;
 }
 .ui-slider-horizontal .ui-slider-range {
@@ -58,7 +58,7 @@
 
 .ui-slider-vertical {
     width: .8em;
-    height: 100px;
+    height: 6.25rem;
 }
 .ui-slider-vertical .ui-slider-handle {
     left: -.3em;
@@ -80,13 +80,13 @@
     font-size: 1em;
 }
 .ui-widget.ui-widget-content {
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 0.0625rem solid rgba(31, 32, 65, 0.25);
 box-sizing: border-box;
-border-radius: 3px;
-width: 266px;
+border-radius: 0.1875rem;
+width: 16.625rem;
 }
 .ui-widget-content {
-    border: 1px solid #dddddd;
+    border: 0.0625rem solid #dddddd;
     background: #fff;
     color: #333333;
 }
@@ -94,7 +94,7 @@ width: 266px;
     color: #333333;
 }
 .ui-widget-header {
-    border: 1px solid #dddddd;
+    border: 0.0625rem solid #dddddd;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     color: #333333;
     font-weight: bold;
@@ -114,11 +114,11 @@ width: 266px;
 works properly when clicked or hovered */
 html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
-    border: 2px solid #fff;
+    border: 0.125rem solid #fff;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     font-weight: normal;
     color: #454545;
-border-radius: 10px;
+border-radius: 0.625rem;
 }
 .ui-state-default a,
 .ui-state-default a:link,
@@ -138,7 +138,7 @@ a:visited.ui-button,
 .ui-widget-header .ui-state-focus,
 .ui-button:hover,
 .ui-button:focus {
-    border: 2px solid #fff;
+    border: 0.125rem solid #fff;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     font-weight: normal;
     color: #2b2b2b;

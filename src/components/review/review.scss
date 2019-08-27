@@ -1,35 +1,35 @@
 .review{
     display: flex;
     flex-direction: column;
-    max-width: 710px;;
+    max-width: 44.375rem;;
     .review__topBlock,
     .review__bottomBlock{
       display: flex;
     }
     .review__avatar{
-      max-width: 48px;
-      height: 48px;
+      max-width: 3rem;
+      height: 3rem;
       border-radius: 50%;
-      border: 2px solid #fff;
+      border: 0.125rem solid #fff;
       box-sizing: border-box;
-      box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+      box-shadow: 0rem 0.625rem 1.25rem rgba(31, 32, 65, 0.1);
     }
     .review__name{
-      margin: 0px 0 0 10px;
-      font-family: 'Montserrat';
-      font-size: 14px;
-      line-height: 24px;
+      margin: 0rem 0 0 0.625rem;
+      
+      font-size: 0.875rem;
+      line-height: 1.5rem;
       color: rgba(31, 32, 65, 0.75);
       b{
         font-family: 'MontserratBold'
       }
     }
     .review__like{
-      margin: 12px 0 0 4px;
+      margin: 0.75rem 0 0 0.25rem;
     }
     .review__content{
-      margin: 10px 0 0 14px;
-      line-height: 24px;
+      margin: 0.625rem 0 0 0.875rem;
+      line-height: 1.5rem;
       color: rgba(31, 32, 65, 0.75);
     }
   }

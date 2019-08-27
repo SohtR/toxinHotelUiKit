@@ -1,14 +1,14 @@
 .pagination{
   .pagination__link{
       display: inline-block;
-      width: 40px;
-      height: 41px;
-      border-radius: 22px;
+      width: 2.5rem;
+      height: 2.5625rem;
+      border-radius: 1.375rem;
       text-align: center;
       vertical-align: middle;
-      line-height: 40px;
-      font-family: 'Montserrat';
-      font-size: 12px;
+      line-height: 2.5rem;
+      
+      font-size: 0.75rem;
       color: rgba(31, 32, 65, 0.5);
     }
     .active,
@@ -19,18 +19,18 @@
     .next{
       background: url(./arrow-forward.png) no-repeat center,
                   linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-      text-indent: -1000000px;
+      text-indent: -62500rem;
       &:hover{
         background: url(./arrow-forward.png) no-repeat center,
         linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       }
     }
     .pagination__content{
-      font-family: 'Montserrat';
-      font-size: 14px;
-      line-height: 24px;
+      
+      font-size: 0.875rem;
+      line-height: 1.5rem;
       color: rgba(31, 32, 65, 0.75);
-      margin: 8px 0 0 5px;
+      margin: 0.5rem 0 0 0.3125rem;
     }
   }
   
