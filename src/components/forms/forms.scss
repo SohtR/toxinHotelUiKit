@@ -2,7 +2,18 @@
     .wrapper{
     flex-wrap: wrap;
     }
-    .clickMe a{
+    .buttons-block{
+        .button{
         margin: 15px;
+        }
+        .buttons-block__header{
+            margin: 20px;
+        }
     }
+
+    .email-subscription-field{
+        .email-subscription-field__header{
+          margin: 20px 0 0 20px;
+        }
+      }
 }

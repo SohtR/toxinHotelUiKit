@@ -1,0 +1,16 @@
+.searchRoom .flex-wrapper {
+  margin: 0 0 10px 0;
+}
+
+.searchRoom .searchRoom__header {
+  margin: 1px 0 4px 0;
+}
+
+.searchRoom .searchRoom__arrival {
+  margin: 0 20px 0 0;
+}
+
+.searchRoom .dropdownGuest {
+  margin: 0 0 9px 0;
+}
+/*# sourceMappingURL=card-search-room.css.map */

@@ -1,8 +1,8 @@
-.card.loginAccount
-    h1 Войти
+.card-template.loginAccount
+    h1.card-template__header Войти
     +textField(data.cardLogin.emailField.id, data.cardLogin.emailField.placeholder, data.cardLogin.emailField.type)
     +textField(data.cardLogin.passField.id, data.cardLogin.passField.placeholder, data.cardLogin.passField.type)
     +button(data.cardLogin.btnLongStyle, data.cardLogin.btnLongContent)
-    .flex
+    .flex-wrapper
         p.haveAccount Нет аккаунта на Toxin?
         +button(data.cardLogin.btnBorderStyle, data.cardLogin.btnBorderContent)

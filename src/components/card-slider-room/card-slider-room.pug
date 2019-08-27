@@ -10,9 +10,9 @@ mixin sliderRoom(roomNum, price,rev, lux)
                     img(src=require(`./components/card-slider-room/${roomNum}-slide-3.jpg`))
                 li
                     img(src=require(`./components/card-slider-room/${roomNum}-slide-4.jpg`))
-        .flex.roomSlider__priceHeadline
+        .flex-wrapper.roomSlider__priceHeadline
             p.roomSlider__number <span class="roomSlider__num"> №</span> #{roomNum} <span class="roomSlider__lux">#{lux}</span>
             p.roomSlider__price= price +"₽ в сутки"
-        .flex.roomSlider__rating
+        .flex-wrapper.roomSlider__rating
             +rateButton(roomNum)                               
             p.roomSlider__reviewsAmount <b>#{rev}</b> Отзывов

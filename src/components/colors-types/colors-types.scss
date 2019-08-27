@@ -3,14 +3,14 @@
     display: flex;
     margin: 30px 0 0 0;
 }
-.color-squares li{
-display: flex;
+.color-squares__item{
+    display: flex;
 }
 .square{
-width: 70px;
-height: 70px;
-background: #1F2041;
-border-radius: 6px;
+    width: 70px;
+    height: 70px;
+    background: #1F2041;
+    border-radius: 6px;
 
 }
 ._75{

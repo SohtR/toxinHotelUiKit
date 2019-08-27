@@ -1,4 +1,4 @@
-.bulletList li {
+.bulletList .bulletList__item {
   font-family: 'Montserrat';
   font-size: 14px;
   line-height: 24px;
@@ -8,7 +8,7 @@
   padding: 0 0 0 12px;
   width: 240px; }
 
-.bulletList li:before {
+.bulletList .bulletList__item:before {
   width: 10px;
   height: 10px;
   border-radius: 10px;
@@ -32,59 +32,48 @@
   text-align: center;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px; }
-
-.button_border {
-  position: relative;
-  color: #BC9CFF;
-  padding: 0.55em 1.5em;
-  background: #fff; }
-
-.button_border::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: -0.125rem;
-  right: -0.125rem;
-  bottom: -0.125rem;
-  left: -0.125rem;
-  border-radius: 22px;
-  background: linear-gradient(to bottom, #BC9CFF, #8BA4F9); }
-
-.button_border:hover::before,
-.button_border:active::before {
-  opacity: 0.5; }
-
-.button_fill {
-  padding: 0.625rem 1.1875rem; }
-
-.button_fill:hover,
-.button_fill:active {
-  opacity: 0.5; }
-
-.button_long {
-  width: 320px;
-  height: 44px;
-  display: inline-block;
-  text-align: center;
-  background: url(.././img/arrow-forward.png) no-repeat right 13px center, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  padding: 15px 0 0 0; }
-  .button_long:hover, .button_long:active {
+  .button_border {
+    position: relative;
+    color: #BC9CFF;
+    padding: 0.55em 1.5em;
+    background: #fff; }
+  .button_border::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -0.125rem;
+    right: -0.125rem;
+    bottom: -0.125rem;
+    left: -0.125rem;
+    border-radius: 22px;
+    background: linear-gradient(to bottom, #BC9CFF, #8BA4F9); }
+  .button_border:hover::before, .button_border:active::before {
     opacity: 0.5; }
+  .button_fill {
+    padding: 0.625rem 1.1875rem; }
+  .button_fill:hover, .button_fill:active {
+    opacity: 0.5; }
+  .button_long {
+    width: 320px;
+    height: 44px;
+    display: inline-block;
+    text-align: center;
+    background: url(.././img/arrow-forward.png) no-repeat right 13px center, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    padding: 15px 0 0 0; }
+    .button_long:hover, .button_long:active {
+      opacity: 0.5; }
 
-.loginAccount .flex {
+.loginAccount .flex-wrapper {
   margin: 0px 0 4px 0; }
 
 .loginAccount .haveAccount {
   margin: 13px 0 0px 0; }
 
-.loginAccount input {
+.loginAccount .textfield {
   margin: 0 0 10px 0; }
 
-.loginAccount input[type="password"] {
-  margin: 0 0 20px 0; }
-
 .loginAccount .button_long {
-  margin: 0 0 30px 0; }
+  margin: 10px 0 30px 0; }
 
 .loginAccount .button_border {
   margin: 2px 0px 0px 59px;
@@ -94,42 +83,11 @@
   display: inline-block;
   line-height: 27px; }
 
-.card {
-  width: 380px;
-  padding: 40px 30px 30px 30px;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  z-index: 1; }
-  .card h1 {
-    font-family: 'MontserratBold';
-    font-size: 24px;
-    line-height: 30px;
-    color: #1F2041;
-    margin: 0 0 20px 0;
-    letter-spacing: -0.4px; }
-  .card .btnBorder {
-    margin: 2px 0 0 36px;
-    width: 96px;
-    height: 40px;
-    box-sizing: border-box;
-    display: inline-block;
-    line-height: 26px; }
-  .card .haveAccount {
-    font-size: 14px;
-    line-height: 18px;
-    color: #000; }
-
-.registerAccount h1 {
+.registerAccount .registerAccount__header {
   letter-spacing: -0.6px; }
 
-.registerAccount input {
+.registerAccount .textfield {
   margin: 0 0 10px 0; }
-
-.registerAccount input[type="password"] {
-  margin: 0 0 8px 0; }
 
 .registerAccount .registerAccount__birthday {
   margin: 25px 0 5px 0; }
@@ -137,46 +95,15 @@
 .registerAccount .registerAccount__enterData {
   margin: 10px 0 5px 0; }
 
-.registerAccount .flex {
+.registerAccount .flex-wrapper {
   margin: 0px 0 3px 0; }
-  .registerAccount .flex p {
-    margin: 0 0 20px 10px;
-    line-height: 22px; }
 
 .registerAccount .button_long {
   margin: 0 0 30px 0; }
 
-.card {
-  width: 380px;
-  padding: 40px 30px 30px 30px;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  z-index: 1; }
-  .card h1 {
-    font-family: 'MontserratBold';
-    font-size: 24px;
-    line-height: 30px;
-    color: #1F2041;
-    margin: 0 0 20px 0;
-    letter-spacing: -0.4px; }
-  .card .button_border {
-    margin: 2px 0 0 36px;
-    width: 96px;
-    height: 40px;
-    box-sizing: border-box;
-    display: inline-block;
-    line-height: 26px; }
-  .card .haveAccount {
-    font-size: 14px;
-    line-height: 18px;
-    color: #000; }
-
 .roomDetail {
   height: 511px; }
-  .roomDetail h3 {
+  .roomDetail .roomDetail__header {
     margin: 0 0 5px 0; }
   .roomDetail .roomDetail__price {
     margin: 9px -6px 0px 0px; }
@@ -196,20 +123,20 @@
     line-height: 15px;
     text-transform: uppercase;
     color: #BC9CFF; }
-  .roomDetail .flex {
+  .roomDetail .flex-wrapper {
     justify-content: space-between;
     margin: 20px 0 0 0; }
-  .roomDetail .flex:first-child {
+  .roomDetail .flex-wrapper:first-child {
     justify-content: space-between;
     margin: 0; }
   .roomDetail .roomDetail__priceTable {
     border-collapse: collapse;
     margin: 21px 0 0 0; }
-    .roomDetail .roomDetail__priceTable td {
+    .roomDetail .roomDetail__priceTable .roomDetail__priceTable-column {
       padding: 0 0 10px 0;
       vertical-align: top;
       text-align: center; }
-    .roomDetail .roomDetail__priceTable .circle {
+    .roomDetail .roomDetail__priceTable .roomDetail__priceTable-circle {
       width: 20px;
       height: 20px;
       border: 1px solid rgba(31, 32, 65, 0.25);
@@ -245,38 +172,10 @@
   .roomDetail .button_long {
     margin: 20px 0 0 0; }
 
-.card {
-  width: 380px;
-  padding: 40px 30px 30px 30px;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  z-index: 1; }
-  .card h1 {
-    font-family: 'MontserratBold';
-    font-size: 24px;
-    line-height: 30px;
-    color: #1F2041;
-    margin: 0 0 20px 0;
-    letter-spacing: -0.4px; }
-  .card .btnBorder {
-    margin: 2px 0 0 36px;
-    width: 96px;
-    height: 40px;
-    box-sizing: border-box;
-    display: inline-block;
-    line-height: 26px; }
-  .card .haveAccount {
-    font-size: 14px;
-    line-height: 18px;
-    color: #000; }
-
-.searchRoom .flex {
+.searchRoom .flex-wrapper {
   margin: 0 0 10px 0; }
 
-.searchRoom h3 {
+.searchRoom .searchRoom__header {
   margin: 1px 0 4px 0; }
 
 .searchRoom .searchRoom__arrival {
@@ -284,34 +183,6 @@
 
 .searchRoom .dropdownGuest {
   margin: 0 0 9px 0; }
-
-.card {
-  width: 380px;
-  padding: 40px 30px 30px 30px;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  z-index: 1; }
-  .card h1 {
-    font-family: 'MontserratBold';
-    font-size: 24px;
-    line-height: 30px;
-    color: #1F2041;
-    margin: 0 0 20px 0;
-    letter-spacing: -0.4px; }
-  .card .btnBorder {
-    margin: 2px 0 0 36px;
-    width: 96px;
-    height: 40px;
-    box-sizing: border-box;
-    display: inline-block;
-    line-height: 26px; }
-  .card .haveAccount {
-    font-size: 14px;
-    line-height: 18px;
-    color: #000; }
 
 .cardSmall {
   width: 270px;
@@ -631,22 +502,62 @@ html[xmlns] .flexslider .slides {
     opacity: 1;
     right: 10px; } }
 
+.card-template {
+  width: 380px;
+  padding: 40px 30px 30px 30px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 1; }
+  .card-template .card-template__header {
+    font-family: 'MontserratBold';
+    font-size: 24px;
+    line-height: 30px;
+    color: #1F2041;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.4px; }
+  .card-template .button_border {
+    margin: 2px 0 0 36px;
+    width: 96px;
+    height: 40px;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 26px; }
+  .card-template .haveAccount {
+    font-size: 14px;
+    line-height: 18px;
+    color: #000; }
+
+.cards-block {
+  width: 100%; }
+
+.checkboxes__header {
+  font-family: 'MontserratBold';
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+  margin: 0 0 0 20px; }
+
 .CheckList {
   margin: 18px 0 0 24px;
   padding: 0;
   width: 266px; }
-  .CheckList li {
+  .CheckList .CheckList__item {
     margin: 0 0 10px 0;
     height: 20px; }
-  .CheckList input[type="checkbox"] {
+  .CheckList .CheckList__checkbox {
     display: none; }
-  .CheckList input[type="checkbox"] + label {
+  .CheckList .CheckList__checkbox + label {
     font-family: 'Montserrat';
     font-size: 14px;
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
     cursor: pointer; }
-  .CheckList input[type="checkbox"] + label::before {
+  .CheckList .CheckList__checkbox + label::before {
     content: "";
     display: inline-block;
     margin: 0 10px 0 0;
@@ -658,37 +569,16 @@ html[xmlns] .flexslider .slides {
     border-radius: 4px;
     position: relative;
     top: 4px; }
-  .CheckList input[type="checkbox"]:checked + label::before {
+  .CheckList .CheckList__checkbox:checked + label::before {
     background: url(.././img/checked.png) no-repeat top left;
     border: none; }
-
-#checkboxes {
-  display: none; }
-
-.CheckLabel {
-  position: relative; }
-  .CheckLabel:hover {
-    color: orange; }
-  .CheckLabel:after {
-    content: 'Checkbox buttons';
-    white-space: nowrap;
-    position: absolute;
-    bottom: 0;
-    left: 2em;
-    width: 266px;
-    font-family: 'MontserratBold';
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: #1F2041; }
 
 .colors-type {
   width: 100%;
   display: flex;
   margin: 30px 0 0 0; }
 
-.color-squares li {
+.color-squares__item {
   display: flex; }
 
 .square {
@@ -739,7 +629,7 @@ html[xmlns] .flexslider .slides {
   font-family: 'QuicksandBold';
   color: #1F2041; }
 
-.filter {
+.datepicker-filter {
   width: 266px;
   height: 44px;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -752,7 +642,7 @@ html[xmlns] .flexslider .slides {
   background: #fff url(.././img/arrow-down.svg) no-repeat right 10px center;
   box-sizing: border-box; }
 
-.dataDropdown input {
+.dataDropdown__input {
   width: 150px;
   height: 44px;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -1827,7 +1717,7 @@ a.NCS.button.inactive {
   border-radius: 4px;
   background: #fff;
   margin: 1.5625rem 0 0 0; }
-  .formEmail input[type="email"] {
+  .formEmail .formEmail__email-field {
     border: none;
     padding: 0px  0 0.25rem 0.9375rem;
     font-size: 0.875rem;
@@ -1836,39 +1726,39 @@ a.NCS.button.inactive {
     outline: none;
     vertical-align: middle;
     font-family: 'Montserrat'; }
-  .formEmail input:focus::placeholder {
+  .formEmail .formEmail__email-field:focus::placeholder {
     color: rgba(31, 32, 65, 0); }
-  .formEmail input[type="submit"] {
+  .formEmail .formEmail__submit {
     background: url(.././img/arrow-input.svg) no-repeat;
     border: none;
     outline: none;
     margin: 0.8125rem 0 0 0.6875rem;
     width: 1.125rem;
     height: 1.125rem; }
-  .formEmail input[type="submit"]:hover {
+  .formEmail .formEmail__submit:hover {
     cursor: pointer; }
 
-.exCheckList {
+.expanded-checkbox-list {
   max-height: 0em;
   overflow: hidden;
   margin: 18px 0 0 24px;
   padding: 0;
   transition: max-height 0.35s ease-in;
   width: 266px; }
-  .exCheckList li {
+  .expanded-checkbox-list .expanded-checkbox-list__item {
     margin: 0 0 10px 0;
     height: 20px; }
-  #expander:checked ~ .exCheckList {
+  #expander:checked ~ .expanded-checkbox-list {
     max-height: 17em; }
-  .exCheckList input[type="checkbox"] {
+  .expanded-checkbox-list .expanded-checkbox-list__input {
     display: none; }
-  .exCheckList input[type="checkbox"] + label {
+  .expanded-checkbox-list .expanded-checkbox-list__input + label {
     font-family: 'Montserrat';
     font-size: 14px;
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
     cursor: pointer; }
-  .exCheckList input[type="checkbox"] + label::before {
+  .expanded-checkbox-list .expanded-checkbox-list__input + label::before {
     content: "";
     display: inline-block;
     margin: 0 10px 0 0;
@@ -1880,15 +1770,15 @@ a.NCS.button.inactive {
     border-radius: 4px;
     position: relative;
     top: 4px; }
-  .exCheckList input[type="checkbox"]:checked + label::before {
+  .expanded-checkbox-list .expanded-checkbox-list__input:checked + label::before {
     background: url(.././img/checked.png) no-repeat top left;
     border: none; }
 
-.exCheckLabel {
+.expanded-checkbox-label {
   position: relative; }
-  .exCheckLabel:hover {
+  .expanded-checkbox-label:hover {
     color: orange; }
-  .exCheckLabel:after {
+  .expanded-checkbox-label:after {
     content: 'Expandable checkbox list';
     white-space: nowrap;
     position: absolute;
@@ -1903,7 +1793,7 @@ a.NCS.button.inactive {
     line-height: 15px;
     text-transform: uppercase;
     color: #1F2041; }
-  #expander:checked + .exCheckLabel:after {
+  #expander:checked + .expanded-checkbox-label:after {
     content: 'Expandable checkbox list';
     background: url(.././img/expand-more.png) no-repeat 238px;
     width: 266px; }
@@ -1945,9 +1835,7 @@ a.NCS.button.inactive {
 
 .footer-big__list {
   margin: 0 43px 0 0; }
-  .footer-big__list ul {
-    margin: 0.625rem 0 0 0; }
-  .footer-big__list li {
+  .footer-big__list .footer-big__list-item {
     line-height: 2.375rem; }
 
 .footer-big__support {
@@ -1960,13 +1848,13 @@ a.NCS.button.inactive {
   line-height: 0.9375rem;
   text-transform: uppercase;
   color: #1F2041;
-  margin: 0.3125rem 0 0 0; }
+  margin: 0.3125rem 0 10px 0; }
 
-.footer-big__subscribe p {
+.footer-big__subscribe .footer-big__subscribe-content {
   margin: 20px 0 0 0;
   line-height: 1.375rem; }
 
-.footer-big__subscribe h3 {
+.footer-big__subscribe .footer-big__headline {
   letter-spacing: -0.0375rem; }
 
 .footer-big__copyright {
@@ -1974,7 +1862,7 @@ a.NCS.button.inactive {
   justify-content: space-between;
   width: 100%;
   height: 70px; }
-  .footer-big__copyright p {
+  .footer-big__copyright .footer-big__copyright-content {
     padding: 0.9375rem 0 0 0;
     letter-spacing: -0.0063rem;
     font-size: 0.875rem;
@@ -2025,7 +1913,7 @@ a.NCS.button.inactive {
   width: 100%;
   align-items: center;
   display: flex; }
-  .wrapper-column p {
+  .wrapper-column .footer-small__content {
     max-width: 560px;
     text-align: center;
     margin: 14px 0 0 0;
@@ -2038,6 +1926,18 @@ a.NCS.button.inactive {
 
 .footer-small__social {
   margin: 31px 0 0 0; }
+
+.form-elements .wrapper {
+  flex-wrap: wrap; }
+
+.form-elements .buttons-block .button {
+  margin: 15px; }
+
+.form-elements .buttons-block .buttons-block__header {
+  margin: 20px; }
+
+.form-elements .email-subscription-field .email-subscription-field__header {
+  margin: 20px 0 0 20px; }
 
 .headerButtons {
   background: #fff;
@@ -2058,7 +1958,7 @@ a.NCS.button.inactive {
   justify-content: space-between; }
   .wrapper .header__logo {
     display: inline; }
-    .wrapper .header__logo img {
+    .wrapper .header__logo .header__logo-img {
       max-width: 100%;
       max-height: 100%; }
 
@@ -2069,14 +1969,14 @@ a.NCS.button.inactive {
   list-style: none;
   margin: 0.7em 2.2em 0 0px;
   padding: 0; }
-  .headerButtons__mainMenu li {
+  .headerButtons__mainMenu .headerButtons__mainMenu-item {
     display: inline-block;
     margin: 0 0 0 1.75rem;
     position: relative; }
-  .headerButtons__mainMenu li a {
+  .headerButtons__mainMenu .headerButtons__mainMenu-item a {
     font-size: 0.875rem;
     color: rgba(31, 32, 65, 0.5); }
-  .headerButtons__mainMenu li:nth-child(3) a::after {
+  .headerButtons__mainMenu .headerButtons__mainMenu-item:nth-child(3) a::after {
     content: '';
     display: inline-block;
     width: 1.0625rem;
@@ -2086,7 +1986,7 @@ a.NCS.button.inactive {
     top: -0.1875rem;
     left: 3.4375rem;
     opacity: 0.5; }
-  .headerButtons__mainMenu li.active a {
+  .headerButtons__mainMenu .headerButtons__mainMenu-item.active a {
     font-family: 'MontserratBold';
     color: rgba(31, 32, 65, 0.75); }
 
@@ -2096,18 +1996,6 @@ a.NCS.button.inactive {
   padding: 0.6875rem 0 0 0; }
   .headerButtons__buttons a:nth-child(2) {
     margin: 0 0 0 1.3125rem; }
-
-.btn {
-  height: 34px;
-  box-sizing: border-box;
-  cursor: pointer;
-  font-family: 'MontserratBold';
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: #fff;
-  text-align: center;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  border-radius: 22px; }
 
 .header {
   background: #fff;
@@ -2123,7 +2011,7 @@ a.NCS.button.inactive {
   border-left: 1px solid rgba(31, 32, 65, 0.1);
   padding: 0.6875rem 0 0 1.9375rem; }
 
-.my {
+.like-button {
   box-sizing: border-box;
   border-radius: 10px;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -2137,7 +2025,7 @@ a.NCS.button.inactive {
   text-decoration: none;
   background: #fff url(.././img/like_border.svg) no-repeat 4px 6px; }
 
-.my-counter:after {
+.like-button-counter:after {
   padding: 0 14px;
   color: rgba(31, 32, 65, 0.25);
   content: attr(data-count);
@@ -2147,20 +2035,20 @@ margin-right: -13px; */
   position: absolute;
   top: 1px; }
 
-.my {
+.like-button {
   color: rgba(31, 32, 65, 0.25); }
 
-.my:hover,
-.my.active {
+.like-button:hover,
+.like-button.active {
   background: #fff url(.././img/like.svg) no-repeat 4px 6px;
   border: 1px solid #BC9CFF;
   color: #BC9CFF; }
 
-.my:hover:after,
-.my.active:after {
+.like-button:hover:after,
+.like-button.active:after {
   color: #BC9CFF; }
 
-.pagination a, .pagination span {
+.pagination .pagination__link {
   display: inline-block;
   width: 40px;
   height: 41px;
@@ -2183,7 +2071,7 @@ margin-right: -13px; */
   .pagination .next:hover {
     background: url(.././img/arrow-forward.png) no-repeat center, linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
 
-.pagination p {
+.pagination .pagination__content {
   font-family: 'Montserrat';
   font-size: 14px;
   line-height: 24px;
@@ -2390,15 +2278,15 @@ a:visited.ui-button,
   display: inline-block;
   width: 120px;
   height: 24px; }
-  .rating input {
+  .rating .rating__input {
     opacity: 0;
     margin-right: -100%; }
-  .rating label {
+  .rating .rating__label {
     position: relative;
     display: block;
     float: right;
     opacity: 1; }
-  .rating label:before {
+  .rating .rating__label:before {
     font-family: 'Material Icons';
     font-size: 24px;
     display: block;
@@ -2410,9 +2298,9 @@ a:visited.ui-button,
     background-clip: text;
     color: transparent; }
 
-.rating > label:hover:before,
-.rating > label:hover ~ label:before,
-.rating:not(:hover) > :checked ~ label:before {
+.rating > .rating__label:hover:before,
+.rating > .rating__label:hover ~ .rating__label:before,
+.rating:not(:hover) > :checked ~ .rating__label:before {
   opacity: 1;
   font-family: 'Material Icons';
   font-size: 24px;
@@ -2453,14 +2341,37 @@ a:visited.ui-button,
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75); }
 
-.richCheckbox .CheckList li {
-  margin: 0 0 42px 0; }
-  .richCheckbox .CheckList li label {
+.CheckList {
+  margin: 18px 0 0 24px;
+  padding: 0;
+  width: 266px; }
+  .CheckList .CheckList__checkbox {
+    display: none; }
+  .CheckList .CheckList__checkbox + label {
+    cursor: pointer;
     font-family: 'MontserratBold';
     font-size: 14px;
     line-height: 18px;
     color: rgba(31, 32, 65, 0.75); }
-  .richCheckbox .CheckList li p {
+  .CheckList .CheckList__checkbox + label::before {
+    content: "";
+    display: inline-block;
+    margin: 0 10px 0 0;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: relative;
+    top: 4px; }
+  .CheckList .CheckList__checkbox:checked + label::before {
+    background: url(.././img/checked.png) no-repeat top left;
+    border: none; }
+
+.richCheckbox .CheckList__item {
+  margin: 0 0 42px 0; }
+  .richCheckbox .CheckList__item .CheckList__content {
     margin: 0;
     font-family: 'Montserrat';
     font-size: 12px;
@@ -2476,9 +2387,9 @@ a:visited.ui-button,
   margin: 20px 0 0 0;
   padding: 0 0 18px 0px;
   border-bottom: 1px solid rgba(31, 32, 65, 0.1); }
-  .roomFeature img {
+  .roomFeature .roomFeature__img {
     position: absolute; }
-  .roomFeature p {
+  .roomFeature .roomFeature__content {
     padding: 0 0 5px 54px;
     margin: 0;
     color: rgba(31, 32, 65, 0.75); }
@@ -2506,8 +2417,8 @@ a:visited.ui-button,
 .textfield:focus::placeholder {
   opacity: 0; }
 
-.toggleButton p {
-  margin: 0 0 0 10px; }
+.toggleButton {
+  margin: 0 10px 8px 0; }
 
 .toggle {
   position: relative;
@@ -2529,7 +2440,7 @@ a:visited.ui-button,
     border-radius: 10px;
     transition: background .2s ease;
     border: 1px solid rgba(31, 32, 65, 0.25); }
-  .toggle span {
+  .toggle .toggle__button {
     position: absolute;
     top: 5px;
     left: 5px;
@@ -2539,7 +2450,7 @@ a:visited.ui-button,
     background: rgba(31, 32, 65, 0.25);
     border-radius: 10px;
     transition: all .2s ease; }
-    .toggle span:before {
+    .toggle .toggle__button:before {
       content: "";
       position: absolute;
       display: block;
@@ -2556,7 +2467,7 @@ a:visited.ui-button,
   background: #fff;
   border: 1px solid #BC9CFF; }
 
-.toggleButton input[type="checkbox"]:checked + .toggle span {
+.toggleButton input[type="checkbox"]:checked + .toggle .toggle__button {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   transform: translateX(20px);
   transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease; }
@@ -2574,8 +2485,8 @@ a:visited.ui-button,
 
 @font-face {
   font-family: 'MontserratBold';
-  src: url(./fonts/montserrat-Bold/montserrat-Bold.eot);
-  src: url(./fonts/montserrat-Bold/montserrat-Bold.woff) format("woff"), url(./fonts/montserrat-Bold/montserrat-Bold.ttf) format("truetype"), url(./fonts/montserrat-Bold/montserrat-Bold.svg) format("svg");
+  src: url(./fonts/montserrat-bold/montserrat-bold.eot);
+  src: url(./fonts/montserrat-bold/montserrat-bold.woff) format("woff"), url(./fonts/montserrat-bold/montserrat-bold.ttf) format("truetype"), url(./fonts/montserrat-bold/montserrat-bold.svg) format("svg");
   font-weight: bold;
   font-style: normal; }
 
@@ -2638,46 +2549,27 @@ main {
   display: flex;
   z-index: 1; }
 
-.flex {
+.flex-wrapper {
   display: flex;
   margin: 20px 0 0 0; }
-  .flex form {
+  .flex-wrapper form {
     margin: 10px; }
 
-.flex-column {
+.flex-column-wrapper {
   display: flex;
   flex-direction: column;
   margin: auto 20px; }
-  .flex-column form {
+  .flex-column-wrapper form {
     margin: 10px; }
 
-.email h3 {
-  margin: 20px 0 0 20px; }
-
-.clickMe h3 {
-  margin: 20px; }
-
-.clickMe .btn {
-  margin: 20px; }
-
-.clickMe .btnFill {
-  padding: 14.8px 19px;
-  margin: 20px; }
-
-.clickMe .btnBorder {
-  padding: 11px 17px; }
-
-.linkPurple {
+.link__purple {
   font-family: 'MontserratBold';
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
   color: #BC9CFF; }
 
-.linkPurple:hover,
-.linkPurple:active {
+.link__purple:hover,
+.link__purple:active {
   color: rgba(31, 32, 65, 0.5); }
-
-.cards {
-  width: 100%; }
 

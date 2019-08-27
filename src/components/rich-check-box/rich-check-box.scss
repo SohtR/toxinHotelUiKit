@@ -1,13 +1,41 @@
+.CheckList {
+  margin: 18px 0 0 24px;
+  padding: 0;
+  width: 266px;
+ 
+  .CheckList__checkbox{
+    display:none;            
+  }
+  .CheckList__checkbox + label{
+    cursor: pointer;
+    font-family: 'MontserratBold';
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+  .CheckList__checkbox + label::before{
+    content: "";
+    display: inline-block;
+    margin: 0 10px 0 0;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: relative;
+    top: 4px;
+  }
+  .CheckList__checkbox:checked + label::before {
+    background: url(./checked.png) no-repeat top left;
+    border: none;  
+  }
+}
+
 .richCheckbox{
-    .CheckList li{
+  .CheckList__item{
       margin: 0 0 42px 0;
-      label{
-        font-family: 'MontserratBold';
-        font-size: 14px;
-        line-height: 18px;
-        color: rgba(31, 32, 65, 0.75);
-      }
-      p{
+      .CheckList__content{
         margin: 0;
         font-family: 'Montserrat';
         font-size: 12px;
@@ -20,3 +48,4 @@
 #richCheckbox{
 display: none;
 }
+

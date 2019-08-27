@@ -1,28 +1,28 @@
-.exCheckList {
+.expanded-checkbox-list {
     max-height: 0em;
     overflow: hidden;
     margin: 18px 0 0 24px;
     padding: 0;
     transition: max-height 0.35s ease-in;
     width: 266px;
-    li{
+    .expanded-checkbox-list__item{
       margin: 0 0 10px 0;
       height: 20px;
     }
     #expander:checked ~ & {
       max-height: 17em;
     }
-    input[type="checkbox"]{
+    .expanded-checkbox-list__input{
       display:none;            
     }
-    input[type="checkbox"] + label{
+    .expanded-checkbox-list__input + label{
       font-family: 'Montserrat';
       font-size: 14px;
       line-height: 18px;
       color: rgba(31, 32, 65, 0.5);
       cursor: pointer;
     }
-    input[type="checkbox"] + label::before{
+    .expanded-checkbox-list__input + label::before{
       content: "";
       display: inline-block;
       margin: 0 10px 0 0;
@@ -35,20 +35,18 @@
       position: relative;
       top: 4px;
     }
-    input[type="checkbox"]:checked + label::before {
+    .expanded-checkbox-list__input:checked + label::before {
       background: url(./checked.png) no-repeat top left;
       border: none;  
       
     }
 }
   
-.exCheckLabel {
+.expanded-checkbox-label {
     position: relative;
-    
     &:hover {
       color: orange;
     }
-    
     &:after {
       content: 'Expandable checkbox list';
       white-space: nowrap;

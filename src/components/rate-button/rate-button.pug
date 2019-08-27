@@ -1,12 +1,12 @@
 mixin rateButton(number)
     span(class="rating")
-        input(id="rating"+number+5 type="radio" name="rating"+number value="5")
-        label(for="rating"+number+5) 5
-        input(id="rating"+number+4 type="radio" name="rating"+number value="4")
-        label(for="rating"+number+4) 4
-        input(id="rating"+number+3 type="radio" name="rating"+number value="3")
-        label(for="rating"+number+3) 3
-        input(id="rating"+number+2 type="radio" name="rating"+number value="2" checked)
-        label(for="rating"+number+2) 2
-        input(id="rating"+number+1 type="radio" name="rating"+number value="1")
-        label(for="rating"+number+1) 1
+        input.rating__input(id="rating"+number+5 type="radio" name="rating"+number value="5")
+        label.rating__label(for="rating"+number+5) 5
+        input.rating__input(id="rating"+number+4 type="radio" name="rating"+number value="4")
+        label.rating__label(for="rating"+number+4) 4
+        input.rating__input(id="rating"+number+3 type="radio" name="rating"+number value="3")
+        label.rating__label(for="rating"+number+3) 3
+        input.rating__input(id="rating"+number+2 type="radio" name="rating"+number value="2" checked)
+        label.rating__label(for="rating"+number+2) 2
+        input.rating__input(id="rating"+number+1 type="radio" name="rating"+number value="1")
+        label.rating__label(for="rating"+number+1) 1

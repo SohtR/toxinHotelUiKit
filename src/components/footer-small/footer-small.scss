@@ -12,12 +12,12 @@
     width: 100%;
     align-items: center;
     display: flex;
-p{
-    max-width: 560px;
-    text-align: center;
-    margin: 14px 0 0 0;
-    line-height: 23px;
-}
+    .footer-small__content{
+        max-width: 560px;
+        text-align: center;
+        margin: 14px 0 0 0;
+        line-height: 23px;
+    }
 }
 
 .footer-small__logo{

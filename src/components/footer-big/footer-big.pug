@@ -8,40 +8,40 @@ mixin footerBig(data)
                 .footer-big__list.footer-big__nav
                     h3.footer-big__headline navigation
                     ul
-                        li
+                        li.footer-big__list-item
                             a(href="") About Us
-                        li
+                        li.footer-big__list-item
                             a(href="") News
-                        li
+                        li.footer-big__list-item
                             a(href="") Support
-                        li
+                        li.footer-big__list-item
                             a(href="") Products
                 .footer-big__list.footer-big__about
                     h3.footer-big__headline about us
                     ul
-                        li
+                        li.footer-big__list-item
                             a(href="") Who we are
-                        li
+                        li.footer-big__list-item
                             a(href="") Our team
-                        li
+                        li.footer-big__list-item
                             a(href="") Careers
-                        li
+                        li.footer-big__list-item
                             a(href="") Investors
                 .footer-big__list.footer-big__support
                     h3.footer-big__headline support
                     ul
-                        li
+                        li.footer-big__list-item
                             a(href="") Documentation
-                        li
+                        li.footer-big__list-item
                             a(href="") Community
-                        li
+                        li.footer-big__list-item
                             a(href="") Get in touch
             .footer-big__subscribe
                 h3.footer-big__headline subscribe to ours newsletter
-                p Receive our latest news and promotions in your inbox!
+                p.footer-big__subscribe-content Receive our latest news and promotions in your inbox!
                 +emailSubscribe(data.emailId, data.emailPlaceholder)
         .footer-big__copyright
-            p Copyright © 2018 Toxin UI Kit. All rights reserved.
+            p.footer-big__copyright-content Copyright © 2018 Toxin UI Kit. All rights reserved.
             .footer-big__social 
                 a(href="").footer-big__twitter 
                 a(href="").footer-big__facebook 

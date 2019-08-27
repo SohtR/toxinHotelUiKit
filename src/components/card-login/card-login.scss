@@ -1,18 +1,16 @@
 .loginAccount{
-    .flex{
+    .flex-wrapper{
       margin: 0px 0 4px 0;
     }
     .haveAccount{
       margin: 13px 0 0px 0;
     }
-    input{
+    .textfield{
       margin: 0 0 10px 0;
     }
-    input[type="password"]{
-      margin: 0 0 20px 0;
-    }
+   
     .button_long{
-      margin: 0 0 30px 0;
+      margin: 10px 0 30px 0;
     }
     .button_border{
       margin: 2px 0px 0px 59px;

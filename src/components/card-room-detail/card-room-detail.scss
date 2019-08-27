@@ -1,6 +1,6 @@
 .roomDetail{
     height: 511px;
-    h3{
+    .roomDetail__header{
       margin: 0 0 5px 0;
     }
     .roomDetail__price{
@@ -25,24 +25,23 @@
       text-transform: uppercase;
       color: #BC9CFF;
     }
-    .flex{
+    .flex-wrapper{
       justify-content: space-between;
       margin: 20px 0 0 0;
     }
-    .flex:first-child{
+    .flex-wrapper:first-child{
       justify-content: space-between;
       margin: 0;
     }
     .roomDetail__priceTable{
       border-collapse: collapse;
       margin: 21px 0 0 0;
-      td{
+      .roomDetail__priceTable-column{
         padding: 0 0 10px 0;
-        // line-height: 20px;
         vertical-align: top;
         text-align: center;
       }
-      .circle{
+      .roomDetail__priceTable-circle{
         width: 20px;
         height: 20px;
         border: 1px solid rgba(31, 32, 65, 0.25);

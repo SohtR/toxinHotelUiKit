@@ -1,5 +1,5 @@
 mixin forms(data)
-        .flex
+        .flex-wrapper
             .formText
                 h3 Text field
                 +textField(data.textfieldId, data.textfieldPlaceholder, data.textfieldType)
@@ -12,7 +12,7 @@ mixin forms(data)
             .maskedText
                 h3 Masked Textfield
                 +maskedTextfield(data.maskedTextId, data.maskedTextPlaceholder)
-        .flex   
+        .flex-wrapper   
             .date
                 h3 Data Dropdown
                 include ../data-dropdown/data-dropdown.pug
@@ -21,11 +21,11 @@ mixin forms(data)
                 label(for="") 
                     h3 Filter Dropdown    
                 include ../data-dd-filter/data-dd-filter.pug
-            .email
-                h3 subscription textfield
+            .email-subscription-field
+                h3.email-subscription-field__header subscription textfield
                 +emailSubscribe(data.emailSubId, data.emailSubPlaceholder)
             include ../expend-checkbox/expend-checkbox.pug
-        .flex
+        .flex-wrapper
             .flex-col  
                 +roomFeature(data.roomFeatureComfort.ImgName, data.roomFeatureComfort.Header, data.roomFeatureComfort.Body)
                 +roomFeature(data.roomFeatureUdobstvo.ImgName, data.roomFeatureUdobstvo.Header, data.roomFeatureUdobstvo.Body)
@@ -37,34 +37,34 @@ mixin forms(data)
                     +radioButton(data.radioId2, data.radioContent2, data.radioName)
             .toggleBut
                     h3 Toggle
-                    .flex
+                    .flex-wrapper
                         +toggleButton(data.toggleButtonId)
                         p Получать спецпредложения
-        .flex   
-            .flex-column 
+        .flex-wrapper   
+            .flex-column-wrapper 
                 h3 like button
                 +likeButton(data.likeCount)
-            .flex-column
+            .flex-column-wrapper
                 h3 rate button
                 +rateButton(data.ratingNumber0)
-            .flex-column
+            .flex-column-wrapper
                 +rangeSlider(data.rangeSliderLabel)
-        .flex
-            .clickMe
-                h3 Buttons
+        .flex-wrapper
+            .buttons-block
+                h3.buttons-block__header Buttons
                 +button(data.btnFillStyle, data.btnFillContent)  
                 +button(data.btnBorderStyle, data.btnBorderContent)    
-                a.linkPurple(href='#') click me  
+                a.link__purple(href='#') click me  
                 +button(data.btnLongStyle, data.btnLongContent)
             include ../pagination/pagination.pug
-        .flex
+        .flex-wrapper
             .richChbox
                 h3 rich checkbox buttons
                 include ../rich-check-box/rich-check-box.pug
             .bullet
                 h3 Bullet list
                 include ../bullet-list/bullet-list.pug     
-        .flex
+        .flex-wrapper
             include ../review/review.pug
 
 .form-elements

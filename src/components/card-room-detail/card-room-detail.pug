@@ -1,28 +1,28 @@
-.card.roomDetail
-    .flex.roomDetail__priceHeadline
+.card-template.roomDetail
+    .flex-wrapper.roomDetail__priceHeadline
         p.roomDetail__number <span class="roomDetail__num"> №</span>888 <span class="roomDetail__lux">люкс</span>
         p.roomDetail__price 9 990₽ в сутки
-    .flex
+    .flex-wrapper
         include ../two-input-range/two-input-range.pug
     .dropdownGuest
-        h3 гости
+        h3.roomDetail__header гости
         include ../dropdown-guest-repeat/dropdown-guest-repeat.pug
     table.roomDetail__priceTable
         tr
-            td.roomDetail__leftCol 9 990₽ х 4 суток
-            td
-            td.roomDetail__rightCol 39 960₽
+            td.roomDetail__priceTable-column.roomDetail__leftCol 9 990₽ х 4 суток
+            td.roomDetail__priceTable-column
+            td.roomDetail__priceTable-column.roomDetail__rightCol 39 960₽
         tr
-            td.roomDetail__leftCol Сбор за услуги: скидка 2 179₽
-            td 
-                a(href='#').circle i
-            td.roomDetail__rightCol 0₽
+            td.roomDetail__priceTable-column.roomDetail__leftCol Сбор за услуги: скидка 2 179₽
+            td.roomDetail__priceTable-column 
+                a(href='#').roomDetail__priceTable-circle i
+            td.roomDetail__priceTable-column.roomDetail__rightCol 0₽
         tr
-            td.roomDetail__leftCol Сбор за дополнительные услуги
-            td
-                    a(href='#').circle i
-            td.roomDetail__rightCol 300₽
-    .flex.roomDetail__total
+            td.roomDetail__priceTable-column.roomDetail__leftCol Сбор за дополнительные услуги
+            td.roomDetail__priceTable-column
+                    a(href='#').roomDetail__priceTable-circle i
+            td.roomDetail__priceTable-column.roomDetail__rightCol 300₽
+    .flex-wrapper.roomDetail__total
         p Итого
         .roomDetail__borderDashed
         p.roomDetail__totalSum 38 081₽

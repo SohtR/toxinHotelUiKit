@@ -1,0 +1,73 @@
+.cardSmall {
+  width: 270px;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+          box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.roomSlider {
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.roomSlider .roomSlider__priceHeadline {
+  margin: 20px 0 0 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.roomSlider .roomSlider__price {
+  margin: 3px 12px 0px 0px;
+}
+
+.roomSlider .roomSlider__number {
+  font-family: 'MontserratBold';
+  font-size: 19px;
+  line-height: 24px;
+  color: #1F2041;
+  letter-spacing: -1px;
+}
+
+.roomSlider .roomSlider__num {
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0 3px 0 0;
+}
+
+.roomSlider .roomSlider__lux {
+  font-family: 'MontserratBold';
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+}
+
+.roomSlider .roomSlider__rating {
+  margin: 16px 0 17px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.roomSlider .rating {
+  margin: 0px 0 0 20px;
+}
+
+.roomSlider .roomSlider__reviewsAmount {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 18px;
+  text-align: right;
+  color: rgba(31, 32, 65, 0.5);
+  margin: 5px auto;
+}
+
+.roomSlider .roomSlider__reviewsAmount b {
+  font-family: 'MontserratBold';
+}
+/*# sourceMappingURL=card-slider-room.css.map */

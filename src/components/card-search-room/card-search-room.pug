@@ -1,8 +1,8 @@
-.card.searchRoom
-    h1 Найдем номера под ваши пожелания
-    .flex
+.card-template.searchRoom
+    h1.card-template__header Найдем номера под ваши пожелания
+    .flex-wrapper
         include ../two-input-range/two-input-range-repeat.pug
     .dropdownGuest
-        h3 гости
+        h3.searchRoom__header гости
         include ../dropdown-guest/dropdown-guest.pug
     +button(data.cardSearchRoom.btnLongStyle, data.cardSearchRoom.btnLongContent)

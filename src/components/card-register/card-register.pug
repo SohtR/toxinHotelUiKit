@@ -1,8 +1,8 @@
-.card.registerAccount
-    h1 Регистрация аккаунта
+.card-template.registerAccount
+    h1.card-template__header Регистрация аккаунта
     +textField(data.cardRegister.textfieldName.id, data.cardRegister.textfieldName.placeholder, data.cardRegister.textfieldName.type)
     +textField(data.cardRegister.textfieldLastname.id, data.cardRegister.textfieldLastname.placeholder, data.cardRegister.textfieldLastname.type)
-    p
+    p.radio-buttons-block
         +radioButton(data.cardRegister.radiobuttonMan.id, data.cardRegister.radiobuttonMan.content, data.cardRegister.radiobuttonMan.name)
         +radioButton(data.cardRegister.radiobuttonWoman.id, data.cardRegister.radiobuttonWoman.content, data.cardRegister.radiobuttonWoman.name)
     h3.registerAccount__birthday дата рождения
@@ -10,7 +10,7 @@
     h3.registerAccount__enterData данные для входа в сервис
     +textField(data.cardRegister.emailField.id, data.cardRegister.emailField.placeholder, data.cardRegister.emailField.type)
     +textField(data.cardRegister.passField.id, data.cardRegister.passField.placeholder, data.cardRegister.passField.type)
-    .flex
+    .flex-wrapper
         +toggleButton(data.cardRegister.toggleBtnId)
         p Получать спецпредложения
     +button(data.cardRegister.btnLongStyle, data.cardRegister.btnLongContent)

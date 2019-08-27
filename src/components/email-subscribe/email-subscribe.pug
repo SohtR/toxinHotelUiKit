@@ -1,4 +1,4 @@
 mixin emailSubscribe(id,ph)
     form(action="#", method="post").formEmail
-        input(type="email", name=id, placeholder=ph)
-        input(type="submit", value="")
+        input.formEmail__email-field(type="email", name=id, placeholder=ph)
+        input.formEmail__submit(type="submit", value="")

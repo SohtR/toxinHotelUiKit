@@ -1,10 +1,10 @@
 form(action="#").richCheckbox
     ul.CheckList
-        li
-            input(type="checkbox" id="qfirst" name="first" hidden)
+        li.CheckList__item
+            input.CheckList__checkbox(type="checkbox" id="qfirst" name="first" hidden)
             label(for="qfirst") Широкий коридор
-                p Ширина коридоров в номере не менее 91 см.
-        li
-            input(type="checkbox" id="qsecond" name="first" checked hidden)
+                p.CheckList__content Ширина коридоров в номере не менее 91 см.
+        li.CheckList__item
+            input.CheckList__checkbox(type="checkbox" id="qsecond" name="first" checked hidden)
             label(for="qsecond") Помощник для инвалидов
-                p На 1 этаже вас встретит специалист  и проводит до номера.
+                p.CheckList__content На 1 этаже вас встретит специалист  и проводит до номера.

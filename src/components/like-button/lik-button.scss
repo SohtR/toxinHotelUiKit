@@ -1,4 +1,4 @@
-.my {
+.like-button {
     box-sizing: border-box;
     border-radius: 10px;
     border: 1px solid rgba(31, 32, 65, 0.25);
@@ -13,7 +13,7 @@
     background:#fff url(./like_border.svg) no-repeat 4px 6px;
 }
 
-.my-counter:after {
+.like-button-counter:after {
 padding: 0 14px;
 color: rgba(31, 32, 65, 0.25);
 content: attr(data-count);
@@ -25,17 +25,17 @@ top: 1px;
 
 }
 
-.my {
+.like-button {
 color: rgba(31, 32, 65, 0.25);
 }
-.my:hover,
-.my.active {
+.like-button:hover,
+.like-button.active {
 background:#fff url(./like.svg) no-repeat 4px 6px;
 border: 1px solid #BC9CFF;
 color: #BC9CFF;
 }
-.my:hover:after,
-.my.active:after{
+.like-button:hover:after,
+.like-button.active:after{
 color: #BC9CFF;
 
 } 

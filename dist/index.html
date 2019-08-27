@@ -1,14 +1,1633 @@
-Html Webpack Plugin:
-<pre>
-  TypeError: Cannot read property 'call' of undefined
-  
-  - loader.js:707 Object.pug_interp [as forms]
-    [index.pug?.]/[html-webpack-plugin]/lib/loader.js:707:23
-  
-  - loader.js:776 template
-    [index.pug?.]/[html-webpack-plugin]/lib/loader.js:776:20
-  
-  - index.js:284 Promise.resolve.then
-    [toxinHotelUiKit]/[html-webpack-plugin]/index.js:284:18
-  
-</pre>
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Toxin Hotel</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="./favicons/site.webmanifest">
+    <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  <link href="style.css" rel="stylesheet"><script type="text/javascript" src="main.js"></script></head>
+  <body>
+    <main>
+      <div class="headerButtons">
+              <div class="wrapper"> <a class="header__logo" href="#"> <img class="header__logo-img" src=".././img/color-logo.svg" alt="Main Logo"></a>
+                <div class="header__nav-but-wrap">
+                  <nav> 
+                    <ul class="headerButtons__mainMenu">
+                      <li class="headerButtons__mainMenu-item active"> <a href="#">Home</a></li>
+                      <li class="headerButtons__mainMenu-item"> <a href="#">About Us</a></li>
+                      <li class="headerButtons__mainMenu-item"><a href="#">Services</a></li>
+                      <li class="headerButtons__mainMenu-item"><a href="#">Careers</a></li>
+                      <li class="headerButtons__mainMenu-item"><a href="#">News</a></li>
+                      <li class="headerButtons__mainMenu-item"><a href="#">Documentation</a></li>
+                    </ul>
+                  </nav>
+                  <div class="headerButtons__buttons"><a class="button button_border">login</a><a class="button button_fill">register</a>
+                  </div>
+                </div>
+              </div>
+      </div>
+      <div class="header">
+        <div class="wrapper"><a class="header__logo" href="#"> <img src=".././img/color-logo.svg" alt="Main Logo"></a>
+                <div class="header__nav-but-wrap">
+                  <nav> 
+                    <ul class="headerButtons__mainMenu">
+                      <li class="headerButtons__mainMenu-item active"> <a href="#">Home</a></li>
+                      <li class="headerButtons__mainMenu-item"> <a href="#">About Us</a></li>
+                      <li class="headerButtons__mainMenu-item"><a href="#">Services</a></li>
+                      <li class="headerButtons__mainMenu-item"><a href="#">Careers</a></li>
+                      <li class="headerButtons__mainMenu-item"><a href="#">News</a></li>
+                      <li class="headerButtons__mainMenu-item"><a href="#">Documentation</a></li>
+                    </ul>
+                  </nav><a class="withBorder" href="#">Cosmin Negoita</a>
+                </div>
+        </div>
+      </div>
+      <div class="footer-big">
+        <div class="wrapper">
+                <div class="footer-big__main">
+                  <div class="footer-big__logo"><a class="header__logo" href="#"> <img src=".././img/color-logo.svg" alt="Main Logo"></a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.       </p>
+                  </div>
+                  <div class="footer-big__menus">
+                    <div class="footer-big__list footer-big__nav">
+                      <h3 class="footer-big__headline">navigation</h3>
+                      <ul>
+                        <li class="footer-big__list-item"><a href="">About Us</a></li>
+                        <li class="footer-big__list-item"><a href="">News</a></li>
+                        <li class="footer-big__list-item"><a href="">Support</a></li>
+                        <li class="footer-big__list-item"><a href="">Products</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-big__list footer-big__about">
+                      <h3 class="footer-big__headline">about us</h3>
+                      <ul>
+                        <li class="footer-big__list-item"><a href="">Who we are</a></li>
+                        <li class="footer-big__list-item"><a href="">Our team</a></li>
+                        <li class="footer-big__list-item"><a href="">Careers</a></li>
+                        <li class="footer-big__list-item"><a href="">Investors</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-big__list footer-big__support">
+                      <h3 class="footer-big__headline">support</h3>
+                      <ul>
+                        <li class="footer-big__list-item"><a href="">Documentation</a></li>
+                        <li class="footer-big__list-item"><a href="">Community</a></li>
+                        <li class="footer-big__list-item"><a href="">Get in touch</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="footer-big__subscribe">
+                    <h3 class="footer-big__headline">subscribe to ours newsletter</h3>
+                    <p class="footer-big__subscribe-content">Receive our latest news and promotions in your inbox!</p>
+                    <form class="formEmail" action="#" method="post">
+                      <input class="formEmail__email-field" type="email" name="email" placeholder="Your email address">
+                      <input class="formEmail__submit" type="submit" value="">
+                    </form>
+                  </div>
+                </div>
+                <div class="footer-big__copyright">
+                  <p class="footer-big__copyright-content">Copyright © 2018 Toxin UI Kit. All rights reserved.</p>
+                  <div class="footer-big__social"> <a class="footer-big__twitter" href=""> </a><a class="footer-big__facebook" href=""> </a><a class="footer-big__instagram" href=""></a></div>
+                </div>
+        </div>
+      </div>
+      <div class="footer-small">
+        <div class="wrapper">
+                <div class="wrapper-column">
+                  <div class="footer-small__logo"><a href="#"> <img src=".././img/color-logo.svg" alt="Logo"></a></div>
+                  <p class="footer-small__content">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis. </p>
+                  <div class="footer-small__social"><a class="footer-big__twitter" href=""> </a><a class="footer-big__facebook" href=""> </a><a class="footer-big__instagram" href=""></a></div>
+                </div>
+        </div>
+      </div>
+      <div class="colors-type">
+        <div class="wrapper">
+                <ul class="color-squares">
+                  <li class="color-squares__item"> 
+                    <div class="square"></div>
+                    <div class="color-descript">
+                      <p>Dark Shade 100%</p>
+                      <p>#1F2041</p>
+                    </div>
+                  </li>
+                  <li class="color-squares__item">
+                    <div class="square _75"></div>
+                    <div class="color-descript">
+                      <p>Dark Shade 75%</p>
+                      <p>#1F2041</p>
+                    </div>
+                  </li>
+                  <li class="color-squares__item">
+                    <div class="square _50"></div>
+                    <div class="color-descript">
+                      <p>Dark Shade 50%</p>
+                      <p>#1F2041</p>
+                    </div>
+                  </li>
+                  <li class="color-squares__item">
+                    <div class="square _25"></div>
+                    <div class="color-descript">
+                      <p>Dark Shade 25%</p>
+                      <p>#1F2041</p>
+                    </div>
+                  </li>
+                  <li class="color-squares__item">
+                    <div class="square _5"></div>
+                    <div class="color-descript">
+                      <p>Dark Shade 5%</p>
+                      <p>#1F2041</p>
+                    </div>
+                  </li>
+                  <li class="color-squares__item">
+                    <div class="square purple"></div>
+                    <div class="color-descript">
+                      <p>Purple</p>
+                      <p>bc9cff</p>
+                    </div>
+                  </li>
+                  <li class="color-squares__item"> 
+                    <div class="square green"></div>
+                    <div class="color-descript">
+                      <p>Green</p>
+                      <p>#6fcf97</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="headlines">
+                  <table>
+                    <tr>
+                      <td>
+                        <h1>H1                            </h1>
+                      </td>
+                      <td> 
+                        <h1>This one is the sub-section or widget title</h1>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> 
+                        <h2>H2</h2>
+                      </td>
+                      <td>
+                        <h2>Next one is the item title inside widgets</h2>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h3>H3</h3>
+                      </td>
+                      <td>
+                        <h3>This is a label or CTA text</h3>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>Body</p>
+                      </td>
+                      <td>
+                        <p>This is the body text which is used for most of the design, like paragraphs, lists, etc.</p>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+        </div>
+      </div>
+      <div class="form-elements">
+        <div class="wrapper">
+                <div class="flex-wrapper">
+                  <div class="formText">
+                    <h3>Text field</h3>
+                    <label for="textfield"> </label>
+                    <input class="textfield" type="text" name="textfield" placeholder="Email" id="textfield">
+                    <div class="dropdownRooms"></div>
+                    <form class="dropdown" action="#">
+                      <h3>Dropdown</h3>
+<input id="dropdown" name="NCS" type="text" readonly placeholder="Параметры комнаты">
+                    </form>
+                  </div>
+                  <div class="maskedText">
+                    <h3>Masked Textfield</h3>
+                    <label for="maskedText"> </label>
+                    <input class="textfield" type="text" placeholder="ДД.ММ.ГГГГ" id="maskedText" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}">
+                  </div>
+                </div>
+                <div class="flex-wrapper">  
+                  <div class="date">
+                    <h3>Data Dropdown</h3>
+<div class="dataDropdown">
+  <label for=""> </label>
+  <input class="dataDropdown__input datepicker-here" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+</div>
+                  </div>
+                  <div class="filterDropdown">
+                    <label for=""> 
+                      <h3>Filter Dropdown    </h3>
+                    </label>
+<input class="datepicker-here datepicker-filter" type="text" data-range="true" data-multiple-dates-separator=" - " data-clear-Button="true" data-apply-Button="true">
+                  </div>
+                  <div class="email-subscription-field">
+                    <h3 class="email-subscription-field__header">subscription textfield</h3>
+                    <form class="formEmail" action="#" method="post">
+                      <input class="formEmail__email-field" type="email" name="subs2" placeholder="Your email address">
+                      <input class="formEmail__submit" type="submit" value="">
+                    </form>
+                  </div>
+<form class="expendCheck" action="#"> 
+  <input id="expander" type="checkbox">
+  <label class="expanded-checkbox-label" for="expander"></label>
+  <ul class="expanded-checkbox-list">
+    <li class="expanded-checkbox-list__item">
+      <input class="expanded-checkbox-list__input" type="checkbox" id="cfirst" name="first" hidden>
+      <label for="cfirst">Завтрак</label>
+    </li>
+    <li class="expanded-checkbox-list__item">
+      <input class="expanded-checkbox-list__input" type="checkbox" id="csecond" name="first" checked hidden>
+      <label for="csecond">Письменный стол</label>
+    </li>
+    <li class="expanded-checkbox-list__item">
+      <input class="expanded-checkbox-list__input" type="checkbox" id="cthird" name="first" checked hidden>
+      <label for="cthird">Стул для кормления</label>
+    </li>
+    <li class="expanded-checkbox-list__item">
+      <input class="expanded-checkbox-list__input" type="checkbox" id="cfourth" name="first" checked hidden>
+      <label for="cfourth">Кроватка</label>
+    </li>
+    <li class="expanded-checkbox-list__item">
+      <input class="expanded-checkbox-list__input" type="checkbox" id="cfifth" name="first" hidden>
+      <label for="cfifth">Телевизор</label>
+    </li>
+    <li class="expanded-checkbox-list__item">
+      <input class="expanded-checkbox-list__input" type="checkbox" id="csix" name="first" hidden>
+      <label for="csix">Шампунь</label>
+    </li>
+    <li class="expanded-checkbox-list__item">
+      <input class="expanded-checkbox-list__input" type="checkbox" id="cseven" name="first" hidden>
+      <label for="cseven">Телевизор</label>
+    </li>
+    <li class="expanded-checkbox-list__item">
+      <input class="expanded-checkbox-list__input" type="checkbox" id="ceight" name="first" hidden>
+      <label for="ceight">Шампунь</label>
+    </li>
+  </ul>
+</form>
+                </div>
+                <div class="flex-wrapper">
+                  <div class="flex-col"> 
+                    <div class="roomFeature name"><img class="roomFeature__img" src=".././img/comfort.png" alt="11">
+                      <p class="roomFeature__content roomFeature__headline">Комфорт</p>
+                      <p class="roomFeature__content">Шумопоглощающие стены</p>
+                    </div>
+                    <div class="roomFeature name"><img class="roomFeature__img" src=".././img/udobstvo.png" alt="11">
+                      <p class="roomFeature__content roomFeature__headline">Удобство</p>
+                      <p class="roomFeature__content">Окно в каждой из спален</p>
+                    </div>
+                  </div>
+<form class="checkboxes" action="#">
+  <h3 class="checkboxes__header">Checkbox buttons</h3>
+  <ul class="CheckList">
+    <li class="CheckList__item">
+      <input class="CheckList__checkbox" type="checkbox" id="bfirst" name="first" hidden>
+      <label for="bfirst">Завтрак</label>
+    </li>
+    <li class="CheckList__item">
+      <input class="CheckList__checkbox" type="checkbox" id="bsecond" name="first" checked hidden>
+      <label for="bsecond">Письменный стол</label>
+    </li>
+    <li class="CheckList__item">
+      <input class="CheckList__checkbox" type="checkbox" id="bthird" name="first" checked hidden>
+      <label for="bthird">Стул для кормления</label>
+    </li>
+  </ul>
+</form>
+                  <div class="radioBut">
+                    <h3>Radio buttons</h3>
+                    <p>
+                      <input class="radioButton" type="radio" id="test1" name="radio-group">
+                      <label for="test1">Мужчина</label>
+                      <input class="radioButton" type="radio" id="test2" name="radio-group">
+                      <label for="test2">Женщина</label>
+                    </p>
+                  </div>
+                  <div class="toggleBut">
+                    <h3>Toggle</h3>
+                    <div class="flex-wrapper">
+                      <div class="toggleButton"> 
+                        <input type="checkbox" id="cbx" style="display:none">
+                        <label class="toggle" for="cbx"><span class="toggle__button"></span></label>
+                      </div>
+                      <p>Получать спецпредложения</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-wrapper">  
+                  <div class="flex-column-wrapper"> 
+                    <h3>like button</h3><a class="btn-counter like-button-counter like-button" href="#" title="Love it" data-count="5"><span></span></a>
+                  </div>
+                  <div class="flex-column-wrapper">
+                    <h3>rate button</h3><span class="rating">
+                      <input class="rating__input" id="rating05" type="radio" name="rating0" value="5">
+                      <label class="rating__label" for="rating05">5</label>
+                      <input class="rating__input" id="rating04" type="radio" name="rating0" value="4">
+                      <label class="rating__label" for="rating04">4</label>
+                      <input class="rating__input" id="rating03" type="radio" name="rating0" value="3">
+                      <label class="rating__label" for="rating03">3</label>
+                      <input class="rating__input" id="rating02" type="radio" name="rating0" value="2" checked>
+                      <label class="rating__label" for="rating02">2</label>
+                      <input class="rating__input" id="rating01" type="radio" name="rating0" value="1">
+                      <label class="rating__label" for="rating01">1</label></span>
+                  </div>
+                  <div class="flex-column-wrapper">
+                    <div class="rangeSlider">
+                      <label for="amount">Range Slider</label>
+                      <input type="text" disabled id="amount" readonly>
+                      <div id="slider-range"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-wrapper">
+                  <div class="buttons-block">
+                    <h3 class="buttons-block__header">Buttons</h3><a class="button button_fill">click me</a><a class="button button_border">click me</a><a class="link__purple" href="#">click me  </a><a class="button button_long">перейти к оплате</a>
+                  </div>
+<div class="pagination">
+  <h3>pagination</h3><a class="pagination__link active" href="#">1</a><a class="pagination__link" href="#">2</a><a class="pagination__link" href="#">3</a><span class="pagination__link">&hellip;</span><a class="pagination__link" href="#">15</a><a class="pagination__link next" href="#">next</a>
+  <p class="pagination__content">1 – 12 из 100+ вариантов аренды</p>
+</div>
+                </div>
+                <div class="flex-wrapper">
+                  <div class="richChbox">
+                    <h3>rich checkbox buttons</h3>
+<form class="richCheckbox" action="#">
+  <ul class="CheckList">
+    <li class="CheckList__item">
+      <input class="CheckList__checkbox" type="checkbox" id="qfirst" name="first" hidden>
+      <label for="qfirst">Широкий коридор
+        <p class="CheckList__content">Ширина коридоров в номере не менее 91 см.</p>
+      </label>
+    </li>
+    <li class="CheckList__item">
+      <input class="CheckList__checkbox" type="checkbox" id="qsecond" name="first" checked hidden>
+      <label for="qsecond">Помощник для инвалидов
+        <p class="CheckList__content">На 1 этаже вас встретит специалист  и проводит до номера.</p>
+      </label>
+    </li>
+  </ul>
+</form>
+                  </div>
+                  <div class="bullet">
+                    <h3>Bullet list</h3>
+<ul class="bulletList">
+  <li class="bulletList__item">Нельзя с питомцами</li>
+  <li class="bulletList__item">Без вечеринок и мероприятий</li>
+  <li class="bulletList__item">Время прибытия — после 13:00, а выезд до 12:00  </li>
+</ul>
+                  </div>
+                </div>
+                <div class="flex-wrapper">
+                  <div class="review">
+                    <div class="review__topBlock"><img class="review__avatar" src=".././img/avatar-2.jpg" alt="avatar">
+                      <p class="review__name"><b>Мурад Сарафанов</b> <br> 5 дней назад</p>
+                    </div>
+                    <div class="review__bottomBlock">
+                      <div class="review__like"><a class="btn-counter like-button-counter like-button" href="#" title="Love it" data-count="11"><span></span></a>
+                      </div>
+                      <p class="review__content">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+                    </div>
+                  </div>
+                </div>
+        </div>
+      </div>
+      <div class="cards-block">
+        <div class="wrapper">
+          <div class="flex-wrapper">
+                  <div class="flex-column-wrapper">
+                    <div class="card-template searchRoom">
+                      <h1 class="card-template__header">Найдем номера под ваши пожелания</h1>
+                      <div class="flex-wrapper">
+<div class="searchRoom__arrival">
+  <h3>пРиБыТие</h3>
+  <div class="dataDropdown">
+    <label for="start2"> </label>
+    <input class="dataDropdown__input datepicker-here datepickers2 datepicker-here datepickers2" id="start2" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+  </div>
+</div>
+<div class="searchRoom__departure">
+  <h3>выезд</h3>
+  <div class="dataDropdown">
+    <label for="end2"> </label>
+    <input class="dataDropdown__input datepicker-here datepickers2" id="end2" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+  </div>
+</div>
+                      </div>
+                      <div class="dropdownGuest">
+                        <h3 class="searchRoom__header">гости</h3>
+<label for="dropdownGuest"> 
+  <input id="dropdownGuest" name="guest" type="text" readonly placeholder="Сколько гостей">
+</label>
+                      </div><a class="button button_long">подобрать номер</a>
+                    </div>
+                    <div class="card-template registerAccount">
+                      <h1 class="card-template__header">Регистрация аккаунта</h1>
+                      <label for="name"> </label>
+                      <input class="textfield" type="text" name="name" placeholder="Имя" id="name">
+                      <label for="lastname"> </label>
+                      <input class="textfield" type="text" name="lastname" placeholder="Фамилия" id="lastname">
+                      <p class="radio-buttons-block">
+                        <input class="radioButton" type="radio" id="test3" name="group">
+                        <label for="test3">Мужчина</label>
+                        <input class="radioButton" type="radio" id="test4" name="group">
+                        <label for="test4">Женщина</label>
+                      </p>
+                      <h3 class="registerAccount__birthday">дата рождения</h3>
+                      <label for="birthday"> </label>
+                      <input class="textfield" type="text" placeholder="ДД.ММ.ГГГГ" id="birthday" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}">
+                      <h3 class="registerAccount__enterData">данные для входа в сервис</h3>
+                      <label for="regEmail"> </label>
+                      <input class="textfield" type="email" name="regEmail" placeholder="Email" id="regEmail">
+                      <label for="regPass"> </label>
+                      <input class="textfield" type="password" name="regPass" placeholder="Пароль" id="regPass">
+                      <div class="flex-wrapper">
+                        <div class="toggleButton"> 
+                          <input type="checkbox" id="mailing" style="display:none">
+                          <label class="toggle" for="mailing"><span class="toggle__button"></span></label>
+                        </div>
+                        <p>Получать спецпредложения</p>
+                      </div><a class="button button_long">Перейти к оплате</a>
+                      <p class="haveAccount">Уже есть аккаунт на Toxin<a class="button button_border">войти</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex-column-wrapper">
+                    <div class="card-template loginAccount">
+                      <h1 class="card-template__header">Войти</h1>
+                      <label for="loginEmail"> </label>
+                      <input class="textfield" type="email" name="loginEmail" placeholder="Email" id="loginEmail">
+                      <label for="loginPass"> </label>
+                      <input class="textfield" type="password" name="loginPass" placeholder="Пароль" id="loginPass"><a class="button button_long">Войти</a>
+                      <div class="flex-wrapper">
+                        <p class="haveAccount">Нет аккаунта на Toxin?</p><a class="button button_border">создать</a>
+                      </div>
+                    </div>
+                    <div class="card-template roomDetail">
+                      <div class="flex-wrapper roomDetail__priceHeadline">
+                        <p class="roomDetail__number"><span class="roomDetail__num"> №</span>888 <span class="roomDetail__lux">люкс</span></p>
+                        <p class="roomDetail__price">9 990₽ в сутки</p>
+                      </div>
+                      <div class="flex-wrapper">
+<div class="searchRoom__arrival">
+  <h3 class="roomDetail__header">пРиБыТие</h3>
+  <div class="dataDropdown">
+    <label for="start"> </label>
+    <input class="dataDropdown__input datepicker-here datepickers" id="start" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+  </div>
+</div>
+<div class="searchRoom__departure">
+  <h3 class="roomDetail__header">выезд</h3>
+  <div class="dataDropdown">
+    <label for="end"> </label>
+    <input class="dataDropdown__input datepicker-here datepickers" id="end" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+  </div>
+</div>
+                      </div>
+                      <div class="dropdownGuest">
+                        <h3 class="roomDetail__header">гости</h3>
+<label for="guest2"> </label>
+<input id="guest2" name="guest2" type="text" readonly placeholder="Сколько гостей">
+                      </div>
+                      <table class="roomDetail__priceTable">
+                        <tr>
+                          <td class="roomDetail__priceTable-column roomDetail__leftCol">9 990₽ х 4 суток</td>
+                          <td class="roomDetail__priceTable-column"></td>
+                          <td class="roomDetail__priceTable-column roomDetail__rightCol">39 960₽</td>
+                        </tr>
+                        <tr>
+                          <td class="roomDetail__priceTable-column roomDetail__leftCol">Сбор за услуги: скидка 2 179₽</td>
+                          <td class="roomDetail__priceTable-column"> <a class="roomDetail__priceTable-circle" href="#">i</a></td>
+                          <td class="roomDetail__priceTable-column roomDetail__rightCol">0₽</td>
+                        </tr>
+                        <tr>
+                          <td class="roomDetail__priceTable-column roomDetail__leftCol">Сбор за дополнительные услуги</td>
+                          <td class="roomDetail__priceTable-column"><a class="roomDetail__priceTable-circle" href="#">i</a></td>
+                          <td class="roomDetail__priceTable-column roomDetail__rightCol">300₽</td>
+                        </tr>
+                      </table>
+                      <div class="flex-wrapper roomDetail__total">
+                        <p>Итого</p>
+                        <div class="roomDetail__borderDashed"></div>
+                        <p class="roomDetail__totalSum">38 081₽</p>
+                      </div><a class="button button_long">Забронировать</a>
+                    </div>
+                  </div>
+                  <div class="flex-column-wrapper">
+                    <div class="cardSmall roomSlider">
+                      <div class="flexslider">
+                        <ul class="slides">
+                          <li><img src=".././img/888-slide-1.jpg"></li>
+                          <li><img src=".././img/888-slide-2.jpg"></li>
+                          <li><img src=".././img/888-slide-3.jpg"></li>
+                          <li><img src=".././img/888-slide-4.jpg"></li>
+                        </ul>
+                      </div>
+                      <div class="flex-wrapper roomSlider__priceHeadline">
+                        <p class="roomSlider__number"><span class="roomSlider__num"> №</span> 888 <span class="roomSlider__lux">люкс</span></p>
+                        <p class="roomSlider__price">9 990₽ в сутки</p>
+                      </div>
+                      <div class="flex-wrapper roomSlider__rating"><span class="rating">
+                          <input class="rating__input" id="rating8885" type="radio" name="rating888" value="5">
+                          <label class="rating__label" for="rating8885">5</label>
+                          <input class="rating__input" id="rating8884" type="radio" name="rating888" value="4">
+                          <label class="rating__label" for="rating8884">4</label>
+                          <input class="rating__input" id="rating8883" type="radio" name="rating888" value="3">
+                          <label class="rating__label" for="rating8883">3</label>
+                          <input class="rating__input" id="rating8882" type="radio" name="rating888" value="2" checked>
+                          <label class="rating__label" for="rating8882">2</label>
+                          <input class="rating__input" id="rating8881" type="radio" name="rating888" value="1">
+                          <label class="rating__label" for="rating8881">1</label></span>
+                        <p class="roomSlider__reviewsAmount"><b>145</b> Отзывов</p>
+                      </div>
+                    </div>
+                    <div class="cardSmall roomSlider">
+                      <div class="flexslider">
+                        <ul class="slides">
+                          <li><img src=".././img/840-slide-1.jpg"></li>
+                          <li><img src=".././img/840-slide-2.jpg"></li>
+                          <li><img src=".././img/840-slide-3.jpg"></li>
+                          <li><img src=".././img/840-slide-4.jpg"></li>
+                        </ul>
+                      </div>
+                      <div class="flex-wrapper roomSlider__priceHeadline">
+                        <p class="roomSlider__number"><span class="roomSlider__num"> №</span> 840 <span class="roomSlider__lux"></span></p>
+                        <p class="roomSlider__price">9 900₽ в сутки</p>
+                      </div>
+                      <div class="flex-wrapper roomSlider__rating"><span class="rating">
+                          <input class="rating__input" id="rating8405" type="radio" name="rating840" value="5">
+                          <label class="rating__label" for="rating8405">5</label>
+                          <input class="rating__input" id="rating8404" type="radio" name="rating840" value="4">
+                          <label class="rating__label" for="rating8404">4</label>
+                          <input class="rating__input" id="rating8403" type="radio" name="rating840" value="3">
+                          <label class="rating__label" for="rating8403">3</label>
+                          <input class="rating__input" id="rating8402" type="radio" name="rating840" value="2" checked>
+                          <label class="rating__label" for="rating8402">2</label>
+                          <input class="rating__input" id="rating8401" type="radio" name="rating840" value="1">
+                          <label class="rating__label" for="rating8401">1</label></span>
+                        <p class="roomSlider__reviewsAmount"><b>65</b> Отзывов</p>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+<script>
+   /*
+ * numbercategoryselector.js
+ * Author & copyright (c) 2017: Sakri Koskimies
+ *
+ * MIT license
+ */
+(function ($) {
+
+        $.fn.guest = function (options) {
+
+            $ginput = $(this);
+            $goriginalPlaceholder = $ginput.attr("placeholder");
+
+            var settings = $.extend({
+                // Defaults.
+                categoryNames: ["Adults", "Children"],
+                categoryValues: false,
+                minValue: 0,
+                maxValue: 10,
+                closeOnOutsideClick: true,
+                showText: true,
+                delimiter: ", ",
+                align: "left",
+                fade: true,
+                useDisplay: true,
+                showZero: false,
+                callback: function(values){}
+            }, options);
+
+            if (!settings.categoryValues) {
+                settings.categoryValues = newFilledArray(settings.categoryNames.length, 0);
+            }
+
+            $gparent = createHTML();
+
+            if (settings.closeOnOutsideClick) {
+                $(document).mouseup(function (e) {
+                    if (!$ginput.is(e.target) && !$gparent.is(e.target) && $gparent.has(e.target).length === 0 && !$("div.guest.display").is(e.target) && $("div.guest.display").has(e.target).length === 0) {
+                        if (settings.fade) {
+                            $gparent.fadeOut(200);
+                        } else {
+                            $gparent.hide();
+                        }
+                    }
+                });
+            }
+
+            $(this).click(function () {
+                switchSelector();
+            });
+
+            $(window).resize(function () {
+                setPositions();
+
+            });
+
+            function doCallback() {
+                if (typeof options.callback == 'function') {
+                    var callbackResult = {};
+                    for ($gi = 0; $gi < settings.categoryNames.length; $gi++) {
+                        callbackResult[settings.categoryNames[$gi]] = settings.categoryValues[$gi];
+                    }
+                    options.callback.call(this, callbackResult);
+                }
+            }
+
+            function setPositions() {
+                switch (settings.align) {
+                    case "left":
+                        $gparent.css("top", $ginput.position().top + $ginput.outerHeight());
+                        $gparent.css("left", $ginput.position().left);
+                        break;
+                    
+                }
+                if (settings.useDisplay) {
+                    $gdisplay = $("div.guest.display");
+                    $gdisplay.css("top", $ginput.position().top + 1);
+                    $gdisplay.css("left", $ginput.position().left + 1);
+                    $gdisplay.css("width", $ginput.width() - 1);
+                    $gdisplay.css("height", $ginput.height() - 1);
+                }
+            }
+
+            $("a.guest.button.plus").click(function () {
+                $gcategory = $(this).attr("category");
+                if (settings.categoryValues[$gcategory] < settings.maxValue) {
+                    settings.categoryValues[$gcategory]++;
+                    $gnum = settings.categoryValues[$gcategory];
+                    $("div.guest.value[category='" + $gcategory + "']").text($gnum);
+                    doCallback();
+                    if(settings.categoryValues[$gcategory] == settings.maxValue){
+                        $(this).addClass("inactive");
+                    }else{
+                        $(this).removeClass("inactive");
+                    }
+                    if(settings.categoryValues[$gcategory] > settings.minValue){
+                        $("a.guest.button.minus[category='"+$gcategory+"']").removeClass("inactive");
+                    }else{
+                        $("a.guest.button.minus[category='"+$gcategory+"']").addClass("inactive");
+                    }
+                }
+                if (settings.showText) {
+                    if (!settings.useDisplay) {
+                        updateText();
+                    } else {
+                        updateElement();
+                    }
+                }
+                return false;
+            });
+
+            $("a.guest.button.minus").click(function () {
+                $gcategory = $(this).attr("category");
+                if (settings.categoryValues[$gcategory] > settings.minValue) {
+                    settings.categoryValues[$gcategory]--;
+                    $gnum = settings.categoryValues[$gcategory];
+                    $("div.guest.value[category='" + $gcategory + "']").text($gnum);
+                    doCallback();
+                    if(settings.categoryValues[$gcategory] == settings.minValue){
+                        $(this).addClass("inactive");
+                    }else{
+                        $(this).removeClass("inactive");
+                    }
+                    if(settings.categoryValues[$gcategory] < settings.maxValue){
+                        $("a.guest.button.plus[category='"+$gcategory+"']").removeClass("inactive");
+                    }else{
+                        $("a.guest.button.plus[category='"+$gcategory+"']").addClass("inactive");
+                    }
+                }
+                if (settings.showText) {
+                    if (!settings.useDisplay) {
+                        updateText();
+                    } else {
+                        updateElement();
+                    }
+                }
+                return false;
+            });
+
+            function updateElement() {
+                $ginput.val("");
+                $gdisplay = $("div.guest.inlinedisplay");
+                $gdisplay.empty();
+                $gdisplayelements = 0;
+                for ($gi = 0; $gi < settings.categoryNames.length; $gi++) {
+                    if (settings.categoryValues[$gi] != 0 || settings.showZero) {
+                        $gdisplayelement = $("<div class='guest displayelement'></div>").appendTo($gdisplay);
+                        $gdisplayelement.text(settings.categoryValues[$gi] + " " + settings.categoryNames[$gi] + ", ");
+                        $gdisplayelements++;
+                    }
+                }
+                if ($gdisplayelements == 0) {
+                    $ginput.attr("placeholder", $goriginalPlaceholder)
+                } else {
+                    $ginput.attr("placeholder", "")
+                }
+                updateText();
+            }
+
+            // function updateText() {
+            //     $gtext = "";
+            //     $gadded = 0;
+            //     for ($gi = 0; $gi < settings.categoryNames.length; $gi++) {
+            //         if (settings.categoryValues[$gi] != 0 || settings.showZero) {
+            //             if ($gadded != 0) {
+            //                 $gtext += settings.delimiter;
+            //             }
+            //             $gtext += settings.categoryValues[$gi] + " " + settings.categoryNames[$gi];
+            //             $gadded++;
+            //         }
+            //     }
+            //     $ginput.val($gtext);
+            // }
+            function updateText() {
+                $gtext = "";
+                $gadded = 0;
+                $gsum = 0;
+                $baby =0;
+                $last = settings.categoryNames.length-1;
+                for ($gi = 0; $gi < settings.categoryNames.length; $gi++) {
+                    if (settings.categoryValues[$gi] != 0 || settings.showZero) {
+                        
+                        $gsum += settings.categoryValues[$gi];
+                        $gadded++;
+                        
+                    }
+                }
+                $baby+= settings.categoryValues[$last]
+                if($baby != 0){
+                    //$gtext+=$gsum + " гостя, " + $baby + " младенцы";   Если младенец != гость
+                    $gtext+=$gsum-$baby + " гостя, " + $baby + " младенцы";
+                }else{
+                    $gtext += $gsum + " гостя";}
+                
+                if ($gsum == 0) {
+                    $ginput.val($goriginalPlaceholder); 
+                    $(".NCSG.reset").hide();
+                } else {
+                    $ginput.val($gtext);
+                    $(".NCSG.reset").show();
+                }
+                
+            }
+
+
+            function createHTML() {
+
+                $ginput.attr("type", "text");
+                if (settings.useDisplay) {
+
+                    $ginput.attr("placeholder", "");
+
+                    $gdisplay = $("<div class='guest display'></div>").prependTo("body");
+                    $gdisplay.css("top", $ginput.position().top + 1);
+                    $gdisplay.css("left", $ginput.position().left + 1);
+                    $gdisplay.css("width", $ginput.width() - 1);
+                    $gdisplay.css("height", $ginput.height() - 1);
+
+                    $("<div class='guest inlinedisplay'></div>").prependTo($gdisplay);
+
+                    $gdisplay.click(function () {
+                        switchSelector();
+                    });
+                }
+
+
+                $gparent = $("<div class='guest parent'></div>").prependTo("body").hide();
+
+                switch (settings.align) {
+                    case "left":
+                        $gparent.css("top", $ginput.position().top + $ginput.outerHeight());
+                        $gparent.css("left", $ginput.position().left);
+                        break;
+                    
+                }
+
+                for ($gi = 0; $gi < settings.categoryNames.length; $gi++) {
+                    $gcategory = $("<div class='guest category'></div>").appendTo($gparent);
+                    $gtext = $("<div class='guest text'></div>").appendTo($gcategory);
+                    $gname = $("<div class='guest name' category='" + $gi + "'>&nbsp;" + settings.categoryNames[$gi] + "</div>").appendTo($gtext);
+                    $gbuttons = $("<div class='guest buttons'></div>").appendTo($gcategory);
+                    $gbutton_minus = $("<a href='' class='guest button minus' category='" + $gi + "'>&#8211;</a>").appendTo($gbuttons);
+                    $gvalue = $("<div class='guest value' category='" + $gi + "'>" + settings.categoryValues[$gi] + "</div>").appendTo($gbuttons);
+                    $gbutton_plus = $("<a href='' class='guest button plus' category='" + $gi + "'>&#43;</a>").appendTo($gbuttons);
+                    
+                    if(settings.categoryValues[$gi] == settings.maxValue){
+                        $gbutton_plus.addClass("inactive");
+                    }
+
+                    if(settings.categoryValues[$gi] == settings.minValue){
+                        $gbutton_minus.addClass("inactive");
+                    }
+                }
+                $gclose = $("<div class='NCSG room'></div><a class='NCSG close' href=''>Применить</a>").appendTo($gparent);
+                $gclose.click(function () {
+                    if (settings.fade) {
+                        $gparent.fadeOut(200);
+                    } else {
+                        $gparent.hide();
+                    }
+                    return false;
+                });
+                $gzero = $("<div class='NCSG room'></div><a class='NCSG reset' href=''>Очистить</a>").appendTo($gparent);
+                $gzero.click(function() {
+                for ($gi = 0; $gi < settings.categoryNames.length; $gi++) {
+                    if (settings.categoryValues[$gi] != 0 || settings.showZero) {
+                        settings.categoryValues[$gi] = 0;
+                        $("div.guest.value[category='" + $gi + "']").text("0");
+                        $(".guest.button.minus").addClass("inactive");
+                        doCallback();
+                    }
+                }
+                updateText();
+                return false;
+            });
+                if (settings.showText) {
+                    if (!settings.useDisplay) {
+                        updateText();
+                    } else {
+                        updateElement();
+                    }
+                }
+
+                if (settings.useDisplay) {
+                    $ginput.css("color", "transparent");
+                }
+
+                return $gparent;
+            }
+
+            
+
+            
+            function switchSelector() {
+                if (settings.fade) {
+                    $gparent.fadeToggle(200);
+                } else {
+                    $gparent.toggle();
+                }
+            }
+
+            function newFilledArray(len, val) {
+                var rv = new Array(len);
+                while (--len >= 0) {
+                    rv[len] = val;
+                }
+                return rv;
+            }
+
+        }
+        ;
+
+    }(jQuery)
+)
+;
+</script>
+<script>
+   /*
+ * numbercategoryselector.js
+ * Author & copyright (c) 2017: Sakri Koskimies
+ *
+ * MIT license
+ */
+(function ($) {
+
+        $.fn.guest2 = function (options) {
+
+            $g2ginput = $(this);
+            $g2goriginalPlaceholder = $g2ginput.attr("placeholder");
+
+            var settings = $.extend({
+                // Defaults.
+                categoryNames: ["Adults", "Children"],
+                categoryValues: false,
+                minValue: 0,
+                maxValue: 10,
+                closeOnOutsideClick: true,
+                showText: true,
+                delimiter: ", ",
+                align: "left",
+                fade: true,
+                useDisplay: true,
+                showZero: false,
+                callback: function(values){}
+            }, options);
+
+            if (!settings.categoryValues) {
+                settings.categoryValues = newFilledArray(settings.categoryNames.length, 0);
+            }
+
+            $g2gparent = createHTML();
+
+            if (settings.closeOnOutsideClick) {
+                $(document).mouseup(function (e) {
+                    if (!$g2ginput.is(e.target) && !$g2gparent.is(e.target) && $g2gparent.has(e.target).length === 0 && !$("div.guest2.display").is(e.target) && $("div.guest2.display").has(e.target).length === 0) {
+                        if (settings.fade) {
+                            $g2gparent.fadeOut(200);
+                        } else {
+                            $g2gparent.hide();
+                        }
+                    }
+                });
+            }
+
+            $(this).click(function () {
+                switchSelector();
+            });
+
+            $(window).resize(function () {
+                setPositions();
+
+            });
+
+            function doCallback() {
+                if (typeof options.callback == 'function') {
+                    var callbackResult = {};
+                    for ($g2gi = 0; $g2gi < settings.categoryNames.length; $g2gi++) {
+                        callbackResult[settings.categoryNames[$g2gi]] = settings.categoryValues[$g2gi];
+                    }
+                    options.callback.call(this, callbackResult);
+                }
+            }
+
+            function setPositions() {
+                switch (settings.align) {
+                    case "left":
+                        $g2gparent.css("top", $g2ginput.position().top + $g2ginput.outerHeight());
+                        $g2gparent.css("left", $g2ginput.position().left);
+                        break;
+                    
+                }
+                if (settings.useDisplay) {
+                    $g2gdisplay = $("div.guest2.display");
+                    $g2gdisplay.css("top", $g2ginput.position().top + 1);
+                    $g2gdisplay.css("left", $g2ginput.position().left + 1);
+                    $g2gdisplay.css("width", $g2ginput.width() - 1);
+                    $g2gdisplay.css("height", $g2ginput.height() - 1);
+                }
+            }
+
+            $("a.guest2.button.plus").click(function () {
+                $g2gcategory = $(this).attr("category");
+                if (settings.categoryValues[$g2gcategory] < settings.maxValue) {
+                    settings.categoryValues[$g2gcategory]++;
+                    $g2gnum = settings.categoryValues[$g2gcategory];
+                    $("div.guest2.value[category='" + $g2gcategory + "']").text($g2gnum);
+                    doCallback();
+                    if(settings.categoryValues[$g2gcategory] == settings.maxValue){
+                        $(this).addClass("inactive");
+                    }else{
+                        $(this).removeClass("inactive");
+                    }
+                    if(settings.categoryValues[$g2gcategory] > settings.minValue){
+                        $("a.guest2.button.minus[category='"+$g2gcategory+"']").removeClass("inactive");
+                    }else{
+                        $("a.guest2.button.minus[category='"+$g2gcategory+"']").addClass("inactive");
+                    }
+                }
+                if (settings.showText) {
+                    if (!settings.useDisplay) {
+                        updateText();
+                    } else {
+                        updateElement();
+                    }
+                }
+                return false;
+            });
+
+            $("a.guest2.button.minus").click(function () {
+                $g2gcategory = $(this).attr("category");
+                if (settings.categoryValues[$g2gcategory] > settings.minValue) {
+                    settings.categoryValues[$g2gcategory]--;
+                    $g2gnum = settings.categoryValues[$g2gcategory];
+                    $("div.guest2.value[category='" + $g2gcategory + "']").text($g2gnum);
+                    doCallback();
+                    if(settings.categoryValues[$g2gcategory] == settings.minValue){
+                        $(this).addClass("inactive");
+                    }else{
+                        $(this).removeClass("inactive");
+                    }
+                    if(settings.categoryValues[$g2gcategory] < settings.maxValue){
+                        $("a.guest2.button.plus[category='"+$g2gcategory+"']").removeClass("inactive");
+                    }else{
+                        $("a.guest2.button.plus[category='"+$g2gcategory+"']").addClass("inactive");
+                    }
+                }
+                if (settings.showText) {
+                    if (!settings.useDisplay) {
+                        updateText();
+                    } else {
+                        updateElement();
+                    }
+                }
+                return false;
+            });
+
+            function updateElement() {
+                $g2ginput.val("");
+                $g2gdisplay = $("div.guest2.inlinedisplay");
+                $g2gdisplay.empty();
+                $g2gdisplayelements = 0;
+                for ($g2gi = 0; $g2gi < settings.categoryNames.length; $g2gi++) {
+                    if (settings.categoryValues[$g2gi] != 0 || settings.showZero) {
+                        $g2gdisplayelement = $("<div class='guest2 displayelement'></div>").appendTo($g2gdisplay);
+                        $g2gdisplayelement.text(settings.categoryValues[$g2gi] + " " + settings.categoryNames[$g2gi] + ", ");
+                        $g2gdisplayelements++;
+                    }
+                }
+                if ($g2gdisplayelements == 0) {
+                    $g2ginput.attr("placeholder", $g2goriginalPlaceholder)
+                } else {
+                    $g2ginput.attr("placeholder", "")
+                }
+                updateText();
+            }
+
+            // function updateText() {
+            //     $g2gtext = "";
+            //     $g2gadded = 0;
+            //     for ($g2gi = 0; $g2gi < settings.categoryNames.length; $g2gi++) {
+            //         if (settings.categoryValues[$g2gi] != 0 || settings.showZero) {
+            //             if ($g2gadded != 0) {
+            //                 $g2gtext += settings.delimiter;
+            //             }
+            //             $g2gtext += settings.categoryValues[$g2gi] + " " + settings.categoryNames[$g2gi];
+            //             $g2gadded++;
+            //         }
+            //     }
+            //     $g2ginput.val($g2gtext);
+            // }
+            function updateText() {
+                $g2gtext = "";
+                $g2gadded = 0;
+                $g2gsum = 0;
+                $gbaby =0;
+                $glast = settings.categoryNames.length-1;
+                for ($g2gi = 0; $g2gi < settings.categoryNames.length; $g2gi++) {
+                    if (settings.categoryValues[$g2gi] != 0 || settings.showZero) {
+                        
+                        $g2gsum += settings.categoryValues[$g2gi];
+                        $g2gadded++;
+                    }
+                }
+                $gbaby+= settings.categoryValues[$glast]
+                if($gbaby != 0){
+                    //$gtext+=$gsum + " гостя, " + $baby + " младенцы";   Если младенец != гость
+                    $g2gtext+=$g2gsum-$gbaby + " гостя, " + $gbaby + " младенцы";
+                }else{
+                    $g2gtext += $g2gsum + " гостя";}
+                
+                if ($g2gsum == 0) {
+                    $g2ginput.val($g2goriginalPlaceholder); 
+                    $(".NCSG.reset").hide();
+                } else {
+                    $g2ginput.val($g2gtext);
+                    $(".NCSG.reset").show();
+                }
+                
+            }
+
+
+            function createHTML() {
+
+                $g2ginput.attr("type", "text");
+                if (settings.useDisplay) {
+
+                    $g2ginput.attr("placeholder", "");
+
+                    $g2gdisplay = $("<div class='guest2 display'></div>").prependTo("body");
+                    $g2gdisplay.css("top", $g2ginput.position().top + 1);
+                    $g2gdisplay.css("left", $g2ginput.position().left + 1);
+                    $g2gdisplay.css("width", $g2ginput.width() - 1);
+                    $g2gdisplay.css("height", $g2ginput.height() - 1);
+
+                    $("<div class='guest2 inlinedisplay'></div>").prependTo($g2gdisplay);
+
+                    $g2gdisplay.click(function () {
+                        switchSelector();
+                    });
+                }
+
+
+                $g2gparent = $("<div class='guest2 parent'></div>").prependTo("body").hide();
+
+                switch (settings.align) {
+                    case "left":
+                        $g2gparent.css("top", $g2ginput.position().top + $g2ginput.outerHeight());
+                        $g2gparent.css("left", $g2ginput.position().left);
+                        break;
+                    
+                }
+
+                for ($g2gi = 0; $g2gi < settings.categoryNames.length; $g2gi++) {
+                    $g2gcategory = $("<div class='guest2 category'></div>").appendTo($g2gparent);
+                    $g2gtext = $("<div class='guest2 text'></div>").appendTo($g2gcategory);
+                    $g2gname = $("<div class='guest2 name' category='" + $g2gi + "'>&nbsp;" + settings.categoryNames[$g2gi] + "</div>").appendTo($g2gtext);
+                    $g2gbuttons = $("<div class='guest2 buttons'></div>").appendTo($g2gcategory);
+                    $g2gbutton_minus = $("<a href='' class='guest2 button minus' category='" + $g2gi + "'>&#8211;</a>").appendTo($g2gbuttons);
+                    $g2gvalue = $("<div class='guest2 value' category='" + $g2gi + "'>" + settings.categoryValues[$g2gi] + "</div>").appendTo($g2gbuttons);
+                    $g2gbutton_plus = $("<a href='' class='guest2 button plus' category='" + $g2gi + "'>&#43;</a>").appendTo($g2gbuttons);
+                    
+                    if(settings.categoryValues[$g2gi] == settings.maxValue){
+                        $g2gbutton_plus.addClass("inactive");
+                    }
+
+                    if(settings.categoryValues[$g2gi] == settings.minValue){
+                        $g2gbutton_minus.addClass("inactive");
+                    }
+                }
+                $g2gclose = $("<div class='NCSG room'></div><a class='NCSG close' href=''>Применить</a>").appendTo($g2gparent);
+                $g2gclose.click(function () {
+                    if (settings.fade) {
+                        $g2gparent.fadeOut(200);
+                    } else {
+                        $g2gparent.hide();
+                    }
+                    return false;
+                });
+                $g2gzero = $("<div class='NCSG room'></div><a class='NCSG reset' href=''>Очистить</a>").appendTo($g2gparent);
+                $g2gzero.click(function() {
+                for ($g2gi = 0; $g2gi < settings.categoryNames.length; $g2gi++) {
+                    if (settings.categoryValues[$g2gi] != 0 || settings.showZero) {
+                        settings.categoryValues[$g2gi] = 0;
+                        $("div.guest2.value[category='" + $g2gi + "']").text("0");
+                        $(".guest2.button.minus").addClass("inactive");
+                        doCallback();
+                    }
+                }
+                updateText();
+                return false;
+            });
+                if (settings.showText) {
+                    if (!settings.useDisplay) {
+                        updateText();
+                    } else {
+                        updateElement();
+                    }
+                }
+
+                if (settings.useDisplay) {
+                    $g2ginput.css("color", "transparent");
+                }
+
+                return $g2gparent;
+            }
+
+            
+
+            
+            function switchSelector() {
+                if (settings.fade) {
+                    $g2gparent.fadeToggle(200);
+                } else {
+                    $g2gparent.toggle();
+                }
+            }
+
+            function newFilledArray(len, val) {
+                var rv = new Array(len);
+                while (--len >= 0) {
+                    rv[len] = val;
+                }
+                return rv;
+            }
+
+        }
+        ;
+
+    }(jQuery)
+)
+;
+</script>
+<script>$( function() {
+    $("input[name='NCS']").NCS({
+        categoryNames: ["Спальни", "Кровати", "Ванные комнаты"],
+        categoryValues: false,
+        minValue: 0,
+        maxValue: 10,
+        closeOnOutsideClick: true,
+        showText: true,
+        delimiter: ", ",
+        align: "left",
+        fade: true,
+        useDisplay: false,
+        showZero: false,
+    });
+});
+</script>
+<script>var now = new Date();
+var endDate = new Date(now.getTime() + 365*24*60*60*1000)
+var $start = $('#start'),
+    $end = $('#end');
+var $datepickers = $('.datepickers');
+
+$datepickers.datepicker({
+    language: 'ru',
+    // offset: ,
+    navTitles: {
+      days: '<i>yyyy</i> MM',
+      months: 'yyyy',
+      years: 'yyyy1 - yyyy2'
+    },
+    minDate: now,
+    maxDate: endDate,
+    multipleDatesSeparator: "-",
+    range: true,
+      onSelect: function (fd, date) {
+        $end.data('datepicker')
+                .update('selectedDates', $start.data('datepicker').selectedDates);
+        var start = fd.split('-')[0]
+        var end = fd.split('-')[1];
+        if (end) {
+          $start.val(start);
+          $end.val(end);
+        } else {
+          $end.val('')
+        }
+        console.log($start.data('datepicker'));
+    }
+})
+</script>
+<script>var now = new Date();
+var endDate = new Date(now.getTime() + 365*24*60*60*1000)
+var $start2 = $('#start2'),
+    $end2 = $('#end2');
+var $datepickers = $('.datepickers2');
+
+$datepickers.datepicker({
+    language: 'ru',
+    // offset: ,
+    navTitles: {
+      days: '<i>yyyy</i> MM',
+      months: 'yyyy',
+      years: 'yyyy1 - yyyy2'
+    },
+    minDate: now,
+    maxDate: endDate,
+    multipleDatesSeparator: "-",
+    range: true,
+      onSelect: function (fd, date) {
+        $end2.data('datepicker')
+                .update('selectedDates', $start.data('datepicker').selectedDates);
+        var start = fd.split('-')[0]
+        var end = fd.split('-')[1];
+        if (end) {
+          $start2.val(start);
+          $end2.val(end);
+        } else {
+          $end.val('')
+        }
+        console.log($start2.data('datepicker'));
+    }
+})
+</script>
+<script>$( function() {
+    $("input[name='guest']").guest({
+        categoryNames: ["Взрослые", "Дети", "Младенцы"],
+        categoryValues: false,
+        minValue: 0,
+        maxValue: 10,
+        closeOnOutsideClick: false,
+        showText: true,
+        delimiter: ", ",
+        align: "left",
+        fade: true,
+        useDisplay: false,
+        showZero: false,
+    });
+});
+</script>
+<script>    $("input[name='guest2']").guest2({
+        categoryNames: ["Взрослые", "Дети", "Младенцы"],
+        categoryValues: false,
+        minValue: 0,
+        maxValue: 10,
+        closeOnOutsideClick: false,
+        showText: true,
+        delimiter: ", ",
+        align: "left",
+        fade: true,
+        useDisplay: false,
+        showZero: false,
+    });
+
+</script>
+<script>
+   
+    $('.btn-counter').on('click', function(event, count) {
+    event.preventDefault();
+    
+    var $this = $(this),
+        count = $this.attr('data-count'),
+        active = $this.hasClass('active'),
+        multiple = $this.hasClass('multiple-count');
+    
+    $.fn.noop = $.noop;
+    $this.attr('data-count', ! active || multiple ? ++count : --count  )[multiple ? 'noop' : 'toggleClass']('active');
+    
+  });
+
+</script>
+<script>
+     $( function() {
+      $( "#slider-range" ).slider({
+        range: true,
+        min: 1000,
+        max: 16000,
+        values: [ 5000, 10000 ],
+        slide: function( event, ui ) {
+          $( "#amount" ).val( ui.values[ 0 ] + "₽" + " - " + ui.values[ 1 ] + "₽" );
+        }
+      });
+      $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ) + "₽"  +
+        " - " + $( "#slider-range" ).slider( "values", 1 ) + "₽" );
+    } );
+
+
+ 
+</script>
+<script>
+   /*
+ * numbercategoryselector.js
+ * Author & copyright (c) 2017: Sakri Koskimies
+ *
+ * MIT license
+ */
+(function ($) {
+
+        $.fn.NCS = function (options) {
+
+            $input = $(this);
+            $originalPlaceholder = $input.attr("placeholder");
+
+            var settings = $.extend({
+                // Defaults.
+                categoryNames: ["Adults", "Children"],
+                categoryValues: false,
+                minValue: 0,
+                maxValue: 10,
+                closeOnOutsideClick: true,
+                showText: true,
+                delimiter: ", ",
+                align: "left",
+                fade: true,
+                useDisplay: true,
+                showZero: false,
+                callback: function(values){}
+            }, options);
+
+            if (!settings.categoryValues) {
+                settings.categoryValues = newFilledArray(settings.categoryNames.length, 0);
+            }
+
+            $parent = createHTML();
+
+            if (settings.closeOnOutsideClick) {
+                $(document).mouseup(function (e) {
+                    if (!$input.is(e.target) && !$parent.is(e.target) && $parent.has(e.target).length === 0 && !$("div.NCS.display").is(e.target) && $("div.NCS.display").has(e.target).length === 0) {
+                        if (settings.fade) {
+                            $parent.fadeOut(200);
+                        } else {
+                            $parent.hide();
+                        }
+                    }
+                });
+            }
+
+            $(this).click(function () {
+                switchSelector();
+            });
+
+            $(window).resize(function () {
+                setPositions();
+
+            });
+
+            function doCallback() {
+                if (typeof options.callback == 'function') {
+                    var callbackResult = {};
+                    for ($i = 0; $i < settings.categoryNames.length; $i++) {
+                        callbackResult[settings.categoryNames[$i]] = settings.categoryValues[$i];
+                    }
+                    options.callback.call(this, callbackResult);
+                }
+            }
+
+            function setPositions() {
+                switch (settings.align) {
+                    case "left":
+                        $parent.css("top", $input.position().top + $input.outerHeight());
+                        $parent.css("left", $input.position().left);
+                        break;
+                    
+                }
+                if (settings.useDisplay) {
+                    $display = $("div.NCS.display");
+                    $display.css("top", $input.position().top + 1);
+                    $display.css("left", $input.position().left + 1);
+                    $display.css("width", $input.width() - 1);
+                    $display.css("height", $input.height() - 1);
+                }
+            }
+
+            $("a.NCS.button.plus").click(function () {
+                $category = $(this).attr("category");
+                if (settings.categoryValues[$category] < settings.maxValue) {
+                    settings.categoryValues[$category]++;
+                    $num = settings.categoryValues[$category];
+                    $("div.NCS.value[category='" + $category + "']").text($num);
+                    doCallback();
+                    if(settings.categoryValues[$category] == settings.maxValue){
+                        $(this).addClass("inactive");
+                    }else{
+                        $(this).removeClass("inactive");
+                    }
+                    if(settings.categoryValues[$category] > settings.minValue){
+                        $("a.NCS.button.minus[category='"+$category+"']").removeClass("inactive");
+                    }else{
+                        $("a.NCS.button.minus[category='"+$category+"']").addClass("inactive");
+                    }
+                }
+                if (settings.showText) {
+                    if (!settings.useDisplay) {
+                        updateText();
+                    } else {
+                        updateElement();
+                    }
+                }
+                return false;
+            });
+
+            $("a.NCS.button.minus").click(function () {
+                $category = $(this).attr("category");
+                if (settings.categoryValues[$category] > settings.minValue) {
+                    settings.categoryValues[$category]--;
+                    $num = settings.categoryValues[$category];
+                    $("div.NCS.value[category='" + $category + "']").text($num);
+                    doCallback();
+                    if(settings.categoryValues[$category] == settings.minValue){
+                        $(this).addClass("inactive");
+                    }else{
+                        $(this).removeClass("inactive");
+                    }
+                    if(settings.categoryValues[$category] < settings.maxValue){
+                        $("a.NCS.button.plus[category='"+$category+"']").removeClass("inactive");
+                    }else{
+                        $("a.NCS.button.plus[category='"+$category+"']").addClass("inactive");
+                    }
+                }
+                if (settings.showText) {
+                    if (!settings.useDisplay) {
+                        updateText();
+                    } else {
+                        updateElement();
+                    }
+                }
+                return false;
+            });
+
+            function updateElement() {
+                $input.val("");
+                $display = $("div.NCS.inlinedisplay");
+                $display.empty();
+                $displayelements = 0;
+                for ($i = 0; $i < settings.categoryNames.length; $i++) {
+                    if (settings.categoryValues[$i] != 0 || settings.showZero) {
+                        $displayelement = $("<div class='NCS displayelement'></div>").appendTo($display);
+                        $displayelement.text(settings.categoryValues[$i] + " " + settings.categoryNames[$i] + ", ");
+                        $displayelements++;
+                    }
+                }
+                if ($displayelements == 0) {
+                    $input.attr("placeholder", $originalPlaceholder)
+                } else {
+                    $input.attr("placeholder", "")
+                }
+                updateText();
+            }
+
+            function updateText() {
+                $text = "";
+                $added = 0;
+                for ($i = 0; $i < settings.categoryNames.length; $i++) {
+                    if (settings.categoryValues[$i] != 0 || settings.showZero) {
+                        if ($added != 0) {
+                            $text += settings.delimiter;
+                        }
+                        $text += settings.categoryValues[$i] + " " + settings.categoryNames[$i];
+                        $added++;
+                    }
+                }
+                $input.val($text);
+            }
+
+
+            function createHTML() {
+
+                $input.attr("type", "text");
+                if (settings.useDisplay) {
+
+                    $input.attr("placeholder", "");
+
+                    $display = $("<div class='NCS display'></div>").prependTo("body");
+                    $display.css("top", $input.position().top + 1);
+                    $display.css("left", $input.position().left + 1);
+                    $display.css("width", $input.width() - 1);
+                    $display.css("height", $input.height() - 1);
+
+                    $("<div class='NCS inlinedisplay'></div>").prependTo($display);
+
+                    $display.click(function () {
+                        switchSelector();
+                    });
+                }
+
+
+                $parent = $("<div class='NCS parent'></div>").prependTo("body").hide();
+
+                switch (settings.align) {
+                    case "left":
+                        $parent.css("top", $input.position().top + $input.outerHeight());
+                        $parent.css("left", $input.position().left);
+                        break;
+                    
+                }
+
+                for ($i = 0; $i < settings.categoryNames.length; $i++) {
+                    $category = $("<div class='NCS category'></div>").appendTo($parent);
+                    $text = $("<div class='NCS text'></div>").appendTo($category);
+                    $name = $("<div class='NCS name' category='" + $i + "'>&nbsp;" + settings.categoryNames[$i] + "</div>").appendTo($text);
+                    $buttons = $("<div class='NCS buttons'></div>").appendTo($category);
+                    $button_minus = $("<a href='' class='NCS button minus' category='" + $i + "'>&#8211;</a>").appendTo($buttons);
+                    $value = $("<div class='NCS value' category='" + $i + "'>" + settings.categoryValues[$i] + "</div>").appendTo($buttons);
+                    $button_plus = $("<a href='' class='NCS button plus' category='" + $i + "'>&#43;</a>").appendTo($buttons);
+
+                    if(settings.categoryValues[$i] == settings.maxValue){
+                        $button_plus.addClass("inactive");
+                    }
+
+                    if(settings.categoryValues[$i] == settings.minValue){
+                        $button_minus.addClass("inactive");
+                    }
+                }
+                
+
+                if (settings.showText) {
+                    if (!settings.useDisplay) {
+                        updateText();
+                    } else {
+                        updateElement();
+                    }
+                }
+
+                if (settings.useDisplay) {
+                    $input.css("color", "transparent");
+                }
+
+                return $parent;
+            }
+
+            function switchSelector() {
+                if (settings.fade) {
+                    $parent.fadeToggle(200);
+                } else {
+                    $parent.toggle();
+                }
+            }
+
+            function newFilledArray(len, val) {
+                var rv = new Array(len);
+                while (--len >= 0) {
+                    rv[len] = val;
+                }
+                return rv;
+            }
+
+        }
+        ;
+
+    }(jQuery)
+)
+;
+</script>

@@ -1,5 +1,5 @@
 mixin roomFeature(name,headline,descript)
     .roomFeature.name
-        img(src=require("./components/room-feature/"+name+".png"), alt="11")
-        p.roomFeature__headline=headline
-        p=descript
+        img.roomFeature__img(src=require("./components/room-feature/"+name+".png"), alt="11")
+        p.roomFeature__content.roomFeature__headline=headline
+        p.roomFeature__content=descript

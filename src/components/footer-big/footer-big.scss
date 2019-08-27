@@ -22,7 +22,6 @@
 
 .footer-big__logo {
     max-width: 16.25rem;
-
     p {
         font-family: 'Montserrat';
         font-size: 0.875rem;
@@ -40,12 +39,7 @@
 
 .footer-big__list {
     margin: 0 43px 0 0;
-
-    ul {
-        margin: 0.625rem 0 0 0;
-    }
-
-    li {
+    .footer-big__list-item {
         line-height: 2.375rem;
     }
 }
@@ -61,16 +55,15 @@
     line-height: 0.9375rem;
     text-transform: uppercase;
     color: #1F2041;
-    margin: 0.3125rem 0 0 0;
+    margin: 0.3125rem 0 10px 0;
 }
 
 .footer-big__subscribe {
-    p {
+    .footer-big__subscribe-content {
         margin: 20px 0 0 0;
         line-height: 1.375rem;
     }
-
-    h3 {
+    .footer-big__headline {
         letter-spacing: -0.0375rem;
     }
 }
@@ -81,7 +74,7 @@
     width: 100%;
     height: 70px;
 
-    p {
+    .footer-big__copyright-content {
         padding: 0.9375rem 0 0 0;
         letter-spacing: -0.0063rem;
         font-size: 0.875rem;

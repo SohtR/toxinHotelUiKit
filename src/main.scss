@@ -43,14 +43,14 @@ main{
   display: flex;
   z-index: 1;
 }
-.flex{
+.flex-wrapper{
   display: flex;
   margin: 20px 0 0 0;
   form{
     margin: 10px;
   }
 }
-.flex-column{
+.flex-column-wrapper{
   display: flex;
   flex-direction: column;
   margin: auto 20px;
@@ -58,40 +58,16 @@ main{
     margin: 10px;
   }
 }
-.email{
-  h3{
-    margin: 20px 0 0 20px;
-  }
-}
 
-.clickMe{
-  h3{
-    margin: 20px;
-  }
-  .btn{
-    margin: 20px;
-  }
-  .btnFill  {
-    padding: 14.8px 19px;
-    margin: 20px;
-  }
-  .btnBorder{
-    padding: 11px 17px;
-  }
-  
-}
-
-.linkPurple{
+.link__purple{
   font-family: 'MontserratBold';
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
   color: #BC9CFF;
 }
-.linkPurple:hover,
-.linkPurple:active{
+.link__purple:hover,
+.link__purple:active{
   color: rgba(31, 32, 65, 0.5);
 }
-.cards{
-  width: 100%;
-}
+
