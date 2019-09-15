@@ -5,14 +5,15 @@
     width: 100%;
     display: flex;
     padding: 0 0 6.625rem 0;
-}
-
-.wrapper-column{
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    display: flex;
-    .footer-small__content{
+    &__logo{
+        padding:6.3125rem 0 0 0;
+        width: 6.625rem;
+        height: 2.5rem;
+    }
+    &__social{
+        margin: 1.9375rem 0 0 0;
+    }
+    &__content{
         max-width: 35rem;
         text-align: center;
         margin: 0.875rem 0 0 0;
@@ -20,13 +21,9 @@
     }
 }
 
-.footer-small__logo{
-    padding:6.3125rem 0 0 0;
-    width: 6.625rem;
-    height: 2.5rem;
+.wrapper-column{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    display: flex;
 }
-
-.footer-small__social{
-    margin: 1.9375rem 0 0 0;
-}
-  

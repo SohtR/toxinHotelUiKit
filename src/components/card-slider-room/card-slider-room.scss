@@ -9,47 +9,48 @@
   .roomSlider{
       padding: 0;
       margin: 1.25rem 0 0 0;
-      .roomSlider__priceHeadline{
+      
+      &__priceHeadline{
         margin: 1.25rem 0 0 1.25rem;
         justify-content: space-between;
+        display: flex;
       }
-      .roomSlider__price{
+      &__price{
         margin: 0.1875rem 0.75rem 0rem 0rem;
       }
-      .roomSlider__number{
+      &__number{
         font-weight: bold;
         font-size: 1.1875rem;
         line-height: 1.5rem;
         color: #1F2041;
         letter-spacing: -0.0625rem;
       }
-      .roomSlider__num{
+      &__num{
         font-size: 0.875rem;
         line-height: 1.0625rem;
         margin: 0 0.1875rem 0 0;
       }
-      .roomSlider__lux{
+      &__lux{
         font-weight: bold;
         font-size: 0.75rem;
         line-height: 0.9375rem;
         text-transform: uppercase;
         color: #BC9CFF;
       }
-    .roomSlider__rating{
+      &__rating{
       margin: 1rem 0 1.0625rem 0;
       justify-content: space-between;
+      display: flex;
     }  
     .rating{
       margin: 0rem 0 0 1.25rem;
     }
-    .roomSlider__reviewsAmount{
+    &__reviewsAmount{
       font-size: 0.875rem;
       line-height: 1.125rem;
       text-align: right;
       color: rgba(31, 32, 65, 0.5);
       margin: 0.3125rem auto;
-      b{
-        font-weight: bold;
-      }
+      
     }
   }

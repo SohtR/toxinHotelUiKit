@@ -5,24 +5,24 @@
     padding: 0;
     transition: max-height 0.35s ease-in;
     width: 16.625rem;
-    .expanded-checkbox-list__item{
+    &__item{
       margin: 0 0 0.625rem 0;
       height: 1.25rem;
     }
     #expander:checked ~ & {
       max-height: 17em;
     }
-    .expanded-checkbox-list__input{
+    &__input{
       display:none;            
     }
-    .expanded-checkbox-list__input + label{
+    &__input + label{
       
       font-size: 0.875rem;
       line-height: 1.125rem;
       color: rgba(31, 32, 65, 0.5);
       cursor: pointer;
     }
-    .expanded-checkbox-list__input + label::before{
+    &__input + label::before{
       content: "";
       display: inline-block;
       margin: 0 0.625rem 0 0;
@@ -35,7 +35,7 @@
       position: relative;
       top: 0.25rem;
     }
-    .expanded-checkbox-list__input:checked + label::before {
+    &__input:checked + label::before {
       background: url(./checked.png) no-repeat top left;
       border: none;  
       

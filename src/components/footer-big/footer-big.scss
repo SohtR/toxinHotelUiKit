@@ -6,116 +6,117 @@
     padding: 6.25rem 0 0px 0px;
     display: flex;
     position: relative;
-
-}
-
-.footer-big>.wrapper {
-    flex-wrap: wrap;
-}
-
-.footer-big__main {
-    display: flex;
-    padding: 0.0625rem 0 5.625rem 0;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.footer-big__logo {
-    max-width: 16.25rem;
-    p {
+    &__main {
+        display: flex;
+        padding: 0.0625rem 0 5.625rem 0;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__logo {
+        max-width: 16.25rem;
+        
+    }
+    &__logo-content {
         font-size: 0.875rem;
         line-height: 1.5rem;
         color: rgba(31, 32, 65, 0.75);
         letter-spacing: -0.0063rem;
     }
-}
-
-.footer-big__menus {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-}
-
-.footer-big__list {
-    margin: 0 2.6875rem 0 0;
-    .footer-big__list-item {
+    &__menus {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }   
+    &__list {
+        margin: 0 2.6875rem 0 0;
+        
+    }
+    &__list-item {
         line-height: 2.375rem;
     }
-}
-
-.footer-big__support {
-    margin: 0 3.0625rem 0 0rem;
-}
-
-.footer-big__headline {
-    font-weight: bold;
-    font-size: 0.75rem;
-    line-height: 0.9375rem;
-    text-transform: uppercase;
-    color: #1F2041;
-    margin: 0.3125rem 0 0.625rem 0;
-}
-
-.footer-big__subscribe {
-    .footer-big__subscribe-content {
+    
+    &__support {
+        margin: 0 3.0625rem 0 0rem;
+    }
+    &__headline {
+        font-weight: bold;
+        font-size: 0.75rem;
+        line-height: 0.9375rem;
+        text-transform: uppercase;
+        color: #1F2041;
+        margin: 0.3125rem 0 0.625rem 0;
+    }
+    
+    &__subscribe-content {
         margin: 1.25rem 0 0 0;
         line-height: 1.375rem;
     }
-    .footer-big__headline {
+    &__headline {
         letter-spacing: -0.0375rem;
     }
-}
-
-.footer-big__copyright {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 4.375rem;
-
-    .footer-big__copyright-content {
+    &__copyright {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 4.375rem;
+    }
+    &__copyright-content {
         padding: 0.9375rem 0 0 0;
         letter-spacing: -0.0063rem;
         font-size: 0.875rem;
         line-height: 1.0625rem;
         color: rgba(31, 32, 65, 0.75);
     }
+    &::after {
+        width: 100%;
+        content: '';
+        display: block;
+        position: absolute;
+        height: 0.125rem;
+        background: #f4f4f6;
+        bottom: 4.375rem;
+    }
+    &__social {
+        padding: 1.6875rem 0 0 0;
+    
+    }
+    
+    
+    &__twitter,
+    &__facebook,
+    &__instagram {
+        display: inline-block;
+        width: 1.375rem;
+        height: 1.375rem;
+        background: url(./css-sprites.png) no-repeat;
+        margin: 0 1.375rem 0 0;
+    }
+    
+    &__twitter {
+        background: url(./css-sprites.png) no-repeat -0.625rem -3.25rem;
+    }
+    
+    &__facebook {
+        background: url(./css-sprites.png) no-repeat -0.625rem -0.625rem;
+    }
+    
+    &__instagram {
+        background: url(./css-sprites.png) no-repeat -3.25rem -0.625rem;
+        margin: 0;
+    }
 }
 
-.footer-big::after {
-    width: 100%;
-    content: '';
-    display: block;
-    position: absolute;
-    height: 0.125rem;
-    background: #f4f4f6;
-    bottom: 4.375rem;
-}
-
-.footer-big__social {
-    padding: 1.6875rem 0 0 0;
-
+.wrapper {
+    flex-wrap: wrap;
 }
 
 
-.footer-big__twitter,
-.footer-big__facebook,
-.footer-big__instagram {
-    display: inline-block;
-    width: 1.375rem;
-    height: 1.375rem;
-    background: url(./css-sprites.png) no-repeat;
-    margin: 0 1.375rem 0 0;
-}
 
-.footer-big__twitter {
-    background: url(./css-sprites.png) no-repeat -0.625rem -3.25rem;
-}
 
-.footer-big__facebook {
-    background: url(./css-sprites.png) no-repeat -0.625rem -0.625rem;
-}
 
-.footer-big__instagram {
-    background: url(./css-sprites.png) no-repeat -3.25rem -0.625rem;
-    margin: 0;
-}
+
+
+
+
+
+

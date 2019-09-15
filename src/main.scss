@@ -29,6 +29,9 @@ h3{
   color: #1F2041;
   opacity: 0.75;
 }
+input{
+  margin: 0;
+}
 main{
   margin: 0 auto;
   width:100%;
@@ -49,6 +52,7 @@ main{
     margin: 0.625rem;
   }
 }
+
 .flex-column-wrapper{
   display: flex;
   flex-direction: column;

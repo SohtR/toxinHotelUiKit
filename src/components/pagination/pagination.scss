@@ -1,5 +1,5 @@
 .pagination{
-  .pagination__link{
+  &__link{
       display: inline-block;
       width: 2.5rem;
       height: 2.5625rem;
@@ -11,12 +11,12 @@
       font-size: 0.75rem;
       color: rgba(31, 32, 65, 0.5);
     }
-    .active,
-    a:hover{
+    &__link_active,
+    &__link:hover{
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       color: #fff;
     }
-    .next{
+    &__link_next{
       background: url(./arrow-forward.png) no-repeat center,
                   linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
       text-indent: -62500rem;
@@ -25,7 +25,7 @@
         linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
       }
     }
-    .pagination__content{
+    &__content{
       
       font-size: 0.875rem;
       line-height: 1.5rem;

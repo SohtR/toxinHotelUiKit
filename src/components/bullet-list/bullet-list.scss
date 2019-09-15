@@ -1,5 +1,5 @@
 .bulletList{
-  .bulletList__item{
+  &__item{
       font-size: 0.875rem;
       line-height: 1.5rem;
       color: rgba(31, 32, 65, 0.75);
@@ -8,7 +8,7 @@
       padding: 0 0 0 0.75rem;
       width: 15rem;
     }
-    .bulletList__item:before {
+    &__item:before {
       width: 0.625rem;
       height: 0.625rem;
       border-radius: 0.625rem;

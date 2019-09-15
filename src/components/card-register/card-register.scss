@@ -1,14 +1,14 @@
 .registerAccount{
-    .registerAccount__header{
+    &__header{
       letter-spacing: -0.0375rem;
     }
     .textfield{
       margin: 0 0 0.625rem 0;
     }
-    .registerAccount__birthday{
+    &__birthday{
       margin: 1.5625rem 0 0.3125rem 0;
     }
-    .registerAccount__enterData{
+    &__enterData{
       margin: 0.625rem 0 0.3125rem 0;
     }
     .flex-wrapper{

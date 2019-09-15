@@ -3,17 +3,17 @@
   padding: 0;
   width: 16.625rem;
  
-  .CheckList__checkbox{
+  &__checkbox{
     display:none;            
   }
-  .CheckList__checkbox + label{
+  &__checkbox + label{
     cursor: pointer;
     font-weight: bold;
     font-size: 0.875rem;
     line-height: 1.125rem;
     color: rgba(31, 32, 65, 0.75);
   }
-  .CheckList__checkbox + label::before{
+  &__checkbox + label::before{
     content: "";
     display: inline-block;
     margin: 0 0.625rem 0 0;
@@ -26,7 +26,7 @@
     position: relative;
     top: 0.25rem;
   }
-  .CheckList__checkbox:checked + label::before {
+  &__checkbox:checked + label::before {
     background: url(./checked.png) no-repeat top left;
     border: none;  
   }

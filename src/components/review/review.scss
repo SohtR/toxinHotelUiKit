@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
     max-width: 44.375rem;;
-    .review__topBlock,
-    .review__bottomBlock{
+    &__topBlock,
+    &__bottomBlock{
       display: flex;
     }
-    .review__avatar{
+    &__avatar{
       max-width: 3rem;
       height: 3rem;
       border-radius: 50%;
@@ -14,20 +14,18 @@
       box-sizing: border-box;
       box-shadow: 0rem 0.625rem 1.25rem rgba(31, 32, 65, 0.1);
     }
-    .review__name{
+    &__name{
       margin: 0rem 0 0 0.625rem;
       
       font-size: 0.875rem;
       line-height: 1.5rem;
       color: rgba(31, 32, 65, 0.75);
-      b{
-        font-family: 'MontserratBold'
-      }
+      
     }
-    .review__like{
+    &__like{
       margin: 0.75rem 0 0 0.25rem;
     }
-    .review__content{
+    &__content{
       margin: 0.625rem 0 0 0.875rem;
       line-height: 1.5rem;
       color: rgba(31, 32, 65, 0.75);

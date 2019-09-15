@@ -1,5 +1,5 @@
 mixin toggleButton(id)
     .toggleButton 
-        input(type="checkbox" id=id style="display:none")
+        input.toggleButton__input(type="checkbox" id=id style="display:none")
         label.toggle(for=id)
             span.toggle__button

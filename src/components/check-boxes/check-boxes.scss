@@ -10,21 +10,21 @@
     margin: 1.125rem 0 0 1.5rem;
     padding: 0;
     width: 16.625rem;
-    .CheckList__item{
+    &__item{
       margin: 0 0 0.625rem 0;
       height: 1.25rem;
     }
-    .CheckList__checkbox{
+    &__checkbox{
       display:none;            
     }
-    .CheckList__checkbox + .CheckList__checkbox-label{
+    &__checkbox + &__checkbox-label{
       font-size: 0.875rem;
       line-height: 1.125rem;
       color: rgba(31, 32, 65, 0.5);
       cursor: pointer;
       font-weight: normal;
     }
-    .CheckList__checkbox + .CheckList__checkbox-label::before{
+    &__checkbox + &__checkbox-label::before{
       content: "";
       display: inline-block;
       margin: 0 0.625rem 0 0;
@@ -37,7 +37,7 @@
       position: relative;
       top: 0.25rem;
     }
-    .CheckList__checkbox:checked + label::before {
+    &__checkbox:checked + label::before {
       background: url(./checked.png) no-repeat top left;
       border: none;  
     }

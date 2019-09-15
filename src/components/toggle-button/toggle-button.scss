@@ -23,7 +23,7 @@
         transition: background .2s ease;
         border: 0.0625rem solid rgba(31, 32, 65, 0.25);
     }
-    .toggle__button{
+    &__button{
         position: absolute;
         top: 0.3125rem;
         left: 0.3125rem;
