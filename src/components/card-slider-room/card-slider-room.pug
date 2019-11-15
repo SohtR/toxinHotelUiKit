@@ -2,18 +2,18 @@ mixin slider-room(roomNum, price,rev, lux)
     .card-small.room-slider
         .flexslider
             ul.slides
-                li
-                    img(src=require(`./components/card-slider-room/${roomNum}-slide-1.jpg`))
-                li
-                    img(src=require(`./components/card-slider-room/${roomNum}-slide-2.jpg`))
-                li
-                    img(src=require(`./components/card-slider-room/${roomNum}-slide-3.jpg`))
-                li
-                    img(src=require(`./components/card-slider-room/${roomNum}-slide-4.jpg`))
+                li.slides__item
+                    img.slides__img(src=require(`./components/card-slider-room/${roomNum}-slide-1.jpg`))
+                li.slides__item
+                    img.slides__img(src=require(`./components/card-slider-room/${roomNum}-slide-2.jpg`))
+                li.slides__item
+                    img.slides__img(src=require(`./components/card-slider-room/${roomNum}-slide-3.jpg`))
+                li.slides__item
+                    img.slides__img(src=require(`./components/card-slider-room/${roomNum}-slide-4.jpg`))
         .room-slider__priceHeadline
             p.room-slider__number
                 span.room-slider__num №
-                span #{roomNum}
+                span.room-slider__number #{roomNum}
                 span.room-slider__lux  #{lux}
             p.room-slider__price= price +"₽ в сутки"
         .room-slider__rating

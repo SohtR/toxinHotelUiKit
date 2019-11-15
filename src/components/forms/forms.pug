@@ -1,25 +1,25 @@
 mixin forms(data)
         .flex-wrapper
-            .formText
-                h3 Text field
+            .form-text
+                h3.form-text__headline Text field
                 +textfield(data.textfieldId, data.textfieldPlaceholder, data.textfieldType)
                 .dropdownRooms
                 form(action="#").dropdown
-                    h3 Dropdown
+                    h3.form-text__headline Dropdown
                     include ../dropdown-room/dropdown-room.pug
                 
             
-            .maskedText
-                h3 Masked Textfield
+            .masked-text
+                h3.maskedText__headline Masked Textfield
                 +masked-textfield(data.maskedTextId, data.maskedTextPlaceholder)
         .flex-wrapper   
             .date
-                h3 Data Dropdown
+                h3.date__headline Data Dropdown
                 include ../data-dropdown/data-dropdown.pug
                 
-            .filterDropdown
+            .filter-dropdown
                 label(for="") 
-                    h3 Filter Dropdown    
+                    h3.filter-dropdown__headline Filter Dropdown    
                 include ../data-dd-filter/data-dd-filter.pug
             .email-subscription-field
                 h3.email-subscription-field__header subscription textfield
@@ -30,22 +30,22 @@ mixin forms(data)
                 +room-feature(data.roomFeatureComfort.ImgName, data.roomFeatureComfort.Header, data.roomFeatureComfort.Body)
                 +room-feature(data.roomFeatureUdobstvo.ImgName, data.roomFeatureUdobstvo.Header, data.roomFeatureUdobstvo.Body)
             include ../check-boxes/check-boxes.pug
-            .radioBut
-                h3 Radio buttons
+            .radio-but
+                h3.radio-but__headline Radio buttons
                 p
                     +radio-button(data.radioId1, data.radioContent1, data.radioName)
                     +radio-button(data.radioId2, data.radioContent2, data.radioName)
-            .toggleBut
-                    h3 Toggle
-                    .flex-wrapper
-                        +toggle-button(data.toggleButtonId)
-                        p Получать спецпредложения
+            .toggle-but
+                h3.toggle-but__headline Toggle
+                .flex-wrapper
+                    +toggle-button(data.toggleButtonId)
+                    p.toggle-but__content Получать спецпредложения
         .flex-wrapper   
             .flex-column-wrapper 
-                h3 like button
+                h3.flex-column-wrapper__headline like button
                 +like-button(data.likeCount)
             .flex-column-wrapper
-                h3 rate button
+                h3.flex-column-wrapper__headline rate button
                 +rate-button(data.ratingNumber0)
             .flex-column-wrapper
                 +range-slider(data.rangeSliderLabel)
@@ -58,11 +58,11 @@ mixin forms(data)
                 +button(data.btnLongStyle, data.btnLongContent)
             include ../pagination/pagination.pug
         .flex-wrapper
-            .richChbox
-                h3 rich checkbox buttons
+            .rich-checkbox
+                h3.rich-checkbox__headline rich checkbox buttons
                 include ../rich-check-box/rich-check-box.pug
             .bullet
-                h3 Bullet list
+                h3.bullet____headline Bullet list
                 include ../bullet-list/bullet-list.pug     
         .flex-wrapper
             include ../review/review.pug
