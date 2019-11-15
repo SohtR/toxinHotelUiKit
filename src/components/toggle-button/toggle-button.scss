@@ -1,4 +1,4 @@
-.toggleButton{
+.toggle-button{
     margin: 0 0.625rem 0.5rem 0;
 }
 
@@ -48,7 +48,7 @@
         }
     }
 }
-.toggleButton input[type="checkbox"]:checked + .toggle{
+.toggle-button input[type="checkbox"]:checked + .toggle{
     &:before{
         background: #fff;
         border: 0.0625rem solid #BC9CFF;

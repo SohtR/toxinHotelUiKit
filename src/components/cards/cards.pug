@@ -6,8 +6,8 @@ mixin cards(data)
                 include ../card-login/card-login.pug
                 include ../card-room-detail/card-room-detail.pug
             .flex-column-wrapper
-                +sliderRoom(data.sliderRoom888.number, data.sliderRoom888.price, data.sliderRoom888.reviews, data.sliderRoom888.isLux)
-                +sliderRoom(data.sliderRoom840.number, data.sliderRoom840.price, data.sliderRoom840.reviews)
+                +slider-room(data.sliderRoom888.number, data.sliderRoom888.price, data.sliderRoom888.reviews, data.sliderRoom888.isLux)
+                +slider-room(data.sliderRoom840.number, data.sliderRoom840.price, data.sliderRoom840.reviews)
 
 .cards-block
     .wrapper

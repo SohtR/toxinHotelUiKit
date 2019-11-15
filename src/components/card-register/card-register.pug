@@ -1,18 +1,18 @@
-.card-template.registerAccount
+.card-template.register-account
     h1.card-template__header Регистрация аккаунта
-    +textField(data.cardRegister.textfieldName.id, data.cardRegister.textfieldName.placeholder, data.cardRegister.textfieldName.type)
-    +textField(data.cardRegister.textfieldLastname.id, data.cardRegister.textfieldLastname.placeholder, data.cardRegister.textfieldLastname.type)
+    +textfield(data.cardRegister.textfieldName.id, data.cardRegister.textfieldName.placeholder, data.cardRegister.textfieldName.type)
+    +textfield(data.cardRegister.textfieldLastname.id, data.cardRegister.textfieldLastname.placeholder, data.cardRegister.textfieldLastname.type)
     p.radio-buttons-block
-        +radioButton(data.cardRegister.radiobuttonMan.id, data.cardRegister.radiobuttonMan.content, data.cardRegister.radiobuttonMan.name)
-        +radioButton(data.cardRegister.radiobuttonWoman.id, data.cardRegister.radiobuttonWoman.content, data.cardRegister.radiobuttonWoman.name)
-    h3.registerAccount__birthday дата рождения
-    +maskedTextfield(data.cardRegister.maskedText.id, data.cardRegister.maskedText.placeholder)
-    h3.registerAccount__enterData данные для входа в сервис
-    +textField(data.cardRegister.emailField.id, data.cardRegister.emailField.placeholder, data.cardRegister.emailField.type)
-    +textField(data.cardRegister.passField.id, data.cardRegister.passField.placeholder, data.cardRegister.passField.type)
+        +radio-button(data.cardRegister.radiobuttonMan.id, data.cardRegister.radiobuttonMan.content, data.cardRegister.radiobuttonMan.name)
+        +radio-button(data.cardRegister.radiobuttonWoman.id, data.cardRegister.radiobuttonWoman.content, data.cardRegister.radiobuttonWoman.name)
+    h3.register-account__birthday дата рождения
+    +masked-textfield(data.cardRegister.maskedText.id, data.cardRegister.maskedText.placeholder)
+    h3.register-account__enterData данные для входа в сервис
+    +textfield(data.cardRegister.emailField.id, data.cardRegister.emailField.placeholder, data.cardRegister.emailField.type)
+    +textfield(data.cardRegister.passField.id, data.cardRegister.passField.placeholder, data.cardRegister.passField.type)
     .flex-wrapper
-        +toggleButton(data.cardRegister.toggleBtnId)
+        +toggle-button(data.cardRegister.toggleBtnId)
         p Получать спецпредложения
     +button(data.cardRegister.btnLongStyle, data.cardRegister.btnLongContent)
-    p.haveAccount Уже есть аккаунт на Toxin
+    p.have-account Уже есть аккаунт на Toxin
         +button(data.cardRegister.btnBorderStyle, data.cardRegister.btnBorderContent)

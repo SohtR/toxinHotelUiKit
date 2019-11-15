@@ -2,7 +2,7 @@ mixin forms(data)
         .flex-wrapper
             .formText
                 h3 Text field
-                +textField(data.textfieldId, data.textfieldPlaceholder, data.textfieldType)
+                +textfield(data.textfieldId, data.textfieldPlaceholder, data.textfieldType)
                 .dropdownRooms
                 form(action="#").dropdown
                     h3 Dropdown
@@ -11,7 +11,7 @@ mixin forms(data)
             
             .maskedText
                 h3 Masked Textfield
-                +maskedTextfield(data.maskedTextId, data.maskedTextPlaceholder)
+                +masked-textfield(data.maskedTextId, data.maskedTextPlaceholder)
         .flex-wrapper   
             .date
                 h3 Data Dropdown
@@ -23,32 +23,32 @@ mixin forms(data)
                 include ../data-dd-filter/data-dd-filter.pug
             .email-subscription-field
                 h3.email-subscription-field__header subscription textfield
-                +emailSubscribe(data.emailSubId, data.emailSubPlaceholder)
+                +email-subscribe(data.emailSubId, data.emailSubPlaceholder)
             include ../expend-checkbox/expend-checkbox.pug
         .flex-wrapper
             .flex-col  
-                +roomFeature(data.roomFeatureComfort.ImgName, data.roomFeatureComfort.Header, data.roomFeatureComfort.Body)
-                +roomFeature(data.roomFeatureUdobstvo.ImgName, data.roomFeatureUdobstvo.Header, data.roomFeatureUdobstvo.Body)
+                +room-feature(data.roomFeatureComfort.ImgName, data.roomFeatureComfort.Header, data.roomFeatureComfort.Body)
+                +room-feature(data.roomFeatureUdobstvo.ImgName, data.roomFeatureUdobstvo.Header, data.roomFeatureUdobstvo.Body)
             include ../check-boxes/check-boxes.pug
             .radioBut
                 h3 Radio buttons
                 p
-                    +radioButton(data.radioId1, data.radioContent1, data.radioName)
-                    +radioButton(data.radioId2, data.radioContent2, data.radioName)
+                    +radio-button(data.radioId1, data.radioContent1, data.radioName)
+                    +radio-button(data.radioId2, data.radioContent2, data.radioName)
             .toggleBut
                     h3 Toggle
                     .flex-wrapper
-                        +toggleButton(data.toggleButtonId)
+                        +toggle-button(data.toggleButtonId)
                         p Получать спецпредложения
         .flex-wrapper   
             .flex-column-wrapper 
                 h3 like button
-                +likeButton(data.likeCount)
+                +like-button(data.likeCount)
             .flex-column-wrapper
                 h3 rate button
-                +rateButton(data.ratingNumber0)
+                +rate-button(data.ratingNumber0)
             .flex-column-wrapper
-                +rangeSlider(data.rangeSliderLabel)
+                +range-slider(data.rangeSliderLabel)
         .flex-wrapper
             .buttons-block
                 h3.buttons-block__header Buttons

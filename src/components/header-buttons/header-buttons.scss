@@ -1,4 +1,4 @@
-.headerButtons{
+.header-buttons{
     background: #fff;
     box-shadow: 0rem 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
     height: 4.375rem;
@@ -31,7 +31,7 @@
     justify-content: space-between;
     
 }
-.headerButtons{
+.header-buttons{
     &__mainMenu{
         list-style: none;
         margin: 0.7em 2.2em 0 0rem;
@@ -70,6 +70,9 @@
     }
     &__mainMenu-link:nth-child(2){
         margin: 0 0 0 1.3125rem;
+    }
+    &__login-wrapper{
+        margin: 0 22px 0 0;
     }
 }
 

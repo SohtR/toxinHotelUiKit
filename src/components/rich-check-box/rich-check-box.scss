@@ -1,4 +1,4 @@
-.CheckList {
+.check-list {
   margin: 1.125rem 0 0 1.5rem;
   padding: 0;
   width: 16.625rem;
@@ -32,10 +32,10 @@
   }
 }
 
-.richCheckbox{
-  .CheckList__item{
+.rich-checkbox{
+  .check-list__item{
       margin: 0 0 2.625rem 0;
-      .CheckList__content{
+      .check-list__content{
         margin: 0;
         font-size: 0.75rem;
         line-height: 0.875rem;

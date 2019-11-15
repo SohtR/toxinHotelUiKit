@@ -1,4 +1,4 @@
-mixin footerBig(data)
+mixin footer-big(data)
         .footer-big__main
             .footer-big__logo
                 a.header__logo(href="#") 
@@ -39,7 +39,7 @@ mixin footerBig(data)
             .footer-big__subscribe
                 h3.footer-big__headline subscribe to ours newsletter
                 p.footer-big__subscribe-content Receive our latest news and promotions in your inbox!
-                +emailSubscribe(data.emailId, data.emailPlaceholder)
+                +email-subscribe(data.emailId, data.emailPlaceholder)
         .footer-big__copyright
             p.footer-big__copyright-content Copyright © 2018 Toxin UI Kit. All rights reserved.
             .footer-big__social 
@@ -49,4 +49,4 @@ mixin footerBig(data)
 
 .footer-big
     .wrapper
-        +footerBig({emailId: "email", emailPlaceholder: "Your email address"})
+        +footer-big({emailId: "email", emailPlaceholder: "Your email address"})
