@@ -9,7 +9,7 @@ input[name='NCS']{
             line-height: 1.5rem;
             margin: 0 0 1.4375rem 0; 
             color: rgba(56, 56, 77, 0.75);
-            background: #fff url("./arrow-down.svg") 14.5rem 0.5625rem no-repeat; 
+            background: #fff url("../../img/arrow-down.svg") 14.5rem 0.5625rem no-repeat; 
             text-overflow: ellipsis;
             outline: none;
             cursor: pointer;
@@ -108,7 +108,6 @@ div.NCS.name, a.NCS.close, div.NCS.value {
     text-transform: uppercase;
     font-size: 0.75rem;
     line-height: 0.9375rem;
-    // padding: 0 0 0 0.9375rem;
 }
 
 div.NCS.buttons {
