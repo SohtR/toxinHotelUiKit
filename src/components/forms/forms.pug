@@ -52,10 +52,15 @@ mixin forms(data)
         .flex-wrapper
             .buttons-block
                 h3.buttons-block__header Buttons
-                +button(data.btnFillStyle, data.btnFillContent)  
-                +button(data.btnBorderStyle, data.btnBorderContent)    
-                a.link__purple(href='#') click me  
-                +button(data.btnLongStyle, data.btnLongContent)
+                .buttons-block__content    
+                    .buttons-block__button-margin
+                        +button(data.btnFillStyle, data.btnFillContent)  
+                    .buttons-block__button-margin
+                        +button(data.btnBorderStyle, data.btnBorderContent)    
+                    .buttons-block__button-margin
+                        a.link__purple(href='#') click me  
+                    .buttons-block__button-margin
+                        +button(data.btnLongStyle, data.btnLongContent)
             include ../pagination/pagination.pug
         .flex-wrapper
             .rich-checkbox

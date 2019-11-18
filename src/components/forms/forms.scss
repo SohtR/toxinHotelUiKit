@@ -3,17 +3,17 @@
     flex-wrap: wrap;
     }
     .buttons-block{
-        .button{
-        margin: 0.9375rem;
-        }
-        &__header{
-            margin: 1.25rem;
-        }
+      &__content{
+        display: flex;
+        
+      }
+      &__header{
+          margin: 1.25rem;
+      }
+      &__button-margin{
+        margin: 1.25rem;
+      }
     }
 
-    .email-subscription-field{
-        &__header{
-          margin: 1.25rem 0 0 1.25rem;
-        }
-      }
+    
 }
