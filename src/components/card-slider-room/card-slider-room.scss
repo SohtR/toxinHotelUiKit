@@ -1,16 +1,13 @@
-.card-small{
-    width: 16.875rem;
-    background: #fff;
-    box-sizing: border-box;
-    box-shadow: 0rem 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
-    border-radius: 0.25rem;
-    z-index: 1;  
-  }
   .room-slider{
       padding: 0;
       margin: 1.25rem 0 0 0;
-      
-      &__priceHeadline{
+      width: 16.875rem;
+      background: #fff;
+      box-sizing: border-box;
+      box-shadow: 0rem 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
+      border-radius: 0.25rem;
+      z-index: 1; 
+      &__price-headline{
         margin: 1.25rem 0 0 1.25rem;
         justify-content: space-between;
         display: flex;

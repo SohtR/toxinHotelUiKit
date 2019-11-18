@@ -1,5 +1,5 @@
 mixin slider-room(roomNum, price,rev, lux)
-    .card-small.room-slider
+    .room-slider
         .flexslider
             ul.slides
                 li.slides__item
@@ -10,7 +10,7 @@ mixin slider-room(roomNum, price,rev, lux)
                     img.slides__img(src=require(`./components/card-slider-room/${roomNum}-slide-3.jpg`))
                 li.slides__item
                     img.slides__img(src=require(`./components/card-slider-room/${roomNum}-slide-4.jpg`))
-        .room-slider__priceHeadline
+        .room-slider__price-headline
             p.room-slider__number
                 span.room-slider__num №
                 span.room-slider__number #{roomNum}

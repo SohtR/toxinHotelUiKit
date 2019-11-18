@@ -29,7 +29,9 @@
     }   
     &__list {
         margin: 0 2.6875rem 0 0;
-        
+        &_support {
+            margin: 0 3.0625rem 0 0rem;
+        }
     }
     &__list-item {
         line-height: 2.375rem;
@@ -44,15 +46,13 @@
         line-height: 0.9375rem;
         text-transform: uppercase;
         color: #1F2041;
-        margin: 0.3125rem 0 0.625rem 0;
+        margin: 0.3125rem 0 0.625rem 0; 
+        letter-spacing: -0.0375rem;
     }
     
     &__subscribe-content {
         margin: 1.25rem 0 0 0;
         line-height: 1.375rem;
-    }
-    &__headline {
-        letter-spacing: -0.0375rem;
     }
     &__copyright {
         display: flex;
@@ -78,10 +78,8 @@
     }
     &__social {
         padding: 1.6875rem 0 0 0;
-    
     }
-    
-    
+
     &__twitter,
     &__facebook,
     &__instagram {

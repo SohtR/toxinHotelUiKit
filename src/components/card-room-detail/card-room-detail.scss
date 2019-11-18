@@ -1,5 +1,32 @@
 .room-detail{
     height: 31.9375rem;
+    width: 380px;
+    padding: 40px 30px 30px 30px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 1;
+    
+    .button_border{
+      margin: 2px 0 0 36px;
+      width: 96px;
+      height: 40px;
+      box-sizing: border-box;
+      display: inline-block;
+      line-height: 26px;
+    }
+    .have-account{
+      font-size: 14px;
+      line-height: 18px;
+      color: #000;
+    }
+    &__price-headline{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
     &__header{
       margin: 0 0 0.3125rem 0;
     }
@@ -50,14 +77,16 @@
       display: inline-block;
     }
   
-    &__price-table &__rightCol{
+    &__rightCol{
       text-align: right;
       padding: 0 0 0 1.3125rem;
+      vertical-align: top;
     }
-    &__price-table &__leftCol{
+    &__leftCol{
       text-align: left;
       width: 13.375rem;
       padding: 0 0.3125rem 1.0625rem 0;
+      vertical-align: top;
     }
     .dropdown-guest{
       margin: 1.25rem 0 0 0;
@@ -71,13 +100,13 @@
       justify-content: space-between;
       display: flex;
     }
-    &__borderDashed{
+    &__border-dashed{
       border-bottom: 0.0625rem dashed rgba(31, 32, 65, 0.25);
       flex-grow: 1;
       height: 1.125rem;
       margin: 0 0.25rem;
     }
-    &__totalSum{
+    &__total-sum{
       letter-spacing: -0.0938rem;
     }
     .button_long{

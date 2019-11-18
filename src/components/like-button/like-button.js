@@ -1,5 +1,4 @@
-
-    $('.btn-counter').on('click', function(event, count) {
+    $('.like-button').on('click', function(event, count) {
     event.preventDefault();
     
     var $this = $(this),
