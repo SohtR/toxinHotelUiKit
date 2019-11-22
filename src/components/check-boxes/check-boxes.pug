@@ -1,12 +1,6 @@
-form(action="#").checkboxes
-    h3.checkboxes__header Checkbox buttons
+mixin checkboxes(options)
     ul.check-list
-        li.check-list__item
-            input.check-list__checkbox(type="checkbox" id="bfirst" name="first" hidden)
-            label.check-list__checkbox-label(for="bfirst") Завтрак
-        li.check-list__item
-            input.check-list__checkbox(type="checkbox" id="bsecond" name="first" checked hidden)
-            label.check-list__checkbox-label(for="bsecond") Письменный стол
-        li.check-list__item
-            input.check-list__checkbox(type="checkbox" id="bthird" name="first" checked hidden)
-            label.check-list__checkbox-label(for="bthird") Стул для кормления
+        each item in options
+            li.check-list__item
+                input.check-list__checkbox(type="checkbox" id=`b${item.id}` name=`${item.id}` hidden)
+                label.check-list__checkbox-label(for=`b${item.id}`)= item.content

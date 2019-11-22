@@ -1,28 +1,9 @@
-form(action="#")
-    input(id="expander" type="checkbox")
-    label.expanded-checkbox-label(for="expander")
-    ul.expanded-checkbox-list
-        li.expanded-checkbox-list__item
-            input.expanded-checkbox-list__input(type="checkbox" id="cfirst" name="first" hidden)
-            label(for="cfirst") Завтрак
-        li.expanded-checkbox-list__item
-            input.expanded-checkbox-list__input(type="checkbox" id="csecond" name="first" checked hidden)
-            label(for="csecond") Письменный стол
-        li.expanded-checkbox-list__item
-            input.expanded-checkbox-list__input(type="checkbox" id="cthird" name="first" checked hidden)
-            label(for="cthird") Стул для кормления
-        li.expanded-checkbox-list__item
-            input.expanded-checkbox-list__input(type="checkbox" id="cfourth" name="first" checked hidden)
-            label(for="cfourth") Кроватка
-        li.expanded-checkbox-list__item
-            input.expanded-checkbox-list__input(type="checkbox" id="cfifth" name="first" hidden)
-            label(for="cfifth") Телевизор
-        li.expanded-checkbox-list__item
-            input.expanded-checkbox-list__input(type="checkbox" id="csix" name="first" hidden)
-            label(for="csix") Шампунь
-        li.expanded-checkbox-list__item
-            input.expanded-checkbox-list__input(type="checkbox" id="cseven" name="first" hidden)
-            label(for="cseven") Телевизор
-        li.expanded-checkbox-list__item
-            input.expanded-checkbox-list__input(type="checkbox" id="ceight" name="first" hidden)
-            label(for="ceight") Шампунь
+mixin expanded-checkbox-list(options)
+    form(action="#")
+        input(id="expander" type="checkbox")
+        label.expanded-checkbox-label(for="expander")
+        ul.expanded-checkbox-list
+            each item in options
+                li.expanded-checkbox-list__item
+                    input.expanded-checkbox-list__input(type="checkbox" id=`c${item.id}` name=`${item.id}` checked=item.checked hidden)
+                    label(for=`c${item.id}`)=item.content

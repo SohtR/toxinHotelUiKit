@@ -1,4 +1,7 @@
-ul.bullet-list
-    li.bullet-list__item Нельзя с питомцами
-    li.bullet-list__item Без вечеринок и мероприятий
-    li.bullet-list__item Время прибытия — после 13:00, а выезд до 12:00  
+mixin bullet-list(options)
+    ul.bullet-list
+        each item in options
+            li.bullet-list__item=item
+
+
+

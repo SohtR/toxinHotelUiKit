@@ -24,12 +24,64 @@ mixin forms(data)
             .email-subscription-field
                 h3.email-subscription-field__header subscription textfield
                 +email-subscribe(data.emailSubId, data.emailSubPlaceholder)
-            include ../expend-checkbox/expend-checkbox.pug
+            +expanded-checkbox-list({
+                        first:{
+                            id: "first",
+                            content: "Завтрак"
+                        },
+                        second:{
+                            id: "second",
+                            content: "Письменный стол",
+                            checked: true
+                        },
+                        third:{
+                            id: "third",
+                            content: "Стул для кормления",
+                            checked: true
+                        },
+                        fourth:{
+                            id: "fourth",
+                            content: "Кроватка",
+                            checked: true
+                        },
+                        fifth:{
+                            id: "fifth",
+                            content: "Телевизор"
+                        },
+                        sixth:{
+                            id: "sixth",
+                            content: "Шампунь"
+                        },
+                        seventh:{
+                            id: "seventh",
+                            content: "Телевизор"
+                        },
+                        eighth:{
+                            id: "eighth",
+                            content: "Шампунь"
+                        }})
         .flex-wrapper
             .flex-col  
                 +room-feature(data.roomFeatureComfort.ImgName, data.roomFeatureComfort.Header, data.roomFeatureComfort.Body)
                 +room-feature(data.roomFeatureUdobstvo.ImgName, data.roomFeatureUdobstvo.Header, data.roomFeatureUdobstvo.Body)
-            include ../check-boxes/check-boxes.pug
+            form(action="#").checkboxes
+                h3.checkboxes__header Checkbox buttons
+                +checkboxes({
+                    first:{
+                        id: "first",
+                        content: "Завтрак"
+                    },
+                    second:{
+                        id: "second",
+                        content: "Письменный стол",
+                        checked: true
+                    },
+                    third:{
+                        id: "third",
+                        content: "Стул для кормления",
+                        checked: true
+                    }
+                })
             .radio-but
                 h3.radio-but__headline Radio buttons
                 p
@@ -65,10 +117,26 @@ mixin forms(data)
         .flex-wrapper
             .rich-checkbox
                 h3.rich-checkbox__headline rich checkbox buttons
-                include ../rich-check-box/rich-check-box.pug
+                +rich-checkbox({
+                    first:{
+                        id: "first",
+                        header: "Широкий коридор",
+                        content: "Ширина коридоров в номере не менее 91 см."
+                    },
+                    second:{
+                        id: "second",
+                        header: "Помощник для инвалидов",
+                        content: "На 1 этаже вас встретит специалист  и проводит до номера.",
+                        checked: true
+                    }
+                })
             .bullet
                 h3.bullet____headline Bullet list
-                include ../bullet-list/bullet-list.pug     
+                +bullet-list({
+                    pet: "Нельзя с питомцами",
+                    party: "Без вечеринок и мероприятий",
+                    check_time: "Время прибытия — после 13:00, а выезд до 12:00"
+                }) 
         .flex-wrapper
             include ../review/review.pug
 
