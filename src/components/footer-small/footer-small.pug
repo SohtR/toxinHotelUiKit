@@ -1,14 +1,13 @@
 mixin footer-small(data)
-        .wrapper-column
-            .footer-small__logo
-                a.footer-small__logo-ref(href="#") 
-                    img.footer-small__logo-img(src=require("./components/footer-small/color-logo.svg"), alt="Logo")
-            p.footer-small__content Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis. 
-            .footer-small__social
-                a(href="").footer-big__twitter 
-                a(href="").footer-big__facebook 
-                a(href="").footer-big__instagram
+    .footer-small
+        .wrapper
+            .wrapper-column
+                .footer-small__logo
+                    a.footer-small__logo-ref(href="#") 
+                        img.footer-small__logo-img(src=require("./components/footer-small/color-logo.svg"), alt="Logo")
+                p.footer-small__content=data.content
+                .footer-small__social
+                    a(href="").footer-big__twitter 
+                    a(href="").footer-big__facebook 
+                    a(href="").footer-big__instagram
 
-.footer-small
-    .wrapper
-        +footer-small()

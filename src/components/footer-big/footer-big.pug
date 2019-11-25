@@ -1,52 +1,27 @@
 mixin footer-big(data)
-        .footer-big__main
-            .footer-big__logo
-                a.header__logo(href="#") 
-                    img.header__logo-img(src=require("./components/footer-big/color-logo.svg"), alt="Main Logo")
-                p.footer-big__logo-content Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.       
-            .footer-big__menus
-                .footer-big__list
-                    h3.footer-big__headline navigation
-                    ul.footer-big__list
-                        li.footer-big__list-item
-                            a(href="").footer-big__list-ref About Us
-                        li.footer-big__list-item
-                            a(href="").footer-big__list-ref News
-                        li.footer-big__list-item
-                            a(href="").footer-big__list-ref Support
-                        li.footer-big__list-item
-                            a(href="").footer-big__list-ref Products
-                .footer-big__list
-                    h3.footer-big__headline about us
-                    ul.footer-big__list
-                        li.footer-big__list-item
-                            a(href="").footer-big__list-ref Who we are
-                        li.footer-big__list-item
-                            a(href="").footer-big__list-ref Our team
-                        li.footer-big__list-item
-                            a(href="").footer-big__list-ref Careers
-                        li.footer-big__list-item
-                            a(href="").footer-big__list-ref Investors
-                .footer-big__list.footer-big__list_support
-                    h3.footer-big__headline support
-                    ul.footer-big__list
-                        li.footer-big__list-item
-                            a(href="".footer-big__list-ref) Documentation
-                        li.footer-big__list-item
-                            a(href="").footer-big__list-ref Community
-                        li.footer-big__list-item
-                            a(href="").footer-big__list-ref Get in touch
-            .footer-big__subscribe
-                h3.footer-big__headline subscribe to ours newsletter
-                p.footer-big__subscribe-content Receive our latest news and promotions in your inbox!
-                +email-subscribe(data.emailId, data.emailPlaceholder)
-        .footer-big__copyright
-            p.footer-big__copyright-content Copyright © 2018 Toxin UI Kit. All rights reserved.
-            .footer-big__social 
-                a(href="").footer-big__twitter 
-                a(href="").footer-big__facebook 
-                a(href="").footer-big__instagram
+    .footer-big
+        .wrapper
+            .footer-big__main
+                .footer-big__logo
+                    a.header__logo(href="#") 
+                        img.header__logo-img(src=require("./components/footer-big/color-logo.svg"), alt="Main Logo")
+                    p.footer-big__logo-content= data.logoContent       
+                .footer-big__menus
+                    each item in data.list
+                        .footer-big__list
+                            h3.footer-big__headline= item.header
+                            ul.footer-big__list
+                                each i in item.itemList
+                                    li.footer-big__list-item
+                                        a(href="").footer-big__list-ref=i
+                .footer-big__subscribe
+                    h3.footer-big__headline=data.subscribeHeadline
+                    p.footer-big__subscribe-content=data.subscribeContent 
+                    +email-subscribe(data.emailId, data.emailPlaceholder)
+            .footer-big__copyright
+                p.footer-big__copyright-content=data.copyrightContent 
+                .footer-big__social 
+                    a(href="").footer-big__twitter 
+                    a(href="").footer-big__facebook 
+                    a(href="").footer-big__instagram
 
-.footer-big
-    .wrapper
-        +footer-big({emailId: "email", emailPlaceholder: "Your email address"})

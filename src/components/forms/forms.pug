@@ -6,25 +6,25 @@ mixin forms(data)
                 .dropdownRooms
                 form(action="#").dropdown
                     h3.form-text__headline Dropdown
-                    include ../dropdown-room/dropdown-room.pug
-                
-            
+                    +dropdown-room("Параметры комнаты")
             .masked-text
                 h3.maskedText__headline Masked Textfield
                 +masked-textfield(data.maskedTextId, data.maskedTextPlaceholder)
         .flex-wrapper   
             .date
                 h3.date__headline Data Dropdown
-                include ../data-dropdown/data-dropdown.pug
-                
+                .data-dropdown
+                +data-dropdown()
             .filter-dropdown
                 label(for="") 
-                    h3.filter-dropdown__headline Filter Dropdown    
-                include ../data-dd-filter/data-dd-filter.pug
+                    h3.filter-dropdown__headline Filter Dropdown
+                +data-dropdown-filter()    
             .email-subscription-field
                 h3.email-subscription-field__header subscription textfield
-                +email-subscribe(data.emailSubId, data.emailSubPlaceholder)
-            +expanded-checkbox-list({
+                .email-subscribe-margin
+                    +email-subscribe(data.emailSubId, data.emailSubPlaceholder)
+            .expanded-checkbox-list-margin
+                +expanded-checkbox-list({
                         first:{
                             id: "first",
                             content: "Завтрак"
@@ -61,27 +61,30 @@ mixin forms(data)
                             content: "Шампунь"
                         }})
         .flex-wrapper
-            .flex-col  
-                +room-feature(data.roomFeatureComfort.ImgName, data.roomFeatureComfort.Header, data.roomFeatureComfort.Body)
-                +room-feature(data.roomFeatureUdobstvo.ImgName, data.roomFeatureUdobstvo.Header, data.roomFeatureUdobstvo.Body)
+            .flex-col
+                .room-feature-margin  
+                    +room-feature(data.roomFeatureComfort.ImgName, data.roomFeatureComfort.Header, data.roomFeatureComfort.Body)
+                .room-feature-margin  
+                    +room-feature(data.roomFeatureUdobstvo.ImgName, data.roomFeatureUdobstvo.Header, data.roomFeatureUdobstvo.Body)
             form(action="#").checkboxes
                 h3.checkboxes__header Checkbox buttons
-                +checkboxes({
-                    first:{
-                        id: "first",
-                        content: "Завтрак"
-                    },
-                    second:{
-                        id: "second",
-                        content: "Письменный стол",
-                        checked: true
-                    },
-                    third:{
-                        id: "third",
-                        content: "Стул для кормления",
-                        checked: true
-                    }
-                })
+                .checkbox-margin
+                    +checkboxes({
+                        first:{
+                            id: "first",
+                            content: "Завтрак"
+                        },
+                        second:{
+                            id: "second",
+                            content: "Письменный стол",
+                            checked: true
+                        },
+                        third:{
+                            id: "third",
+                            content: "Стул для кормления",
+                            checked: true
+                        }
+                    })
             .radio-but
                 h3.radio-but__headline Radio buttons
                 p
@@ -90,6 +93,7 @@ mixin forms(data)
             .toggle-but
                 h3.toggle-but__headline Toggle
                 .flex-wrapper
+                    .toggle-button 
                     +toggle-button(data.toggleButtonId)
                     p.toggle-but__content Получать спецпредложения
         .flex-wrapper   
@@ -113,23 +117,27 @@ mixin forms(data)
                         a.link__purple(href='#') click me  
                     .buttons-block__button-margin
                         +button(data.btnLongStyle, data.btnLongContent)
-            include ../pagination/pagination.pug
+            +pagination({
+                content: "1 – 12 из 100+ вариантов аренды",
+                header: "pagination"
+            })
         .flex-wrapper
-            .rich-checkbox
-                h3.rich-checkbox__headline rich checkbox buttons
-                +rich-checkbox({
-                    first:{
-                        id: "first",
-                        header: "Широкий коридор",
-                        content: "Ширина коридоров в номере не менее 91 см."
-                    },
-                    second:{
-                        id: "second",
-                        header: "Помощник для инвалидов",
-                        content: "На 1 этаже вас встретит специалист  и проводит до номера.",
-                        checked: true
-                    }
-                })
+            .rich-checkbox-margin
+                .rich-checkbox
+                    h3.rich-checkbox__headline rich checkbox buttons
+                    +rich-checkbox({
+                        first:{
+                            id: "first",
+                            header: "Широкий коридор",
+                            content: "Ширина коридоров в номере не менее 91 см."
+                        },
+                        second:{
+                            id: "second",
+                            header: "Помощник для инвалидов",
+                            content: "На 1 этаже вас встретит специалист  и проводит до номера.",
+                            checked: true
+                        }
+                    })
             .bullet
                 h3.bullet____headline Bullet list
                 +bullet-list({
@@ -138,42 +146,11 @@ mixin forms(data)
                     check_time: "Время прибытия — после 13:00, а выезд до 12:00"
                 }) 
         .flex-wrapper
-            include ../review/review.pug
+            +review({
+                name: "Мурад Сарафанов",
+                date: "5",
+                likes: "11",
+                content: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+            })
+            
 
-.form-elements
-    .wrapper
-        +forms({
-            textfieldId: "textfield",
-            textfieldPlaceholder: "Email",
-            textfieldType: "text",
-            maskedTextId: "maskedText",
-            maskedTextPlaceholder: "ДД.ММ.ГГГГ",
-            emailSubId: "subs2",
-            emailSubPlaceholder: "Your email address",
-            roomFeatureComfort: {
-                    ImgName: "comfort",
-                    Header: "Комфорт",
-                    Body: "Шумопоглощающие стены"
-                },
-            roomFeatureUdobstvo: {
-                    ImgName: "udobstvo",
-                    Header: "Удобство",
-                    Body: "Окно в каждой из спален"
-                },
-            radioId1: "test1",
-            radioId2: "test2",
-            radioContent1: "Мужчина",
-            radioContent2: "Женщина",
-            radioName: "radio-group",
-            toggleButtonId: "cbx",
-            likeCount: 5,
-            ratingNumber0: 0,
-            rangeSliderLabel: "Range Slider",
-            btnFillContent: "click me",
-            btnFillStyle: "fill",
-            btnBorderContent: "click me",
-            btnBorderStyle: "border",
-            btnLongContent: "перейти к оплате",
-            btnLongStyle: "long"
-
-        })

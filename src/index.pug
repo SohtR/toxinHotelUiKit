@@ -13,7 +13,24 @@ include components/expend-checkbox/expend-checkbox.pug
 include components/bullet-list/bullet-list.pug
 include components/check-boxes/check-boxes.pug
 include components/rich-check-box/rich-check-box.pug
-
+include components/header-buttons/header-buttons.pug
+include components/cards/cards.pug
+include components/forms/forms.pug
+include components/header/header.pug
+include components/footer-big/footer-big.pug
+include components/footer-small/footer-small.pug
+include components/colors-types/colors-types.pug
+include components/card-room-detail/card-room-detail.pug
+include components/card-login/card-login.pug
+include components/card-search-room/card-search-room.pug
+include components/card-register/card-register.pug
+include components/dropdown-guest/dropdown-guest.pug
+include components/dropdown-guest-repeat/dropdown-guest-repeat.pug
+include components/dropdown-room/dropdown-room.pug
+include components/review/review.pug
+include components/data-dd-filter/data-dd-filter.pug
+include components/data-dropdown/data-dropdown.pug
+include components/pagination/pagination.pug
 doctype html
 html
     head
@@ -32,13 +49,248 @@ html
         meta(name="theme-color" content="#ffffff")
     body
         main
-            include components/header-buttons/header-buttons.pug
-            include components/header/header.pug
-            include components/footer-big/footer-big.pug
-            include components/footer-small/footer-small.pug
-            include components/colors-types/colors-types.pug
-            include components/forms/forms.pug
-            include components/cards/cards.pug
+            .header-buttons
+                +header-buttons({
+                    list:{
+                        1:{
+                            content: "Home",
+                            active: true
+                        } ,
+                        2: {content:"About Us"},
+                        3: {content: "Services"},
+                        4: {content: "Careers"},
+                        5: {content: "News"},
+                        6: {content: "Documentation"}
+                    },
+                    loginButtonStyle: "border",
+                    loginButton: "login",
+                    registerButtonStyle: "fill",
+                    registerButton: "register"
+                    })
+            .header-margin
+                +header({
+                    1:{
+                        content: "Home",
+                        active: true
+                    } ,
+                    2: {content:"About Us"},
+                    3: {content: "Services"},
+                    4: {content: "Careers"},
+                    5: {content: "News"},
+                    6: {content: "Documentation"}
+                })
+            .footer-big-margin
+                +footer-big({
+                    list:{
+                        navigation:{
+                            header: "navigation",
+                            itemList:{
+                                1: "About Us",
+                                2: "News",
+                                3: "Support",
+                                4: "Products"
+                            }
+                        },
+                        aboutUs:{
+                            header: "about us",
+                            itemList:{
+                                1: "Who we are",
+                                2: "Our team",
+                                3: "Careers",
+                                4: "Investors"
+                            }
+                        },
+                    support:{
+                            header: "support",
+                            itemList:{
+                                1: "Documentation",
+                                2: "News",
+                                3: "Community",
+                                4: "Get in touch"
+                            }
+                        }
+                    },
+                    subscribeContent: "Receive our latest news and promotions in your inbox!",
+                    subscribeHeadline: "subscribe to ours newsletter",
+                    logoContent: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis. ",
+                    emailId: "email",
+                    emailPlaceholder: "Your email address",
+                    copyrightContent: "Copyright © 2018 Toxin UI Kit. All rights reserved."
+                    })
+            .footer-small-margin
+                +footer-small({
+                    content: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis. "
+                })
+            .colors-type
+                .wrapper
+                    +colors-types({
+                        1:{
+                            class: "square",
+                            name: "Dark Shade 100%",
+                            hex: "#1F2041"
+                        },
+                        2:{
+                            class: "square _75",
+                            name: "Dark Shade 75%",
+                            hex: "#1F2041"
+                        },
+                        3:{
+                            class: "square _50",
+                            name: "Dark Shade 50%",
+                            hex: "#1F2041"
+                        },
+                        4:{
+                            class: "square _25",
+                            name: "Dark Shade 25%",
+                            hex: "#1F2041"
+                        },
+                        5:{
+                            class: "square _5",
+                            name: "Dark Shade 5%",
+                            hex: "#1F2041"
+                        },
+                        6:{
+                            class: "square purple",
+                            name: "Purple",
+                            hex: "#bc9cff"
+                        },
+                        7:{
+                            class: "square green",
+                            name: "Green",
+                            hex: "#6fcf97"
+                        }
+                    })
+            .form-elements
+                .wrapper
+                    +forms({
+                        textfieldId: "textfield",
+                        textfieldPlaceholder: "Email",
+                        textfieldType: "text",
+                        maskedTextId: "maskedText",
+                        maskedTextPlaceholder: "ДД.ММ.ГГГГ",
+                        emailSubId: "subs2",
+                        emailSubPlaceholder: "Your email address",
+                        roomFeatureComfort: {
+                                ImgName: "comfort",
+                                Header: "Комфорт",
+                                Body: "Шумопоглощающие стены"
+                            },
+                        roomFeatureUdobstvo: {
+                                ImgName: "udobstvo",
+                                Header: "Удобство",
+                                Body: "Окно в каждой из спален"
+                            },
+                        radioId1: "test1",
+                        radioId2: "test2",
+                        radioContent1: "Мужчина",
+                        radioContent2: "Женщина",
+                        radioName: "radio-group",
+                        toggleButtonId: "cbx",
+                        likeCount: 5,
+                        ratingNumber0: 0,
+                        rangeSliderLabel: "Range Slider",
+                        btnFillContent: "click me",
+                        btnFillStyle: "fill",
+                        btnBorderContent: "click me",
+                        btnBorderStyle: "border",
+                        btnLongContent: "перейти к оплате",
+                        btnLongStyle: "long"
+                    })
+            .cards-block
+                .wrapper
+                    .flex-wrapper
+                        +cards({
+                            cardLogin:{
+                                header: "Войти",
+                                emailField: {
+                                    id: "loginEmail",
+                                    placeholder: "Email",
+                                    type: "email"
+                                },
+                                passField: {
+                                    id: "loginPass",
+                                    placeholder: "Пароль",
+                                    type: "password"
+                                },
+                                btnLongContent: "Войти",
+                                btnLongStyle: "long",
+                                btnBorderContent: "создать",
+                                btnBorderStyle: "border"
+                            },
+                            cardRegister:{
+                                header:"Регистрация аккаунта",
+                                textfieldName: {
+                                    id: "name",
+                                    placeholder: "Имя",
+                                    type: "text"
+                                },
+                                textfieldLastname: {
+                                    id: "lastname",
+                                    placeholder: "Фамилия",
+                                    type: "text"
+                                },
+                                radiobuttonMan: {
+                                    id: "test3",
+                                    content: "Мужчина",
+                                    name: "group"
+                                },
+                                radiobuttonWoman: {
+                                    id: "test4",
+                                    content: "Женщина",
+                                    name: "group"
+                                },
+                                maskedText: {
+                                    id: "birthday",
+                                    placeholder: "ДД.ММ.ГГГГ"
+                                },
+                                emailField: {
+                                    id: "regEmail",
+                                    placeholder: "Email",
+                                    type: "email"
+                                },
+                                passField: {
+                                    id: "regPass",
+                                    placeholder: "Пароль",
+                                    type: "password"
+                                },
+                                toggleBtnId: "mailing",
+                                btnLongContent: "Перейти к оплате",
+                                btnLongStyle: "long",
+                                btnBorderContent: "войти",
+                                btnBorderStyle: "border",
+                                offer: "Получать спецпредложения",
+                                birth: "дата рождения",
+                                enterData: "данные для входа в сервис"
+                            },
+                            searchRoom:{
+                                header: "Найдем номера под ваши пожелания",
+                                btnLongContent: "подобрать номер",
+                                btnLongStyle: "long"
+                            },
+                            roomDetail:{
+                                number: "888",
+                                price: "9 990",
+                                days: "4",
+                                totalPrice: "39 960",
+                                service: "2 179",
+                                extra: "300",
+                                total: "38 081",
+                                btnLongContent: "Забронировать",
+                                btnLongStyle: "long"
+                            },
+                            sliderRoom888: {
+                                number: 888,
+                                price: "9 990",
+                                reviews: 145,
+                                isLux: "люкс"
+                            },
+                            sliderRoom840: {
+                                number: 840,
+                                price: "9 900",
+                                reviews: 65
+                            }
+                        })
+            
 
 include components/script-injection/script-injection.pug
 

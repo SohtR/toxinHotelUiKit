@@ -48,18 +48,14 @@ main{
 .flex-wrapper{
   display: flex;
   margin: 1.25rem 0 0 0;
-  form{
-    margin: 0.625rem;
-  }
+  
 }
 
 .flex-column-wrapper{
   display: flex;
   flex-direction: column;
   margin: auto 1.25rem;
-  form{
-    margin: 0.625rem;
-  }
+  
 }
 
 .link__purple{
@@ -74,3 +70,23 @@ main{
   color: rgba(31, 32, 65, 0.5);
 }
 
+.colors-type{
+  width: 100%;
+  display: flex;
+  margin: 1.875rem 0 0 0;
+}
+
+.footer-big-margin{
+  margin: 2.3125rem 0 0 0;
+  width: 100%;
+}
+.footer-small-margin{
+  margin: 2.5rem 0 0 0;
+  width: 100%;
+}
+
+.header-margin{
+  margin: 2.5rem 0 0 0;
+  width: 100%;
+
+}

@@ -2,5 +2,5 @@ mixin checkboxes(options)
     ul.check-list
         each item in options
             li.check-list__item
-                input.check-list__checkbox(type="checkbox" id=`b${item.id}` name=`${item.id}` hidden)
+                input.check-list__checkbox(type="checkbox" id=`b${item.id}` name=`${item.id}` checked=item.checked hidden)
                 label.check-list__checkbox-label(for=`b${item.id}`)= item.content

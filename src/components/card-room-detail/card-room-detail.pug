@@ -1,33 +1,35 @@
-.room-detail
-    .flex-wrapper
-        .room-detail__price-headline
-            p.room-detail__number
-                span.room-detail__num № 
-                span.room-detail__number 888 
-                span.room-detail__lux люкс
-            p.room-detail__price 9 990₽ в сутки
-    .flex-wrapper
-        include ../two-input-range/two-input-range.pug
-    .dropdown-guest
-        h3.room-detail__header гости
-        include ../dropdown-guest-repeat/dropdown-guest-repeat.pug
-    table.room-detail__price-table
-        tr.room-detail__price-table-row
-            td.room-detail__leftCol 9 990₽ х 4 суток
-            td.room-detail__price-table-column
-            td.room-detail__rightCol 39 960₽
-        tr.room-detail__price-table-row
-            td.room-detail__leftCol Сбор за услуги: скидка 2 179₽
-            td.room-detail__price-table-column 
-                a(href='#').room-detail__price-table-circle i
-            td.room-detail__rightCol 0₽
-        tr.room-detail__price-table-row
-            td.room-detail__leftCol Сбор за дополнительные услуги
-            td.room-detail__price-table-column
+mixin room-detail(data)    
+    .room-detail
+        .flex-wrapper
+            .room-detail__price-headline
+                p.room-detail__number
+                    span.room-detail__num № 
+                    span.room-detail__number=data.number
+                    span.room-detail__lux люкс
+                p.room-detail__price=`${data.price} в сутки`
+        .flex-wrapper
+            include ../two-input-range/two-input-range.pug
+        .dropdown-guest
+            h3.room-detail__header гости
+            +dropdown-guest-repeat("Сколько гостей")
+        table.room-detail__price-table
+            tr.room-detail__price-table-row
+                td.room-detail__leftCol=`${data.price}₽ х ${data.days} суток`
+                td.room-detail__price-table-column
+                td.room-detail__rightCol=`${data.totalPrice}₽`
+            tr.room-detail__price-table-row
+                td.room-detail__leftCol=` Сбор за услуги: скидка ${data.service}₽`
+                td.room-detail__price-table-column 
                     a(href='#').room-detail__price-table-circle i
-            td.room-detail__rightCol 300₽
-    .room-detail__total
-        p.room-detail__total-name Итого
-        .room-detail__border-dashed
-        p.room-detail__total-sum 38 081₽
-    +button(data.cardRoomDetail.btnLongStyle, data.cardRoomDetail.btnLongContent)
+                td.room-detail__rightCol 0₽
+            tr.room-detail__price-table-row
+                td.room-detail__leftCol Сбор за дополнительные услуги
+                td.room-detail__price-table-column
+                        a(href='#').room-detail__price-table-circle i
+                td.room-detail__rightCol=`${data.extra}₽`
+        .room-detail__total
+            p.room-detail__total-name Итого
+            .room-detail__border-dashed
+            p.room-detail__total-sum=`${data.total}₽`
+        +button(data.btnLongStyle, data.btnLongContent)
+

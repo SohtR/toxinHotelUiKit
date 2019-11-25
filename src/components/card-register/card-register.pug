@@ -1,18 +1,20 @@
-.register-account
-    h1.register-account__header Регистрация аккаунта
-    +textfield(data.cardRegister.textfieldName.id, data.cardRegister.textfieldName.placeholder, data.cardRegister.textfieldName.type)
-    +textfield(data.cardRegister.textfieldLastname.id, data.cardRegister.textfieldLastname.placeholder, data.cardRegister.textfieldLastname.type)
-    p.radio-buttons-block
-        +radio-button(data.cardRegister.radiobuttonMan.id, data.cardRegister.radiobuttonMan.content, data.cardRegister.radiobuttonMan.name)
-        +radio-button(data.cardRegister.radiobuttonWoman.id, data.cardRegister.radiobuttonWoman.content, data.cardRegister.radiobuttonWoman.name)
-    h3.register-account__birthday дата рождения
-    +masked-textfield(data.cardRegister.maskedText.id, data.cardRegister.maskedText.placeholder)
-    h3.register-account__enterData данные для входа в сервис
-    +textfield(data.cardRegister.emailField.id, data.cardRegister.emailField.placeholder, data.cardRegister.emailField.type)
-    +textfield(data.cardRegister.passField.id, data.cardRegister.passField.placeholder, data.cardRegister.passField.type)
-    .flex-wrapper
-        +toggle-button(data.cardRegister.toggleBtnId)
-        p.register-account__special-offer Получать спецпредложения
-    +button(data.cardRegister.btnLongStyle, data.cardRegister.btnLongContent)
-    p.have-account Уже есть аккаунт на Toxin
-        +button(data.cardRegister.btnBorderStyle, data.cardRegister.btnBorderContent)
+mixin card-register(data)    
+    .register-account
+        h1.register-account__header=data.header 
+        +textfield(data.textfieldName.id, data.textfieldName.placeholder, data.textfieldName.type)
+        +textfield(data.textfieldLastname.id, data.textfieldLastname.placeholder, data.textfieldLastname.type)
+        p.radio-buttons-block
+            +radio-button(data.radiobuttonMan.id, data.radiobuttonMan.content, data.radiobuttonMan.name)
+            +radio-button(data.radiobuttonWoman.id, data.radiobuttonWoman.content, data.radiobuttonWoman.name)
+        h3.register-account__birthday= data.birth
+        +masked-textfield(data.maskedText.id, data.maskedText.placeholder)
+        h3.register-account__enterData=data.enterData
+        +textfield(data.emailField.id, data.emailField.placeholder, data.emailField.type)
+        +textfield(data.passField.id, data.passField.placeholder, data.passField.type)
+        .flex-wrapper
+            +toggle-button(data.toggleBtnId)
+            p.register-account__special-offer=data.offer
+        +button(data.btnLongStyle, data.btnLongContent)
+        p.have-account Уже есть аккаунт на Toxin
+            +button(data.btnBorderStyle, data.btnBorderContent)
+

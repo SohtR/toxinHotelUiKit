@@ -1,23 +1,17 @@
 mixin header(data)
-        a.header__logo(href="#") 
-            img(src=require("./components/header/color-logo.svg"), alt="Main Logo")
-        .header__nav-but-wrap
-            nav 
-                ul.header-buttons__mainMenu
-                    li.header-buttons__mainMenu-item.header-buttons__mainMenu-item_active 
-                        a.header-buttons__mainMenu-link(href='#') Home
-                    li.header-buttons__mainMenu-item 
-                        a.header-buttons__mainMenu-link(href='#') About Us
-                    li.header-buttons__mainMenu-item
-                        a.header-buttons__mainMenu-link(href='#') Services
-                    li.header-buttons__mainMenu-item
-                        a.header-buttons__mainMenu-link(href='#') Careers
-                    li.header-buttons__mainMenu-item
-                        a.header-buttons__mainMenu-link(href='#') News
-                    li.header-buttons__mainMenu-item
-                        a.header-buttons__mainMenu-link(href='#') Documentation
-            a(href="#").with-border Cosmin Negoita
+    .header
+        .wrapper
+            a.header__logo(href="#") 
+                img(src=require("./components/header/color-logo.svg"), alt="Main Logo")
+            .header__nav-but-wrap
+                nav 
+                    ul.header-buttons__mainMenu
+                        each item in data
+                            if item.active
+                                li.header-buttons__mainMenu-item.header-buttons__mainMenu-item_active 
+                                    a.header-buttons__mainMenu-link(href='#')= item.content
+                            else
+                                li.header-buttons__mainMenu-item 
+                                    a.header-buttons__mainMenu-link(href='#')= item.content
+                a(href="#").with-border Cosmin Negoita
 
-.header
-    .wrapper
-        +header()

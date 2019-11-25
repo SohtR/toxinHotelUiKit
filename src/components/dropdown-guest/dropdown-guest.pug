@@ -1,2 +1,3 @@
-label(for="dropdownGuest") 
-    input(id="dropdownGuest" name="guest", type="text", readonly, placeholder="Сколько гостей")
+mixin dropdown-guest(ph)
+    label(for="dropdownGuest") 
+        input(id="dropdownGuest" name="guest", type="text", readonly, placeholder=ph)

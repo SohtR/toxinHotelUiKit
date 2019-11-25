@@ -5,26 +5,14 @@ mixin header-buttons(data)
         .header__nav-but-wrap
             nav 
                 ul.header-buttons__mainMenu
-                    li.header-buttons__mainMenu-item.header-buttons__mainMenu-item_active 
-                        a.header-buttons__mainMenu-link(href='#') Home
-                    li.header-buttons__mainMenu-item 
-                        a.header-buttons__mainMenu-link(href='#') About Us
-                    li.header-buttons__mainMenu-item
-                        a.header-buttons__mainMenu-link(href='#') Services
-                    li.header-buttons__mainMenu-item
-                        a.header-buttons__mainMenu-link(href='#') Careers
-                    li.header-buttons__mainMenu-item
-                        a.header-buttons__mainMenu-link(href='#') News
-                    li.header-buttons__mainMenu-item
-                        a.header-buttons__mainMenu-link(href='#') Documentation
+                    each item in data.list
+                        if item.active
+                            li(class=`header-buttons__mainMenu-item header-buttons__mainMenu-item_active`)
+                                a.header-buttons__mainMenu-link(href='#')= item.content
+                        else 
+                            li(class=`header-buttons__mainMenu-item`)
+                                a.header-buttons__mainMenu-link(href='#')= item.content
             .header-buttons__buttons
                 span.header-buttons__login-wrapper
                     +button(data.loginButtonStyle, data.loginButton)
                 +button(data.registerButtonStyle, data.registerButton)
-
-.header-buttons
-    +header-buttons({
-        loginButtonStyle: "border",
-        loginButton: "login",
-        registerButtonStyle: "fill",
-        registerButton: "register"})

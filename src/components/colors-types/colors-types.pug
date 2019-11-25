@@ -1,40 +1,12 @@
 mixin colors-types(data)
         ul.color-squares
-            li.color-squares__item  
-                div.square
-                div.color-descript
-                    p.color-descript__content Dark Shade 100%
-                    p.color-descript__content #1F2041
-            li.color-squares__item
-                div.square._75
-                div.color-descript
-                    p.color-descript__content Dark Shade 75%
-                    p.color-descript__content #1F2041
-            li.color-squares__item
-                div.square._50
-                div.color-descript
-                    p.color-descript__content Dark Shade 50%
-                    p.color-descript__content #1F2041
-            li.color-squares__item
-                div.square._25
-                div.color-descript
-                    p.color-descript__content Dark Shade 25%
-                    p.color-descript__content #1F2041
-            li.color-squares__item
-                div.square._5
-                div.color-descript
-                    p.color-descript__content Dark Shade 5%
-                    p.color-descript__content #1F2041
-            li.color-squares__item
-                div.square.purple
-                div.color-descript
-                    p.color-descript__content Purple
-                    p.color-descript__content bc9cff
-            li.color-squares__item  
-                div.square.green
-                div.color-descript
-                    p.color-descript__content Green
-                    p.color-descript__content #6fcf97
+            each item in data
+                li.color-squares__item  
+                    div(class=item.class)
+                    div.color-descript
+                        p.color-descript__content=item.name
+                        p.color-descript__content=item.hex
+
         .headlines
             table.headlines__table
                 tr.headlines__table-row
@@ -58,6 +30,3 @@ mixin colors-types(data)
                     td.headlines__table-colon
                         p.headlines__table-p This is the body text which is used for most of the design, like paragraphs, lists, etc.
 
-.colors-type
-    .wrapper
-        +colors-types()

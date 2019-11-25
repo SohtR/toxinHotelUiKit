@@ -1,8 +1,11 @@
-.search-room
-    h1.search-room__header Найдем номера под ваши пожелания
-    .flex-wrapper
-        include ../two-input-range/two-input-range-repeat.pug
-    .dropdown-guest
-        h3.search-room__headline гости
-        include ../dropdown-guest/dropdown-guest.pug
-    +button(data.cardSearchRoom.btnLongStyle, data.cardSearchRoom.btnLongContent)
+mixin search-room(data)    
+    .search-room
+        h1.search-room__header=data.header
+        .flex-wrapper
+            include ../two-input-range/two-input-range-repeat.pug
+        .dropdown-guest
+            h3.search-room__headline гости
+            +dropdown-guest("Сколько гостей")
+            
+        +button(data.btnLongStyle, data.btnLongContent)
+

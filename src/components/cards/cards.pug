@@ -1,96 +1,13 @@
 mixin cards(data)
             .flex-column-wrapper
-                include ../card-search-room/card-search-room.pug
-                include ../card-register/card-register.pug
+                +search-room(data.searchRoom)
+                +card-register(data.cardRegister)
             .flex-column-wrapper
-                include ../card-login/card-login.pug
-                include ../card-room-detail/card-room-detail.pug
+                +card-login(data.cardLogin)
+                +room-detail(data.roomDetail)
             .flex-column-wrapper
-                +slider-room(data.sliderRoom888.number, data.sliderRoom888.price, data.sliderRoom888.reviews, data.sliderRoom888.isLux)
-                +slider-room(data.sliderRoom840.number, data.sliderRoom840.price, data.sliderRoom840.reviews)
+                .room-slider-margin
+                    +slider-room(data.sliderRoom888)
+                .room-slider-margin
+                    +slider-room(data.sliderRoom840)
 
-.cards-block
-    .wrapper
-        .flex-wrapper
-            +cards({
-                cardSearchRoom: {
-                    btnLongContent: "подобрать номер",
-                    btnLongStyle: "long"
-                },
-
-                cardRegister: {
-                    textfieldName: {
-                        id: "name",
-                        placeholder: "Имя",
-                        type: "text"
-                    },
-                    textfieldLastname: {
-                        id: "lastname",
-                        placeholder: "Фамилия",
-                        type: "text"
-                    },
-                    radiobuttonMan: {
-                        id: "test3",
-                        content: "Мужчина",
-                        name: "group"
-                    },
-                    radiobuttonWoman: {
-                        id: "test4",
-                        content: "Женщина",
-                        name: "group"
-                    },
-                    maskedText: {
-                        id: "birthday",
-                        placeholder: "ДД.ММ.ГГГГ"
-                    },
-                    emailField: {
-                        id: "regEmail",
-                        placeholder: "Email",
-                        type: "email"
-                    },
-                    passField: {
-                        id: "regPass",
-                        placeholder: "Пароль",
-                        type: "password"
-                    },
-                    toggleBtnId: "mailing",
-                    btnLongContent: "Перейти к оплате",
-                    btnLongStyle: "long",
-                    btnBorderContent: "войти",
-                    btnBorderStyle: "border"
-                },
-
-                cardLogin: {
-                    emailField: {
-                        id: "loginEmail",
-                        placeholder: "Email",
-                        type: "email"
-                    },
-                    passField: {
-                        id: "loginPass",
-                        placeholder: "Пароль",
-                        type: "password"
-                    },
-                    btnLongContent: "Войти",
-                    btnLongStyle: "long",
-                    btnBorderContent: "создать",
-                    btnBorderStyle: "border"
-                },
-
-                cardRoomDetail: {
-                    btnLongContent: "Забронировать",
-                    btnLongStyle: "long",
-                },
-
-                sliderRoom888: {
-                    number: 888,
-                    price: "9 990",
-                    reviews: 145,
-                    isLux: "люкс"
-                },
-                sliderRoom840: {
-                    number: 840,
-                    price: "9 900",
-                    reviews: 65
-                }
-            })
