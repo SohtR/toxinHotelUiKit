@@ -1,9 +1,12 @@
 Demo Page: https://sohtr.github.io/toxinHotelUiPage/
 
 To clone repository to your local storage: 
+
     git clone https://github.com/SohtR/toxinHotelUiKit.git
 
-Then you should install webpack: npm install webpack webpack-cli --save-dev
+Then you should install webpack: 
+
+    npm install webpack webpack-cli --save-dev
 
 You can use one of the three commands:
 
