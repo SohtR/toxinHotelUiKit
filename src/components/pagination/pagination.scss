@@ -7,26 +7,27 @@
       text-align: center;
       vertical-align: middle;
       line-height: 2.5rem;
-      
       font-size: 0.75rem;
       color: rgba(31, 32, 65, 0.5);
-    }
-    &__link_active,
-    &__link:hover{
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      color: #fff;
-    }
-    &__link_next{
-      background: url(./arrow-forward.png) no-repeat center,
-                  linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-      text-indent: -62500rem;
+
+      &_active,
       &:hover{
-        background: url(./arrow-forward.png) no-repeat center,
-        linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        color: #fff;
+      }
+
+      &_next{
+        background: url(./arrow-forward.png) no-repeat center, linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        text-indent: -62500rem;
+
+        &:hover{
+          background: url(./arrow-forward.png) no-repeat center,
+          linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        }
       }
     }
+    
     &__content{
-      
       font-size: 0.875rem;
       line-height: 1.5rem;
       color: rgba(31, 32, 65, 0.75);

@@ -10,6 +10,7 @@
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     transform: translate3d(0,0,0);
+    margin: 0 10px 0 0px;
     &:before{
         content: "";
         position: relative;
@@ -22,7 +23,9 @@
         border-radius: 0.625rem;
         transition: background .2s ease;
         border: 0.0625rem solid rgba(31, 32, 65, 0.25);
+       
     }
+    
     &__button{
         position: absolute;
         top: 0.3125rem;
@@ -33,6 +36,7 @@
         background: rgba(31, 32, 65, 0.25);
         border-radius: 0.625rem;
         transition: all .2s ease;
+        
         &:before{
             content: "";
             position: absolute;
@@ -52,15 +56,12 @@
     &:before{
         background: #fff;
         border: 0.0625rem solid #BC9CFF;
+        transform: scale(1);
+        transition: all .4s ease;
     }
     .toggle__button{
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         transform: translateX(1.25rem);
         transition: all .2s cubic-bezier(.8,.4,.3,1.25), background .15s ease;
-    }
-    &:before{
-        transform: scale(1);
-        transition: all .4s ease;
-        
     }
 }

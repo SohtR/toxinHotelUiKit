@@ -13,27 +13,29 @@
     background:#fff url(./like_border.svg) no-repeat 0.25rem 0.375rem;
     color: rgba(31, 32, 65, 0.25);
 
+    &:after {
+        padding: 0 0.875rem;
+        color: rgba(31, 32, 65, 0.25);
+        content: attr(data-count);
+        left: 10;
+        position: absolute;
+        top: 0.0625rem;
+    }
+        
+    &:hover,
+    &.active {
+        background:#fff url(./like.svg) no-repeat 0.25rem 0.375rem;
+        border: 1px solid #BC9CFF;
+        color: #BC9CFF;
+
+        &:after{
+            color: #BC9CFF;
+        
+        } 
+    }
+    
 }
 
-.like-button:after {
-padding: 0 0.875rem;
-color: rgba(31, 32, 65, 0.25);
-content: attr(data-count);
-left: 10;
-position: absolute;
-top: 0.0625rem;
-}
 
-.like-button:hover,
-.like-button.active {
-background:#fff url(./like.svg) no-repeat 0.25rem 0.375rem;
-border: 1px solid #BC9CFF;
-color: #BC9CFF;
-}
-.like-button:hover:after,
-.like-button.active:after{
-color: #BC9CFF;
-
-} 
   
   

@@ -1,19 +1,19 @@
 input[name='guest2'] {
-            height: 2.75rem;
-            width: 20rem;
-            border: 0.0625rem solid rgba(31, 32, 65, 0.25);
-            box-sizing: border-box;
-            border-radius: 0.25rem 0.25rem 0 0;
-            padding: 0 1.5rem 0rem 0.9375rem;
-            font-size: 0.875rem;
-            line-height: 1.5rem;
-            margin: 0 0 1.25rem 0; 
-            color: rgba(31, 32, 65, 0.75);
-            background: #fff url(../../img/arrow-down.svg) 17.8125rem 0.5625rem no-repeat;
-            text-overflow: ellipsis;
-            outline: none;
-            cursor: pointer;
-        }
+    height: 2.75rem;
+    width: 20rem;
+    border: 0.0625rem solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 0.25rem 0.25rem 0 0;
+    padding: 0 1.5rem 0rem 0.9375rem;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    margin: 0 0 1.25rem 0; 
+    color: rgba(31, 32, 65, 0.75);
+    background: #fff url(../../img/arrow-down.svg) 17.8125rem 0.5625rem no-repeat;
+    text-overflow: ellipsis;
+    outline: none;
+    cursor: pointer;
+}
 div.guest2.parent {
     position: absolute;
     z-index: 1000;

@@ -1,37 +1,42 @@
 .form-email{
-    width: 16.25rem;
-    height: 2.75rem;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
-    border-radius: 0.25rem;
-    background: #fff;
-    &__email-field{
-        border: none;
-        padding: 0rem  0 0.25rem 0.9375rem;
-        font-size: 0.875rem;
-        line-height: 1.5rem;
-        color: rgba(31, 32, 65, 0.75);
-        outline: none; 
-        vertical-align: middle;
-    }
-      
-    &__email-field:focus::placeholder{
+  width: 16.70rem;
+  height: 2.75rem;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  background: #fff;
+
+  &__email-field{
+    border: none;
+    padding: 0rem  0 0.25rem 0.9375rem;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: rgba(31, 32, 65, 0.75);
+    outline: none; 
+    vertical-align: middle;
+
+    &:focus::placeholder{
       color: rgba(31, 32, 65, 0);
     }
-    &__submit{
-      background: url(./arrow-input.svg) no-repeat;
-      border: none;
-      outline: none;
-      margin: 0.8125rem 0 0 0.6875rem;
-      width: 1.125rem;
-      height: 1.125rem;
-    }
-    &__submit:hover{
-      cursor:pointer;}
   }
-  .email-subscription-field{
-    &__header{
-      margin: 1.25rem 0 0 1.25rem;
+    
+  &__submit{
+    background: url(./arrow-input.svg) no-repeat;
+    border: none;
+    outline: none;
+    margin: 0.8125rem 0 0 4.550rem;
+    width: 1.125rem;
+    height: 1.125rem;
+
+    &:hover{
+      cursor:pointer;
     }
   }
+}
+    
+.email-subscription-field{
+  &__header{
+    margin: 1.25rem 0 0 1.25rem;
+  }
+}
   

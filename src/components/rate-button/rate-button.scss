@@ -4,30 +4,46 @@
     display: inline-block;
     width: 7.5rem;
     height: 1.5rem;
+
     &__input{
       opacity: 0;
       margin-right: -100%;
     }
+
     &__label{
       position: relative;
       display: block;
       float: right;
       opacity: 1;
+
+      &:before{
+        font-family: 'Material Icons';
+        font-size: 1.5rem;
+        display: block;
+        opacity: 1;
+        content: '\e83a';
+        transition: opacity 0.2s linear;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      
+      &:hover:before,
+      &:hover ~ &:before{
+        opacity: 1;
+        font-family: 'Material Icons';
+        font-size: 1.5rem;
+        display: block;
+        content: '\e838';
+        transition: opacity 0.2s linear;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        -webkit-background-clip: text; 
+        background-clip: text;
+        color: transparent;
+      }
     }
-    &__label:before{
-      font-family: 'Material Icons';
-      font-size: 1.5rem;
-      display: block;
-      opacity: 1;
-      content: '\e83a';
-      transition: opacity 0.2s linear;
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    &__label:hover:before,
-    &__label:hover ~ &__label:before,
+    
     &:not(:hover) > :checked ~ &__label:before{
       opacity: 1;
       font-family: 'Material Icons';

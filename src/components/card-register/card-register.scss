@@ -13,7 +13,7 @@
     line-height: 30px;
     color: #1F2041;
     margin: 0 0 20px 0;
-    letter-spacing: -0.4px;
+    letter-spacing: -0.0375rem;
   }
   .button_border{
     margin: 2px 0 0 36px;
@@ -28,9 +28,6 @@
     line-height: 18px;
     color: #000;
   }
-  &__header{
-    letter-spacing: -0.0375rem;
-  }
   .textfield{
     margin: 0 0 0.625rem 0;
   }
@@ -44,8 +41,7 @@
     margin: 0rem 0 0.1875rem 0;
   }
   .button_long{
-    margin: 0 0 1.875rem 0;
+    margin: 1.25rem 0 1.875rem 0;
   }
-  
 }
   

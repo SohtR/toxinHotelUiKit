@@ -1,74 +1,76 @@
 .room-detail{
-    height: 31.9375rem;
-    width: 380px;
-    padding: 40px 30px 30px 30px;
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+  height: 31.9375rem;
+  width: 380px;
+  padding: 40px 30px 30px 30px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 1;
+  
+  .button_border{
+    margin: 2px 0 0 36px;
+    width: 96px;
+    height: 40px;
     box-sizing: border-box;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    z-index: 1;
-    
-    .button_border{
-      margin: 2px 0 0 36px;
-      width: 96px;
-      height: 40px;
-      box-sizing: border-box;
-      display: inline-block;
-      line-height: 26px;
-    }
-    .have-account{
-      font-size: 14px;
-      line-height: 18px;
-      color: #000;
-    }
-    &__price-headline{
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-    }
-    &__header{
-      margin: 0 0 0.3125rem 0;
-    }
-    &__price{
-      margin: 0.5625rem -0.375rem 0rem 0rem;
-    }
-    &__number{
-      font-weight: bold;
-      font-size: 1.5rem;
-      line-height: 1.875rem;
-      color: #1F2041;
-      letter-spacing: -0.0625rem;
-    }
-    &__num{
-      font-size: 0.875rem;
-      line-height: 1.0625rem;
-      margin: 0 0.1875rem 0 0;
-    }
-    &__lux{
-      font-weight: bold;
-      font-size: 0.75rem;
-      line-height: 0.9375rem;
-      text-transform: uppercase;
-      color: #BC9CFF;
-    }
-    .flex-wrapper{
-      justify-content: space-between;
-      margin: 1.25rem 0 0 0;
-    }
-    .flex-wrapper:first-child{
+    display: inline-block;
+    line-height: 26px;
+  }
+  .have-account{
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
+  }
+  &__price-headline{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__header{
+    margin: 0 0 0.3125rem 0;
+  }
+  &__price{
+    margin: 0.5625rem -0.375rem 0rem 0rem;
+  }
+  &__number{
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    color: #1F2041;
+    letter-spacing: -0.0625rem;
+  }
+  &__num{
+    font-size: 0.875rem;
+    line-height: 1.0625rem;
+    margin: 0 0.1875rem 0 0;
+  }
+  &__lux{
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    text-transform: uppercase;
+    color: #BC9CFF;
+  }
+  .flex-wrapper{
+    justify-content: space-between;
+    margin: 1.25rem 0 0 0;
+    &:first-child{
       justify-content: space-between;
       margin: 0;
     }
-    &__price-table{
-      border-collapse: collapse;
-    }
-    &__price-table-column{
+  }
+  
+  &__price-table{
+    border-collapse: collapse;
+
+    &-column{
       padding: 0 0 0.625rem 0;
       vertical-align: top;
       text-align: center;
     }
-    &__price-table-circle{
+
+    &-circle{
       width: 1.25rem;
       height: 1.25rem;
       border: 0.0625rem solid rgba(31, 32, 65, 0.25);
@@ -76,40 +78,47 @@
       border-radius: 50%;
       display: inline-block;
     }
+  }
   
-    &__rightCol{
-      text-align: right;
-      padding: 0 0 0 1.3125rem;
-      vertical-align: top;
-    }
-    &__leftCol{
-      text-align: left;
-      width: 13.375rem;
-      padding: 0 0.3125rem 1.0625rem 0;
-      vertical-align: top;
-    }
-    .dropdown-guest{
-      margin: 1.25rem 0 0 0;
-    }
-    &__total{
-      font-weight: bold;
-      font-size: 1.1875rem;
-      line-height: 1.5rem;
-      color: #1F2041;
-      margin: 0.82rem 0 0 0;
-      justify-content: space-between;
-      display: flex;
-    }
-    &__border-dashed{
-      border-bottom: 0.0625rem dashed rgba(31, 32, 65, 0.25);
-      flex-grow: 1;
-      height: 1.125rem;
-      margin: 0 0.25rem;
-    }
-    &__total-sum{
+  &__rightCol{
+    text-align: right;
+    padding: 0 0 0 1.3125rem;
+    vertical-align: top;
+  }
+
+  &__leftCol{
+    text-align: left;
+    width: 13.375rem;
+    padding: 0 0.3125rem 1.0625rem 0;
+    vertical-align: top;
+  }
+
+  .dropdown-guest{
+    margin: 1.25rem 0 0 0;
+  }
+
+  &__total{
+    font-weight: bold;
+    font-size: 1.1875rem;
+    line-height: 1.5rem;
+    color: #1F2041;
+    margin: 0.82rem 0 0 0;
+    justify-content: space-between;
+    display: flex;
+    
+    &-sum{
       letter-spacing: -0.0938rem;
     }
-    .button_long{
-      margin: 1.25rem 0 0 0;
-    }
   }
+
+  &__border-dashed{
+    border-bottom: 0.0625rem dashed rgba(31, 32, 65, 0.25);
+    flex-grow: 1;
+    height: 1.125rem;
+    margin: 0 0.25rem;
+  }
+  
+  .button_long{
+    margin: 1.25rem 0 0 0;
+  }
+}

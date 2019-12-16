@@ -7,14 +7,16 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   z-index: 1;
+
   &__header{
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
     color: #1F2041;
-    margin: 0 0 20px 0;
     letter-spacing: -0.4px;
+    margin: 0.0625rem 0 0.25rem 0;
   }
+
   .button_border{
     margin: 2px 0 0 36px;
     width: 96px;
@@ -23,18 +25,17 @@
     display: inline-block;
     line-height: 26px;
   }
+
   .have-account{
     font-size: 14px;
     line-height: 18px;
     color: #000;
   }
+
   .flex-wrapper{
     margin: 0 0 0.625rem 0;
   }
   
-  &__header{
-        margin: 0.0625rem 0 0.25rem 0;
-    }
   &__arrival{
     margin: 0 1.25rem 0 0;
   }
