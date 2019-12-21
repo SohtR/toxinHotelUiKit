@@ -1,15 +1,15 @@
-mixin forms(data)
+mixin forms({textfieldId='text id', textfieldPlaceholder='text placeholder', textfieldType='text', maskedTextId='masked id', maskedTextPlaceholder='masked placeholder', emailSubId='email id', emailSubPlaceholder='email placeholder', roomFeatureComfort={ImgName, Header, Body}, roomFeatureUdobstvo={ImgName, Header, Body}, radioId1='radio1', radioContent1='radio content1', radioName='radio name', radioId2='radio2', radioContent2='radio content2', radioName='radio name', toggleButtonId='toggle id', likeCount='5', ratingNumber0='2', rangeSliderLabel='range slider', buttonFillStyle='fill', buttonFillContent='button fill', buttonBorderStyle='border', buttonBorderContent='border button', buttonLongContent='long button', buttonLongStyle='long'}={})
         .flex-wrapper
             .form-text
                 h3.form-text__headline Text field
-                +textfield(data.textfieldId, data.textfieldPlaceholder, data.textfieldType)
+                +textfield(textfieldId, textfieldPlaceholder, textfieldType)
                 .dropdownRooms
                 form(action="#").dropdown
                     h3.form-text__headline Dropdown
                     +dropdown-room("Параметры комнаты")
             .masked-text
                 h3.maskedText__headline Masked Textfield
-                +masked-textfield(data.maskedTextId, data.maskedTextPlaceholder)
+                +masked-textfield(maskedTextId, maskedTextPlaceholder)
         .flex-wrapper   
             .date
                 h3.date__headline Data Dropdown
@@ -22,7 +22,7 @@ mixin forms(data)
             .email-subscription-field
                 h3.email-subscription-field__header subscription textfield
                 .email-subscribe-margin
-                    +email-subscribe(data.emailSubId, data.emailSubPlaceholder)
+                    +email-subscribe(emailSubId, emailSubPlaceholder)
             .expanded-checkbox-list-margin
                 +expanded-checkbox-list({
                         first:{
@@ -63,9 +63,9 @@ mixin forms(data)
         .flex-wrapper
             .flex-col
                 .room-feature-margin  
-                    +room-feature(data.roomFeatureComfort.ImgName, data.roomFeatureComfort.Header, data.roomFeatureComfort.Body)
+                    +room-feature(roomFeatureComfort.ImgName, roomFeatureComfort.Header, roomFeatureComfort.Body)
                 .room-feature-margin  
-                    +room-feature(data.roomFeatureUdobstvo.ImgName, data.roomFeatureUdobstvo.Header, data.roomFeatureUdobstvo.Body)
+                    +room-feature(roomFeatureUdobstvo.ImgName, roomFeatureUdobstvo.Header, roomFeatureUdobstvo.Body)
             form(action="#").checkboxes
                 h3.checkboxes__header Checkbox buttons
                 .checkbox-margin
@@ -88,35 +88,35 @@ mixin forms(data)
             .radio-but
                 h3.radio-but__headline Radio buttons
                 p
-                    +radio-button(data.radioId1, data.radioContent1, data.radioName)
-                    +radio-button(data.radioId2, data.radioContent2, data.radioName)
+                    +radio-button(radioId1, radioContent1, radioName)
+                    +radio-button(radioId2, radioContent2, radioName)
             .toggle-but
                 h3.toggle-but__headline Toggle
                 .flex-wrapper
                     .toggle-button 
-                    +toggle-button(data.toggleButtonId)
+                    +toggle-button(toggleButtonId)
                     p.toggle-but__content Получать спецпредложения
         .flex-wrapper   
             .flex-column-wrapper 
                 h3.flex-column-wrapper__headline like button
-                +like-button(data.likeCount)
+                +like-button(likeCount)
             .flex-column-wrapper
                 h3.flex-column-wrapper__headline rate button
-                +rate-button(data.ratingNumber0)
+                +rate-button(ratingNumber0)
             .flex-column-wrapper
-                +range-slider(data.rangeSliderLabel)
+                +range-slider(rangeSliderLabel)
         .flex-wrapper
             .buttons-block
                 h3.buttons-block__header Buttons
                 .buttons-block__content    
                     .buttons-block__button-margin
-                        +button(data.buttonFillStyle, data.buttonFillContent)  
+                        +button(buttonFillStyle, buttonFillContent)  
                     .buttons-block__button-margin
-                        +button(data.buttonBorderStyle, data.buttonBorderContent)    
+                        +button(buttonBorderStyle, buttonBorderContent)    
                     .buttons-block__button-margin
                         a.link__purple(href='#') click me  
                     .buttons-block__button-margin
-                        +button(data.buttonLongStyle, data.buttonLongContent)
+                        +button(buttonLongStyle, buttonLongContent)
             +pagination({
                 content: "1 – 12 из 100+ вариантов аренды",
                 header: "pagination"

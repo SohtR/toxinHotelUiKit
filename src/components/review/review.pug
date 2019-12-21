@@ -1,11 +1,11 @@
-mixin review(data)    
+mixin review({name='name', date='5', likes='3', content='review content'}={})    
     .review
         .review__top-block
             img.review__avatar(src=require("./components/review/avatar-2.jpg"), alt="avatar")
-            p.review__name!= ` <strong>${data.name}</strong> <br /> ${data.date} дней назад`
+            p.review__name!= ` <strong>${name}</strong> <br /> ${date} дней назад`
 
         .review__bottom-block
             .review__like
-                +like-button(data.likes)
-            p.review__content=data.content
+                +like-button(likes)
+            p.review__content=content
 

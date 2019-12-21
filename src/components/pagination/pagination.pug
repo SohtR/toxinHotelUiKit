@@ -1,6 +1,6 @@
-mixin pagination(data)    
+mixin pagination({header='header'}={})    
     .pagination
-        h3= data.header
+        h3= header
         a.pagination__link.pagination__link_active(href="#") 1
         a.pagination__link(href="#") 2
         a.pagination__link(href="#") 3

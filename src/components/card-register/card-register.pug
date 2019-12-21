@@ -1,20 +1,20 @@
-mixin card-register(data)    
+mixin card-register({header="header", textfieldName={id, placeholder, type}, textfieldLastname={id, placeholder, type}, radiobuttonMan={id, content, name}, radiobuttonWoman={id, content, name}, birth='Birthday', maskedText={id, placeholder}, enterData='enter data', emailField={id, placeholder, type}, passwordField={id, placeholder, type}, toggleButtonId='toggle button', offer='special offer', buttonBorderContent='Border Template', buttonBorderStyle='border', buttonLongStyle='long',buttonLongContent='Long Template'}={})    
     .register-account
-        h1.register-account__header=data.header 
-        +textfield(data.textfieldName.id, data.textfieldName.placeholder, data.textfieldName.type)
-        +textfield(data.textfieldLastname.id, data.textfieldLastname.placeholder, data.textfieldLastname.type)
+        h1.register-account__header=header 
+        +textfield(textfieldName.id, textfieldName.placeholder, textfieldName.type)
+        +textfield(textfieldLastname.id, textfieldLastname.placeholder, textfieldLastname.type)
         p.radio-buttons-block
-            +radio-button(data.radiobuttonMan.id, data.radiobuttonMan.content, data.radiobuttonMan.name)
-            +radio-button(data.radiobuttonWoman.id, data.radiobuttonWoman.content, data.radiobuttonWoman.name)
-        h3.register-account__birthday= data.birth
-        +masked-textfield(data.maskedText.id, data.maskedText.placeholder)
-        h3.register-account__enterData=data.enterData
-        +textfield(data.emailField.id, data.emailField.placeholder, data.emailField.type)
-        +textfield(data.passwordField.id, data.passwordField.placeholder, data.passwordField.type)
+            +radio-button(radiobuttonMan.id, radiobuttonMan.content, radiobuttonMan.name)
+            +radio-button(radiobuttonWoman.id, radiobuttonWoman.content, radiobuttonWoman.name)
+        h3.register-account__birthday= birth
+        +masked-textfield(maskedText.id, maskedText.placeholder)
+        h3.register-account__enterData=enterData
+        +textfield(emailField.id, emailField.placeholder, emailField.type)
+        +textfield(passwordField.id, passwordField.placeholder, passwordField.type)
         .flex-wrapper
-            +toggle-button(data.toggleButtonId)
-            p.register-account__special-offer=data.offer
-        +button(data.buttonLongStyle, data.buttonLongContent)
+            +toggle-button(toggleButtonId)
+            p.register-account__special-offer=offer
+        +button(buttonLongStyle, buttonLongContent)
         p.have-account Уже есть аккаунт на Toxin
-            +button(data.buttonBorderStyle, data.buttonBorderContent)
+            +button(buttonBorderStyle, buttonBorderContent)
 

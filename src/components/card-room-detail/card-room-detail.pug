@@ -1,12 +1,12 @@
-mixin room-detail(data)    
+mixin room-detail({number='999', price='999', days='1', totalPrice='9999', service='100',extra='100', total='99999', buttonLongStyle='long',buttonLongContent='Long Template'}={})    
     .room-detail
         .flex-wrapper
             .room-detail__price-headline
                 p.room-detail__number
                     span.room-detail__num № 
-                    span.room-detail__number=data.number
+                    span.room-detail__number=number
                     span.room-detail__lux люкс
-                p.room-detail__price=`${data.price} в сутки`
+                p.room-detail__price=`${price} в сутки`
         .flex-wrapper
             include ../two-input-range/two-input-range.pug
         .dropdown-guest
@@ -14,11 +14,11 @@ mixin room-detail(data)
             +dropdown-guest-repeat("Сколько гостей")
         table.room-detail__price-table
             tr.room-detail__price-table-row
-                td.room-detail__leftColumnumn=`${data.price}₽ х ${data.days} суток`
+                td.room-detail__leftColumnumn=`${price}₽ х ${days} суток`
                 td.room-detail__price-table-column
-                td.room-detail__rightColumn=`${data.totalPrice}₽`
+                td.room-detail__rightColumn=`${totalPrice}₽`
             tr.room-detail__price-table-row
-                td.room-detail__leftColumn=` Сбор за услуги: скидка ${data.service}₽`
+                td.room-detail__leftColumn=` Сбор за услуги: скидка ${service}₽`
                 td.room-detail__price-table-column 
                     a(href='#').room-detail__price-table-circle i
                 td.room-detail__rightColumn 0₽
@@ -26,10 +26,10 @@ mixin room-detail(data)
                 td.room-detail__leftColumn Сбор за дополнительные услуги
                 td.room-detail__price-table-column
                         a(href='#').room-detail__price-table-circle i
-                td.room-detail__rightColumn=`${data.extra}₽`
+                td.room-detail__rightColumn=`${extra}₽`
         .room-detail__total
             p.room-detail__total-name Итого
             .room-detail__border-dashed
-            p.room-detail__total-sum=`${data.total}₽`
-        +button(data.buttonLongStyle, data.buttonLongContent)
+            p.room-detail__total-sum=`${total}₽`
+        +button(buttonLongStyle, buttonLongContent)
 

@@ -1,13 +1,13 @@
-mixin footer-big(data)
+mixin footer-big({logoContent='logo here', list={}, subscribeHeadline='subscribe', subscribeContent='sub content', emailId='email', emailPlaceholder='email placeholder', copyrightContent='copyright'}={})
     .footer-big
         .wrapper
             .footer-big__main
                 .footer-big__logo
                     a.header__logo(href="#") 
                         img.header__logo-img(src=require("./components/footer-big/color-logo.svg"), alt="Main Logo")
-                    p.footer-big__logo-content= data.logoContent       
+                    p.footer-big__logo-content= logoContent       
                 .footer-big__menus
-                    each item in data.list
+                    each item in list
                         .footer-big__list
                             h3.footer-big__headline= item.header
                             ul.footer-big__list
@@ -15,11 +15,11 @@ mixin footer-big(data)
                                     li.footer-big__list-item
                                         a(href="").footer-big__list-ref=i
                 .footer-big__subscribe
-                    h3.footer-big__headline=data.subscribeHeadline
-                    p.footer-big__subscribe-content=data.subscribeContent 
-                    +email-subscribe(data.emailId, data.emailPlaceholder)
+                    h3.footer-big__headline=subscribeHeadline
+                    p.footer-big__subscribe-content=subscribeContent 
+                    +email-subscribe(emailId, emailPlaceholder)
             .footer-big__copyright
-                p.footer-big__copyright-content=data.copyrightContent 
+                p.footer-big__copyright-content=copyrightContent 
                 .footer-big__social 
                     a(href="").footer-big__twitter 
                     a(href="").footer-big__facebook 

@@ -1,13 +1,13 @@
-mixin cards(data)
+mixin cards({searchRoom={}, cardRegister={},cardLogin={}, roomDetail={}, sliderRoom840={}, sliderRoom888={}}={})
             .flex-column-wrapper
-                +search-room(data.searchRoom)
-                +card-register(data.cardRegister)
+                +search-room(searchRoom)
+                +card-register(cardRegister)
             .flex-column-wrapper
-                +card-login(data.cardLogin)
-                +room-detail(data.roomDetail)
+                +card-login(cardLogin)
+                +room-detail(roomDetail)
             .flex-column-wrapper
                 .room-slider-margin
-                    +slider-room(data.sliderRoom888)
+                    +slider-room(sliderRoom888)
                 .room-slider-margin
-                    +slider-room(data.sliderRoom840)
+                    +slider-room(sliderRoom840)
 

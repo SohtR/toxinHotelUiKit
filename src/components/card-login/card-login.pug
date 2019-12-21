@@ -1,10 +1,10 @@
-mixin card-login(data)
+mixin card-login({header='header', emailField={id, placeholder, type}, passwordField={id, placeholder, type}, buttonBorderContent='Border Template',buttonBorderStyle='border', buttonLongStyle='long',buttonLongContent='Long Template'}={})
     .login-account
-        h1.login-account__header= data.header
-        +textfield(data.emailField.id, data.emailField.placeholder, data.emailField.type)
-        +textfield(data.passwordField.id, data.passwordField.placeholder, data.passwordField.type)
-        +button(data.buttonLongStyle, data.buttonLongContent)
+        h1.login-account__header= header
+        +textfield(emailField.id, emailField.placeholder, emailField.type)
+        +textfield(passwordField.id, passwordField.placeholder, passwordField.type)
+        +button(buttonLongStyle, buttonLongContent)
         .flex-wrapper
             p.have-account Нет аккаунта на Toxin?
-            +button(data.buttonBorderStyle, data.buttonBorderContent)
+            +button(buttonBorderStyle, buttonBorderContent)
 

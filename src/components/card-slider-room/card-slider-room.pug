@@ -1,21 +1,21 @@
-mixin slider-room(data)
+mixin slider-room({number='111', isLux=true, price='100', reviews='5'}={})
     .room-slider
         .flexslider
             ul.slides
                 li.slides__item
-                    img.slides__img(src=require(`./components/card-slider-room/${data.number}-slide-1.jpg`))
+                    img.slides__img(src=require(`./components/card-slider-room/${number}-slide-1.jpg`))
                 li.slides__item
-                    img.slides__img(src=require(`./components/card-slider-room/${data.number}-slide-2.jpg`))
+                    img.slides__img(src=require(`./components/card-slider-room/${number}-slide-2.jpg`))
                 li.slides__item
-                    img.slides__img(src=require(`./components/card-slider-room/${data.number}-slide-3.jpg`))
+                    img.slides__img(src=require(`./components/card-slider-room/${number}-slide-3.jpg`))
                 li.slides__item
-                    img.slides__img(src=require(`./components/card-slider-room/${data.number}-slide-4.jpg`))
+                    img.slides__img(src=require(`./components/card-slider-room/${number}-slide-4.jpg`))
         .room-slider__price-headline
             p.room-slider__number
                 span.room-slider__num №
-                span.room-slider__number #{data.number}
-                span.room-slider__lux  #{data.isLux}
-            p.room-slider__price= data.price +"₽ в сутки"
+                span.room-slider__number #{number}
+                span.room-slider__lux  #{isLux}
+            p.room-slider__price= price +"₽ в сутки"
         .room-slider__rating
-            +rate-button(data.number)                               
-            p.room-slider__reviewsAmount <b>#{data.reviews}</b> Отзывов
+            +rate-button(number)                               
+            p.room-slider__reviewsAmount <b>#{reviews}</b> Отзывов

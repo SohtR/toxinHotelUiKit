@@ -1,11 +1,11 @@
-mixin search-room(data)    
+mixin search-room({header='header', buttonLongStyle='long',buttonLongContent='Long Template'}={})    
     .search-room
-        h1.search-room__header=data.header
+        h1.search-room__header=header
         .flex-wrapper
             include ../two-input-range/two-input-range-repeat.pug
         .dropdown-guest
             h3.search-room__headline гости
             +dropdown-guest("Сколько гостей")
             
-        +button(data.buttonLongStyle, data.buttonLongContent)
+        +button(buttonLongStyle, buttonLongContent)
 
