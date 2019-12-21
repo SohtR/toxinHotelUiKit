@@ -25,9 +25,9 @@
 .green{
     background: #6fcf97;
 }
-.color-descript{
+.color-description{
     margin: 0 0 0 1.25rem;
-    .color-descript__content{
+    .color-description__content{
         font-family: 'Quicksand';
         font-size: 19px;
         line-height: 29px;
@@ -35,7 +35,7 @@
         text-transform: uppercase;
         margin: 0.375rem 0.625rem;
     }
-    .color-descript__content:first-child{
+    .color-description__content:first-child{
         font-weight: bold;
         text-transform: none;
     }

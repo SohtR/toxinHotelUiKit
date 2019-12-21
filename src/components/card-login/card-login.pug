@@ -2,9 +2,9 @@ mixin card-login(data)
     .login-account
         h1.login-account__header= data.header
         +textfield(data.emailField.id, data.emailField.placeholder, data.emailField.type)
-        +textfield(data.passField.id, data.passField.placeholder, data.passField.type)
-        +button(data.btnLongStyle, data.btnLongContent)
+        +textfield(data.passwordField.id, data.passwordField.placeholder, data.passwordField.type)
+        +button(data.buttonLongStyle, data.buttonLongContent)
         .flex-wrapper
             p.have-account Нет аккаунта на Toxin?
-            +button(data.btnBorderStyle, data.btnBorderContent)
+            +button(data.buttonBorderStyle, data.buttonBorderContent)
 

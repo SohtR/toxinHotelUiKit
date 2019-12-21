@@ -1116,7 +1116,7 @@ eval("\nvar content = __webpack_require__(/*! !../../../node_modules/mini-css-ex
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$('.btn-counter').on('click', function (event, count) {\n  event.preventDefault();\n  var $this = $(this),\n      count = $this.attr('data-count'),\n      active = $this.hasClass('active'),\n      multiple = $this.hasClass('multiple-count');\n  $.fn.noop = $.noop;\n  $this.attr('data-count', !active || multiple ? ++count : --count)[multiple ? 'noop' : 'toggleClass']('active');\n});\n\n//# sourceURL=webpack:///./src/components/like-button/like-button.js?");
+eval("$('.button-counter').on('click', function (event, count) {\n  event.preventDefault();\n  var $this = $(this),\n      count = $this.attr('data-count'),\n      active = $this.hasClass('active'),\n      multiple = $this.hasClass('multiple-count');\n  $.fn.noop = $.noop;\n  $this.attr('data-count', !active || multiple ? ++count : --count)[multiple ? 'noop' : 'toggleClass']('active');\n});\n\n//# sourceURL=webpack:///./src/components/like-button/like-button.js?");
 
 /***/ }),
 

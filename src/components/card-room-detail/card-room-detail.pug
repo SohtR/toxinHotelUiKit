@@ -14,22 +14,22 @@ mixin room-detail(data)
             +dropdown-guest-repeat("Сколько гостей")
         table.room-detail__price-table
             tr.room-detail__price-table-row
-                td.room-detail__leftCol=`${data.price}₽ х ${data.days} суток`
+                td.room-detail__leftColumnumn=`${data.price}₽ х ${data.days} суток`
                 td.room-detail__price-table-column
-                td.room-detail__rightCol=`${data.totalPrice}₽`
+                td.room-detail__rightColumn=`${data.totalPrice}₽`
             tr.room-detail__price-table-row
-                td.room-detail__leftCol=` Сбор за услуги: скидка ${data.service}₽`
+                td.room-detail__leftColumn=` Сбор за услуги: скидка ${data.service}₽`
                 td.room-detail__price-table-column 
                     a(href='#').room-detail__price-table-circle i
-                td.room-detail__rightCol 0₽
+                td.room-detail__rightColumn 0₽
             tr.room-detail__price-table-row
-                td.room-detail__leftCol Сбор за дополнительные услуги
+                td.room-detail__leftColumn Сбор за дополнительные услуги
                 td.room-detail__price-table-column
                         a(href='#').room-detail__price-table-circle i
-                td.room-detail__rightCol=`${data.extra}₽`
+                td.room-detail__rightColumn=`${data.extra}₽`
         .room-detail__total
             p.room-detail__total-name Итого
             .room-detail__border-dashed
             p.room-detail__total-sum=`${data.total}₽`
-        +button(data.btnLongStyle, data.btnLongContent)
+        +button(data.buttonLongStyle, data.buttonLongContent)
 

@@ -10,11 +10,11 @@ mixin card-register(data)
         +masked-textfield(data.maskedText.id, data.maskedText.placeholder)
         h3.register-account__enterData=data.enterData
         +textfield(data.emailField.id, data.emailField.placeholder, data.emailField.type)
-        +textfield(data.passField.id, data.passField.placeholder, data.passField.type)
+        +textfield(data.passwordField.id, data.passwordField.placeholder, data.passwordField.type)
         .flex-wrapper
-            +toggle-button(data.toggleBtnId)
+            +toggle-button(data.toggleButtonId)
             p.register-account__special-offer=data.offer
-        +button(data.btnLongStyle, data.btnLongContent)
+        +button(data.buttonLongStyle, data.buttonLongContent)
         p.have-account Уже есть аккаунт на Toxin
-            +button(data.btnBorderStyle, data.btnBorderContent)
+            +button(data.buttonBorderStyle, data.buttonBorderContent)
 

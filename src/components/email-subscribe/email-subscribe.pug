@@ -1,4 +1,4 @@
-mixin email-subscribe(id,ph)
+mixin email-subscribe(id,placeHolder)
     form(action="#", method="post").form-email
-        input.form-email__email-field(type="email", name=id, placeholder=ph)
+        input.form-email__email-field(type="email", name=id, placeholder=placeHolder)
         input.form-email__submit(type="submit", value="")

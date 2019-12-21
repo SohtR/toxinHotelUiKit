@@ -1,10 +1,10 @@
 mixin review(data)    
     .review
-        .review__topBlock
+        .review__top-block
             img.review__avatar(src=require("./components/review/avatar-2.jpg"), alt="avatar")
             p.review__name!= ` <strong>${data.name}</strong> <br /> ${data.date} дней назад`
 
-        .review__bottomBlock
+        .review__bottom-block
             .review__like
                 +like-button(data.likes)
             p.review__content=data.content
