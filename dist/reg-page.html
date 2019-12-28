@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Toxin Hotel</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="./favicons/site.webmanifest">
+    <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  <link href="style.css" rel="stylesheet"><script type="text/javascript" src="regPage.js"></script></head>
+  <body>
+    <main>
+      <div class="header-buttons">
+        <div class="wrapper"> <a class="header__logo" href="index.html"> <img class="header__logo-img" src=".././img/color-logo.svg" alt="Main Logo"></a>
+          <div class="header__navigation-buttons-wrapper">
+            <nav> 
+              <ul class="header-buttons__mainMenu">
+                <li class="header-buttons__mainMenu-item header-buttons__mainMenu-item_active"><a class="header-buttons__mainMenu-link" href="#">О нас</a></li>
+                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link" href="#">Услуги</a></li>
+                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link" href="#">Вакансии</a></li>
+                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link" href="#">Новости</a></li>
+                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link" href="#">Соглашения</a></li>
+              </ul>
+            </nav>
+            <div class="header-buttons__buttons"><span class="header-buttons__login-wrapper"><a class="button button_border" href="./login-page.html">войти</a></span><a class="button button_fill" href="./reg-page.html">зарегистрироваться</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="regPageBody">
+        <div class="regPageBody__wrapper">
+          <div class="regPageBody__bg">
+            <div class="register-account">
+              <h1 class="register-account__header">Регистрация аккаунта</h1>
+              <label for="name"> </label>
+              <input class="textfield" type="text" name="name" placeholder="Имя" id="name">
+              <label for="lastname"> </label>
+              <input class="textfield" type="text" name="lastname" placeholder="Фамилия" id="lastname">
+              <p class="radio-buttons-block">
+                <input class="radio-button" type="radio" id="test3" name="group">
+                <label for="test3">Мужчина</label>
+                <input class="radio-button" type="radio" id="test4" name="group">
+                <label for="test4">Женщина</label>
+              </p>
+              <h3 class="register-account__birthday">дата рождения</h3>
+              <label for="birthday"> </label>
+              <input class="textfield" type="text" placeholder="ДД.ММ.ГГГГ" id="birthday" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}">
+              <h3 class="register-account__enterData">данные для входа в сервис</h3>
+              <label for="regEmail"> </label>
+              <input class="textfield" type="email" name="regEmail" placeholder="Email" id="regEmail">
+              <label for="regPass"> </label>
+              <input class="textfield" type="password" name="regPass" placeholder="Пароль" id="regPass">
+              <div class="flex-wrapper">
+                <input class="toggle-button__input" type="checkbox" id="mailing" style="display:none">
+                <label class="toggle" for="mailing"><span class="toggle__button"></span></label>
+                <p class="register-account__special-offer">Получать спецпредложения</p>
+              </div><a class="button button_long">Перейти к оплате</a>
+              <p class="have-account">Уже есть аккаунт на Toxin<a class="button button_border">войти</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-big-margin">
+        <div class="footer-big">
+          <div class="wrapper">
+            <div class="footer-big__main">
+              <div class="footer-big__logo"><a class="header__logo" href="#"> <img class="header__logo-img" src=".././img/color-logo.svg" alt="Main Logo"></a>
+                <p class="footer-big__logo-content">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+              </div>
+              <div class="footer-big__menus">
+                <div class="footer-big__list">
+                  <h3 class="footer-big__headline">навигация</h3>
+                  <ul class="footer-big__list">
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">О нас</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Новости</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Служба поддержки</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Услуги</a></li>
+                  </ul>
+                </div>
+                <div class="footer-big__list">
+                  <h3 class="footer-big__headline">О нас</h3>
+                  <ul class="footer-big__list">
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">О сервисе</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Наша команда</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Вакансии</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Инвесторы</a></li>
+                  </ul>
+                </div>
+                <div class="footer-big__list">
+                  <h3 class="footer-big__headline">Служба поддержки</h3>
+                  <ul class="footer-big__list">
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Соглашения</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Сообщества</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Связь с нами</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-big__subscribe">
+                <h3 class="footer-big__headline">Подписка</h3>
+                <p class="footer-big__subscribe-content">Получайте специальные предложения и новости сервиса</p>
+                <form class="form-email" action="#" method="post">
+                  <input class="form-email__email-field" type="email" name="email" placeholder="Email">
+                  <input class="form-email__submit" type="submit" value="">
+                </form>
+              </div>
+            </div>
+            <div class="footer-big__copyright">
+              <p class="footer-big__copyright-content">Copyright © 2018 Toxin отель. Все права зачищены.</p>
+              <div class="footer-big__social"> <a class="footer-big__twitter" href=""> </a><a class="footer-big__facebook" href=""> </a><a class="footer-big__instagram" href=""></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

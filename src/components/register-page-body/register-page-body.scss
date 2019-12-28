@@ -1,0 +1,40 @@
+.regPageBody{
+    width: 100%;
+  }
+  .regPageBody__wrapper{
+    max-width: 90rem;
+    margin: 0 auto;
+    
+  }
+  .regPageBody__bg{
+    display: flex;
+    justify-content: center;
+    background: url(./login-page-bg.jpg) no-repeat center bottom;
+    background-size: cover;
+    padding: 1.875rem 0 1.5rem 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    .regPageBody__bg{
+        
+        .card.registerAccount{
+            width: 18.75rem;
+            padding: 0.438rem 0.875rem 0.875rem 0.875rem;
+            input {
+                width: 17rem;
+                font-size: 0.875rem;
+            }
+            h1{
+              font-size: 1.2rem;
+              text-align: center;
+            }
+            .buttonBorder{
+              margin: 0.125rem 0 0 44px;
+              width: auto;
+            }
+            .haveAccount{
+              font-size: 0.67rem;
+            }
+        }
+    }
+}

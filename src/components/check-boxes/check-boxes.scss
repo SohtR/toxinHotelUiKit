@@ -2,22 +2,22 @@
   padding: 0;
   width: 16.625rem;
 
-  &__item{
+  &__item {
     margin: 0 0 0.625rem 0;
     height: 1.25rem;
   }
-  
-  &__checkbox{
-    display:none;  
 
-    & + &-label{
+  &__checkbox {
+    display: none;
+
+    &+&-label {
       font-size: 0.875rem;
       line-height: 1.125rem;
       color: rgba(31, 32, 65, 0.5);
       cursor: pointer;
       font-weight: normal;
-      
-      &::before{
+
+      &::before {
         content: "";
         display: inline-block;
         margin: 0 0.625rem 0 0;
@@ -30,12 +30,12 @@
         position: relative;
         top: 0.25rem;
       }
-    }          
+    }
   }
-  
-  
-  &__checkbox:checked + label::before {
+
+
+  &__checkbox:checked+label::before {
     background: url(./checked.png) no-repeat top left;
-    border: none;  
+    border: none;
   }
 }

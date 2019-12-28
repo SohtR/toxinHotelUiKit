@@ -1,4 +1,4 @@
-.search-room{
+.search-room {
   width: 380px;
   padding: 40px 30px 30px 30px;
   background: #fff;
@@ -8,16 +8,20 @@
   border-radius: 4px;
   z-index: 1;
 
-  &__header{
+  &__header {
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
     color: #1F2041;
     letter-spacing: -0.4px;
-    margin: 0.0625rem 0 0.25rem 0;
+    margin: 0.0625rem 0 1.25rem 0;
   }
 
-  .button_border{
+  &__headline {
+    margin: 1.25rem 0 0.3125rem 0;
+  }
+
+  .button_border {
     margin: 2px 0 0 36px;
     width: 96px;
     height: 40px;
@@ -26,20 +30,21 @@
     line-height: 26px;
   }
 
-  .have-account{
+  .have-account {
     font-size: 14px;
     line-height: 18px;
     color: #000;
   }
 
-  .flex-wrapper{
+  .flex-wrapper {
     margin: 0 0 0.625rem 0;
   }
-  
-  &__arrival{
+
+  &__arrival {
     margin: 0 1.25rem 0 0;
   }
-  .dropdown-guest{
+
+  .dropdown-guest {
     margin: 0 0 0.5625rem 0;
   }
 }

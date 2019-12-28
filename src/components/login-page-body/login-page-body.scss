@@ -1,0 +1,28 @@
+.loginPageBody{
+    width: 100%;
+}
+.loginPageBody__wrapper{
+max-width: 90rem;
+margin: 0 auto;
+
+}
+.loginPageBody__bg{
+display: flex;
+justify-content: center;
+background: url(./login-page-bg.jpg) no-repeat center bottom;
+background-size: cover;
+padding: 10.0625rem 0 10.125rem 0;
+}
+
+@media screen and (max-width: 500px) {
+    .loginPageBody__bg{
+        .card.loginAccount{
+            width: 18.75rem;
+            padding: 0.438rem 0.875rem 0.875rem 0.875rem;
+            input {
+                width: 17rem;
+                font-size: 0.875rem;
+            }
+        }
+    }
+}

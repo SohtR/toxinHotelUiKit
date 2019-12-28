@@ -1,0 +1,145 @@
+.searchBody
+    .wrapper
+        .searchBody__leftSide
+            h3 даты пребывания в отеле
+            +data-dropdown-filter()
+            h3 гости
+            +dropdown-guest("Сколько гостей")
+            +range-slider('диапазон цены')
+            p.leftSide__rangeExplain Стоимость за сутки пребывания в номере
+            h3 checkbox buttons
+            +checkboxes({
+                        first:{
+                            id: "first",
+                            content: "Можно курить"
+                        },
+                        second:{
+                            id: "second",
+                            content: "Можно с питомцами",
+                            checked: true
+                        },
+                        third:{
+                            id: "third",
+                            content: "Можно пригласить гостей (до 10 человек)",
+                            checked: true
+                        }
+                    })
+            h3.leftSide__richCheckBox доступность
+            +rich-checkbox({
+                        first:{
+                            id: "first",
+                            header: "Широкий коридор",
+                            content: "Ширина коридоров в номере не менее 91 см."
+                        },
+                        second:{
+                            id: "second",
+                            header: "Помощник для инвалидов",
+                            content: "На 1 этаже вас встретит специалист  и проводит до номера.",
+                            checked: true
+                        }
+                    })
+            h3.leftSide__roomFeatures удобства номера
+            +dropdown-room("Удобства")
+            +expanded-checkbox-list({
+                        first:{
+                            id: "first",
+                            content: "Завтрак"
+                        },
+                        second:{
+                            id: "second",
+                            content: "Письменный стол",
+                            checked: true
+                        },
+                        third:{
+                            id: "third",
+                            content: "Стул для кормления",
+                            checked: true
+                        },
+                        fourth:{
+                            id: "fourth",
+                            content: "Кроватка",
+                            checked: true
+                        },
+                        fifth:{
+                            id: "fifth",
+                            content: "Телевизор"
+                        },
+                        sixth:{
+                            id: "sixth",
+                            content: "Шампунь"
+                        },
+                        seventh:{
+                            id: "seventh",
+                            content: "Телевизор"
+                        },
+                        eighth:{
+                            id: "eighth",
+                            content: "Шампунь"
+                        }})
+        .searchBody__rightSide
+            h1 Номера, которые мы для вас подобрали
+            .rightSide__searchResult
+                +slider-room({
+                                number: 888,
+                                price: "9 990",
+                                reviews: 145,
+                                isLux: "люкс"
+                            })
+                +slider-room({
+                                number: 840,
+                                price: "9 900",
+                                reviews: 65
+                            })
+                +slider-room({
+                                number: 980,
+                                price: "8500",
+                                reviews: 35,
+                                isLux: "люкс"
+                            })
+                +slider-room({
+                                number: 856,
+                                price: "7300",
+                                reviews: 19
+                            })
+                +slider-room({
+                                number: 740,
+                                price: "6000",
+                                reviews: 44
+                            })
+                +slider-room({
+                                number:982,
+                                price: "5800",
+                                reviews: 56
+                            })
+                +slider-room({
+                                number: 678,
+                                price: "5500",
+                                reviews: 45
+                            })
+                +slider-room({
+                                number: 450,
+                                price: "5300",
+                                reviews: 39
+                            })
+                +slider-room({
+                                number: 350,
+                                price: "5000",
+                                reviews: 77
+                            })
+                +slider-room({
+                                number: 666,
+                                price: "5000",
+                                reviews: 25
+                            })
+                +slider-room({
+                                number: 444,
+                                price: "5000",
+                                reviews: 15
+                            })
+                +slider-room({
+                                number: 352,
+                                price: "5000",
+                                reviews: 55
+                            })
+            .rightSide__pagination
+                +pagination()

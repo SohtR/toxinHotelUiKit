@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Toxin Hotel</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="./favicons/site.webmanifest">
+    <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  <link href="style.css" rel="stylesheet"><script type="text/javascript" src="search.js"></script></head>
+  <body>
+    <main>
+      <div class="header-buttons">
+        <div class="wrapper"> <a class="header__logo" href="index.html"> <img class="header__logo-img" src=".././img/color-logo.svg" alt="Main Logo"></a>
+          <div class="header__navigation-buttons-wrapper">
+            <nav> 
+              <ul class="header-buttons__mainMenu">
+                <li class="header-buttons__mainMenu-item header-buttons__mainMenu-item_active"><a class="header-buttons__mainMenu-link" href="#">О нас</a></li>
+                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link" href="#">Услуги</a></li>
+                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link" href="#">Вакансии</a></li>
+                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link" href="#">Новости</a></li>
+                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link" href="#">Соглашения</a></li>
+              </ul>
+            </nav>
+            <div class="header-buttons__buttons"><span class="header-buttons__login-wrapper"><a class="button button_border" href="./login-page.html">войти</a></span><a class="button button_fill" href="./reg-page.html">зарегистрироваться</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="searchBody">
+        <div class="wrapper">
+          <div class="searchBody__leftSide">
+            <h3>даты пребывания в отеле</h3>
+            <input class="datepicker-here datepicker-filter" type="text" data-range="true" data-multiple-dates-separator=" - " data-clear-Button="true" data-apply-Button="true">
+            <h3>гости</h3>
+            <label for="dropdownGuest"> 
+              <input id="dropdownGuest" name="guest" type="text" readonly placeholder="Сколько гостей">
+            </label>
+            <div class="range-slider">
+              <label for="amount">диапазон цены</label>
+              <input type="text" disabled id="amount" readonly>
+              <div id="slider-range"></div>
+            </div>
+            <p class="leftSide__rangeExplain">Стоимость за сутки пребывания в номере</p>
+            <h3>checkbox buttons</h3>
+            <h3 class="leftSide__richCheckBox">доступность</h3>
+            <h3 class="leftSide__roomFeatures">удобства номера</h3>
+          </div>
+          <div class="searchBody__rightSide">
+            <h1>Номера, которые мы для вас подобрали</h1>
+            <div class="rightSide__searchResult">
+              <div class="room-slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li class="slides__item"><img class="slides__img" src=".././img/888-slide-1.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/888-slide-2.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/888-slide-3.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/888-slide-4.jpg"></li>
+                  </ul>
+                </div>
+                <div class="room-slider__price-headline">
+                  <p class="room-slider__number"><span class="room-slider__num">№</span><span class="room-slider__number">888</span><span class="room-slider__lux"> люкс</span></p>
+                  <p class="room-slider__price">9 990₽ в сутки</p>
+                </div>
+                <div class="room-slider__rating"><span class="rating">
+                    <input class="rating__input" id="rating8885" type="radio" name="rating888" value="5">
+                    <label class="rating__label" for="rating8885">5</label>
+                    <input class="rating__input" id="rating8884" type="radio" name="rating888" value="4">
+                    <label class="rating__label" for="rating8884">4</label>
+                    <input class="rating__input" id="rating8883" type="radio" name="rating888" value="3">
+                    <label class="rating__label" for="rating8883">3</label>
+                    <input class="rating__input" id="rating8882" type="radio" name="rating888" value="2" checked>
+                    <label class="rating__label" for="rating8882">2</label>
+                    <input class="rating__input" id="rating8881" type="radio" name="rating888" value="1">
+                    <label class="rating__label" for="rating8881">1</label></span>
+                  <p class="room-slider__reviewsAmount"><b>145</b> Отзывов</p>
+                </div>
+              </div>
+              <div class="room-slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li class="slides__item"><img class="slides__img" src=".././img/840-slide-1.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/840-slide-2.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/840-slide-3.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/840-slide-4.jpg"></li>
+                  </ul>
+                </div>
+                <div class="room-slider__price-headline">
+                  <p class="room-slider__number"><span class="room-slider__num">№</span><span class="room-slider__number">840</span><span class="room-slider__lux"> </span></p>
+                  <p class="room-slider__price">9 900₽ в сутки</p>
+                </div>
+                <div class="room-slider__rating"><span class="rating">
+                    <input class="rating__input" id="rating8405" type="radio" name="rating840" value="5">
+                    <label class="rating__label" for="rating8405">5</label>
+                    <input class="rating__input" id="rating8404" type="radio" name="rating840" value="4">
+                    <label class="rating__label" for="rating8404">4</label>
+                    <input class="rating__input" id="rating8403" type="radio" name="rating840" value="3">
+                    <label class="rating__label" for="rating8403">3</label>
+                    <input class="rating__input" id="rating8402" type="radio" name="rating840" value="2" checked>
+                    <label class="rating__label" for="rating8402">2</label>
+                    <input class="rating__input" id="rating8401" type="radio" name="rating840" value="1">
+                    <label class="rating__label" for="rating8401">1</label></span>
+                  <p class="room-slider__reviewsAmount"><b>65</b> Отзывов</p>
+                </div>
+              </div>
+              <div class="room-slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li class="slides__item"><img class="slides__img" src=".././img/980-slide-1.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/980-slide-2.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/980-slide-3.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/980-slide-4.jpg"></li>
+                  </ul>
+                </div>
+                <div class="room-slider__price-headline">
+                  <p class="room-slider__number"><span class="room-slider__num">№</span><span class="room-slider__number">980</span><span class="room-slider__lux"> люкс</span></p>
+                  <p class="room-slider__price">8500₽ в сутки</p>
+                </div>
+                <div class="room-slider__rating"><span class="rating">
+                    <input class="rating__input" id="rating9805" type="radio" name="rating980" value="5">
+                    <label class="rating__label" for="rating9805">5</label>
+                    <input class="rating__input" id="rating9804" type="radio" name="rating980" value="4">
+                    <label class="rating__label" for="rating9804">4</label>
+                    <input class="rating__input" id="rating9803" type="radio" name="rating980" value="3">
+                    <label class="rating__label" for="rating9803">3</label>
+                    <input class="rating__input" id="rating9802" type="radio" name="rating980" value="2" checked>
+                    <label class="rating__label" for="rating9802">2</label>
+                    <input class="rating__input" id="rating9801" type="radio" name="rating980" value="1">
+                    <label class="rating__label" for="rating9801">1</label></span>
+                  <p class="room-slider__reviewsAmount"><b>35</b> Отзывов</p>
+                </div>
+              </div>
+              <div class="room-slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li class="slides__item"><img class="slides__img" src=".././img/856-slide-1.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/856-slide-2.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/856-slide-3.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/856-slide-4.jpg"></li>
+                  </ul>
+                </div>
+                <div class="room-slider__price-headline">
+                  <p class="room-slider__number"><span class="room-slider__num">№</span><span class="room-slider__number">856</span><span class="room-slider__lux"> </span></p>
+                  <p class="room-slider__price">7300₽ в сутки</p>
+                </div>
+                <div class="room-slider__rating"><span class="rating">
+                    <input class="rating__input" id="rating8565" type="radio" name="rating856" value="5">
+                    <label class="rating__label" for="rating8565">5</label>
+                    <input class="rating__input" id="rating8564" type="radio" name="rating856" value="4">
+                    <label class="rating__label" for="rating8564">4</label>
+                    <input class="rating__input" id="rating8563" type="radio" name="rating856" value="3">
+                    <label class="rating__label" for="rating8563">3</label>
+                    <input class="rating__input" id="rating8562" type="radio" name="rating856" value="2" checked>
+                    <label class="rating__label" for="rating8562">2</label>
+                    <input class="rating__input" id="rating8561" type="radio" name="rating856" value="1">
+                    <label class="rating__label" for="rating8561">1</label></span>
+                  <p class="room-slider__reviewsAmount"><b>19</b> Отзывов</p>
+                </div>
+              </div>
+              <div class="room-slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li class="slides__item"><img class="slides__img" src=".././img/740-slide-1.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/740-slide-2.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/740-slide-3.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/740-slide-4.jpg"></li>
+                  </ul>
+                </div>
+                <div class="room-slider__price-headline">
+                  <p class="room-slider__number"><span class="room-slider__num">№</span><span class="room-slider__number">740</span><span class="room-slider__lux"> </span></p>
+                  <p class="room-slider__price">6000₽ в сутки</p>
+                </div>
+                <div class="room-slider__rating"><span class="rating">
+                    <input class="rating__input" id="rating7405" type="radio" name="rating740" value="5">
+                    <label class="rating__label" for="rating7405">5</label>
+                    <input class="rating__input" id="rating7404" type="radio" name="rating740" value="4">
+                    <label class="rating__label" for="rating7404">4</label>
+                    <input class="rating__input" id="rating7403" type="radio" name="rating740" value="3">
+                    <label class="rating__label" for="rating7403">3</label>
+                    <input class="rating__input" id="rating7402" type="radio" name="rating740" value="2" checked>
+                    <label class="rating__label" for="rating7402">2</label>
+                    <input class="rating__input" id="rating7401" type="radio" name="rating740" value="1">
+                    <label class="rating__label" for="rating7401">1</label></span>
+                  <p class="room-slider__reviewsAmount"><b>44</b> Отзывов</p>
+                </div>
+              </div>
+              <div class="room-slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li class="slides__item"><img class="slides__img" src=".././img/982-slide-1.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/982-slide-2.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/982-slide-3.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/982-slide-4.jpg"></li>
+                  </ul>
+                </div>
+                <div class="room-slider__price-headline">
+                  <p class="room-slider__number"><span class="room-slider__num">№</span><span class="room-slider__number">982</span><span class="room-slider__lux"> </span></p>
+                  <p class="room-slider__price">5800₽ в сутки</p>
+                </div>
+                <div class="room-slider__rating"><span class="rating">
+                    <input class="rating__input" id="rating9825" type="radio" name="rating982" value="5">
+                    <label class="rating__label" for="rating9825">5</label>
+                    <input class="rating__input" id="rating9824" type="radio" name="rating982" value="4">
+                    <label class="rating__label" for="rating9824">4</label>
+                    <input class="rating__input" id="rating9823" type="radio" name="rating982" value="3">
+                    <label class="rating__label" for="rating9823">3</label>
+                    <input class="rating__input" id="rating9822" type="radio" name="rating982" value="2" checked>
+                    <label class="rating__label" for="rating9822">2</label>
+                    <input class="rating__input" id="rating9821" type="radio" name="rating982" value="1">
+                    <label class="rating__label" for="rating9821">1</label></span>
+                  <p class="room-slider__reviewsAmount"><b>56</b> Отзывов</p>
+                </div>
+              </div>
+              <div class="room-slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li class="slides__item"><img class="slides__img" src=".././img/678-slide-1.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/678-slide-2.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/678-slide-3.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/678-slide-4.jpg"></li>
+                  </ul>
+                </div>
+                <div class="room-slider__price-headline">
+                  <p class="room-slider__number"><span class="room-slider__num">№</span><span class="room-slider__number">678</span><span class="room-slider__lux"> </span></p>
+                  <p class="room-slider__price">5500₽ в сутки</p>
+                </div>
+                <div class="room-slider__rating"><span class="rating">
+                    <input class="rating__input" id="rating6785" type="radio" name="rating678" value="5">
+                    <label class="rating__label" for="rating6785">5</label>
+                    <input class="rating__input" id="rating6784" type="radio" name="rating678" value="4">
+                    <label class="rating__label" for="rating6784">4</label>
+                    <input class="rating__input" id="rating6783" type="radio" name="rating678" value="3">
+                    <label class="rating__label" for="rating6783">3</label>
+                    <input class="rating__input" id="rating6782" type="radio" name="rating678" value="2" checked>
+                    <label class="rating__label" for="rating6782">2</label>
+                    <input class="rating__input" id="rating6781" type="radio" name="rating678" value="1">
+                    <label class="rating__label" for="rating6781">1</label></span>
+                  <p class="room-slider__reviewsAmount"><b>45</b> Отзывов</p>
+                </div>
+              </div>
+              <div class="room-slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li class="slides__item"><img class="slides__img" src=".././img/450-slide-1.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/450-slide-2.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/450-slide-3.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/450-slide-4.jpg"></li>
+                  </ul>
+                </div>
+                <div class="room-slider__price-headline">
+                  <p class="room-slider__number"><span class="room-slider__num">№</span><span class="room-slider__number">450</span><span class="room-slider__lux"> </span></p>
+                  <p class="room-slider__price">5300₽ в сутки</p>
+                </div>
+                <div class="room-slider__rating"><span class="rating">
+                    <input class="rating__input" id="rating4505" type="radio" name="rating450" value="5">
+                    <label class="rating__label" for="rating4505">5</label>
+                    <input class="rating__input" id="rating4504" type="radio" name="rating450" value="4">
+                    <label class="rating__label" for="rating4504">4</label>
+                    <input class="rating__input" id="rating4503" type="radio" name="rating450" value="3">
+                    <label class="rating__label" for="rating4503">3</label>
+                    <input class="rating__input" id="rating4502" type="radio" name="rating450" value="2" checked>
+                    <label class="rating__label" for="rating4502">2</label>
+                    <input class="rating__input" id="rating4501" type="radio" name="rating450" value="1">
+                    <label class="rating__label" for="rating4501">1</label></span>
+                  <p class="room-slider__reviewsAmount"><b>39</b> Отзывов</p>
+                </div>
+              </div>
+              <div class="room-slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li class="slides__item"><img class="slides__img" src=".././img/350-slide-1.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/350-slide-2.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/350-slide-3.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/350-slide-4.jpg"></li>
+                  </ul>
+                </div>
+                <div class="room-slider__price-headline">
+                  <p class="room-slider__number"><span class="room-slider__num">№</span><span class="room-slider__number">350</span><span class="room-slider__lux"> </span></p>
+                  <p class="room-slider__price">5000₽ в сутки</p>
+                </div>
+                <div class="room-slider__rating"><span class="rating">
+                    <input class="rating__input" id="rating3505" type="radio" name="rating350" value="5">
+                    <label class="rating__label" for="rating3505">5</label>
+                    <input class="rating__input" id="rating3504" type="radio" name="rating350" value="4">
+                    <label class="rating__label" for="rating3504">4</label>
+                    <input class="rating__input" id="rating3503" type="radio" name="rating350" value="3">
+                    <label class="rating__label" for="rating3503">3</label>
+                    <input class="rating__input" id="rating3502" type="radio" name="rating350" value="2" checked>
+                    <label class="rating__label" for="rating3502">2</label>
+                    <input class="rating__input" id="rating3501" type="radio" name="rating350" value="1">
+                    <label class="rating__label" for="rating3501">1</label></span>
+                  <p class="room-slider__reviewsAmount"><b>77</b> Отзывов</p>
+                </div>
+              </div>
+              <div class="room-slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li class="slides__item"><img class="slides__img" src=".././img/666-slide-1.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/666-slide-2.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/666-slide-3.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/666-slide-4.jpg"></li>
+                  </ul>
+                </div>
+                <div class="room-slider__price-headline">
+                  <p class="room-slider__number"><span class="room-slider__num">№</span><span class="room-slider__number">666</span><span class="room-slider__lux"> </span></p>
+                  <p class="room-slider__price">5000₽ в сутки</p>
+                </div>
+                <div class="room-slider__rating"><span class="rating">
+                    <input class="rating__input" id="rating6665" type="radio" name="rating666" value="5">
+                    <label class="rating__label" for="rating6665">5</label>
+                    <input class="rating__input" id="rating6664" type="radio" name="rating666" value="4">
+                    <label class="rating__label" for="rating6664">4</label>
+                    <input class="rating__input" id="rating6663" type="radio" name="rating666" value="3">
+                    <label class="rating__label" for="rating6663">3</label>
+                    <input class="rating__input" id="rating6662" type="radio" name="rating666" value="2" checked>
+                    <label class="rating__label" for="rating6662">2</label>
+                    <input class="rating__input" id="rating6661" type="radio" name="rating666" value="1">
+                    <label class="rating__label" for="rating6661">1</label></span>
+                  <p class="room-slider__reviewsAmount"><b>25</b> Отзывов</p>
+                </div>
+              </div>
+              <div class="room-slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li class="slides__item"><img class="slides__img" src=".././img/444-slide-1.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/444-slide-2.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/444-slide-3.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/444-slide-4.jpg"></li>
+                  </ul>
+                </div>
+                <div class="room-slider__price-headline">
+                  <p class="room-slider__number"><span class="room-slider__num">№</span><span class="room-slider__number">444</span><span class="room-slider__lux"> </span></p>
+                  <p class="room-slider__price">5000₽ в сутки</p>
+                </div>
+                <div class="room-slider__rating"><span class="rating">
+                    <input class="rating__input" id="rating4445" type="radio" name="rating444" value="5">
+                    <label class="rating__label" for="rating4445">5</label>
+                    <input class="rating__input" id="rating4444" type="radio" name="rating444" value="4">
+                    <label class="rating__label" for="rating4444">4</label>
+                    <input class="rating__input" id="rating4443" type="radio" name="rating444" value="3">
+                    <label class="rating__label" for="rating4443">3</label>
+                    <input class="rating__input" id="rating4442" type="radio" name="rating444" value="2" checked>
+                    <label class="rating__label" for="rating4442">2</label>
+                    <input class="rating__input" id="rating4441" type="radio" name="rating444" value="1">
+                    <label class="rating__label" for="rating4441">1</label></span>
+                  <p class="room-slider__reviewsAmount"><b>15</b> Отзывов</p>
+                </div>
+              </div>
+              <div class="room-slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li class="slides__item"><img class="slides__img" src=".././img/352-slide-1.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/352-slide-2.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/352-slide-3.jpg"></li>
+                    <li class="slides__item"><img class="slides__img" src=".././img/352-slide-4.jpg"></li>
+                  </ul>
+                </div>
+                <div class="room-slider__price-headline">
+                  <p class="room-slider__number"><span class="room-slider__num">№</span><span class="room-slider__number">352</span><span class="room-slider__lux"> </span></p>
+                  <p class="room-slider__price">5000₽ в сутки</p>
+                </div>
+                <div class="room-slider__rating"><span class="rating">
+                    <input class="rating__input" id="rating3525" type="radio" name="rating352" value="5">
+                    <label class="rating__label" for="rating3525">5</label>
+                    <input class="rating__input" id="rating3524" type="radio" name="rating352" value="4">
+                    <label class="rating__label" for="rating3524">4</label>
+                    <input class="rating__input" id="rating3523" type="radio" name="rating352" value="3">
+                    <label class="rating__label" for="rating3523">3</label>
+                    <input class="rating__input" id="rating3522" type="radio" name="rating352" value="2" checked>
+                    <label class="rating__label" for="rating3522">2</label>
+                    <input class="rating__input" id="rating3521" type="radio" name="rating352" value="1">
+                    <label class="rating__label" for="rating3521">1</label></span>
+                  <p class="room-slider__reviewsAmount"><b>55</b> Отзывов</p>
+                </div>
+              </div>
+            </div>
+            <div class="rightSide__pagination">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-big-margin">
+        <div class="footer-big">
+          <div class="wrapper">
+            <div class="footer-big__main">
+              <div class="footer-big__logo"><a class="header__logo" href="#"> <img class="header__logo-img" src=".././img/color-logo.svg" alt="Main Logo"></a>
+                <p class="footer-big__logo-content">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+              </div>
+              <div class="footer-big__menus">
+                <div class="footer-big__list">
+                  <h3 class="footer-big__headline">навигация</h3>
+                  <ul class="footer-big__list">
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">О нас</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Новости</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Служба поддержки</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Услуги</a></li>
+                  </ul>
+                </div>
+                <div class="footer-big__list">
+                  <h3 class="footer-big__headline">О нас</h3>
+                  <ul class="footer-big__list">
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">О сервисе</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Наша команда</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Вакансии</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Инвесторы</a></li>
+                  </ul>
+                </div>
+                <div class="footer-big__list">
+                  <h3 class="footer-big__headline">Служба поддержки</h3>
+                  <ul class="footer-big__list">
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Соглашения</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Сообщества</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Связь с нами</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-big__subscribe">
+                <h3 class="footer-big__headline">Подписка</h3>
+                <p class="footer-big__subscribe-content">Получайте специальные предложения и новости сервиса</p>
+                <form class="form-email" action="#" method="post">
+                  <input class="form-email__email-field" type="email" name="email" placeholder="Email">
+                  <input class="form-email__submit" type="submit" value="">
+                </form>
+              </div>
+            </div>
+            <div class="footer-big__copyright">
+              <p class="footer-big__copyright-content">Copyright © 2018 Toxin отель. Все права зачищены.</p>
+              <div class="footer-big__social"> <a class="footer-big__twitter" href=""> </a><a class="footer-big__facebook" href=""> </a><a class="footer-big__instagram" href=""></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+<script>
+   /*
+ * numbercategoryselector.js
+ * Author & copyright (c) 2017: Sakri Koskimies
+ *
+ * MIT license
+ */
+(function ($) {
+
+        $.fn.guest = function (options) {
+
+            $ginput = $(this);
+            $goriginalPlaceholder = $ginput.attr("placeholder");
+
+            var settings = $.extend({
+                // Defaults.
+                categoryNames: ["Adults", "Children"],
+                categoryValues: false,
+                minValue: 0,
+                maxValue: 10,
+                closeOnOutsideClick: true,
+                showText: true,
+                delimiter: ", ",
+                align: "left",
+                fade: true,
+                useDisplay: true,
+                showZero: false,
+                callback: function(values){}
+            }, options);
+
+            if (!settings.categoryValues) {
+                settings.categoryValues = newFilledArray(settings.categoryNames.length, 0);
+            }
+
+            $gparent = createHTML();
+
+            if (settings.closeOnOutsideClick) {
+                $(document).mouseup(function (e) {
+                    if (!$ginput.is(e.target) && !$gparent.is(e.target) && $gparent.has(e.target).length === 0 && !$("div.guest.display").is(e.target) && $("div.guest.display").has(e.target).length === 0) {
+                        if (settings.fade) {
+                            $gparent.fadeOut(200);
+                        } else {
+                            $gparent.hide();
+                        }
+                    }
+                });
+            }
+
+            $(this).click(function () {
+                switchSelector();
+            });
+
+            $(window).resize(function () {
+                setPositions();
+
+            });
+
+            function doCallback() {
+                if (typeof options.callback == 'function') {
+                    var callbackResult = {};
+                    for ($gi = 0; $gi < settings.categoryNames.length; $gi++) {
+                        callbackResult[settings.categoryNames[$gi]] = settings.categoryValues[$gi];
+                    }
+                    options.callback.call(this, callbackResult);
+                }
+            }
+
+            function setPositions() {
+                switch (settings.align) {
+                    case "left":
+                        $gparent.css("top", $ginput.position().top + $ginput.outerHeight());
+                        $gparent.css("left", $ginput.position().left);
+                        break;
+                    
+                }
+                if (settings.useDisplay) {
+                    $gdisplay = $("div.guest.display");
+                    $gdisplay.css("top", $ginput.position().top + 1);
+                    $gdisplay.css("left", $ginput.position().left + 1);
+                    $gdisplay.css("width", $ginput.width() - 1);
+                    $gdisplay.css("height", $ginput.height() - 1);
+                }
+            }
+
+            $("a.guest.button.plus").click(function () {
+                $gcategory = $(this).attr("category");
+                if (settings.categoryValues[$gcategory] < settings.maxValue) {
+                    settings.categoryValues[$gcategory]++;
+                    $gnum = settings.categoryValues[$gcategory];
+                    $("div.guest.value[category='" + $gcategory + "']").text($gnum);
+                    doCallback();
+                    if(settings.categoryValues[$gcategory] == settings.maxValue){
+                        $(this).addClass("inactive");
+                    }else{
+                        $(this).removeClass("inactive");
+                    }
+                    if(settings.categoryValues[$gcategory] > settings.minValue){
+                        $("a.guest.button.minus[category='"+$gcategory+"']").removeClass("inactive");
+                    }else{
+                        $("a.guest.button.minus[category='"+$gcategory+"']").addClass("inactive");
+                    }
+                }
+                if (settings.showText) {
+                    if (!settings.useDisplay) {
+                        updateText();
+                    } else {
+                        updateElement();
+                    }
+                }
+                return false;
+            });
+
+            $("a.guest.button.minus").click(function () {
+                $gcategory = $(this).attr("category");
+                if (settings.categoryValues[$gcategory] > settings.minValue) {
+                    settings.categoryValues[$gcategory]--;
+                    $gnum = settings.categoryValues[$gcategory];
+                    $("div.guest.value[category='" + $gcategory + "']").text($gnum);
+                    doCallback();
+                    if(settings.categoryValues[$gcategory] == settings.minValue){
+                        $(this).addClass("inactive");
+                    }else{
+                        $(this).removeClass("inactive");
+                    }
+                    if(settings.categoryValues[$gcategory] < settings.maxValue){
+                        $("a.guest.button.plus[category='"+$gcategory+"']").removeClass("inactive");
+                    }else{
+                        $("a.guest.button.plus[category='"+$gcategory+"']").addClass("inactive");
+                    }
+                }
+                if (settings.showText) {
+                    if (!settings.useDisplay) {
+                        updateText();
+                    } else {
+                        updateElement();
+                    }
+                }
+                return false;
+            });
+
+            function updateElement() {
+                $ginput.val("");
+                $gdisplay = $("div.guest.inlinedisplay");
+                $gdisplay.empty();
+                $gdisplayelements = 0;
+                for ($gi = 0; $gi < settings.categoryNames.length; $gi++) {
+                    if (settings.categoryValues[$gi] != 0 || settings.showZero) {
+                        $gdisplayelement = $("<div class='guest displayelement'></div>").appendTo($gdisplay);
+                        $gdisplayelement.text(settings.categoryValues[$gi] + " " + settings.categoryNames[$gi] + ", ");
+                        $gdisplayelements++;
+                    }
+                }
+                if ($gdisplayelements == 0) {
+                    $ginput.attr("placeholder", $goriginalPlaceholder)
+                } else {
+                    $ginput.attr("placeholder", "")
+                }
+                updateText();
+            }
+
+            // function updateText() {
+            //     $gtext = "";
+            //     $gadded = 0;
+            //     for ($gi = 0; $gi < settings.categoryNames.length; $gi++) {
+            //         if (settings.categoryValues[$gi] != 0 || settings.showZero) {
+            //             if ($gadded != 0) {
+            //                 $gtext += settings.delimiter;
+            //             }
+            //             $gtext += settings.categoryValues[$gi] + " " + settings.categoryNames[$gi];
+            //             $gadded++;
+            //         }
+            //     }
+            //     $ginput.val($gtext);
+            // }
+            function updateText() {
+                $gtext = "";
+                $gadded = 0;
+                $gsum = 0;
+                $baby =0;
+                $last = settings.categoryNames.length-1;
+                for ($gi = 0; $gi < settings.categoryNames.length; $gi++) {
+                    if (settings.categoryValues[$gi] != 0 || settings.showZero) {
+                        
+                        $gsum += settings.categoryValues[$gi];
+                        $gadded++;
+                        
+                    }
+                }
+                $baby+= settings.categoryValues[$last]
+                if($baby != 0){
+                    //$gtext+=$gsum + " гостя, " + $baby + " младенцы";   Если младенец != гость
+                    $gtext+=$gsum-$baby + " гостя, " + $baby + " младенцы";
+                }else{
+                    $gtext += $gsum + " гостя";}
+                
+                if ($gsum == 0) {
+                    $ginput.val($goriginalPlaceholder); 
+                    $(".NCSG.reset").hide();
+                } else {
+                    $ginput.val($gtext);
+                    $(".NCSG.reset").show();
+                }
+                
+            }
+
+
+            function createHTML() {
+
+                $ginput.attr("type", "text");
+                if (settings.useDisplay) {
+
+                    $ginput.attr("placeholder", "");
+
+                    $gdisplay = $("<div class='guest display'></div>").prependTo("body");
+                    $gdisplay.css("top", $ginput.position().top + 1);
+                    $gdisplay.css("left", $ginput.position().left + 1);
+                    $gdisplay.css("width", $ginput.width() - 1);
+                    $gdisplay.css("height", $ginput.height() - 1);
+
+                    $("<div class='guest inlinedisplay'></div>").prependTo($gdisplay);
+
+                    $gdisplay.click(function () {
+                        switchSelector();
+                    });
+                }
+
+
+                $gparent = $("<div class='guest parent'></div>").prependTo("body").hide();
+
+                switch (settings.align) {
+                    case "left":
+                        $gparent.css("top", $ginput.position().top + $ginput.outerHeight());
+                        $gparent.css("left", $ginput.position().left);
+                        break;
+                    
+                }
+
+                for ($gi = 0; $gi < settings.categoryNames.length; $gi++) {
+                    $gcategory = $("<div class='guest category'></div>").appendTo($gparent);
+                    $gtext = $("<div class='guest text'></div>").appendTo($gcategory);
+                    $gname = $("<div class='guest name' category='" + $gi + "'>&nbsp;" + settings.categoryNames[$gi] + "</div>").appendTo($gtext);
+                    $gbuttons = $("<div class='guest buttons'></div>").appendTo($gcategory);
+                    $gbutton_minus = $("<a href='' class='guest button minus' category='" + $gi + "'>&#8211;</a>").appendTo($gbuttons);
+                    $gvalue = $("<div class='guest value' category='" + $gi + "'>" + settings.categoryValues[$gi] + "</div>").appendTo($gbuttons);
+                    $gbutton_plus = $("<a href='' class='guest button plus' category='" + $gi + "'>&#43;</a>").appendTo($gbuttons);
+                    
+                    if(settings.categoryValues[$gi] == settings.maxValue){
+                        $gbutton_plus.addClass("inactive");
+                    }
+
+                    if(settings.categoryValues[$gi] == settings.minValue){
+                        $gbutton_minus.addClass("inactive");
+                    }
+                }
+                $gclose = $("<div class='NCSG room'></div><a class='NCSG close' href=''>Применить</a>").appendTo($gparent);
+                $gclose.click(function () {
+                    if (settings.fade) {
+                        $gparent.fadeOut(200);
+                    } else {
+                        $gparent.hide();
+                    }
+                    return false;
+                });
+                $gzero = $("<div class='NCSG room'></div><a class='NCSG reset' href=''>Очистить</a>").appendTo($gparent);
+                $gzero.click(function() {
+                for ($gi = 0; $gi < settings.categoryNames.length; $gi++) {
+                    if (settings.categoryValues[$gi] != 0 || settings.showZero) {
+                        settings.categoryValues[$gi] = 0;
+                        $("div.guest.value[category='" + $gi + "']").text("0");
+                        $(".guest.button.minus").addClass("inactive");
+                        doCallback();
+                    }
+                }
+                updateText();
+                return false;
+            });
+                if (settings.showText) {
+                    if (!settings.useDisplay) {
+                        updateText();
+                    } else {
+                        updateElement();
+                    }
+                }
+
+                if (settings.useDisplay) {
+                    $ginput.css("color", "transparent");
+                }
+
+                return $gparent;
+            }
+
+            
+
+            
+            function switchSelector() {
+                if (settings.fade) {
+                    $gparent.fadeToggle(200);
+                } else {
+                    $gparent.toggle();
+                }
+            }
+
+            function newFilledArray(len, val) {
+                var rv = new Array(len);
+                while (--len >= 0) {
+                    rv[len] = val;
+                }
+                return rv;
+            }
+
+        }
+        ;
+
+    }(jQuery)
+)
+;
+</script>
+<script>$( function() {
+    $("input[name='NCS']").NCS({
+        categoryNames: ["Спальни", "Кровати", "Ванные комнаты"],
+        categoryValues: false,
+        minValue: 0,
+        maxValue: 10,
+        closeOnOutsideClick: true,
+        showText: true,
+        delimiter: ", ",
+        align: "left",
+        fade: true,
+        useDisplay: false,
+        showZero: false,
+    });
+});
+</script>
+<script>var now = new Date();
+var endDate = new Date(now.getTime() + 365*24*60*60*1000)
+var $start = $('#start'),
+    $end = $('#end');
+var $datepickers = $('.datepickers');
+
+$datepickers.datepicker({
+    language: 'ru',
+    // offset: ,
+    navTitles: {
+      days: '<i>yyyy</i> MM',
+      months: 'yyyy',
+      years: 'yyyy1 - yyyy2'
+    },
+    minDate: now,
+    maxDate: endDate,
+    multipleDatesSeparator: "-",
+    range: true,
+      onSelect: function (fd, date) {
+        $end.data('datepicker')
+                .update('selectedDates', $start.data('datepicker').selectedDates);
+        var start = fd.split('-')[0]
+        var end = fd.split('-')[1];
+        if (end) {
+          $start.val(start);
+          $end.val(end);
+        } else {
+          $end.val('')
+        }
+        console.log($start.data('datepicker'));
+    }
+})
+</script>
+<script>var now = new Date();
+var endDate = new Date(now.getTime() + 365*24*60*60*1000)
+var $start2 = $('#start2'),
+    $end2 = $('#end2');
+var $datepickers = $('.datepickers2');
+
+$datepickers.datepicker({
+    language: 'ru',
+    // offset: ,
+    navTitles: {
+      days: '<i>yyyy</i> MM',
+      months: 'yyyy',
+      years: 'yyyy1 - yyyy2'
+    },
+    minDate: now,
+    maxDate: endDate,
+    multipleDatesSeparator: "-",
+    range: true,
+      onSelect: function (fd, date) {
+        $end2.data('datepicker')
+                .update('selectedDates', $start.data('datepicker').selectedDates);
+        var start = fd.split('-')[0]
+        var end = fd.split('-')[1];
+        if (end) {
+          $start2.val(start);
+          $end2.val(end);
+        } else {
+          $end.val('')
+        }
+        console.log($start2.data('datepicker'));
+    }
+})
+</script>
+<script>$( function() {
+    $("input[name='guest']").guest({
+        categoryNames: ["Взрослые", "Дети", "Младенцы"],
+        categoryValues: false,
+        minValue: 0,
+        maxValue: 10,
+        closeOnOutsideClick: false,
+        showText: true,
+        delimiter: ", ",
+        align: "left",
+        fade: true,
+        useDisplay: false,
+        showZero: false,
+    });
+});
+</script>
+<script>
+       $('.like-button').on('click', function(event, count) {
+    event.preventDefault();
+    
+    var $this = $(this),
+        count = $this.attr('data-count'),
+        active = $this.hasClass('active'),
+        multiple = $this.hasClass('multiple-count');
+    
+    $.fn.noop = $.noop;
+    $this.attr('data-count', ! active || multiple ? ++count : --count  )[multiple ? 'noop' : 'toggleClass']('active');
+    
+  });
+
+</script>
+<script>
+     $( function() {
+      $( "#slider-range" ).slider({
+        range: true,
+        min: 1000,
+        max: 16000,
+        values: [ 5000, 10000 ],
+        slide: function( event, ui ) {
+          $( "#amount" ).val( ui.values[ 0 ] + "₽" + " - " + ui.values[ 1 ] + "₽" );
+        }
+      });
+      $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ) + "₽"  +
+        " - " + $( "#slider-range" ).slider( "values", 1 ) + "₽" );
+    } );
+
+
+ 
+</script>
+<script>
+   /*
+ * numbercategoryselector.js
+ * Author & copyright (c) 2017: Sakri Koskimies
+ *
+ * MIT license
+ */
+(function ($) {
+
+        $.fn.NCS = function (options) {
+
+            $input = $(this);
+            $originalPlaceholder = $input.attr("placeholder");
+
+            var settings = $.extend({
+                // Defaults.
+                categoryNames: ["Adults", "Children"],
+                categoryValues: false,
+                minValue: 0,
+                maxValue: 10,
+                closeOnOutsideClick: true,
+                showText: true,
+                delimiter: ", ",
+                align: "left",
+                fade: true,
+                useDisplay: true,
+                showZero: false,
+                callback: function(values){}
+            }, options);
+
+            if (!settings.categoryValues) {
+                settings.categoryValues = newFilledArray(settings.categoryNames.length, 0);
+            }
+
+            $parent = createHTML();
+
+            if (settings.closeOnOutsideClick) {
+                $(document).mouseup(function (e) {
+                    if (!$input.is(e.target) && !$parent.is(e.target) && $parent.has(e.target).length === 0 && !$("div.NCS.display").is(e.target) && $("div.NCS.display").has(e.target).length === 0) {
+                        if (settings.fade) {
+                            $parent.fadeOut(200);
+                        } else {
+                            $parent.hide();
+                        }
+                    }
+                });
+            }
+
+            $(this).click(function () {
+                switchSelector();
+            });
+
+            $(window).resize(function () {
+                setPositions();
+
+            });
+
+            function doCallback() {
+                if (typeof options.callback == 'function') {
+                    var callbackResult = {};
+                    for ($i = 0; $i < settings.categoryNames.length; $i++) {
+                        callbackResult[settings.categoryNames[$i]] = settings.categoryValues[$i];
+                    }
+                    options.callback.call(this, callbackResult);
+                }
+            }
+
+            function setPositions() {
+                switch (settings.align) {
+                    case "left":
+                        $parent.css("top", $input.position().top + $input.outerHeight());
+                        $parent.css("left", $input.position().left);
+                        break;
+                    
+                }
+                if (settings.useDisplay) {
+                    $display = $("div.NCS.display");
+                    $display.css("top", $input.position().top + 1);
+                    $display.css("left", $input.position().left + 1);
+                    $display.css("width", $input.width() - 1);
+                    $display.css("height", $input.height() - 1);
+                }
+            }
+
+            $("a.NCS.button.plus").click(function () {
+                $category = $(this).attr("category");
+                if (settings.categoryValues[$category] < settings.maxValue) {
+                    settings.categoryValues[$category]++;
+                    $num = settings.categoryValues[$category];
+                    $("div.NCS.value[category='" + $category + "']").text($num);
+                    doCallback();
+                    if(settings.categoryValues[$category] == settings.maxValue){
+                        $(this).addClass("inactive");
+                    }else{
+                        $(this).removeClass("inactive");
+                    }
+                    if(settings.categoryValues[$category] > settings.minValue){
+                        $("a.NCS.button.minus[category='"+$category+"']").removeClass("inactive");
+                    }else{
+                        $("a.NCS.button.minus[category='"+$category+"']").addClass("inactive");
+                    }
+                }
+                if (settings.showText) {
+                    if (!settings.useDisplay) {
+                        updateText();
+                    } else {
+                        updateElement();
+                    }
+                }
+                return false;
+            });
+
+            $("a.NCS.button.minus").click(function () {
+                $category = $(this).attr("category");
+                if (settings.categoryValues[$category] > settings.minValue) {
+                    settings.categoryValues[$category]--;
+                    $num = settings.categoryValues[$category];
+                    $("div.NCS.value[category='" + $category + "']").text($num);
+                    doCallback();
+                    if(settings.categoryValues[$category] == settings.minValue){
+                        $(this).addClass("inactive");
+                    }else{
+                        $(this).removeClass("inactive");
+                    }
+                    if(settings.categoryValues[$category] < settings.maxValue){
+                        $("a.NCS.button.plus[category='"+$category+"']").removeClass("inactive");
+                    }else{
+                        $("a.NCS.button.plus[category='"+$category+"']").addClass("inactive");
+                    }
+                }
+                if (settings.showText) {
+                    if (!settings.useDisplay) {
+                        updateText();
+                    } else {
+                        updateElement();
+                    }
+                }
+                return false;
+            });
+
+            function updateElement() {
+                $input.val("");
+                $display = $("div.NCS.inlinedisplay");
+                $display.empty();
+                $displayelements = 0;
+                for ($i = 0; $i < settings.categoryNames.length; $i++) {
+                    if (settings.categoryValues[$i] != 0 || settings.showZero) {
+                        $displayelement = $("<div class='NCS displayelement'></div>").appendTo($display);
+                        $displayelement.text(settings.categoryValues[$i] + " " + settings.categoryNames[$i] + ", ");
+                        $displayelements++;
+                    }
+                }
+                if ($displayelements == 0) {
+                    $input.attr("placeholder", $originalPlaceholder)
+                } else {
+                    $input.attr("placeholder", "")
+                }
+                updateText();
+            }
+
+            function updateText() {
+                $text = "";
+                $added = 0;
+                for ($i = 0; $i < settings.categoryNames.length; $i++) {
+                    if (settings.categoryValues[$i] != 0 || settings.showZero) {
+                        if ($added != 0) {
+                            $text += settings.delimiter;
+                        }
+                        $text += settings.categoryValues[$i] + " " + settings.categoryNames[$i];
+                        $added++;
+                    }
+                }
+                $input.val($text);
+            }
+
+
+            function createHTML() {
+
+                $input.attr("type", "text");
+                if (settings.useDisplay) {
+
+                    $input.attr("placeholder", "");
+
+                    $display = $("<div class='NCS display'></div>").prependTo("body");
+                    $display.css("top", $input.position().top + 1);
+                    $display.css("left", $input.position().left + 1);
+                    $display.css("width", $input.width() - 1);
+                    $display.css("height", $input.height() - 1);
+
+                    $("<div class='NCS inlinedisplay'></div>").prependTo($display);
+
+                    $display.click(function () {
+                        switchSelector();
+                    });
+                }
+
+
+                $parent = $("<div class='NCS parent'></div>").prependTo("body").hide();
+
+                switch (settings.align) {
+                    case "left":
+                        $parent.css("top", $input.position().top + $input.outerHeight());
+                        $parent.css("left", $input.position().left);
+                        break;
+                    
+                }
+
+                for ($i = 0; $i < settings.categoryNames.length; $i++) {
+                    $category = $("<div class='NCS category'></div>").appendTo($parent);
+                    $text = $("<div class='NCS text'></div>").appendTo($category);
+                    $name = $("<div class='NCS name' category='" + $i + "'>&nbsp;" + settings.categoryNames[$i] + "</div>").appendTo($text);
+                    $buttons = $("<div class='NCS buttons'></div>").appendTo($category);
+                    $button_minus = $("<a href='' class='NCS button minus' category='" + $i + "'>&#8211;</a>").appendTo($buttons);
+                    $value = $("<div class='NCS value' category='" + $i + "'>" + settings.categoryValues[$i] + "</div>").appendTo($buttons);
+                    $button_plus = $("<a href='' class='NCS button plus' category='" + $i + "'>&#43;</a>").appendTo($buttons);
+
+                    if(settings.categoryValues[$i] == settings.maxValue){
+                        $button_plus.addClass("inactive");
+                    }
+
+                    if(settings.categoryValues[$i] == settings.minValue){
+                        $button_minus.addClass("inactive");
+                    }
+                }
+                
+
+                if (settings.showText) {
+                    if (!settings.useDisplay) {
+                        updateText();
+                    } else {
+                        updateElement();
+                    }
+                }
+
+                if (settings.useDisplay) {
+                    $input.css("color", "transparent");
+                }
+
+                return $parent;
+            }
+
+            function switchSelector() {
+                if (settings.fade) {
+                    $parent.fadeToggle(200);
+                } else {
+                    $parent.toggle();
+                }
+            }
+
+            function newFilledArray(len, val) {
+                var rv = new Array(len);
+                while (--len >= 0) {
+                    rv[len] = val;
+                }
+                return rv;
+            }
+
+        }
+        ;
+
+    }(jQuery)
+)
+;
+</script>

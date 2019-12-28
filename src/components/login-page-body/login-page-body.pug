@@ -1,0 +1,19 @@
+.loginPageBody
+    .loginPageBody__wrapper
+        .loginPageBody__bg
+            +card-login({header: "Войти",
+                                emailField: {
+                                    id: "loginEmail",
+                                    placeholder: "Email",
+                                    type: "email"
+                                },
+                                passwordField: {
+                                    id: "loginPass",
+                                    placeholder: "Пароль",
+                                    type: "password"
+                                },
+                                buttonLongContent: "Войти",
+                                buttonLongStyle: "long",
+                                buttonBorderContent: "создать",
+                                buttonBorderStyle: "border"
+                            })

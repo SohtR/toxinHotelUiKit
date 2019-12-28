@@ -1,10 +1,9 @@
-mixin pagination({header='header'}={})    
+mixin pagination({content='1 – 12 из 100+ вариантов аренды'}={})    
     .pagination
-        h3= header
         a.pagination__link.pagination__link_active(href="#") 1
         a.pagination__link(href="#") 2
         a.pagination__link(href="#") 3
         span.pagination__link &hellip;
         a.pagination__link(href="#") 15
         a.pagination__link.pagination__link_next(href="#") next
-        p.pagination__content 1 – 12 из 100+ вариантов аренды
+        p.pagination__content= content

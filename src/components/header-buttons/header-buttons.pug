@@ -1,7 +1,7 @@
-mixin header-buttons({list={}, loginButton='login button', loginButtonStyle='border', registerButton='register button', registerButtonStyle='fill'}={})
+mixin header-buttons({list={}, loginButton='login button', loginButtonStyle='border', registerButton='register button', registerButtonStyle='fill', loginRef='./login-page.html', registerRef='./reg-page.html'}={})
     .wrapper  
-        a.header__logo(href="#") 
-            img.header__logo-img(src=require("./components/header-buttons/color-logo.svg"), alt="Main Logo")
+        a.header__logo(href="index.html") 
+            img.header__logo-img(src=require("../components/header-buttons/color-logo.svg"), alt="Main Logo")
         .header__navigation-buttons-wrapper
             nav 
                 ul.header-buttons__mainMenu
@@ -14,5 +14,5 @@ mixin header-buttons({list={}, loginButton='login button', loginButtonStyle='bor
                                 a.header-buttons__mainMenu-link(href='#')= item.content
             .header-buttons__buttons
                 span.header-buttons__login-wrapper
-                    +button(loginButtonStyle, loginButton)
-                +button(registerButtonStyle, registerButton)
+                    +button(loginButtonStyle, loginButton, loginRef)
+                +button(registerButtonStyle, registerButton, registerRef)

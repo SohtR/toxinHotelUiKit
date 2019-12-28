@@ -1,33 +1,42 @@
-.color-squares__item{
+.color-squares__item {
     display: flex;
 }
-.square{
+
+.square {
     width: 4.375rem;
     height: 4.375rem;
     background: #1F2041;
     border-radius: 0.375rem;
 }
-._75{
+
+._75 {
     opacity: 0.75;
 }
-._50{
+
+._50 {
     opacity: 0.5;
 }
-._25{
+
+._25 {
     opacity: 0.25;
 }
-._5{
+
+._5 {
     opacity: 0.05;
 }
-.purple{
+
+.purple {
     background: #BC9CFF;
 }
-.green{
+
+.green {
     background: #6fcf97;
 }
-.color-description{
+
+.color-description {
     margin: 0 0 0 1.25rem;
-    .color-description__content{
+
+    .color-description__content {
         font-family: 'Quicksand';
         font-size: 19px;
         line-height: 29px;
@@ -35,20 +44,21 @@
         text-transform: uppercase;
         margin: 0.375rem 0.625rem;
     }
-    .color-description__content:first-child{
+
+    .color-description__content:first-child {
         font-weight: bold;
         text-transform: none;
     }
 }
 
-.headlines table tr td:first-child{
+.headlines table tr td:first-child {
     text-align: right;
     padding: 0 3.125rem 0 0;
     color: rgba(31, 32, 65, 0.25);
     font-weight: normal;
 }
 
-.headlines table tr td:nth-child(2){
+.headlines table tr td:nth-child(2) {
     font-family: 'QuicksandBold';
     color: #1F2041;
 }

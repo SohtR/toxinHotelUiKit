@@ -11,7 +11,7 @@ mixin room-detail({number='999', price='999', days='1', totalPrice='9999', servi
             include ../two-input-range/two-input-range.pug
         .dropdown-guest
             h3.room-detail__header гости
-            +dropdown-guest-repeat("Сколько гостей")
+            +dropdown-guest("Сколько гостей")
         table.room-detail__price-table
             tr.room-detail__price-table-row
                 td.room-detail__leftColumnumn=`${price}₽ х ${days} суток`

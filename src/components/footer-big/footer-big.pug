@@ -4,7 +4,7 @@ mixin footer-big({logoContent='logo here', list={}, subscribeHeadline='subscribe
             .footer-big__main
                 .footer-big__logo
                     a.header__logo(href="#") 
-                        img.header__logo-img(src=require("./components/footer-big/color-logo.svg"), alt="Main Logo")
+                        img.header__logo-img(src=require("../components/footer-big/color-logo.svg"), alt="Main Logo")
                     p.footer-big__logo-content= logoContent       
                 .footer-big__menus
                     each item in list

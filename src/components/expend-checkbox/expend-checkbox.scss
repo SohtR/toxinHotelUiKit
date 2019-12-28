@@ -5,23 +5,25 @@
   transition: max-height 0.35s ease-in;
   width: 16.625rem;
 
-  &__item{
+  &__item {
     margin: 0 0 0.625rem 0;
     height: 1.25rem;
   }
-  #expander:checked ~ & {
+
+  #expander:checked~& {
     max-height: 17em;
   }
-  &__input{
-    display:none;  
 
-    & + label{
+  &__input {
+    display: none;
+
+    &+label {
       font-size: 0.875rem;
       line-height: 1.125rem;
       color: rgba(31, 32, 65, 0.5);
       cursor: pointer;
 
-      &::before{
+      &::before {
         content: "";
         display: inline-block;
         margin: 0 0.625rem 0 0;
@@ -34,44 +36,45 @@
         position: relative;
         top: 0.25rem;
       }
-    }        
+    }
   }
-  
-  &__input:checked + label::before {
-    background: url(./checked.png) no-repeat top left;
-    border: none;  
-  }
-}
-  
-.expanded-checkbox-label {
-    position: relative;
 
-    &:hover {
-      color: orange;
-    }
-    &:after {
-      content: 'Expandable checkbox list';
-      white-space: nowrap;
-      position: absolute;
-      cursor: pointer;
-      bottom: 0;
-      left: 2em;
-      background: url(./arrow-down.png) no-repeat 14.875rem;
-      width: 16.625rem;
-      font-weight: bold;
-      font-size: 0.75rem;
-      line-height: 0.9375rem;
-      text-transform: uppercase;
-      color: #1F2041;
-    }
-    
-    #expander:checked + &:after {
-        content: 'Expandable checkbox list';
-        background: url(./expand-more.png) no-repeat 14.875rem;
-        width: 16.625rem;
-      }
+  &__input:checked+label::before {
+    background: url(./checked.png) no-repeat top left;
+    border: none;
+  }
 }
-  
+
+.expanded-checkbox-label {
+  position: relative;
+
+  &:hover {
+    color: orange;
+  }
+
+  &:after {
+    content: 'Дополнительные удобства';
+    white-space: nowrap;
+    position: absolute;
+    cursor: pointer;
+    bottom: 0;
+    left: 2em;
+    background: url(./arrow-down.png) no-repeat 14.875rem;
+    width: 16.625rem;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    text-transform: uppercase;
+    color: #1F2041;
+  }
+
+  #expander:checked+&:after {
+    content: 'Дополнительные удобства';
+    background: url(./expand-more.png) no-repeat 14.875rem;
+    width: 16.625rem;
+  }
+}
+
 #expander {
-    display: none;
+  display: none;
 }

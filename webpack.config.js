@@ -4,7 +4,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const images = require('file-loader');
 const CopyWebpackPlugin= require('copy-webpack-plugin');
 module.exports = {
-  entry: './src/index.js' ,
+  entry: {
+    index: './src/index/index.js',
+    search: './src/search/search.js',
+    loginPage: './src/login-page/login-page.js', 
+    roomDetail: './src/room-detail/room-detail.js',
+    regPage: './src/reg-page/reg-page.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
@@ -76,10 +82,38 @@ module.exports = {
       to: './img'
     }
     ]),
+    
     new HtmlWebpackPlugin({
       inject: 'head',
-      template: './src/index.pug'
+      template: './src/index/index.pug',
+      filename: 'index.html',
+      chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'head',
+      template: './src/search/search.pug',
+      filename: 'search.html',
+      chunks: ['search']
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'head',
+      template: './src/room-detail/room-detail.pug',
+      filename: 'room-detail.html',
+      chunks: ['roomDetail']
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'head',
+      template: './src/login-page/login-page.pug',
+      filename: 'login-page.html',
+      chunks: ['loginPage']
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'head',
+      template: './src/reg-page/reg-page.pug',
+      filename: 'reg-page.html',
+      chunks: ['regPage']
     })
+    
     
   ]
 };

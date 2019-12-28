@@ -1,0 +1,102 @@
+include ../components/button/button.pug
+include ../components/text-field/text-field.pug
+include ../components/radio-button/radio-button.pug
+include ../components/masked-field/masked-field.pug
+include ../components/toggle-button/toggle-button.pug
+include ../components/card-slider-room/card-slider-room.pug
+include ../components/rate-button/rate-button.pug
+include ../components/email-subscribe/email-subscribe.pug
+include ../components/range-slider/range-slider.pug
+include ../components/like-button/like-button.pug
+include ../components/room-feature/room-feature.pug
+include ../components/expend-checkbox/expend-checkbox.pug
+include ../components/bullet-list/bullet-list.pug
+include ../components/check-boxes/check-boxes.pug
+include ../components/rich-check-box/rich-check-box.pug
+include ../components/header-buttons/header-buttons.pug
+include ../components/footer-big/footer-big.pug
+include ../components/card-register/card-register.pug
+include ../components/dropdown-guest/dropdown-guest.pug
+include ../components/dropdown-guest-repeat/dropdown-guest-repeat.pug
+include ../components/dropdown-room/dropdown-room.pug
+include ../components/review/review.pug
+include ../components/data-dd-filter/data-dd-filter.pug
+include ../components/data-dropdown/data-dropdown.pug
+
+doctype html
+html
+    head
+        script(src="https://code.jquery.com/jquery-1.12.4.min.js")
+        script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+        meta(charset = 'utf-8')
+        meta(name='viewport', content="initial-scale=1.0, width=device-width")
+        title Toxin Hotel
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        link(rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png")
+        link(rel="manifest" href="./favicons/site.webmanifest")
+        link(rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5")
+        meta(name="msapplication-TileColor" content="#da532c")
+        meta(name="theme-color" content="#ffffff")
+    body
+        main
+            .header-buttons
+                +header-buttons({
+                    list:{
+                        1:{
+                            content: "О нас",
+                            active: true
+                        } ,
+                        2: {content:"Услуги"},
+                        3: {content: "Вакансии"},
+                        4: {content: "Новости"},
+                        5: {content: "Соглашения"}
+                    },
+                    loginButtonStyle: "border",
+                    loginButton: "войти",
+                    loginRef: "./login-page.html",
+                    registerButtonStyle: "fill",
+                    registerButton: "зарегистрироваться",
+                    registerRef: "./reg-page.html"
+                    })
+            include ../components/register-page-body/register-page-body.pug
+            .footer-big-margin
+                +footer-big({
+                    list:{
+                        navigation:{
+                            header: "навигация",
+                            itemList:{
+                                1: "О нас",
+                                2: "Новости",
+                                3: "Служба поддержки",
+                                4: "Услуги"
+                            }
+                        },
+                        aboutUs:{
+                            header: "О нас",
+                            itemList:{
+                                1: "О сервисе",
+                                2: "Наша команда",
+                                3: "Вакансии",
+                                4: "Инвесторы"
+                            }
+                        },
+                    support:{
+                            header: "Служба поддержки",
+                            itemList:{
+                                1: "Соглашения",
+                                2: "Сообщества",
+                                3: "Связь с нами"
+                            }
+                        }
+                    },
+                    subscribeContent: "Получайте специальные предложения и новости сервиса",
+                    subscribeHeadline: "Подписка",
+                    logoContent: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+                    emailId: "email",
+                    emailPlaceholder: "Email",
+                    copyrightContent: "Copyright © 2018 Toxin отель. Все права зачищены."
+                    })
+
+                            

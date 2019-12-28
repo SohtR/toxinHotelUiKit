@@ -1,18 +1,18 @@
 .check-list {
   padding: 0;
   width: 16.625rem;
- 
-  &__checkbox{
-    display:none;
 
-    & + label{
+  &__checkbox {
+    display: none;
+
+    &+label {
       cursor: pointer;
       font-weight: bold;
       font-size: 0.875rem;
       line-height: 1.125rem;
       color: rgba(31, 32, 65, 0.75);
 
-      &::before{
+      &::before {
         content: "";
         display: inline-block;
         margin: 0 0.625rem 0 0;
@@ -25,31 +25,33 @@
         position: relative;
         top: 0.25rem;
       }
-    }   
-    &:checked + label::before {
-      background: url(./checked.png) no-repeat top left;
-      border: none;  
-    }     
-  }
-  
-  
-  
-}
+    }
 
-.rich-checkbox{
-  .check-list__item{
-      margin: 0 0 2.625rem 0;
-      .check-list__content{
-        margin: 0;
-        font-size: 0.75rem;
-        line-height: 0.875rem;
-        color: rgba(31, 32, 65, 0.5);
-        padding: 0.25rem 0.3125rem 0 1.875rem;
-        font-weight: normal;
-      }
+    &:checked+label::before {
+      background: url(./checked.png) no-repeat top left;
+      border: none;
     }
   }
-#richCheckbox{
-display: none;
+
+
+
 }
 
+.rich-checkbox {
+  .check-list__item {
+    margin: 0 0 2.625rem 0;
+
+    .check-list__content {
+      margin: 0;
+      font-size: 0.75rem;
+      line-height: 0.875rem;
+      color: rgba(31, 32, 65, 0.5);
+      padding: 0.25rem 0.3125rem 0 1.875rem;
+      font-weight: normal;
+    }
+  }
+}
+
+#richCheckbox {
+  display: none;
+}

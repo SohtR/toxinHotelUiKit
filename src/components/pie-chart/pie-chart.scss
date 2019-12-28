@@ -1,0 +1,72 @@
+.pieChart{
+    display: flex;
+    width: 19.4375rem;
+    justify-content: space-between;
+}
+.pieChart__legend{
+margin: 1.625rem 0 0 0;
+.pieChart__Ellips{
+    font-family: 'Montserrat';
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: rgba(31, 32, 65, 0.75);
+    position: relative;
+}
+.pieChart__Ellips::before{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 0.625rem;
+    height: 0.625rem;
+    top: 0.4375rem;
+    left: -1rem;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #BC9CFF, #8BA4F9);
+}
+.pieChart__Ellips-orange::before{
+    background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+}
+.pieChart__Ellips-green::before{
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+.pieChart__Ellips-black::before{
+    background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+}
+}
+.graph-container {
+display: inline-block;
+    position: relative;
+}
+
+.tooltip {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+display: flex;
+flex-direction: column;
+justify-content: center;
+pointer-events: none;
+width: 100%;
+    p{
+        text-align: center;
+    }
+    .amount {
+        font-size: 1.5rem;
+        font-weight: 300;
+        font-family: 'QuicksandBold';
+        line-height: 1.875rem;
+        color: #BC9CFF;
+        margin: -0.5625rem 0 -0.0625rem 0.1875rem;
+    }
+
+    .item {
+        font-weight: 300;
+        font-family: 'MontserratBold';
+        font-size: 0.75rem;
+        line-height: 0.9375rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: #BC9CFF;
+    }
+}

@@ -1,3 +1,4 @@
+$( function() {
     $("input[name='guest2']").guest2({
         categoryNames: ["Взрослые", "Дети", "Младенцы"],
         categoryValues: false,
@@ -11,3 +12,4 @@
         useDisplay: false,
         showZero: false,
     });
+});

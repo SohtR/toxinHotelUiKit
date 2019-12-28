@@ -1,0 +1,57 @@
+
+.flex{
+  display: flex;
+  margin: 20px 0 0 0;
+  form{
+    margin: 10px;
+  }
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  margin: auto 20px;
+  form{
+    margin: 10px;
+  }
+}
+.email{
+  h3{
+    margin: 20px 0 0 20px;
+  }
+}
+
+.clickMe{
+  h3{
+    margin: 20px;
+  }
+  .button{
+    margin: 20px;
+  }
+  .buttonFill  {
+    padding: 14.8px 19px;
+    margin: 20px;
+  }
+  .buttonBorder{
+    padding: 11px 17px;
+  }
+  
+}
+
+.linkPurple{
+  font-family: 'MontserratBold';
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+}
+.linkPurple:hover,
+.linkPurple:active{
+  color: rgba(31, 32, 65, 0.5);
+}
+.cards{
+  width: 100%;
+}
+
+div.guest.parent{
+  min-width: 266px;
+}

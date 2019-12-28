@@ -10,7 +10,7 @@
     position: relative;
     font-size: 0.625rem;
     text-decoration: none;
-    background:#fff url(./like_border.svg) no-repeat 0.25rem 0.375rem;
+    background: #fff url(./like_border.svg) no-repeat 0.25rem 0.375rem;
     color: rgba(31, 32, 65, 0.25);
 
     &:after {
@@ -21,21 +21,17 @@
         position: absolute;
         top: 0.0625rem;
     }
-        
+
     &:hover,
     &.active {
-        background:#fff url(./like.svg) no-repeat 0.25rem 0.375rem;
+        background: #fff url(./like.svg) no-repeat 0.25rem 0.375rem;
         border: 1px solid #BC9CFF;
         color: #BC9CFF;
 
-        &:after{
+        &:after {
             color: #BC9CFF;
-        
-        } 
+
+        }
     }
-    
+
 }
-
-
-  
-  

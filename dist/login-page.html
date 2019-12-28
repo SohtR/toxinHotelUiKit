@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Toxin Hotel</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+    <link rel="manifest" href="./favicons/site.webmanifest">
+    <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  <link href="style.css" rel="stylesheet"><script type="text/javascript" src="loginPage.js"></script></head>
+  <body>
+    <main>
+      <div class="header-buttons">
+        <div class="wrapper"> <a class="header__logo" href="index.html"> <img class="header__logo-img" src=".././img/color-logo.svg" alt="Main Logo"></a>
+          <div class="header__navigation-buttons-wrapper">
+            <nav> 
+              <ul class="header-buttons__mainMenu">
+                <li class="header-buttons__mainMenu-item header-buttons__mainMenu-item_active"><a class="header-buttons__mainMenu-link" href="#">О нас</a></li>
+                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link" href="#">Услуги</a></li>
+                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link" href="#">Вакансии</a></li>
+                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link" href="#">Новости</a></li>
+                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link" href="#">Соглашения</a></li>
+              </ul>
+            </nav>
+            <div class="header-buttons__buttons"><span class="header-buttons__login-wrapper"><a class="button button_border" href="./login-page.html">войти</a></span><a class="button button_fill" href="./reg-page.html">зарегистрироваться</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="loginPageBody">
+        <div class="loginPageBody__wrapper">
+          <div class="loginPageBody__bg">
+            <div class="login-account">
+              <h1 class="login-account__header">Войти</h1>
+              <label for="loginEmail"> </label>
+              <input class="textfield" type="email" name="loginEmail" placeholder="Email" id="loginEmail">
+              <label for="loginPass"> </label>
+              <input class="textfield" type="password" name="loginPass" placeholder="Пароль" id="loginPass"><a class="button button_long">Войти</a>
+              <div class="flex-wrapper">
+                <p class="have-account">Нет аккаунта на Toxin?</p><a class="button button_border">создать</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-big-margin">
+        <div class="footer-big">
+          <div class="wrapper">
+            <div class="footer-big__main">
+              <div class="footer-big__logo"><a class="header__logo" href="#"> <img class="header__logo-img" src=".././img/color-logo.svg" alt="Main Logo"></a>
+                <p class="footer-big__logo-content">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+              </div>
+              <div class="footer-big__menus">
+                <div class="footer-big__list">
+                  <h3 class="footer-big__headline">навигация</h3>
+                  <ul class="footer-big__list">
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">О нас</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Новости</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Служба поддержки</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Услуги</a></li>
+                  </ul>
+                </div>
+                <div class="footer-big__list">
+                  <h3 class="footer-big__headline">О нас</h3>
+                  <ul class="footer-big__list">
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">О сервисе</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Наша команда</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Вакансии</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Инвесторы</a></li>
+                  </ul>
+                </div>
+                <div class="footer-big__list">
+                  <h3 class="footer-big__headline">Служба поддержки</h3>
+                  <ul class="footer-big__list">
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Соглашения</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Сообщества</a></li>
+                    <li class="footer-big__list-item"><a class="footer-big__list-ref" href="">Связь с нами</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-big__subscribe">
+                <h3 class="footer-big__headline">Подписка</h3>
+                <p class="footer-big__subscribe-content">Получайте специальные предложения и новости сервиса</p>
+                <form class="form-email" action="#" method="post">
+                  <input class="form-email__email-field" type="email" name="email" placeholder="Email">
+                  <input class="form-email__submit" type="submit" value="">
+                </form>
+              </div>
+            </div>
+            <div class="footer-big__copyright">
+              <p class="footer-big__copyright-content">Copyright © 2018 Toxin отель. Все права зачищены.</p>
+              <div class="footer-big__social"> <a class="footer-big__twitter" href=""> </a><a class="footer-big__facebook" href=""> </a><a class="footer-big__instagram" href=""></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
