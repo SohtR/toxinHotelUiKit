@@ -9,7 +9,8 @@ module.exports = {
     search: './src/search/search.js',
     loginPage: './src/login-page/login-page.js', 
     roomDetail: './src/room-detail/room-detail.js',
-    regPage: './src/reg-page/reg-page.js'
+    regPage: './src/reg-page/reg-page.js',
+    uikitPage: './src/uikit-page/uikit-page.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -112,6 +113,12 @@ module.exports = {
       template: './src/reg-page/reg-page.pug',
       filename: 'reg-page.html',
       chunks: ['regPage']
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'head',
+      template: './src/uikit-page/uikit-page.pug',
+      filename: 'uikit-page.html',
+      chunks: ['uikitPage']
     })
     
     

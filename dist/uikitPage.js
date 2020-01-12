@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/room-detail/room-detail.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/uikit-page/uikit-page.js");
 /******/ })
 /************************************************************************/
 /******/ ({

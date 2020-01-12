@@ -1,0 +1,91 @@
+body,
+ul,
+a{
+  margin: 0rem;
+  padding: 0rem;
+  font-family: 'Montserrat';
+  font-size: 0.875rem;
+  color: rgba(31, 32, 65, 0.5);
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+p{
+  margin: 0;
+}
+h1{
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+}
+h2{
+  font-size: 1.1875rem;
+  line-height: 1.5rem;
+}
+h3{
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1F2041;
+  opacity: 0.75;
+}
+input{
+  margin: 0;
+}
+main{
+  margin: 0 auto;
+  width:100%;
+  display: flex;
+  background: #f4f4f6 url(../img/main-logo.svg) no-repeat 14.1% 1.875rem;
+  flex-wrap: wrap;
+}
+.form-elements{
+  width: 100%;
+  margin: 3.125rem 0 0 0;
+  display: flex;
+  z-index: 1;
+}
+.flex-wrapper{
+  display: flex;
+  margin: 1.25rem 0 0 0;
+  
+}
+
+.flex-column-wrapper{
+  display: flex;
+  flex-direction: column;
+  margin: auto 1.25rem;
+  
+}
+
+.link__purple{
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  text-transform: uppercase;
+  color: #BC9CFF;
+}
+.link__purple:hover,
+.link__purple:active{
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.colors-type{
+  width: 100%;
+  display: flex;
+  margin: 1.875rem 0 0 0;
+}
+
+.footer-big-margin{
+  width: 100%;
+}
+.footer-small-margin{
+  margin: 2.5rem 0 0 0;
+  width: 100%;
+}
+
+.header-margin{
+  margin: 2.5rem 0 0 0;
+  width: 100%;
+
+}

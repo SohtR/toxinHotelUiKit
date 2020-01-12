@@ -15,3 +15,13 @@ You can use one of the three commands:
     npm run start - start local dev-server
 
     npm run build - mode production
+
+To open "search rooms" page press "Подобрать номер" button
+
+To open "room detail" page press on the number of any room
+
+To open "register page" press "Зарегистрироваться" button
+
+To open "login page" press "Войти" button
+
+To open "uikit page" press "О нас" button

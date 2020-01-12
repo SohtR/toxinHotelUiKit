@@ -23,14 +23,157 @@
           <div class="header__navigation-buttons-wrapper">
             <nav> 
               <ul class="header-buttons__mainMenu">
-                <li class="header-buttons__mainMenu-item header-buttons__mainMenu-item_active"><a class="header-buttons__mainMenu-link" href="#">О нас</a></li>
-                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link" href="#">Услуги</a></li>
-                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link" href="#">Вакансии</a></li>
-                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link" href="#">Новости</a></li>
-                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link" href="#">Соглашения</a></li>
+                <li class="header-buttons__mainMenu-item header-buttons__mainMenu-item_active"><a class="header-buttons__mainMenu-link">О нас</a></li>
+                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link">Услуги</a></li>
+                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link">Вакансии</a></li>
+                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link">Новости</a></li>
+                <li class="header-buttons__mainMenu-item"><a class="header-buttons__mainMenu-link">Соглашения</a></li>
               </ul>
             </nav>
             <div class="header-buttons__buttons"><span class="header-buttons__login-wrapper"><a class="button button_border" href="./login-page.html">войти</a></span><a class="button button_fill" href="./reg-page.html">зарегистрироваться</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="roomDetailBody">
+        <div class="roomDetailBody__wrapper">
+          <div class="roomDetailBody__images">
+            <div class="roomDetailBody__bigImg"></div>
+            <div class="roomDetailBody__smallImg">
+              <div class="roomDetailBody__topImg"></div>
+              <div class="roomDetailBody__bottomImg"></div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="roomDetailBody__content">
+            <div class="roomDetailBody__leftSide">
+              <div class="roomDetailBody__top">
+                <div class="roomDetailBody__roomFeatures">
+                  <h2>Сведения о номере</h2>
+                  <div class="room-feature"><img class="room-feature__img" src=".././img/comfort.png" alt="11">
+                    <p class="room-feature__headline">Комфорт</p>
+                    <p class="room-feature__content">Шумопоглощающие стены</p>
+                  </div>
+                  <div class="room-feature"><img class="room-feature__img" src=".././img/udobstvo.png" alt="11">
+                    <p class="room-feature__headline">Удобство</p>
+                    <p class="room-feature__content">Окно в каждой из спален</p>
+                  </div>
+                  <div class="room-feature"><img class="room-feature__img" src=".././img/uyut.png" alt="11">
+                    <p class="room-feature__headline">Уют</p>
+                    <p class="room-feature__content">Номер оснащён камином</p>
+                  </div>
+                </div>
+                <div class="roomDetailBody__pieChart">
+                  <h2>Впечатления от номера</h2>
+<div class="pieChart">
+  <div class="graph-container">
+    <svg></svg>
+    <div class="tooltip">
+      <p class="amount"></p>
+      <p class="item"></p>
+    </div>
+  </div>
+  <div class="pieChart__legend">
+    <p class="pieChart__Ellips pieChart__Ellips-orange">Великолепно</p>
+    <p class="pieChart__Ellips pieChart__Ellips-green">Хорошо </p>
+    <p class="pieChart__Ellips pieChart__Ellips-purple">Удовлетворительно</p>
+    <p class="pieChart__Ellips pieChart__Ellips-black">Разочарован</p>
+  </div>
+</div>
+                </div>
+              </div>
+              <div class="roomDetailBody__bottom">
+                <div class="roomDetailBody__reviews">
+                  <div class="roomDetailBody__reviewsHeadline">
+                    <h2>Отзывы посетителей номера</h2>
+                    <p>2 отзыва</p>
+                  </div>
+                  <div class="review">
+                    <div class="review__top-block"><img class="review__avatar" src=".././img/avatar-2.jpg" alt="avatar">
+                      <p class="review__name"> <strong>name</strong> <br /> 5 дней назад</p>
+                    </div>
+                    <div class="review__bottom-block">
+                      <div class="review__like"><a class="like-button" href="#" title="Love it" data-count="3"><span></span></a>
+                      </div>
+                      <p class="review__content">review content</p>
+                    </div>
+                  </div>
+                  <div class="review">
+                    <div class="review__top-block"><img class="review__avatar" src=".././img/avatar-2.jpg" alt="avatar">
+                      <p class="review__name"> <strong>name</strong> <br /> 5 дней назад</p>
+                    </div>
+                    <div class="review__bottom-block">
+                      <div class="review__like"><a class="like-button" href="#" title="Love it" data-count="3"><span></span></a>
+                      </div>
+                      <p class="review__content">review content</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="roomDetailBody__lists">
+                  <div class="roomDetailBody__bullet">
+                    <h2>Правила</h2>
+                  </div>
+                  <div class="roomDetailBody__cancel">
+                    <h2>Отмена</h2>
+                    <p class="roomDetailBody__cancelText">Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="roomDetailBody__rightSide">
+              <div class="room-detail">
+                <div class="flex-wrapper">
+                  <div class="room-detail__price-headline">
+                    <p class="room-detail__number"><span class="room-detail__num">№ </span><span class="room-detail__number">888</span><span class="room-detail__lux">люкс</span></p>
+                    <p class="room-detail__price">9 990 в сутки</p>
+                  </div>
+                </div>
+                <div class="flex-wrapper">
+<div class="search-room__arrival">
+  <h3 class="room-detail__header">пРиБыТие</h3>
+  <div class="data-dropdown">
+    <label for="start"> </label>
+    <input class="data-dropdown__input datepicker-here datepickers" id="start" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+  </div>
+</div>
+<div class="search-room__departure">
+  <h3 class="room-detail__header">выезд</h3>
+  <div class="data-dropdown">
+    <label for="end"> </label>
+    <input class="data-dropdown__input datepicker-here datepickers" id="end" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true">
+  </div>
+</div>
+                </div>
+                <div class="dropdown-guest">
+                  <h3 class="room-detail__header">гости</h3>
+                  <label for="dropdownGuest"> 
+                    <input id="dropdownGuest" name="guest" type="text" readonly placeholder="Сколько гостей">
+                  </label>
+                </div>
+                <table class="room-detail__price-table">
+                  <tr class="room-detail__price-table-row">
+                    <td class="room-detail__leftColumn">9 990₽ х 4 суток</td>
+                    <td class="room-detail__price-table-column"></td>
+                    <td class="room-detail__rightColumn">39 960₽</td>
+                  </tr>
+                  <tr class="room-detail__price-table-row">
+                    <td class="room-detail__leftColumn"> Сбор за услуги: скидка 2 179₽</td>
+                    <td class="room-detail__price-table-column"> <a class="room-detail__price-table-circle" href="#">i</a></td>
+                    <td class="room-detail__rightColumn">0₽</td>
+                  </tr>
+                  <tr class="room-detail__price-table-row">
+                    <td class="room-detail__leftColumn">Сбор за дополнительные услуги</td>
+                    <td class="room-detail__price-table-column"><a class="room-detail__price-table-circle" href="#">i</a></td>
+                    <td class="room-detail__rightColumn">300₽</td>
+                  </tr>
+                </table>
+                <div class="room-detail__total">
+                  <p class="room-detail__total-name">Итого</p>
+                  <div class="room-detail__border-dashed"></div>
+                  <p class="room-detail__total-sum">38 081₽</p>
+                </div><a class="button button_long">Забронировать</a>
+              </div>
             </div>
           </div>
         </div>
@@ -89,3 +232,204 @@
     </main>
   </body>
 </html>
+<script>
+const data = [
+    ['ok', 25],
+    ['good', 25],
+    ['excellent', 50],
+    ['bad', 0]
+]
+  
+// const margin = { top: 100, right: 70, bottom: 100, left: 65 };
+const width = 120;
+const height = 120;
+const r_width= 200;
+const r_height = 200;
+const radius = Math.min(r_width, r_height) / 2;
+
+const tooltip = d3.select('.tooltip')
+    .style('display', 'inherit');
+const amount = d3.select('.amount');
+const item = d3.select('.item');
+amount
+        .text(260);
+item
+        .text(`Голосов`);
+
+const svg = d3.select('svg')
+.attr('width', width)
+.attr('height', height)
+.append('g')
+.attr('class', 'group-container')
+    .attr('transform', `translate(${width / 2}, ${height / 2})`);
+
+const color = d3.scaleOrdinal([
+'url(#purple)',
+'url(#green)',
+'url(#orange)',
+
+]);
+
+
+
+const pie = d3.pie()
+.sort(null)
+.value((d) => d[1]);
+
+const path = d3.arc()
+.outerRadius(radius - 40)
+.innerRadius(radius - 45);
+
+const pathTwo = d3.arc()
+.outerRadius(radius - 40)
+.innerRadius(radius - 50);
+
+const arc = svg.selectAll('.arc')
+.data(pie(data))
+.enter().append('g')
+.attr('class', 'arc')
+
+
+
+var purple = arc.append("linearGradient")
+    .attr("id", "purple")
+    .attr("y1", "0%")
+    .attr("y2", "100%");
+purple.append("stop")
+    .attr('class', 'start')
+    .attr("offset", "0%")
+    .attr("stop-color", "#bc9cff")
+    .attr("stop-opacity", 1);
+purple.append("stop")
+    .attr('class', 'end')
+    .attr("offset", "100%")
+    .attr("stop-color", "#8BA4F9")
+    .attr("stop-opacity", 1);
+
+var green = arc.append("linearGradient")
+    .attr("id", "green")
+    .attr("x1", "100%")
+    .attr("x2", "0%");
+green.append("stop")
+    .attr('class', 'start')
+    .attr("offset", "0%")
+    .attr("stop-color", "#6FCF97")
+    .attr("stop-opacity", 1);
+green.append("stop")
+    .attr('class', 'end')
+    .attr("offset", "100%")
+    .attr("stop-color", "#66D2EA")
+    .attr("stop-opacity", 1);
+
+var orange = arc.append("linearGradient")
+    .attr("id", "orange")
+    .attr("y1", "00%")
+    .attr("y2", "100%");
+orange.append("stop")
+    .attr('class', 'start')
+    .attr("offset", "0%")
+    .attr("stop-color", "#FFE39C")
+    .attr("stop-opacity", 1);
+orange.append("stop")
+    .attr('class', 'end')
+    .attr("offset", "100%")
+    .attr("stop-color", "#FFBA9C")
+    .attr("stop-opacity", 1);
+
+
+arc.append('path')
+.attr('d', path)
+.attr('fill', (d, i) => color(i))
+.attr('stroke', (d, i) => "none")
+// .attr('stroke', (d, i) => color(i))
+.on('mouseover', function(d) {
+    d3.select(this)
+    .transition()
+    .style('cursor', 'pointer')
+    .attr('d', pathTwo);
+
+    // const tooltip = d3.select('.tooltip')
+    //   .style('display', 'inherit');
+
+    // const amount = d3.select('.amount');
+    // const item = d3.select('.item');
+
+    // amount
+    //.text(`${d.data[1]}`);
+
+    // item
+    // .text(`${d.data[0]}`);
+})
+.on('mouseout', function(d) {
+    // const tooltip = d3.select('.tooltip')
+    //   .style('display', 'none')
+
+    d3.select(this)
+    .transition()
+    .attr('d', path);
+});
+
+</script>
+<script>    $('.like-button').on('click', function(event, count) {
+    event.preventDefault();
+    
+    var $this = $(this),
+        count = $this.attr('data-count'),
+        active = $this.hasClass('active'),
+        multiple = $this.hasClass('multiple-count');
+    
+    $.fn.noop = $.noop;
+    $this.attr('data-count', ! active || multiple ? ++count : --count  )[multiple ? 'noop' : 'toggleClass']('active');
+    
+  });
+
+</script>
+<script>var now = new Date();
+var endDate = new Date(now.getTime() + 365*24*60*60*1000)
+var $start = $('#start'),
+    $end = $('#end');
+var $datepickers = $('.datepickers');
+
+$datepickers.datepicker({
+    language: 'ru',
+    // offset: ,
+    navTitles: {
+      days: '<i>yyyy</i> MM',
+      months: 'yyyy',
+      years: 'yyyy1 - yyyy2'
+    },
+    minDate: now,
+    maxDate: endDate,
+    multipleDatesSeparator: "-",
+    range: true,
+      onSelect: function (fd, date) {
+        $end.data('datepicker')
+                .update('selectedDates', $start.data('datepicker').selectedDates);
+        var start = fd.split('-')[0]
+        var end = fd.split('-')[1];
+        if (end) {
+          $start.val(start);
+          $end.val(end);
+        } else {
+          $end.val('')
+        }
+        console.log($start.data('datepicker'));
+    }
+})
+</script>
+<script>$( function() {
+    $("input[name='guest']").guest({
+        categoryNames: ["Взрослые", "Дети", "Младенцы"],
+        categoryValues: false,
+        minValue: 0,
+        maxValue: 10,
+        closeOnOutsideClick: false,
+        showText: true,
+        delimiter: ", ",
+        align: "left",
+        fade: true,
+        useDisplay: false,
+        showZero: false,
+    });
+});
+</script>
