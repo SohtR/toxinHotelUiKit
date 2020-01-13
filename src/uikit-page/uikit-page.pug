@@ -64,46 +64,28 @@ html
                     registerButton: "register"
                     })
             .header-margin
-                +header({
-                    1:{
-                        content: "Home",
-                        active: true
-                    } ,
-                    2: {content:"About Us"},
-                    3: {content: "Services"},
-                    4: {content: "Careers"},
-                    5: {content: "News"},
-                    6: {content: "Documentation"}
-                })
+                +header([
+                    {content: "Home",active: true},
+                    {content:"About Us"},
+                    {content: "Services"},
+                    {content: "Careers"},
+                    {content: "News"},
+                    {content: "Documentation"}
+                ])
             .footer-big-margin
                 +footer-big({
                     list:{
                         navigation:{
                             header: "navigation",
-                            itemList:{
-                                1: "About Us",
-                                2: "News",
-                                3: "Support",
-                                4: "Products"
-                            }
+                            itemList:["About Us", "News", "Support", "Products"]
                         },
                         aboutUs:{
                             header: "about us",
-                            itemList:{
-                                1: "Who we are",
-                                2: "Our team",
-                                3: "Careers",
-                                4: "Investors"
-                            }
+                            itemList:["Who we are", "Our team", "Careers", "Investors"]
                         },
                     support:{
                             header: "support",
-                            itemList:{
-                                1: "Documentation",
-                                2: "News",
-                                3: "Community",
-                                4: "Get in touch"
-                            }
+                            itemList:["Documentation", "News", "Community", "Get in touch"]
                         }
                     },
                     subscribeContent: "Receive our latest news and promotions in your inbox!",
@@ -119,43 +101,43 @@ html
                 })
             .colors-type
                 .wrapper
-                    +colors-types({
-                        1:{
+                    +colors-types([
+                        {
                             class: "square",
                             name: "Dark Shade 100%",
                             hex: "#1F2041"
                         },
-                        2:{
+                       {
                             class: "square _75",
                             name: "Dark Shade 75%",
                             hex: "#1F2041"
                         },
-                        3:{
+                        {
                             class: "square _50",
                             name: "Dark Shade 50%",
                             hex: "#1F2041"
                         },
-                        4:{
+                        {
                             class: "square _25",
                             name: "Dark Shade 25%",
                             hex: "#1F2041"
                         },
-                        5:{
+                        {
                             class: "square _5",
                             name: "Dark Shade 5%",
                             hex: "#1F2041"
                         },
-                        6:{
+                        {
                             class: "square purple",
                             name: "Purple",
                             hex: "#bc9cff"
                         },
-                        7:{
+                        {
                             class: "square green",
                             name: "Green",
                             hex: "#6fcf97"
                         }
-                    })
+                    ])
             .form-elements
                 .wrapper
                     +forms({

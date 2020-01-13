@@ -32,16 +32,13 @@ html
         main
             .header-buttons
                 +header-buttons({
-                    list:{
-                        1:{
-                            content: "О нас",
-                            active: true
-                        } ,
-                        2: {content:"Услуги"},
-                        3: {content: "Вакансии"},
-                        4: {content: "Новости"},
-                        5: {content: "Соглашения"}
-                    },
+                    list:[
+                        {content: "О нас", active: true},
+                        {content:"Услуги"},
+                        {content: "Вакансии"},
+                        {content: "Новости"},
+                        {content: "Соглашения"}
+                    ],
                     loginButtonStyle: "border",
                     loginButton: "войти",
                     loginRef: "./login-page.html",
@@ -55,29 +52,15 @@ html
                     list:{
                         navigation:{
                             header: "навигация",
-                            itemList:{
-                                1: "О нас",
-                                2: "Новости",
-                                3: "Служба поддержки",
-                                4: "Услуги"
-                            }
+                            itemList:[ "О нас", "Новости", "Служба поддержки", "Услуги"]
                         },
                         aboutUs:{
                             header: "О нас",
-                            itemList:{
-                                1: "О сервисе",
-                                2: "Наша команда",
-                                3: "Вакансии",
-                                4: "Инвесторы"
-                            }
+                            itemList:[ "О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
                         },
                     support:{
                             header: "Служба поддержки",
-                            itemList:{
-                                1: "Соглашения",
-                                2: "Сообщества",
-                                3: "Связь с нами"
-                            }
+                            itemList:["Соглашения", "Сообщества", "Связь с нами"]
                         }
                     },
                     subscribeContent: "Получайте специальные предложения и новости сервиса",
