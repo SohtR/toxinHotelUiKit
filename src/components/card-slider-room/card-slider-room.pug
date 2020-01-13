@@ -2,14 +2,10 @@ mixin slider-room({number='111', price='100', reviews='5', isLux=""}={})
     .room-slider
         .flexslider
             ul.slides
-                li.slides__item
-                    img.slides__img(src=require(`../components/card-slider-room/${number}-slide-1.jpg`))
-                li.slides__item
-                    img.slides__img(src=require(`../components/card-slider-room/${number}-slide-2.jpg`))
-                li.slides__item
-                    img.slides__img(src=require(`../components/card-slider-room/${number}-slide-3.jpg`))
-                li.slides__item
-                    img.slides__img(src=require(`../components/card-slider-room/${number}-slide-4.jpg`))
+                - for (var i=1; i<=4; i++)
+                    li.slides__item
+                        img.slides__img(src=require(`../components/card-slider-room/${number}-slide-${i}.jpg`))
+                    
         a(href="./room-detail.html")
             .room-slider__price-headline
                 p.room-slider__number
@@ -18,5 +14,5 @@ mixin slider-room({number='111', price='100', reviews='5', isLux=""}={})
                     span.room-slider__lux  #{isLux}
                 p.room-slider__price= price +"₽ в сутки"
             .room-slider__rating
-                +rate-button(number)                               
+                +rate-button(number, 4)                               
                 p.room-slider__reviewsAmount <b>#{reviews}</b> Отзывов

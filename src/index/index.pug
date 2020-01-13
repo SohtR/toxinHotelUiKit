@@ -43,17 +43,14 @@ html
         main
             .header-buttons
                 +header-buttons({
-                    list:{
-                        1:{
-                            content: "О нас",
+                    list:[{content: "О нас",
                             active: true,
-                            link: './uikit-page.html'
-                        } ,
-                        2: {content:"Услуги"},
-                        3: {content: "Вакансии"},
-                        4: {content: "Новости"},
-                        5: {content: "Соглашения"}
-                    },
+                            link: './uikit-page.html'},
+                         {content:"Услуги"},
+                         {content: "Вакансии"},
+                         {content: "Новости"},
+                         {content: "Соглашения"}
+                    ],
                     loginButtonStyle: "border",
                     loginButton: "войти",
                     loginRef: "./login-page.html",

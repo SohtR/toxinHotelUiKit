@@ -51,17 +51,13 @@ html
         main
             .header-buttons
                 +header-buttons({
-                    list:{
-                        1:{
-                            content: "Home",
-                            active: true
-                        } ,
-                        2: {content:"About Us"},
-                        3: {content: "Services"},
-                        4: {content: "Careers"},
-                        5: {content: "News"},
-                        6: {content: "Documentation"}
-                    },
+                    list:[{content: "Home",active: true, link: './uikit-page.html'},
+                        {content:"About Us"},
+                        {content: "Services"},
+                        {content: "Careers"},
+                        {content: "News"},
+                        {content: "Documentation"}
+                    ],
                     loginButtonStyle: "border",
                     loginButton: "login",
                     registerButtonStyle: "fill",
