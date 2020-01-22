@@ -1,12 +1,12 @@
-.regPageBody{
+.register-page-body{
     width: 100%;
   }
-  .regPageBody__wrapper{
+  .register-page-body__wrapper{
     max-width: 90rem;
     margin: 0 auto;
     
   }
-  .regPageBody__bg{
+  .register-page-body__bg{
     display: flex;
     justify-content: center;
     background: url(./login-page-bg.jpg) no-repeat center bottom;
@@ -15,7 +15,7 @@
   }
 
   @media screen and (max-width: 500px) {
-    .regPageBody__bg{
+    .register-page-body__bg{
         
         .card.registerAccount{
             width: 18.75rem;

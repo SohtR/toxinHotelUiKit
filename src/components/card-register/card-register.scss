@@ -1,4 +1,4 @@
-.register-account {
+.card-register {
   width: 380px;
   padding: 40px 30px 30px 30px;
   background: #fff;
@@ -17,22 +17,18 @@
     letter-spacing: -0.0375rem;
   }
 
-  .button_border {
+  &__button_border-big-margin {
     margin: 2px 0 0 36px;
-    width: 96px;
-    height: 40px;
-    box-sizing: border-box;
-    display: inline-block;
-    line-height: 26px;
+    display: inline;
   }
 
-  .have-account {
+  &__have-account {
     font-size: 14px;
     line-height: 18px;
     color: #000;
   }
 
-  .textfield {
+  &__textfield-margin {
     margin: 0 0 0.625rem 0;
   }
 
@@ -44,11 +40,12 @@
     margin: 0.625rem 0 0.3125rem 0;
   }
 
-  .flex-wrapper {
+  &__flex-wrapper {
     margin: 0rem 0 0.1875rem 0;
+    display: flex;
   }
 
-  .button_long {
+  &__button_long-margin {
     margin: 1.25rem 0 1.875rem 0;
   }
 }

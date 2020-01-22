@@ -1,35 +1,36 @@
-mixin room-detail({number='999', price='999', days='1', totalPrice='9999', service='100',extra='100', total='99999', buttonLongStyle='long',buttonLongContent='Long Template'}={})    
-    .room-detail
-        .flex-wrapper
-            .room-detail__price-headline
-                p.room-detail__number
-                    span.room-detail__num № 
-                    span.room-detail__number=number
-                    span.room-detail__lux люкс
-                p.room-detail__price=`${price} в сутки`
-        .flex-wrapper
-            include ../two-input-range/two-input-range.pug
-        .dropdown-guest
-            h3.room-detail__header гости
+mixin card-room-detail({number='999', price='999', days='1', totalPrice='9999', service='100',extra='100', total='99999', buttonLongStyle='long',buttonLongContent='Long Template'}={})    
+    .card-room-detail
+        .card-room-detail__flex-wrapper
+            .card-room-detail__price-headline
+                p.card-room-detail__number
+                    span.card-room-detail__num № 
+                    span.card-room-detail__number=number
+                    span.card-room-detail__lux люкс
+                p.card-room-detail__price=`${price} в сутки`
+        .card-room-detail__flex-wrapper
+            +two-input-range()
+        .card-room-detail__dropdown-guest-margin
+            h3.card-room-detail__header гости
             +dropdown-guest("Сколько гостей")
-        table.room-detail__price-table
-            tr.room-detail__price-table-row
-                td.room-detail__leftColumn=`${price}₽ х ${days} суток`
-                td.room-detail__price-table-column
-                td.room-detail__rightColumn=`${totalPrice}₽`
-            tr.room-detail__price-table-row
-                td.room-detail__leftColumn=` Сбор за услуги: скидка ${service}₽`
-                td.room-detail__price-table-column 
-                    a(href='#').room-detail__price-table-circle i
-                td.room-detail__rightColumn 0₽
-            tr.room-detail__price-table-row
-                td.room-detail__leftColumn Сбор за дополнительные услуги
-                td.room-detail__price-table-column
-                        a(href='#').room-detail__price-table-circle i
-                td.room-detail__rightColumn=`${extra}₽`
-        .room-detail__total
-            p.room-detail__total-name Итого
-            .room-detail__border-dashed
-            p.room-detail__total-sum=`${total}₽`
-        +button(buttonLongStyle, buttonLongContent)
+        table.card-room-detail__price-table
+            tr.card-room-detail__price-table-row
+                td.card-room-detail__leftColumn=`${price}₽ х ${days} суток`
+                td.card-room-detail__price-table-column
+                td.card-room-detail__rightColumn=`${totalPrice}₽`
+            tr.card-room-detail__price-table-row
+                td.card-room-detail__leftColumn=` Сбор за услуги: скидка ${service}₽`
+                td.card-room-detail__price-table-column 
+                    a(href='#').card-room-detail__price-table-circle i
+                td.card-room-detail__rightColumn 0₽
+            tr.card-room-detail__price-table-row
+                td.card-room-detail__leftColumn Сбор за дополнительные услуги
+                td.card-room-detail__price-table-column
+                        a(href='#').card-room-detail__price-table-circle i
+                td.card-room-detail__rightColumn=`${extra}₽`
+        .card-room-detail__total
+            p.card-room-detail__total-name Итого
+            .card-room-detail__border-dashed
+            p.card-room-detail__total-sum=`${total}₽`
+        .card-room-detail__button_long-margin
+            +button(buttonLongStyle, buttonLongContent)
 

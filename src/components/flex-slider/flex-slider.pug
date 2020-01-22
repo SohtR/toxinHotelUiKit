@@ -1,0 +1,7 @@
+mixin flex-slider(number, slides)
+    .flexslider
+        ul.slides
+            - for (var i=1; i<=slides; i++)
+                li.slides__item
+                    img.slides__img(src=require(`../components/card-slider-room/${number}-slide-${i}.jpg`))
+        

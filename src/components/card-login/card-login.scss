@@ -1,4 +1,4 @@
-.login-account {
+.card-login {
   width: 380px;
   padding: 40px 30px 30px 30px;
   background: #fff;
@@ -17,43 +17,28 @@
     letter-spacing: -0.4px;
   }
 
-  .button_border {
-    margin: 2px 0 0 36px;
-    width: 96px;
-    height: 40px;
-    box-sizing: border-box;
-    display: inline-block;
-    line-height: 26px;
-  }
-
-  .have-account {
+  &__have-account {
     font-size: 14px;
     line-height: 18px;
     color: #000;
-  }
-
-  .flex-wrapper {
-    margin: 0rem 0 0.25rem 0;
-  }
-
-  .have-account {
     margin: 0.8125rem 0 0rem 0;
   }
 
-  .textfield {
+  &__flex-wrapper {
+    margin: 0rem 0 0.25rem 0;
+    display: flex;
+  }
+
+  &__textfield-margin {
     margin: 0 0 0.625rem 0;
   }
 
-  .button_long {
+  &__button_long-margin {
     margin: 0.625rem 0 1.875rem 0;
   }
 
-  .button_border {
+  &__button_border-big-margin {
     margin: 0.125rem 0rem 0rem 3.6875rem;
-    width: 5.9375rem;
-    height: 2.625rem;
-    box-sizing: border-box;
-    display: inline-block;
-    line-height: 1.6875rem;
+    
   }
 }

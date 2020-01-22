@@ -1,11 +1,12 @@
-.search-room__arrival
-    h3.room-detail__header пРиБыТие
-    .data-dropdown
-        label(for="start") 
-        input.data-dropdown__input.datepicker-here.datepickers(id="start" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true")
-.search-room__departure
-    h3.room-detail__header выезд
-    .data-dropdown
-        label(for="end") 
-        input.data-dropdown__input.datepicker-here.datepickers(id="end" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true")
+mixin two-input-range()
+    .two-input-range__arrival
+        h3.two-input-range__header пРиБыТие
+        .two-input-range__data-dropdown
+            label(for="start") 
+            input.two-input-range__input.datepicker-here.datepickers(id="start" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true")
+    .two-input-range____departure
+        h3.two-input-range__header выезд
+        .two-input-range__data-dropdown
+            label(for="end") 
+            input.two-input-range__input.datepicker-here.datepickers(id="end" type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true")
                         

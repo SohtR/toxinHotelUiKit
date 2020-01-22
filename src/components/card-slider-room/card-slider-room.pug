@@ -1,18 +1,13 @@
 mixin slider-room({number='111', price='100', reviews='5', isLux=""}={})
-    .room-slider
-        .flexslider
-            ul.slides
-                - for (var i=1; i<=4; i++)
-                    li.slides__item
-                        img.slides__img(src=require(`../components/card-slider-room/${number}-slide-${i}.jpg`))
-                    
+    .slider-room
+        +flex-slider(number, 4)           
         a(href="./room-detail.html")
-            .room-slider__price-headline
-                p.room-slider__number
-                    span.room-slider__num №
-                    span.room-slider__number #{number}
-                    span.room-slider__lux  #{isLux}
-                p.room-slider__price= price +"₽ в сутки"
-            .room-slider__rating
+            .slider-room__price-headline
+                p.slider-room__number
+                    span.slider-room__num №
+                    span.slider-room__number #{number}
+                    span.slider-room__lux  #{isLux}
+                p.slider-room__price= price +"₽ в сутки"
+            .slider-room__rating-margin
                 +rate-button(number, 4)                               
-                p.room-slider__reviewsAmount <b>#{reviews}</b> Отзывов
+                p.slider-room__reviewsAmount <b>#{reviews}</b> Отзывов
