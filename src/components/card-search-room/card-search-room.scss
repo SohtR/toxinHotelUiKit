@@ -30,3 +30,21 @@
     margin: 0 0 0.5625rem 0;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .card-search-room {
+    margin: 4.8% auto;
+    width: 18.75rem;
+    padding: 0.438rem 0.875rem 0.875rem 0.875rem;
+
+    &__header {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    &__flex-wrapper {
+      justify-content: center;
+    }
+  }
+
+}

@@ -1,9 +1,11 @@
-mixin pagination({content='1 – 12 из 100+ вариантов аренды'}={})    
+mixin pagination({pages= 5, activePage= 1, content='1 – 12 из 100+ вариантов аренды'}={})    
     .pagination
-        a.pagination__link.pagination__link_active(href="#") 1
-        a.pagination__link(href="#") 2
-        a.pagination__link(href="#") 3
-        span.pagination__link &hellip;
-        a.pagination__link(href="#") 15
-        a.pagination__link.pagination__link_next(href="#") next
+        - for (let i = 1; i <= 3; i++)
+            -if (i == activePage)
+                 a.pagination__link.pagination__link_active(href="./change-later")= i
+            a.pagination__link(href="./change-later")= i
+        - if (pages > 3)
+            span.pagination__link &hellip;
+            a.pagination__link(href="./change-later")= pages
+        a.pagination__link.pagination__link_next(href="./change-later") next
         p.pagination__content= content

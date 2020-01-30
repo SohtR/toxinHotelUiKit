@@ -9,7 +9,7 @@ mixin card-register({header="header", textfieldName={id, placeholder, type}, tex
             +radio-button(radiobuttonMan.id, radiobuttonMan.content, radiobuttonMan.name)
             +radio-button(radiobuttonWoman.id, radiobuttonWoman.content, radiobuttonWoman.name)
         h3.card-register__birthday= birth
-        +masked-textfield(maskedText.id, maskedText.placeholder)
+        +masked-field(maskedText.id, maskedText.placeholder)
         h3.card-register__enterData=enterData
         .card-register__textfield-margin
             +textfield(emailField.id, emailField.placeholder, emailField.type)

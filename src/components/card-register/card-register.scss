@@ -49,3 +49,25 @@
     margin: 1.25rem 0 1.875rem 0;
   }
 }
+
+@media screen and (max-width: 500px) {
+    .card-register {
+      width: 18.75rem;
+      padding: 0.438rem 0.875rem 0.875rem 0.875rem;
+
+      &__header {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
+      &__button_border-big-margin {
+        margin: 0.125rem 0 0 44px;
+        width: auto;
+      }
+
+      &__have-account {
+        font-size: 0.67rem;
+      }
+    }
+  
+}

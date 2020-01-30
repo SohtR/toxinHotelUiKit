@@ -51,20 +51,19 @@ html
         meta(name="theme-color" content="#ffffff")
     body
         main
-            .header-buttons
-                +header-buttons({
-                    list:[{content: "Home",active: true, link: './uikit-page.html'},
-                        {content:"About Us"},
-                        {content: "Services"},
-                        {content: "Careers"},
-                        {content: "News"},
-                        {content: "Documentation"}
-                    ],
-                    loginButtonStyle: "border",
-                    loginButton: "login",
-                    registerButtonStyle: "fill",
-                    registerButton: "register"
-                    })
+            +header-buttons({
+                list:[{content: "Home",active: true, link: './uikit-page.html'},
+                    {content:"About Us"},
+                    {content: "Services"},
+                    {content: "Careers"},
+                    {content: "News"},
+                    {content: "Documentation"}
+                ],
+                loginButtonStyle: "border",
+                loginButton: "login",
+                registerButtonStyle: "fill",
+                registerButton: "register"
+                })
             .header-margin
                 +header([
                     {content: "Home",active: true},
@@ -101,45 +100,44 @@ html
                 +footer-small({
                     content: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis. "
                 })
-            .colors-type
-                .wrapper
-                    +colors-types([
-                        {
-                            class: "square",
-                            name: "Dark Shade 100%",
-                            hex: "#1F2041"
-                        },
-                       {
-                            class: "square _75",
-                            name: "Dark Shade 75%",
-                            hex: "#1F2041"
-                        },
-                        {
-                            class: "square _50",
-                            name: "Dark Shade 50%",
-                            hex: "#1F2041"
-                        },
-                        {
-                            class: "square _25",
-                            name: "Dark Shade 25%",
-                            hex: "#1F2041"
-                        },
-                        {
-                            class: "square _5",
-                            name: "Dark Shade 5%",
-                            hex: "#1F2041"
-                        },
-                        {
-                            class: "square purple",
-                            name: "Purple",
-                            hex: "#bc9cff"
-                        },
-                        {
-                            class: "square green",
-                            name: "Green",
-                            hex: "#6fcf97"
-                        }
-                    ])
+            .colors-type-margin
+                +colors-types([
+                    {
+                        class: "colors-types__square",
+                        name: "Dark Shade 100%",
+                        hex: "#1F2041"
+                    },
+                    {
+                        class: "colors-types__square colors-types__square_75-percent-opacity",
+                        name: "Dark Shade 75%",
+                        hex: "#1F2041"
+                    },
+                    {
+                        class: "colors-types__square colors-types__square_50-percent-opacity",
+                        name: "Dark Shade 50%",
+                        hex: "#1F2041"
+                    },
+                    {
+                        class: "colors-types__square colors-types__square_25-percent-opacity",
+                        name: "Dark Shade 25%",
+                        hex: "#1F2041"
+                    },
+                    {
+                        class: "colors-types__square colors-types__square_5-percent-opacity",
+                        name: "Dark Shade 5%",
+                        hex: "#1F2041"
+                    },
+                    {
+                        class: "colors-types__square colors-types__square_purple",
+                        name: "Purple",
+                        hex: "#bc9cff"
+                    },
+                    {
+                        class: "colors-types__square colors-types__square_green",
+                        name: "Green",
+                        hex: "#6fcf97"
+                    }
+                ])
             .form-elements
                 .wrapper
                     +forms({

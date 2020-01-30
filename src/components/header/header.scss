@@ -6,9 +6,60 @@
     display: flex;
     padding: 0.9375rem 0 0 0;
     box-sizing: border-box;
-}
 
-.with-border {
-    border-left: 1px solid rgba(31, 32, 65, 0.1);
-    padding: 0.6875rem 0 0 1.9375rem;
+    &__wrapper {
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 72.4375rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: inline;
+    }
+
+    &__navigation-wrapper {
+        display: flex;
+    }
+
+    &__main-menu {
+        list-style: none;
+        margin: 0.7em 2.2em 0 0rem;
+        padding: 0;
+
+        &-item:nth-child(3) &-link::after {
+            content: '';
+            display: inline-block;
+            width: 1.0625rem;
+            height: 1.0625rem;
+            background: url(../../img/arrow-down.svg) no-repeat;
+            position: absolute;
+            top: -0.1875rem;
+            left: 3.4375rem;
+            opacity: 0.5;
+        }
+
+        &-item {
+            display: inline-block;
+            margin: 0 0 0 1.75rem;
+            position: relative;
+            font-size: 0.875rem;
+            color: rgba(31, 32, 65, 0.5);
+        }
+
+        &-link {
+            font-size: 0.875rem;
+            color: rgba(31, 32, 65, 0.5);
+
+            &:nth-child(2) {
+                margin: 0 0 0 1.3125rem;
+            }
+        }
+    }
+
+    &__main-menu-item-with-border {
+        border-left: 1px solid rgba(31, 32, 65, 0.1);
+        padding: 0.6875rem 0 0 1.9375rem;
+    }
 }

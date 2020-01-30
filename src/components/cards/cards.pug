@@ -1,13 +1,13 @@
 mixin cards({searchRoom={}, cardRegister={},cardLogin={}, roomDetail={}, sliderRoom840={}, sliderRoom888={}}={})
-    .flex-column-wrapper
+    .cards__flex-column-wrapper
         +card-search-room(searchRoom)
         +card-register(cardRegister)
-    .flex-column-wrapper
+    .cards__flex-column-wrapper
         +card-login(cardLogin)
         +card-room-detail(roomDetail)
-    .flex-column-wrapper
-        .room-slider-margin
+    .cards__flex-column-wrapper
+        .cards__room-slider-margin
             +slider-room(sliderRoom888)
-        .room-slider-margin
+        .cards__room-slider-margin
             +slider-room(sliderRoom840)
 

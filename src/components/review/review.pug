@@ -1,9 +1,8 @@
-mixin review({name='name', date='5', likes='3', content='review content'}={})    
+mixin review({number='1', reviewerName= 'John Doe', date='5 дней назад', likes=3, content='review content'}={})    
     .review
         .review__top-block
-            img.review__avatar(src=require("../components/review/avatar-2.jpg"), alt="avatar")
-            p.review__name!= ` <strong>${name}</strong> <br /> ${date} дней назад`
-
+            img.review__avatar(src=require(`../components/review/avatar-${number}.jpg`), alt="avatar")
+            p.review__name <b>#{reviewerName}</b> <br>#{date}
         .review__bottom-block
             .review__like
                 +like-button(likes)

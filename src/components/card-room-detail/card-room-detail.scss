@@ -75,13 +75,13 @@
     }
   }
 
-  &__rightColumn {
+  &__right-column {
     text-align: right;
     padding: 0 0 0 1.3125rem;
     vertical-align: top;
   }
 
-  &__leftColumn {
+  &__left-column {
     text-align: left;
     width: 13.375rem;
     padding: 0 0.3125rem 1.0625rem 0;
@@ -116,4 +116,25 @@
   &__button_long-margin {
     margin: 1.25rem 0 0 0;
   }
+}
+
+@media screen and (max-width: 500px) {
+  .card-room-detail {
+    width: 18.75rem;
+    padding: 0.438rem 0.875rem 0.875rem 0.875rem;
+
+    &__price-table {
+      margin: 20px auto;
+    }
+
+    &__left-column {
+      text-align: left;
+      width: 11.375rem;
+    }
+
+    &__right-column {
+      padding: 0 0 0 0.313rem;
+    }
+  }
+
 }

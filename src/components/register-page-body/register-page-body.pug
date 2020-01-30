@@ -1,47 +1,5 @@
-.register-page-body
-    .register-page-body__wrapper
-        .register-page-body__bg
-            +card-register({header:"Регистрация аккаунта",
-                            textfieldName: {
-                                id: "name",
-                                placeholder: "Имя",
-                                type: "text"
-                            },
-                            textfieldLastname: {
-                                id: "lastname",
-                                placeholder: "Фамилия",
-                                type: "text"
-                            },
-                            radiobuttonMan: {
-                                id: "test3",
-                                content: "Мужчина",
-                                name: "group"
-                            },
-                            radiobuttonWoman: {
-                                id: "test4",
-                                content: "Женщина",
-                                name: "group"
-                            },
-                            maskedText: {
-                                id: "birthday",
-                                placeholder: "ДД.ММ.ГГГГ"
-                            },
-                            emailField: {
-                                id: "regEmail",
-                                placeholder: "Email",
-                                type: "email"
-                            },
-                            passwordField: {
-                                id: "regPass",
-                                placeholder: "Пароль",
-                                type: "password"
-                            },
-                            toggleButtonId: "mailing",
-                            buttonLongContent: "Перейти к оплате",
-                            buttonLongStyle: "long",
-                            buttonBorderContent: "войти",
-                            buttonBorderStyle: "border-big",
-                            offer: "Получать спецпредложения",
-                            birth: "дата рождения",
-                            enterData: "данные для входа в сервис"
-                            })
+mixin register-page-body({header="Header here", textfieldName= {}, textfieldLastname= {}, radiobuttonMan= {}, radiobuttonWoman= {}, maskedText= {}, emailField= {}, passwordField= {}, toggleButtonId= "mailing", buttonLongContent= "Long template", buttonLongStyle= "long", buttonBorderContent= "border template", buttonBorderStyle= "border-big", offer= "offer content", birth= "birthday", enterData= "Enter data"})
+    .register-page-body
+        .register-page-body__wrapper
+            .register-page-body__bg
+                +card-register({header, textfieldName, textfieldLastname, radiobuttonMan, radiobuttonWoman, maskedText, emailField, passwordField, toggleButtonId, buttonLongContent, buttonLongStyle, buttonBorderContent, buttonBorderStyle, offer, birth, enterData})

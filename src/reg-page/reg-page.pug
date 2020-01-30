@@ -24,6 +24,7 @@ include ../components/data-dd-filter/data-dd-filter.pug
 include ../components/data-dropdown/data-dropdown.pug
 include ../components/two-input-range/two-input-range.pug
 include ../components/flex-slider/flex-slider.pug
+include ../components/register-page-body/register-page-body.pug
 doctype html
 html
     head
@@ -57,7 +58,51 @@ html
                     registerButton: "зарегистрироваться",
                     registerRef: "./reg-page.html"
                     })
-            include ../components/register-page-body/register-page-body.pug
+            +register-page-body({
+                header:"Регистрация аккаунта",
+                textfieldName: {
+                    id: "name",
+                    placeholder: "Имя",
+                    type: "text"
+                },
+                textfieldLastname: {
+                    id: "lastname",
+                    placeholder: "Фамилия",
+                    type: "text"
+                },
+                radiobuttonMan: {
+                    id: "test3",
+                    content: "Мужчина",
+                    name: "group"
+                },
+                radiobuttonWoman: {
+                    id: "test4",
+                    content: "Женщина",
+                    name: "group"
+                },
+                maskedText: {
+                    id: "birthday",
+                    placeholder: "ДД.ММ.ГГГГ"
+                },
+                emailField: {
+                    id: "regEmail",
+                    placeholder: "Email",
+                    type: "email"
+                },
+                passwordField: {
+                    id: "regPass",
+                    placeholder: "Пароль",
+                    type: "password"
+                },
+                toggleButtonId: "mailing",
+                buttonLongContent: "Перейти к оплате",
+                buttonLongStyle: "long",
+                buttonBorderContent: "войти",
+                buttonBorderStyle: "border-big",
+                offer: "Получать спецпредложения",
+                birth: "дата рождения",
+                enterData: "данные для входа в сервис"
+            })
             .footer-big-margin
                 +footer-big({
                     list:{

@@ -13,10 +13,10 @@ const r_width= 200;
 const r_height = 200;
 const radius = Math.min(r_width, r_height) / 2;
 
-const tooltip = d3.select('.tooltip')
+const tooltip = d3.select('.pie-chart__tooltip')
     .style('display', 'inherit');
-const amount = d3.select('.amount');
-const item = d3.select('.item');
+const amount = d3.select('.pie-chart__amount');
+const item = d3.select('.pie-chart__item');
 amount
         .text(260);
 item

@@ -1,6 +1,7 @@
-.landing-body
-    .landing-body__wrapper
-        .landing-body__bg
-            .landing-body__search-card-margin
-                +card-search-room({header: "Найдем номера под ваши пожелания", buttonLongContent: "подобрать номер", buttonLongStyle: "long"})
-        p.landing-body__bottomText Лучшие номера для вашей работы, отдыха и просто вдохновения
+mixin landing-body({header="Place header here", buttonLongContent="button long", buttonLongStyle="long", searchRef='./search.html', bottomText= "bottom text"}={})
+    .landing-body
+        .landing-body__wrapper
+            .landing-body__bg
+                .landing-body__search-card-margin
+                    +card-search-room({header, buttonLongContent, buttonLongStyle, searchRef})
+            p.landing-body__bottomText= bottomText

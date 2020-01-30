@@ -36,7 +36,7 @@ main{
   margin: 0 auto;
   width:100%;
   display: flex;
-  background: #f4f4f6 url(../img/main-logo.svg) no-repeat 14.1% 1.875rem;
+  background: #fff url(../img/main-logo.svg) no-repeat 14.1% 1.875rem;
   flex-wrap: wrap;
 }
 .form-elements{
@@ -70,14 +70,14 @@ main{
   color: rgba(31, 32, 65, 0.5);
 }
 
-.colors-type{
-  width: 100%;
-  display: flex;
+.colors-type-margin{
   margin: 1.875rem 0 0 0;
+  width: 100%;
 }
 
 .footer-big-margin{
   width: 100%;
+  margin: 2.5rem 0 0 0;
 }
 .footer-small-margin{
   margin: 2.5rem 0 0 0;
@@ -88,4 +88,8 @@ main{
   margin: 2.5rem 0 0 0;
   width: 100%;
 
+}
+
+.cards-block {
+  width: 100%;
 }

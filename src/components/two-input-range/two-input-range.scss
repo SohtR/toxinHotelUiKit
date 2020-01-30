@@ -20,3 +20,13 @@
         margin: 0 1.25rem 0 0;
     }
 }
+
+@media screen and (max-width: 550px) {
+    .two-input-range__input {
+        width: 7.375rem;
+        height: 2.75rem;
+        font-size: 0.675rem;
+        color: rgba(31, 32, 65, 0.75);
+        background: #fff url(../../img/arrow-down.svg) no-repeat 5.5rem 0.6875rem;
+    }
+}

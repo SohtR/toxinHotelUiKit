@@ -30,7 +30,11 @@
   .email-subscribe-margin {
     margin: 1.5625rem 0 0 0;
   }
-
+  .email-subscription-field {
+    &__header {
+      margin: 1.25rem 0 0 1.25rem;
+    }
+  }
   .expanded-checkbox-list-margin {
     margin: 1.125rem 0 0 1.5rem;
   }

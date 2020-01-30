@@ -14,19 +14,19 @@ mixin card-room-detail({number='999', price='999', days='1', totalPrice='9999', 
             +dropdown-guest("Сколько гостей")
         table.card-room-detail__price-table
             tr.card-room-detail__price-table-row
-                td.card-room-detail__leftColumn=`${price}₽ х ${days} суток`
+                td.card-room-detail__left-column=`${price}₽ х ${days} суток`
                 td.card-room-detail__price-table-column
-                td.card-room-detail__rightColumn=`${totalPrice}₽`
+                td.card-room-detail__right-column=`${totalPrice}₽`
             tr.card-room-detail__price-table-row
-                td.card-room-detail__leftColumn=` Сбор за услуги: скидка ${service}₽`
+                td.card-room-detail__left-column=` Сбор за услуги: скидка ${service}₽`
                 td.card-room-detail__price-table-column 
                     a(href='#').card-room-detail__price-table-circle i
-                td.card-room-detail__rightColumn 0₽
+                td.card-room-detail__right-column 0₽
             tr.card-room-detail__price-table-row
-                td.card-room-detail__leftColumn Сбор за дополнительные услуги
+                td.card-room-detail__left-column Сбор за дополнительные услуги
                 td.card-room-detail__price-table-column
                         a(href='#').card-room-detail__price-table-circle i
-                td.card-room-detail__rightColumn=`${extra}₽`
+                td.card-room-detail__right-column=`${extra}₽`
         .card-room-detail__total
             p.card-room-detail__total-name Итого
             .card-room-detail__border-dashed

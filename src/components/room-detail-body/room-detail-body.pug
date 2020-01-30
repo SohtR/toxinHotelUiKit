@@ -1,37 +1,55 @@
-.roomDetailBody
-    .roomDetailBody__wrapper
-        .roomDetailBody__images
-            .roomDetailBody__bigImg
-            .roomDetailBody__smallImg
-                .roomDetailBody__topImg
-                .roomDetailBody__bottomImg
-    .wrapper
-        .roomDetailBody__content
-            .roomDetailBody__leftSide
-                .roomDetailBody__top
-                    .roomDetailBody__roomFeatures
-                        h2 Сведения о номере
+.room-detail-body
+    .room-detail-body__wrapper-top
+        .room-detail-body__images
+            .room-detail-body__big-img
+            .room-detail-body__small-img
+                .room-detail-body__top-img
+                .room-detail-body__bottom-img
+    .room-detail-body__wrapper-bottom
+        .room-detail-body__content
+            .room-detail-body__left-side
+                .room-detail-body__top
+                    .room-detail-body__room-features
+                        h2.room-detail-body__headline Сведения о номере
                         +room-feature('comfort', 'Комфорт', 'Шумопоглощающие стены')
                         +room-feature('udobstvo', 'Удобство', 'Окно в каждой из спален')
                         +room-feature('uyut', 'Уют', 'Номер оснащён камином')
-                    .roomDetailBody__pieChart
-                        h2 Впечатления от номера
+                    .room-detail-body__pie-chart
+                        h2.room-detail-body__pie-chart-headline Впечатления от номера
                         include ../pie-chart/pie-chart.pug
-                .roomDetailBody__bottom
-                    .roomDetailBody__reviews
-                        .roomDetailBody__reviewsHeadline
-                            h2 Отзывы посетителей номера
-                            p 2 отзыва
-                        +review('2', 'Мурад Сарафанов', '5 дней назад', '11', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
-                        +review('1', 'Патрисия Стёклышкова', 'Неделю назад', '2', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
-                    .roomDetailBody__lists
-                        .roomDetailBody__bullet
-                            h2 Правила
-                            include ../bullet-list/bullet-list.pug
-                        .roomDetailBody__cancel
-                            h2 Отмена
-                            p.roomDetailBody__cancelText Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-            .roomDetailBody__rightSide
+                .room-detail-body__bottom
+                    .room-detail-body__reviews
+                        .room-detail-body__reviews-headline
+                            h2.room-detail-body__headline Отзывы посетителей номера
+                            p.room-detail-body__reviews-content 2 отзыва
+                        .room-detail-body__review-margin    
+                            +review({
+                                number: '2',
+                                reviewerName: 'Мурад Сарафанов',
+                                date: '5 дней назад',
+                                likes: 11,
+                                content: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+                            })
+                        .room-detail-body__review-margin 
+                            +review({
+                                number:  '1',
+                                reviewerName: 'Патрисия Стёклышкова',
+                                date: 'Неделю назад',
+                                likes:  2,
+                                content: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
+                            })
+                    .room-detail-body__lists
+                        .room-detail-body__bullet
+                            h2.room-detail-body__bullet-headline Правила
+                            +bullet-list({
+                                pet: "Нельзя с питомцами",
+                                party: "Без вечеринок и мероприятий",
+                                check_time: "Время прибытия — после 13:00, а выезд до 12:00"
+                            }) 
+                        .room-detail-body__cancel
+                            h2.room-detail-body__cancel-headline Отмена
+                            p.room-detail-body__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+            .room-detail-body__right-side
                 +card-room-detail({
                                 number: "888",
                                 price: "9 990",

@@ -1,11 +1,11 @@
-.expanded-checkbox-list {
+.expanded-checkbox__list {
   max-height: 0em;
   overflow: hidden;
   padding: 0;
   transition: max-height 0.35s ease-in;
   width: 16.625rem;
 
-  &__item {
+  &-item {
     margin: 0 0 0.625rem 0;
     height: 1.25rem;
   }
@@ -14,7 +14,7 @@
     max-height: 17em;
   }
 
-  &__input {
+  &-input {
     display: none;
 
     &+label {
@@ -39,13 +39,13 @@
     }
   }
 
-  &__input:checked+label::before {
+  &-input:checked+label::before {
     background: url(./checked.png) no-repeat top left;
     border: none;
   }
 }
 
-.expanded-checkbox-label {
+.expanded-checkbox__label {
   position: relative;
 
   &:hover {

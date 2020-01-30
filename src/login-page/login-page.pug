@@ -14,6 +14,8 @@ include ../components/data-dropdown/data-dropdown.pug
 include ../components/card-login/card-login.pug
 include ../components/two-input-range/two-input-range.pug
 include ../components/flex-slider/flex-slider.pug
+include ../components/login-page-body/login-page-body.pug
+
 doctype html
 html
     head
@@ -48,7 +50,23 @@ html
                     registerButton: "зарегистрироваться",
                     registerRef: "./reg-page.html"
                     })
-            include ../components/login-page-body/login-page-body.pug
+            +login-page-body({
+                header: "Войти",
+                emailField: {
+                    id: "loginEmail",
+                    placeholder: "Email",
+                    type: "email"
+                },
+                passwordField: {
+                    id: "loginPass",
+                    placeholder: "Пароль",
+                    type: "password"
+                },
+                buttonLongContent: "Войти",
+                buttonLongStyle: "long",
+                buttonBorderContent: "создать",
+                buttonBorderStyle: "border-big"
+            })
             .footer-big-margin
                 +footer-big({
                     list:{
@@ -71,7 +89,7 @@ html
                     emailId: "email",
                     emailPlaceholder: "Email",
                     copyrightContent: "Copyright © 2018 Toxin отель. Все права зачищены."
-                    })
+                })
             
 
                             

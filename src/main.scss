@@ -1,6 +1,6 @@
 body,
 ul,
-a{
+a {
   margin: 0rem;
   padding: 0rem;
   font-family: 'Montserrat';
@@ -10,18 +10,22 @@ a{
   text-decoration: none;
   outline: none;
 }
-p{
+
+p {
   margin: 0;
 }
-h1{
+
+h1 {
   font-size: 1.5rem;
   line-height: 1.875rem;
 }
-h2{
+
+h2 {
   font-size: 1.1875rem;
   line-height: 1.5rem;
 }
-h3{
+
+h3 {
   font-size: 0.75rem;
   line-height: 0.9375rem;
   font-weight: bold;
@@ -29,62 +33,68 @@ h3{
   color: #1F2041;
   opacity: 0.75;
 }
-input{
+
+input {
   margin: 0;
 }
-main{
+
+main {
   margin: 0 auto;
-  width:100%;
+  width: 100%;
   display: flex;
-  background: #f4f4f6 url(./img/main-logo.svg) no-repeat 14.1% 1.875rem;
+  background: #fff url(./img/main-logo.svg) no-repeat 14.1% 1.875rem;
   flex-wrap: wrap;
 }
-.form-elements{
+
+.form-elements {
   width: 100%;
   margin: 3.125rem 0 0 0;
   display: flex;
   z-index: 1;
 }
-.flex-wrapper{
+
+.flex-wrapper {
   display: flex;
   margin: 1.25rem 0 0 0;
-  
+
 }
 
-.flex-column-wrapper{
+.flex-column-wrapper {
   display: flex;
   flex-direction: column;
   margin: auto 1.25rem;
-  
+
 }
 
-.link__purple{
+.link__purple {
   font-weight: bold;
   font-size: 0.75rem;
   line-height: 0.9375rem;
   text-transform: uppercase;
   color: #BC9CFF;
 }
+
 .link__purple:hover,
-.link__purple:active{
+.link__purple:active {
   color: rgba(31, 32, 65, 0.5);
 }
 
-.colors-type{
+.colors-type {
   width: 100%;
   display: flex;
   margin: 1.875rem 0 0 0;
 }
 
-.footer-big-margin{
+.footer-big-margin {
   width: 100%;
 }
-.footer-small-margin{
+
+.footer-small-margin {
   margin: 2.5rem 0 0 0;
   width: 100%;
 }
 
-.header-margin{
+.header-margin {
   margin: 2.5rem 0 0 0;
   width: 100%;
 

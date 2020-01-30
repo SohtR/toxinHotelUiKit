@@ -1,9 +1,9 @@
 mixin expanded-checkbox-list(options)
-    form(action="#")
-        input(id="expander" type="checkbox")
-        label.expanded-checkbox-label(for="expander")
-        ul.expanded-checkbox-list
+    form.expanded-checkbox(action="#")
+        input.expanded-checkbox__input(id="expander" type="checkbox")
+        label.expanded-checkbox__label(for="expander")
+        ul.expanded-checkbox__list
             each item in options
-                li.expanded-checkbox-list__item
-                    input.expanded-checkbox-list__input(type="checkbox" id=`c${item.id}` name=`${item.id}` checked=item.checked hidden)
+                li.expanded-checkbox__list-item
+                    input.expanded-checkbox__list-input(type="checkbox" id=`c${item.id}` name=`${item.id}` checked=item.checked hidden)
                     label(for=`c${item.id}`)=item.content

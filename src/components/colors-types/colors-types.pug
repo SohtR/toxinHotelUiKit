@@ -1,32 +1,33 @@
 mixin colors-types(data)
-        ul.color-squares
-            each item in data
-                li.color-squares__item  
-                    div(class=item.class)
-                    div.color-description
-                        p.color-description__content=item.name
-                        p.color-description__content=item.hex
-
-        .headlines
-            table.headlines__table
-                tr.headlines__table-row
-                    td.headlines__table-column
-                        h1.headlines__table-h1 H1                            
-                    td.headlines__table-column 
-                        h1.headlines__table-h1 This one is the sub-section or widget title
-                tr.headlines__table-row
-                    td.headlines__table-column
-                        h2.headlines__table-h2 H2
-                    td.headlines__table-column
-                        h2.headlines__table-h2 Next one is the item title inside widgets
-                tr.headlines__table-row
-                    td.headlines__table-column
-                        h3.headlines__table-h3 H3
-                    td.headlines__table-column
-                        h3.headlines__table-h3 This is a label or CTA text
-                tr.headlines__table-row
-                    td.headlines__table-column
-                        p.headlines__table-p Body
-                    td.headlines__table-column
-                        p.headlines__table-p This is the body text which is used for most of the design, like paragraphs, lists, etc.
+    .colors-types
+        .colors-types__wrapper
+            ul.colors-types__color-squares
+                each item in data
+                    li.colors-types__color-squares-item  
+                        div(class=item.class)
+                        div.colors-types__color-description
+                            p.colors-types__color-description-content=item.name
+                            p.colors-types__color-description-content=item.hex
+            .colors-types__headlines
+                table.colors-types__headlines-table
+                    tr.colors-types__headlines-table-row
+                        td.colors-types__headlines-table-column
+                            h1.colors-types__headlines-table-h1 H1                            
+                        td.colors-types__headlines-table-column 
+                            h1.colors-types__headlines-table-h1 This one is the sub-section or widget title
+                    tr.colors-types__headlines-table-row
+                        td.colors-types__headlines-table-column
+                            h2.colors-types__headlines-table-h2 H2
+                        td.colors-types__headlines-table-column
+                            h2.colors-types__headlines-table-h2 Next one is the item title inside widgets
+                    tr.colors-types__headlines-table-row
+                        td.colors-types__headlines-table-column
+                            h3.colors-types__headlines-table-h3 H3
+                        td.colors-types__headlines-table-column
+                            h3.colors-types__headlines-table-h3 This is a label or CTA text
+                    tr.colors-types__headlines-table-row
+                        td.colors-types__headlines-table-column
+                            p.colors-types__headlines-table-p Body
+                        td.colors-types__headlines-table-column
+                            p.colors-types__headlines-table-p This is the body text which is used for most of the design, like paragraphs, lists, etc.
 

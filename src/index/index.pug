@@ -23,6 +23,7 @@ include ../components/data-dd-filter/data-dd-filter.pug
 include ../components/data-dropdown/data-dropdown.pug
 include ../components/two-input-range/two-input-range.pug
 include ../components/flex-slider/flex-slider.pug
+include ../components/landing-body/landing-body.pug
 
 doctype html
 html
@@ -42,24 +43,29 @@ html
         meta(name="theme-color" content="#ffffff")
     body
         main
-            .header-buttons
-                +header-buttons({
-                    list:[{content: "О нас",
-                            active: true,
-                            link: './uikit-page.html'},
-                         {content:"Услуги"},
-                         {content: "Вакансии"},
-                         {content: "Новости"},
-                         {content: "Соглашения"}
-                    ],
-                    loginButtonStyle: "border",
-                    loginButton: "войти",
-                    loginRef: "./login-page.html",
-                    registerButtonStyle: "fill",
-                    registerButton: "зарегистрироваться",
-                    registerRef: "./reg-page.html"
-                    })
-            include ../components/landing-body/landing-body.pug
+            +header-buttons({
+                list:[{content: "О нас",
+                        active: true,
+                        link: './uikit-page.html'},
+                        {content:"Услуги"},
+                        {content: "Вакансии"},
+                        {content: "Новости"},
+                        {content: "Соглашения"}
+                ],
+                loginButtonStyle: "border",
+                loginButton: "войти",
+                loginRef: "./login-page.html",
+                registerButtonStyle: "fill",
+                registerButton: "зарегистрироваться",
+                registerRef: "./reg-page.html"
+                })
+            +landing-body({
+                header: "Найдем номера под ваши пожелания",
+                buttonLongContent: "подобрать номер",
+                buttonLongStyle: "long",
+                searchRef: "./search.html",
+                bottomText: " Лучшие номера для вашей работы, отдыха и просто вдохновения"
+                })
             .footer-big-margin
                 +footer-big({
                     list:{

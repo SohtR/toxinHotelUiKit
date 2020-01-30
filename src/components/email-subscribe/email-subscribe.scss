@@ -1,4 +1,4 @@
-.form-email {
+.email-subscribe {
   width: 16.2rem;
   height: 2.75rem;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -34,8 +34,8 @@
   }
 }
 
-.email-subscription-field {
-  &__header {
-    margin: 1.25rem 0 0 1.25rem;
+@media screen and (max-width: 850px) {
+  .email-subscribe {
+    margin: 25px auto 0;
   }
 }

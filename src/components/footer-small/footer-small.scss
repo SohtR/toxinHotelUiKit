@@ -5,6 +5,14 @@
     display: flex;
     padding: 0 0 6.625rem 0;
 
+    &__wrapper {
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 72.4375rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__logo {
         padding: 6.3125rem 0 0 0;
         width: 6.625rem;
@@ -21,11 +29,11 @@
         margin: 0.875rem 0 0 0;
         line-height: 1.4375rem;
     }
-}
 
-.wrapper-column {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    display: flex;
+    &__wrapper-column {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        display: flex;
+    }
 }

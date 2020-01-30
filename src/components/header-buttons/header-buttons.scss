@@ -1,4 +1,21 @@
-.header {
+.header-buttons {
+    background: #fff;
+    box-shadow: 0rem 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
+    height: 4.375rem;
+    width: 100%;
+    margin: 0px 0 0 0;
+    display: flex;
+    padding: 0.1875rem 0 0 0;
+    box-sizing: border-box;
+
+    &__wrapper {
+        padding: 0.75rem 0 0 0;
+        margin: 0 auto;
+        width: 72.4375rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__logo {
         display: inline;
 
@@ -10,28 +27,6 @@
 
     &__navigation-buttons-wrapper {
         display: flex;
-    }
-}
-
-.wrapper {
-    margin: 0 auto;
-    width: 72.4375rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.header-buttons {
-    background: #fff;
-    box-shadow: 0rem 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
-    height: 4.375rem;
-    width: 100%;
-    margin: 0px 0 0 0;
-    display: flex;
-    padding: 0.1875rem 0 0 0;
-    box-sizing: border-box;
-
-    .wrapper {
-        padding: 0.75rem 0 0 0;
     }
 
     &__mainMenu {
@@ -78,4 +73,67 @@
     &__login-wrapper {
         margin: 0 22px 0 0;
     }
+}
+
+@media screen and (max-width: 1180px) {
+    .header-buttons {
+        padding: 0.1875rem 15px 0 15px;
+
+        &__wrapper {
+            margin: 0 auto;
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        &__logo {
+            display: inline;
+
+            &-img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .header-buttons {
+        height: 9rem;
+        padding: 0.1875rem 0 24px 0;
+        height: 100%;
+
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        &__logo {
+            align-self: center;
+        }
+
+        &__navigation-buttons-wrapper {
+            flex-direction: column;
+        }
+
+        &__buttons {
+            padding: 1rem 0 0 0;
+            align-self: center;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header-buttons {
+        height: 10rem;
+        padding: 0px 0 30px 0;
+
+        &__navigation {
+            text-align: center;
+        }
+    }
+
+
 }

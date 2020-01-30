@@ -9,7 +9,7 @@ mixin forms({textfieldId='text id', textfieldPlaceholder='text placeholder', tex
                     +dropdown-room("Параметры комнаты")
             .masked-text
                 h3.maskedText__headline Masked Textfield
-                +masked-textfield(maskedTextId, maskedTextPlaceholder)
+                +masked-field(maskedTextId, maskedTextPlaceholder)
         .flex-wrapper   
             .date
                 h3.date__headline Data Dropdown
@@ -69,7 +69,7 @@ mixin forms({textfieldId='text id', textfieldPlaceholder='text placeholder', tex
             form(action="#").checkboxes
                 h3.checkboxes__header Checkbox buttons
                 .checkbox-margin
-                    +checkboxes({
+                    +check-boxes({
                         first:{
                             id: "first",
                             content: "Завтрак"
@@ -118,6 +118,8 @@ mixin forms({textfieldId='text id', textfieldPlaceholder='text placeholder', tex
                     .buttons-block__button-margin
                         +button(buttonLongStyle, buttonLongContent)
             +pagination({
+                pages: 15,
+                activePage: 2,
                 content: "1 – 12 из 100+ вариантов аренды",
                 header: "pagination"
             })

@@ -20,3 +20,10 @@
         opacity: 0;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .textfield {
+        width: 17rem;
+        font-size: 0.875rem;
+    }
+}

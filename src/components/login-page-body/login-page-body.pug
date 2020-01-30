@@ -1,19 +1,5 @@
-.loginPageBody
-    .loginPageBody__wrapper
-        .loginPageBody__bg
-            +card-login({header: "Войти",
-                                emailField: {
-                                    id: "loginEmail",
-                                    placeholder: "Email",
-                                    type: "email"
-                                },
-                                passwordField: {
-                                    id: "loginPass",
-                                    placeholder: "Пароль",
-                                    type: "password"
-                                },
-                                buttonLongContent: "Войти",
-                                buttonLongStyle: "long",
-                                buttonBorderContent: "создать",
-                                buttonBorderStyle: "border-big"
-                            })
+mixin login-page-body({header= "Header", emailField= {}, passwordField= {}, buttonLongContent= "Long template", buttonLongStyle= "long", buttonBorderContent= "Border template", buttonBorderStyle= "border-big"}={})
+    .login-page-body
+        .login-page-body__wrapper
+            .login-page-body__bg
+                +card-login({header, emailField, passwordField, buttonLongContent, buttonLongStyle, buttonBorderContent, buttonBorderStyle})

@@ -15,7 +15,7 @@
         color: #BC9CFF;
         padding: 0.55em 1.5em;
         background: #fff;
-        
+
 
         &::before {
             content: '';
@@ -89,4 +89,19 @@
             opacity: 0.5;
         }
     }
+}
+
+@media screen and (max-width: 550px) {
+    .button {
+        &_long {
+            width: 17rem;
+        }
+
+        &_border-big {
+            width: auto;
+            height: auto;
+            padding: 0.3em 1.5em;
+        }
+    }
+
 }

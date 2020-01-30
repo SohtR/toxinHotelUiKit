@@ -1,17 +1,17 @@
 mixin header(data)
     .header
-        .wrapper
+        .header__wrapper
             a.header__logo(href="#") 
                 img(src=require("../components/header/color-logo.svg"), alt="Main Logo")
-            .header__navigation-buttons-wrapper
-                nav 
-                    ul.header-buttons__mainMenu
+            .header__navigation-wrapper
+                nav.header__navigation 
+                    ul.header__main-menu
                         each item in data
                             if item.active
-                                li.header-buttons__mainMenu-item.header-buttons__mainMenu-item_active 
-                                    a.header-buttons__mainMenu-link(href='#')= item.content
+                                li.header__main-menu-item.header__main-menu-item_active 
+                                    a.header__main-menu-link(href='#')= item.content
                             else
-                                li.header-buttons__mainMenu-item 
-                                    a.header-buttons__mainMenu-link(href='#')= item.content
-                a(href="#").with-border Cosmin Negoita
+                                li.header__main-menu-item 
+                                    a.header__main-menu-link(href='#')= item.content
+                a(href="#").header__main-menu-item-with-border Cosmin Negoita
 

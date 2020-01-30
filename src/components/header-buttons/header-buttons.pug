@@ -1,24 +1,25 @@
 mixin header-buttons({list=[], loginButton='login button', loginButtonStyle='border', registerButton='register button', registerButtonStyle='fill', loginRef='./login-page.html', registerRef='./reg-page.html'}={})
-    .wrapper  
-        a.header__logo(href="index.html") 
-            img.header__logo-img(src=require("../components/header-buttons/color-logo.svg"), alt="Main Logo")
-        .header__navigation-buttons-wrapper
-            nav 
-                ul.header-buttons__mainMenu
-                    each item in list
-                        if item.active
-                            li(class=`header-buttons__mainMenu-item header-buttons__mainMenu-item_active`)
-                                if item.link
-                                    a.header-buttons__mainMenu-link(href=item.link)= item.content
-                                else
-                                    a.header-buttons__mainMenu-link(href='change-later.html')= item.content
-                        else 
-                            li(class=`header-buttons__mainMenu-item`)
-                                if item.link
-                                    a.header-buttons__mainMenu-link(href=item.link)= item.content
-                                else
-                                    a.header-buttons__mainMenu-link(href='change-later.html')= item.content
-            .header-buttons__buttons
-                span.header-buttons__login-wrapper
-                    +button(loginButtonStyle, loginButton, loginRef)
-                +button(registerButtonStyle, registerButton, registerRef)
+    .header-buttons
+        .header-buttons__wrapper  
+            a.header-buttons__logo(href="index.html") 
+                img.header-buttons__logo-img(src=require("../components/header-buttons/color-logo.svg"), alt="Main Logo")
+            .header-buttons__navigation-buttons-wrapper
+                nav.header-buttons__navigation 
+                    ul.header-buttons__mainMenu
+                        each item in list
+                            if item.active
+                                li(class=`header-buttons__mainMenu-item header-buttons__mainMenu-item_active`)
+                                    if item.link
+                                        a.header-buttons__mainMenu-link(href=item.link)= item.content
+                                    else
+                                        a.header-buttons__mainMenu-link(href='change-later.html')= item.content
+                            else 
+                                li(class=`header-buttons__mainMenu-item`)
+                                    if item.link
+                                        a.header-buttons__mainMenu-link(href=item.link)= item.content
+                                    else
+                                        a.header-buttons__mainMenu-link(href='change-later.html')= item.content
+                .header-buttons__buttons
+                    span.header-buttons__login-wrapper
+                        +button(loginButtonStyle, loginButton, loginRef)
+                    +button(registerButtonStyle, registerButton, registerRef)
