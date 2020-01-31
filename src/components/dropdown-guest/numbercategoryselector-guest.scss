@@ -1,4 +1,4 @@
-input[name='guest'] {
+.dropdown-guest__input {
     height: 2.75rem;
     width: 20rem;
     border: 0.0625rem solid rgba(31, 32, 65, 0.25);
@@ -13,6 +13,9 @@ input[name='guest'] {
     text-overflow: ellipsis;
     outline: none;
     cursor: pointer;
+    &_small{
+        width: 16.625rem;
+    }
 }
 
 div.guest.parent {

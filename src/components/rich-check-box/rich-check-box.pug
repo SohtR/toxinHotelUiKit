@@ -1,9 +1,9 @@
 mixin rich-checkbox(options)
-    form(action="#").rich-checkbox
-        ul.check-list
+    form.rich-checkbox(action="#")
+        ul.rich-checkbox__check-list
             each item in options
-                li.check-list__item
-                    input.check-list__checkbox(type="checkbox" id=`q${item.id}` name=`${item.id}` checked=item.checked hidden)
+                li.rich-checkbox__check-list-item
+                    input.rich-checkbox__check-list-checkbox(type="checkbox" id=`q${item.id}` name=`${item.id}` checked=item.checked hidden)
                     label(for=`q${item.id}`)= item.header
-                        p.check-list__content= item.content
+                        p.rich-checkbox__check-list-content= item.content
 

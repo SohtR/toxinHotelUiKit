@@ -1,5 +1,5 @@
 mixin range-slider(label)
     .range-slider
-        label(for="amount")= label
-        input(type="text" disabled id="amount" readonly)
+        label.range-slider__label(for="amount")= label
+        input.range-slider__input(type="text" disabled id="amount" readonly)
         #slider-range

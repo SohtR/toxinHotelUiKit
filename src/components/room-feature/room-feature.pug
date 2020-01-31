@@ -1,5 +1,5 @@
-mixin room-feature(name,headline,description)
+mixin room-feature({name="image-name", headline= "headline", description="description"}={})
     .room-feature
-        img.room-feature__img(src=require("../components/room-feature/"+name+".png"), alt="11")
+        img.room-feature__img(src=require(`../components/room-feature/${name}.png`), alt="11")
         p.room-feature__headline=headline
         p.room-feature__content=description

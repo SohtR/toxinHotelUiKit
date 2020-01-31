@@ -1,4 +1,4 @@
-mixin forms({textfieldId='text id', textfieldPlaceholder='text placeholder', textfieldType='text', maskedTextId='masked id', maskedTextPlaceholder='masked placeholder', emailSubId='email id', emailSubPlaceholder='email placeholder', roomFeatureComfort= {imgName, header, body}, roomFeatureUdobstvo={imgName, header, body}, radioId1='radio1', radioContent1='radio content1',  radioId2='radio2', radioContent2='radio content2', radioName='radio name', toggleButtonId='toggle id', likeCount='5', ratingNumber0='2', rangeSliderLabel='range slider', buttonFillStyle='fill', buttonFillContent='button fill', buttonBorderStyle='border', buttonBorderContent='border button', buttonLongContent='long button', buttonLongStyle='long'}={})
+mixin forms({textfieldId='text id', textfieldPlaceholder='text placeholder', textfieldType='text', maskedTextId='masked id', maskedTextPlaceholder='masked placeholder', emailSubId='email id', emailSubPlaceholder='email placeholder', roomFeatureComfort= {}, roomFeatureUdobstvo={}, radioId1='radio1', radioContent1='radio content1',  radioId2='radio2', radioContent2='radio content2', radioName='radio name', toggleButtonId='toggle id', likeCount='5', ratingNumber0='2', rangeSliderLabel='range slider', buttonFillStyle='fill', buttonFillContent='button fill', buttonBorderStyle='border', buttonBorderContent='border button', buttonLongContent='long button', buttonLongStyle='long'}={})
         .flex-wrapper
             .form-text
                 h3.form-text__headline Text field
@@ -63,9 +63,9 @@ mixin forms({textfieldId='text id', textfieldPlaceholder='text placeholder', tex
         .flex-wrapper
             .flex-col
                 .room-feature-margin  
-                    +room-feature(roomFeatureComfort.imgName, roomFeatureComfort.header, roomFeatureComfort.body)
+                    +room-feature(roomFeatureComfort)
                 .room-feature-margin  
-                    +room-feature(roomFeatureUdobstvo.imgName, roomFeatureUdobstvo.header, roomFeatureUdobstvo.body)
+                    +room-feature(roomFeatureUdobstvo)
             form(action="#").checkboxes
                 h3.checkboxes__header Checkbox buttons
                 .checkbox-margin

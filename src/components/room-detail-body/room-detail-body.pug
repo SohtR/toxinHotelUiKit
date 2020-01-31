@@ -11,9 +11,21 @@
                 .room-detail-body__top
                     .room-detail-body__room-features
                         h2.room-detail-body__headline Сведения о номере
-                        +room-feature('comfort', 'Комфорт', 'Шумопоглощающие стены')
-                        +room-feature('udobstvo', 'Удобство', 'Окно в каждой из спален')
-                        +room-feature('uyut', 'Уют', 'Номер оснащён камином')
+                        +room-feature({
+                            name: "comfort",
+                            headline: "Комфорт",
+                            description:  "Шумопоглощающие стены"
+                            })
+                        +room-feature({
+                            name: "udobstvo",
+                            headline: "Удобство",
+                            description:"Окно в каждой из спален"
+                            })
+                        +room-feature({
+                            name: "uyut",
+                            headline: "Уют",
+                            description:"Номер оснащён камином"
+                            })
                     .room-detail-body__pie-chart
                         h2.room-detail-body__pie-chart-headline Впечатления от номера
                         include ../pie-chart/pie-chart.pug
@@ -24,19 +36,19 @@
                             p.room-detail-body__reviews-content 2 отзыва
                         .room-detail-body__review-margin    
                             +review({
-                                number: '2',
-                                reviewerName: 'Мурад Сарафанов',
-                                date: '5 дней назад',
+                                number: "2",
+                                reviewerName: "Мурад Сарафанов",
+                                date: "5 дней назад",
                                 likes: 11,
-                                content: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+                                content: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
                             })
                         .room-detail-body__review-margin 
                             +review({
-                                number:  '1',
-                                reviewerName: 'Патрисия Стёклышкова',
-                                date: 'Неделю назад',
+                                number:  "1",
+                                reviewerName: "Патрисия Стёклышкова",
+                                date: "Неделю назад",
                                 likes:  2,
-                                content: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
+                                content: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
                             })
                     .room-detail-body__lists
                         .room-detail-body__bullet

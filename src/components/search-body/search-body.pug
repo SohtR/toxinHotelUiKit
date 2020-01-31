@@ -1,13 +1,15 @@
-.searchBody
-    .wrapper
-        .searchBody__leftSide
-            h3 даты пребывания в отеле
-            +data-dropdown-filter()
-            h3 гости
-            +dropdown-guest("Сколько гостей")
-            +range-slider('диапазон цены')
-            p.leftSide__rangeExplain Стоимость за сутки пребывания в номере
-            h3 checkbox buttons
+.search-body
+    .search-body__wrapper
+        .search-body__left-side
+            h3.search-body__left-side-headline даты пребывания в отеле
+            .search-body__left-side-data-filter-margin
+                +data-dropdown-filter()
+            h3.search-body__left-side-headline гости
+            +dropdown-guest("Сколько гостей", "dropdown-guest__input_small")
+            .search-body__left-side-range-margin
+                +range-slider('диапазон цены')
+            p.search-body__left-side-range-explain Стоимость за сутки пребывания в номере
+            h3.search-body__left-side-headline checkbox buttons
             +check-boxes({
                         first:{
                             id: "first",
@@ -24,7 +26,7 @@
                             checked: true
                         }
                     })
-            h3.leftSide__richCheckBox доступность
+            h3.search-body__left-side-rich-checkbox доступность
             +rich-checkbox({
                         first:{
                             id: "first",
@@ -38,7 +40,7 @@
                             checked: true
                         }
                     })
-            h3.leftSide__roomFeatures удобства номера
+            h3.search-body__left-side-room-features удобства номера
             +dropdown-room("Удобства")
             +expanded-checkbox-list({
                         first:{
@@ -76,9 +78,9 @@
                             id: "eighth",
                             content: "Шампунь"
                         }})
-        .searchBody__rightSide
-            h1 Номера, которые мы для вас подобрали
-            .rightSide__searchResult
+        .search-body__right-side
+            h1.search-body__right-side-header Номера, которые мы для вас подобрали
+            .search-body__right-side-search-result
                 +slider-room({
                                 number: 888,
                                 price: "9 990",
@@ -141,5 +143,5 @@
                                 price: "5000",
                                 reviews: 55
                             })
-            .rightSide__pagination
-                +pagination()
+            .search-body__right-side-pagination
+                +pagination({pages: 15, activePage: 1, content: '1 – 12 из 100+ вариантов аренды'})

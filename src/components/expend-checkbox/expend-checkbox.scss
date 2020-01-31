@@ -10,8 +10,12 @@
     height: 1.25rem;
   }
 
+  &-item:first-child {
+    margin: 1.1875rem 0 0.625rem 0;
+  }
+
   #expander:checked~& {
-    max-height: 17em;
+    max-height: 17rem;
   }
 
   &-input {

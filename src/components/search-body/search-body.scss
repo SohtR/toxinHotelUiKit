@@ -1,88 +1,113 @@
-.searchBody{
+.search-body {
     display: flex;
     width: 100%;
-}
-.searchBody__leftSide{
-width: 27.58%;
-padding: 1.875rem 0 0 0;
-    h3{
-        margin: 0 0 0.3125rem 0;
-    }
-    .filter{
-        margin: 0 0 1.25rem 0;
-    }
-    #dropdownGuest{
-        width: 16.625rem;
-    }
-    .rangeSlider{
-        margin: 0.3125rem 0 0 0;
-    }
-    .leftSide__rangeExplain{
-        font-size: 0.75rem;
-        line-height: 0.875rem;
-        color: rgba(31, 32, 65, 0.5);
-        margin: 0.875rem 0 1.875rem 0;
-    }
-    .leftSide__richCheckBox{
-        margin: 2.9375rem 0 0 0;
-    }
-    .leftSide__roomFeatures{
-        margin: 3.875rem 0 0.3125rem 0;
-    }
-    ul.exCheckList li:first-child{
-        margin: 1.1875rem 0 0.625rem 0;
-    }
-}
 
-.searchBody__rightSide{
-width: 72.42%;
-padding: 0.875rem 0 0 0.3125rem;
-box-sizing: border-box;
-    h1{
-        font-family: 'MontserratBold', sans-serif;
-        font-size: 1.5rem;
-        line-height: 1.875rem;
-        color: #1F2041;
-        letter-spacing: -0.0313rem;
-        margin: 1rem 0 0 0;
-    }
-    .rightSide__searchResult{
+    &__wrapper {
+        margin: 0 auto;
+        width: 72.4375rem;
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
     }
-    .rightSide__pagination{
-        display: flex;
-        justify-content: center;
-        margin: 2.75rem 0.875rem 4.375rem 0;
+
+    &__left-side {
+        width: 27.58%;
+        padding: 1.875rem 0 0 0;
+
+        &-headline {
+            margin: 0 0 0.3125rem 0;
+        }
+
+        &-data-filter-margin {
+            margin: 0 0 1.25rem 0;
+        }
+
+        &-range-margin {
+            margin: 0.3125rem 0 0 0;
+        }
+
+        &-range-explain {
+            font-size: 0.75rem;
+            line-height: 0.875rem;
+            color: rgba(31, 32, 65, 0.5);
+            margin: 0.875rem 0 1.875rem 0;
+        }
+
+        &-rich-checkbox {
+            margin: 2.9375rem 0 0 0;
+        }
+
+        &-room-features {
+            margin: 3.875rem 0 0.3125rem 0;
+        }
+
+    }
+
+    &__right-side {
+        width: 72.42%;
+        padding: 0.875rem 0 0 0.3125rem;
+        box-sizing: border-box;
+
+        &-header {
+            font-family: 'MontserratBold', sans-serif;
+            font-size: 1.5rem;
+            line-height: 1.875rem;
+            color: #1F2041;
+            letter-spacing: -0.0313rem;
+            margin: 1rem 0 0 0;
+        }
+
+        &-search-result {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &-pagination {
+            display: flex;
+            justify-content: center;
+            margin: 2.75rem 0.875rem 4.375rem 0;
+        }
     }
 }
 
-@media screen and (max-width: 1200px){
-    .searchBody__rightSide {
+
+
+@media screen and (max-width: 1200px) {
+    .search-body__right-side {
         width: 64%;
         padding: 0.875rem 0.9375rem 0 0.3125rem;
-        h1{
+
+        &-header {
             text-align: center;
         }
-        .rightSide__searchResult{
-        justify-content: space-around;
+
+        &-search-result {
+            justify-content: space-around;
         }
     }
-    
-    .searchBody__leftSide{
+
+    .search-body__left-side {
         margin: 0 auto;
         width: auto;
     }
 }
 
-@media screen and (max-width: 850px){
-    .searchBody__rightSide {
-        width: auto;
+@media screen and (max-width: 850px) {
+    .search-body {
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+
+        &__right-side {
+            width: auto;
+
+            &-pagination {
+                margin: 1.75rem 0.875rem 1.375rem 0;
+            }
+        }
     }
-    .searchBody__rightSide .rightSide__pagination {
-        margin: 1.75rem 0.875rem 1.375rem 0;
-    
-    }
-    
+
+
+
+
 }
